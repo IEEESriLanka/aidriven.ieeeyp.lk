@@ -5,6 +5,8 @@ import "./globals.css";
 import LenisWrapper from "@/components/LenisWrapper";
 import Header from "@/components/Header";
 import { ElementalEnd } from "@/fonts";
+import Footer from "@/components/Footer";
+import BackgroundWrapper from "@/components/common/BgWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +34,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} relative antialiased`}
       >
         <LenisWrapper>
-          <Header />
-          {children}
+          <BackgroundWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </BackgroundWrapper>
         </LenisWrapper>
       </body>
     </html>
