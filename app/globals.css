@@ -3,4 +3,35 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-primary: hsl(11, 83%, 52%);
+  --font-elemental-end: var(--font-elemental-end);
+}
 
+body {
+  background: #1c1c1c;
+}
+
+@layer utilities {
+  .body-gradient {
+    --_angle: to right;
+    background: linear-gradient(
+      var(--_angle),
+      #3b2620 -48%,
+      #2a2121 0%,
+      #1b1b1b 40%,
+      #111 60%,
+      #2a2121 120%,
+      #3c241d 100%
+    );
+  }
+  .bg-gradient {
+    --_angle: to right;
+    background: linear-gradient(
+      var(--_angle),
+      rgba(59, 38, 32, 1),
+      rgba(42, 33, 33, 1),
+      rgba(60, 36, 29, 1)
+    );
+  }
+}
