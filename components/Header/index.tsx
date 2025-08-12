@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <header className="fixed inset-0 top-4 z-[999] mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between overflow-x-clip rounded-2xl px-4 py-3 text-white backdrop-blur-lg">
-      <div className="bg-gradient absolute top-0 left-0 hidden h-full w-full opacity-95 lg:block" />
+      <div className="bg-gradient absolute top-0 left-0 hidden h-full w-full rounded-xl opacity-95 lg:block" />
       <div className="relative">
         <Image src={Logo} alt="AIDSL Logo" width={150} height={50} />
       </div>
