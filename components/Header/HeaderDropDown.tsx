@@ -30,7 +30,9 @@ export function HeaderDropDown() {
         className="bg-gradient z-[99999] w-32 translate-y-2 border-0 text-white"
         style={{ "--_angle": "180deg" } as React.CSSProperties}
       >
-        <DropdownMenuCheckboxItem>Status Bar</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>Create Event</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>View Events</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>Event Settings</DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
