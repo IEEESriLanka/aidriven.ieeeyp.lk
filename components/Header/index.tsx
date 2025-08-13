@@ -7,7 +7,7 @@ import Link from "next/link";
 import { HeaderDropDown } from "./HeaderDropDown";
 import MobileNavigation from "./Mobile";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
-import { useMediaQuery } from "usehooks-ts";
+import { useIsClient, useMediaQuery } from "usehooks-ts";
 
 // Define navigation items array
 export const navItems = [
@@ -35,6 +35,10 @@ export const navItems = [
 export default function Header() {
   const [isOpen, open] = useLockingBodyScroll();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
+
+  const isClient = useIsClient();
+
+  if (!isClient) return null;
 
   return (
     <header className="fixed inset-0 top-4 z-[999] mx-auto flex h-[70px] w-full max-w-7xl items-center justify-between overflow-x-clip rounded-2xl px-4 py-3 text-white backdrop-blur-lg">
