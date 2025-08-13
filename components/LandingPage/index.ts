@@ -1,3 +1,4 @@
 import Hero from "./Hero";
+import UpcomingEvent from "./UpcomingEvents";
 
-export { Hero };
+export { Hero, UpcomingEvent };

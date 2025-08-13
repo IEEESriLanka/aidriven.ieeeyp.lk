@@ -34,4 +34,17 @@ body {
       rgba(60, 36, 29, 1)
     );
   }
+  .section-header {
+    @apply font-elemental-end text-2xl tracking-wide text-white capitalize lg:text-4xl;
+  }
+
+  .event-item-header {
+    background: var(
+      --d-9-d-9-d-9,
+      linear-gradient(180deg, #d5b88d 0%, #fff 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
