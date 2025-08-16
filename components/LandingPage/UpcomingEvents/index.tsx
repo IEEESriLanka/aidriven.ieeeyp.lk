@@ -11,7 +11,7 @@ import { upcomingEventsData } from "@/lib/data";
 
 export default function UpcomingEvent() {
   return (
-    <section className="container mx-auto flex flex-col gap-y-8">
+    <section className="section-gap-y container mx-auto flex flex-col gap-y-8">
       <h1 className="section-header">
         <span>Upcoming</span>
         <span className="text-primary"> Events</span>
