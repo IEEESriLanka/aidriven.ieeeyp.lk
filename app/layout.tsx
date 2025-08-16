@@ -4,7 +4,7 @@ import "./globals.css";
 
 import LenisWrapper from "@/components/LenisWrapper";
 import Header from "@/components/Header";
-import { ElementalEnd } from "@/fonts";
+import { ElementalEnd, FZY } from "@/fonts";
 import Footer from "@/components/Footer";
 import BackgroundWrapper from "@/components/common/BgWrapper";
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} relative antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} ${FZY.variable} relative antialiased`}
       >
         <LenisWrapper>
           <BackgroundWrapper>
