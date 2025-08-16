@@ -5,3 +5,9 @@ export const ElementalEnd = localFont({
   variable: "--font-elemental-end",
   display: "swap",
 });
+
+export const FZY = localFont({
+  src: "./FZYTJW.woff2",
+  variable: "--font-fzytjw",
+  display: "swap",
+});
