@@ -6,12 +6,12 @@ export default function Item(props: BlogItemProps) {
   return (
     <Link
       href={props.link}
-      className="group relative block min-h-[380px] max-w-[480px] overflow-clip"
+      className="group relative block h-full min-h-[380px] max-w-[480px] overflow-clip"
       style={{
         borderRadius: "20px 20px 0 20px",
       }}
     >
-      <article className="flex flex-col gap-y-4 bg-[rgba(69,65,61,0.8)] px-4 py-8">
+      <article className="flex h-full flex-col gap-y-4 bg-[rgba(69,65,61,0.8)] px-4 py-8">
         <div className="border-primary relative h-full min-h-[280px] overflow-clip rounded-xl border">
           <Image src={props.image} alt={props.title} fill />
         </div>
