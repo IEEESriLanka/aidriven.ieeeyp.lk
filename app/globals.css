@@ -6,6 +6,7 @@
 @theme {
   --color-primary: hsl(11, 83%, 52%);
   --font-elemental-end: var(--font-elemental-end);
+  --font-fzytjw: var(--font-fzytjw);
 }
 
 body {
@@ -46,5 +47,26 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .testimonial-card {
+    border-radius: 32px 48px 4px 48px;
+    border: 0.4px solid var(--d-9-d-9-d-9, #ea421e);
+    background: linear-gradient(
+      180deg,
+      rgba(69, 65, 61, 0.2) 0%,
+      rgba(58, 53, 49, 0.2) 48.56%,
+      rgba(52, 47, 42, 0.2) 100%
+    );
+  }
+
+  .section-gap-y {
+    @apply py-12 lg:py-24;
+  }
+}
+
+#about-section {
+  [data-slot="carousel-content"] {
+    overflow: visible;
   }
 }
