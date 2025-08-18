@@ -28,7 +28,12 @@ import type {
   ValProps,
   ContactDetailProps,
   MemberDetailProps,
+  NavLinkItem,
+  NavDropdownItem,
 } from "./type";
+
+// header
+import { HeaderDropDown } from "@/components/Header/HeaderDropDown";
 
 export const socialLinks = [
   {
@@ -172,6 +177,30 @@ export const projectsData: ProjectItemProps[] = [
       edition: "80+ EVENTS",
       date: "SINCE 2023",
     },
+  },
+];
+
+type NavItem = NavLinkItem | NavDropdownItem;
+
+export const navItems: NavItem[] = [
+  {
+    type: "link" as const,
+    href: "/",
+    label: "Home",
+  },
+  {
+    type: "dropdown" as const,
+    component: HeaderDropDown,
+  },
+  {
+    type: "link" as const,
+    href: "/ourTeam",
+    label: "Our Team",
+  },
+  {
+    type: "link" as const,
+    href: "/aboutUs",
+    label: "About Us",
   },
 ];
 
