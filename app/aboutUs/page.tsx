@@ -5,7 +5,7 @@ import {
   contactDetailsData,
   coreValuesData,
   memberDetailsData,
-} from "@/utils/aboutUs/data";
+} from "@/lib/data";
 import { ContactCard, MemberCard, ValueCard } from "@/components/AboutUs/Cards";
 import Form from "@/components/AboutUs/Form";
 
