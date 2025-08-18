@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { type RefObject, useRef } from "react";
-import { usePathname } from "next/navigation";
 
 import { MENU_SLIDE } from "./anim";
 import AnimatedCurve from "./Curve";
@@ -11,8 +10,6 @@ type Props = { id: string; open: (isOpen: boolean) => void };
 
 export default function Sheet({ id }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-
   return (
     <motion.div
       ref={containerRef}
@@ -26,7 +23,6 @@ export default function Sheet({ id }: Props) {
     >
       <SheetHeaderCover container={containerRef} />
       <div className="flex flex-col gap-6 px-6 pt-8">
-        {pathname === "/" && (
           <ul className="flex flex-col space-y-4 text-2xl font-semibold">
             {navItems.map((item, index) => (
               <li key={index}>
@@ -38,9 +34,7 @@ export default function Sheet({ id }: Props) {
               </li>
             ))}
           </ul>
-        )}
       </div>
-
       <div aria-hidden className="my-6 flex-1" />
 
       <AnimatedCurve fill="fill-[#1e1e1ecc]" />
