@@ -75,7 +75,6 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
       </div>
       <div className="text-center text-[16px]">{text}</div>
     </div>
-    <div className="text-center text-[16px]">{text}</div>
   </>
 );
 
