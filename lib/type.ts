@@ -40,3 +40,17 @@ export interface ProjectItemProps {
     date: string;
   };
 }
+
+export interface TimelineItemProps {
+  title: string;
+  caption: string;
+  speaker: {
+    name: string;
+    bio: string;
+  };
+  data: {
+    date: string;
+    time: string;
+    venue: string;
+  };
+}

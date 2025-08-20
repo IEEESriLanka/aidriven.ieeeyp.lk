@@ -25,6 +25,7 @@ import type {
   UpcomingEventItemProps,
   BlogItemProps,
   ProjectItemProps,
+  TimelineItemProps,
 } from "./type";
 
 export const socialLinks = [
@@ -168,6 +169,49 @@ export const projectsData: ProjectItemProps[] = [
       participateCount: 100,
       edition: "80+ EVENTS",
       date: "SINCE 2023",
+    },
+  },
+];
+
+// timeline data
+export const timelineData: TimelineItemProps[] = [
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
     },
   },
 ];
