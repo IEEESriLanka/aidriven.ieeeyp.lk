@@ -39,11 +39,11 @@ export const ContactCard = ({ contactDetail }: { contactDetail: ContactDetailPro
 );
 
 export const ValueCard = ({ img, title, text }: ValProps) => (
-    <div className="h-[320px] w-[250px] bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] flex flex-col gap-[24px] items-center justify-center px-[19px] py-[24px] rounded-[4px_24px]">
+    <div className="h-[380px] container bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] flex flex-col gap-[24px] items-center justify-center px-[19px] py-[24px] rounded-[4px_24px]">
         <div className="py-[12px]">
             <Image src={img} className="size-[80px] object-cover" alt={title} />
         </div>
-        <div className="text-[20px] font-elemental-end  uppercase tracking-[1px]">{title}</div>
+        <div className="text-[20px]  font-elemental-end  uppercase tracking-[1px]">{title}</div>
         <div className="text-[16px] text-center">{text}</div>
     </div>
 );
