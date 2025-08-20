@@ -4,6 +4,7 @@ import {
   UpcomingEvent,
   Blogs,
   Projects,
+  Timeline,
 } from "@/components/LandingPage";
 
 export default function Page() {
@@ -14,6 +15,7 @@ export default function Page() {
       <Testimonials />
       <Blogs />
       <Projects />
+      <Timeline />
     </main>
   );
 }
