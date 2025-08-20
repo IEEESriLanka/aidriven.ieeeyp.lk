@@ -1,9 +1,13 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import aboutImage from '@/assets/aboutImageContainer.png';
-import { contactDetailsData, coreValuesData, memberDetailsData } from '@/utils/aboutUs/data';
-import { ContactCard, MemberCard, ValueCard } from '@/components/AboutUs/Cards';
-import Form from '@/components/AboutUs/Form';
+import aboutImage from "@/assets/aboutImageContainer.png";
+import {
+  contactDetailsData,
+  coreValuesData,
+  memberDetailsData,
+} from "@/lib/data";
+import { ContactCard, MemberCard, ValueCard } from "@/components/AboutUs/Cards";
+import Form from "@/components/AboutUs/Form";
 
 const Page = () => {
     return (
@@ -87,7 +91,9 @@ const Page = () => {
                 </div>
             </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Page;
