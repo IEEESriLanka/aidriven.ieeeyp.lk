@@ -1,5 +1,21 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
+export interface NavLinkItem {
+  type: "link";
+  href: string;
+  label: string;
+  component?: never;
+}
+
+export interface NavDropdownItem {
+  type: "dropdown";
+  component: () => JSX.Element;
+  href?: string;
+  label?: string;
+}
+
+export type NavItem = NavLinkItem | NavDropdownItem;
+
 export interface UpcomingEventItemProps {
   title: string;
   description: string;
@@ -39,4 +55,28 @@ export interface ProjectItemProps {
     edition: string;
     date: string;
   };
+}
+
+import type { StaticImageData } from "next/image";
+import { JSX } from "react";
+
+type ImgSrc = StaticImageData | string;
+
+export interface ValProps {
+  img: ImgSrc;
+  title: string;
+  text: string;
+}
+
+export interface ContactDetailProps {
+  icon: ImgSrc;
+  title: string;
+  val: string;
+}
+
+export interface MemberDetailProps {
+  icon: ImgSrc;
+  title: string;
+  val: string;
+  socials: { icon: ImgSrc; url: string }[];
 }

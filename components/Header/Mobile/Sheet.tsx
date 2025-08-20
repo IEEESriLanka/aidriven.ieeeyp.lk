@@ -1,18 +1,16 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { type RefObject, useRef } from "react";
-import { usePathname } from "next/navigation";
 
 import { MENU_SLIDE } from "./anim";
 import AnimatedCurve from "./Curve";
-import { navItems } from "..";
 import Link from "next/link";
+import MobileNavigationTarget from "./Target";
+import { navItems } from "@/lib/data";
 
 type Props = { id: string; open: (isOpen: boolean) => void };
 
-export default function Sheet({ id }: Props) {
+export default function Sheet({ id, open }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-
   return (
     <motion.div
       ref={containerRef}
@@ -26,21 +24,25 @@ export default function Sheet({ id }: Props) {
     >
       <SheetHeaderCover container={containerRef} />
       <div className="flex flex-col gap-6 px-6 pt-8">
-        {pathname === "/" && (
-          <ul className="flex flex-col space-y-4 text-2xl font-semibold">
-            {navItems.map((item, index) => (
-              <li key={index}>
-                {item.type === "link" ? (
-                  <Link href={item.href}>{item.label}</Link>
-                ) : (
-                  <item.component />
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
+        <ul
+          className="flex flex-col space-y-4 text-2xl font-semibold"
+          onClick={(e) => {
+            if ((e.target as HTMLElement).tagName === "A")
+              open.call(null, false);
+            e.stopPropagation();
+          }}
+        >
+          {navItems.map((item, index) => (
+            <MobileNavigationTarget key={index} index={index} href={item.href}>
+              {item.type === "link" ? (
+                <Link href={item.href}>{item.label}</Link>
+              ) : (
+                <item.component />
+              )}
+            </MobileNavigationTarget>
+          ))}
+        </ul>
       </div>
-
       <div aria-hidden className="my-6 flex-1" />
 
       <AnimatedCurve fill="fill-[#1e1e1ecc]" />
