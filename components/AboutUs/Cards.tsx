@@ -65,15 +65,17 @@ export const ContactCard = ({
 );
 
 export const ValueCard = ({ img, title, text }: ValProps) => (
-  <div className="flex h-[320px] w-[250px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] px-[19px] py-[24px]">
-    <div className="py-[12px]">
-      <Image src={img} className="size-[80px] object-cover" alt={title} />
+  <>
+    <div className="container flex h-[380px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] px-[19px] py-[24px]">
+      <div className="py-[12px]">
+        <Image src={img} className="size-[80px] object-cover" alt={title} />
+      </div>
+      <div className="font-elemental-end text-[20px] tracking-[1px] uppercase">
+        {title}
+      </div>
+      <div className="text-center text-[16px]">{text}</div>
     </div>
-    <div className="font-elemental-end text-[20px] tracking-[1px] uppercase">
-      {title}
-    </div>
-    <div className="text-center text-[16px]">{text}</div>
-  </div>
+  </>
 );
 
 export const MemberCard = ({ member }: { member: MemberDetailProps }) => (

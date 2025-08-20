@@ -11,13 +11,17 @@ import Form from "@/components/AboutUs/Form";
 
 const Page = () => {
   return (
-    <div className="font-poppins mx-[auto] flex flex-col items-center justify-center gap-[102px] px-[40px] pt-[201px] text-white md:w-[1064px] md:px-0">
+    <div className="font-poppins container mx-[auto] flex flex-col items-center justify-center gap-[102px] px-[10px] pt-[201px] text-white md:px-[40px] lg:px-[80px]">
       {/* about */}
-      <div className="flex w-full flex-col justify-center gap-16 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.08)_0%,rgba(58,53,49,0.08)_48.56%,rgba(52,47,42,0.08)_100%)] px-6 py-8 md:flex-row">
+      <div className="container flex flex-col justify-center gap-16 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.08)_0%,rgba(58,53,49,0.08)_48.56%,rgba(52,47,42,0.08)_100%)] px-6 py-8 md:flex-row">
         <div className="flex justify-center">
-          <Image src={aboutImage} alt=" " className="h-[220px] w-[190px]" />
+          <Image
+            src={aboutImage}
+            alt=" "
+            className="h-[220px] w-auto object-contain"
+          />
         </div>
-        <div className="flex w-full flex-col gap-[20px] md:w-[667px]">
+        <div className="container flex flex-col gap-[20px]">
           <p className="font-elemental-end text-center text-[32px] md:text-left">
             ABOUT <span className="text-primary">AIDSL</span>
           </p>
@@ -33,8 +37,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* story */}
-      <div className="flex w-full flex-col gap-[40px]">
+      <div className="container flex flex-col gap-[40px]">
         <div>
           <p className="font-elemental-end text-center text-[32px] md:text-left">
             <span className="text-primary">OUR STORY</span> IS ABOUT BUILDING AI{" "}
@@ -45,9 +48,9 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] md:flex-row md:gap-[65px]">
+        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
           <div className="text-primary text-[32px]">Mission</div>
-          <div className="w-full px-[40px] py-[35px] text-[14px] md:w-[746px]">
+          <div className="container px-[40px] py-[35px] text-[14px]">
             Our mission is to bridge the gap between undergraduates and
             graduates in the AI industry by offering comprehensive AI education,
             practical skills, and a supportive community through a holistic
@@ -57,16 +60,15 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] md:flex-row md:gap-[65px]">
+        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
           <div className="text-primary text-[32px]">Vision</div>
-          <div className="w-full px-[40px] py-[35px] text-[14px] md:w-[746px]">
+          <div className="container px-[40px] py-[35px] text-[14px]">
             Empowering Sri Lankan Youth with AI Excellence.
           </div>
         </div>
       </div>
 
-      {/* core values */}
-      <div className="flex w-full flex-col gap-[32px]">
+      <div className="container flex flex-col gap-[32px]">
         <div>
           <p className="font-elemental-end text-center text-[32px] md:text-left">
             OUR <span className="text-primary">CORE VALUES</span>
@@ -77,7 +79,7 @@ const Page = () => {
             collective collaboration.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-[20px] md:flex-row">
+        <div className="container flex flex-col items-center gap-[30px] px-[20px] md:gap-[20px] md:px-[10px] lg:grid lg:grid-cols-4 lg:gap-[10px] lg:px-0">
           {coreValuesData.map((val) => (
             <ValueCard
               key={val.title}
@@ -89,8 +91,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* contact form */}
-      <div className="flex w-full flex-col gap-[80px]">
+      <div className="container flex flex-col gap-[80px]">
         <div className="font-elemental-end text-primary text-center text-[32px] uppercase md:text-left">
           <p>
             Get in touch <span className="text-white">and let&apos;s</span>{" "}
@@ -102,15 +103,14 @@ const Page = () => {
         </div>
       </div>
 
-      {/* contact + team */}
-      <div className="flex w-full flex-col-reverse justify-center gap-[64px] md:flex-row">
+      <div className="container flex flex-col-reverse justify-center gap-[64px] md:flex-row">
         <div className="mx-auto flex flex-col gap-[40px]">
           {contactDetailsData.map((dets) => (
             <ContactCard key={dets.title} contactDetail={dets} />
           ))}
         </div>
 
-        <div className="flex w-full flex-col justify-center gap-[16px]">
+        <div className="container flex flex-col justify-center gap-[16px]">
           <p className="text-center text-[20px] uppercase">
             Connect with a member of our team
           </p>
