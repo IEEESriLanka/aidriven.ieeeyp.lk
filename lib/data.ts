@@ -20,6 +20,14 @@ import Project1Image from "@/assets/projects/project1.png";
 import Project2Image from "@/assets/projects/project2.png";
 import Project3Image from "@/assets/projects/project3.png";
 
+//events images
+import brainCircuitIcon from '@/assets/icons/Brain Circuit.png';
+import factoryIcon from '@/assets/icons/factory.png';
+import ribbonIcon from '@/assets/icons/Person Ribbon.png';
+import awardIcon  from '@/assets/icons/Award 2.png';
+import trophyIcon  from '@/assets/icons/Trophy.png';
+import globeIcon  from '@/assets/icons/Globe Person.png';
+
 import type {
   TestimonialProps,
   UpcomingEventItemProps,
@@ -272,3 +280,15 @@ export const memberDetailsData: MemberDetailProps[] = [
     ],
   },
 ];
+
+
+//events talk page data
+export const eventsFeatsData: ContactDetailProps[] = [
+  {icon: brainCircuitIcon, title: "Learn how to leverage LLM and Prompting to solve real-world problems."},
+  {icon: factoryIcon, title: "Opportunity to experience an engaging industrial visit."},
+  {icon: ribbonIcon, title: "Gain hands on exposure to training and deployment."},
+  {icon: linkedinIcon, title: "Enhance your LinkedIn profile."},
+  {icon: awardIcon, title: "Upon completion receive a valuable certificate acknowledged by giants in IT industry."},
+  {icon: trophyIcon, title: "Exciting cash prizes to the winners."},
+  {icon: globeIcon, title: "Connect with industry experts in Artificial Intelligence ."},
+]

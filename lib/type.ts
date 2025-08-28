@@ -71,7 +71,7 @@ export interface ValProps {
 export interface ContactDetailProps {
   icon: ImgSrc;
   title: string;
-  val: string;
+  val?: string;
 }
 
 export interface MemberDetailProps {
