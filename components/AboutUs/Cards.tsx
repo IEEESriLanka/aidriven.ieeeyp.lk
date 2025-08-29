@@ -58,8 +58,8 @@ export const ContactCard = ({
       <Image className="m-auto size-[40px]" src={contactDetail.icon} alt="" />
     </div>
     <div className="flex flex-col gap-[7px]">
-      <p className="text-[20px] uppercase">{contactDetail.title}</p>
-      <p className="text-[16px] font-[300]">{contactDetail.val}</p>
+      <p className="text-[20px] font-bold tracking-[4px] uppercase">{contactDetail.title}</p>
+      <p className="text-[16px] font-[300] uppercase">{contactDetail.val}</p>
     </div>
   </div>
 );

@@ -20,6 +20,14 @@ import Project1Image from "@/assets/projects/project1.png";
 import Project2Image from "@/assets/projects/project2.png";
 import Project3Image from "@/assets/projects/project3.png";
 
+//events images
+import brainCircuitIcon from '@/assets/icons/Brain Circuit.png';
+import factoryIcon from '@/assets/icons/factory.png';
+import ribbonIcon from '@/assets/icons/Person Ribbon.png';
+import awardIcon  from '@/assets/icons/Award 2.png';
+import trophyIcon  from '@/assets/icons/Trophy.png';
+import globeIcon  from '@/assets/icons/Globe Person.png';
+
 import type {
   TestimonialProps,
   UpcomingEventItemProps,
@@ -216,6 +224,7 @@ import memberPhoto from "@/assets/aboutUs/mem1.png";
 import instaIcon from "@/assets/icons/fb.png";
 import linkedinIcon from "@/assets/icons/linkedin.png";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
+import { StaticImageData } from "next/image";
 
 export const coreValuesData: ValProps[] = [
   {
@@ -272,3 +281,59 @@ export const memberDetailsData: MemberDetailProps[] = [
     ],
   },
 ];
+
+
+//events talk page data
+export const eventsFeatsData: ContactDetailProps[] = [
+  {icon: brainCircuitIcon, title: "Learn how to leverage LLM and Prompting to solve real-world problems."},
+  {icon: factoryIcon, title: "Opportunity to experience an engaging industrial visit."},
+  {icon: ribbonIcon, title: "Gain hands on exposure to training and deployment."},
+  {icon: linkedinIcon, title: "Enhance your LinkedIn profile."},
+  {icon: awardIcon, title: "Upon completion receive a valuable certificate acknowledged by giants in IT industry."},
+  {icon: trophyIcon, title: "Exciting cash prizes to the winners."},
+  {icon: globeIcon, title: "Connect with industry experts in Artificial Intelligence ."},
+]
+
+//events faq data
+export const eventsFaqData: {title: string, val: string}[] = [
+  {title: "What is the AI Bootcamp 2023?", val: "The AI Bootcamp 2023 is an immersive learning program designed to enhance AI skills and creativity, with virtual sessions and a hands-on hackathon."},
+  {title: "What is AI-Driven Sri Lanka?", val: "AI-Driven Sri Lanka is an initiative focused on providing accessible AI education and fostering a community of AI enthusiasts in Sri Lanka."},
+  {title: "What topics are covered in the virtual sessions?", val:""},
+  {title: "How are the top teams selected for the final presentation?", val:""},
+  {title: "Who can participate in the AI Bootcamp?", val:""},
+  {title: "What are the benefits of participation?", val:""},
+]
+
+//events editions data 
+
+import img1 from "@/assets/events/image 1.png";
+import img2 from "@/assets/events/image 2.png";
+import img3 from "@/assets/events/Team Member Section 1.png";
+import img4 from "@/assets/events/image.png";
+import img5 from "@/assets/events/image 25.png";
+import img6 from "@/assets/events/image 26.png";
+import img7 from "@/assets/events/image 27.png";
+
+import delegatesIcon from "@/assets/icons/Delegates Icon.png";
+import editionIcon from "@/assets/icons/Edition Icon.png";
+import dateIcon from "@/assets/icons/Date Icon.png";
+
+export const eventsEditionsData: {year: string, val: string, stats:ContactDetailProps[], imgs: StaticImageData[]}[] = [
+  {year: '2023', val: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation.Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions", 
+    stats: [
+      {icon: delegatesIcon, title:"100+", val: "delegates"},
+      {icon: editionIcon, title:"12", val: "sessions"},
+      {icon: dateIcon, title:"oct 2023"   },
+  ],
+    imgs: [img1, img3, img2]
+  },
+  {year: '2024',
+    val: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation. Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions",
+    stats: [
+      {icon: delegatesIcon, title:"100+", val: "delegates"},
+      {icon: editionIcon, title:"12", val: "sessions"},
+      {icon: dateIcon, title:"oct 2023"   },
+  ],
+    imgs: [img4, img5, img6, img7]
+  }
+]
