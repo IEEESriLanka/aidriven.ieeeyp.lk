@@ -65,8 +65,8 @@ const Page = () => {
           fREquEntly <span className="text-primary">AsKED</span> QuEstioNs
         </p>
         <AccordionRoot
-          allowMultiple={false}
-          className="mx-auto grid grid-cols-2 gap-x-2 gap-y-0"
+          allowMultiple={true}
+          className="mx-auto grid gap-x-2 gap-y-0 lg:grid-cols-2"
           variant="splitted"
         >
           {eventsFaqData.map((item) => (
@@ -94,7 +94,7 @@ const Page = () => {
         {eventsEditionsData.map((editions, i) => (
           <EditionCard
             key={i}
-            year={editions.year}
+            title={editions.title}
             desc={editions.desc}
             data={editions.data}
             imgs={editions.imgs}
