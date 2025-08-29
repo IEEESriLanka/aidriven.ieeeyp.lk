@@ -19,8 +19,8 @@ const EditionCard = ({year, desc, stats, imgs}: {year: string, desc: string, sta
     </div>
 
     <div className="flex flex-col md:flex-row container justify-center items-center">
-        {imgs.map((img) => (
-            <Image className='container h-[250px] object-contain' src={img} alt=""/>
+        {imgs.map((img,i) => (
+            <Image key={i} className='container h-[250px] object-contain' src={img} alt=""/>
         ))}
     </div>
 
