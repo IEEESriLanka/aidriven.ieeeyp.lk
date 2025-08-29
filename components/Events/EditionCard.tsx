@@ -13,8 +13,8 @@ const EditionCard = ({year, desc, stats, imgs}: {year: string, desc: string, sta
       <p>{desc}</p>
     </div>
     <div className='flex flex-col md:flex-row  gap-8 container justify-center'>
-        {stats.map((stat) => (
-            <ContactCard contactDetail={stat}/>
+        {stats.map((stat,i) => (
+            <ContactCard key={i} contactDetail={stat}/>
         ))}
     </div>
 
