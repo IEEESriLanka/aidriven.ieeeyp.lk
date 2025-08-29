@@ -1,4 +1,3 @@
-import React from 'react'
 import EventCard from './EventCard'
 import { ContactCard } from '../AboutUs/Cards'
 import { ContactDetailProps } from '@/lib/type'

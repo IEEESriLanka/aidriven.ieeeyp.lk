@@ -2,7 +2,7 @@
 
 import { eventsFaqData } from '@/lib/data';
 import Image from 'next/image';
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import plusIcon from "@/assets/icons/plus.svg";
 import subIcon from "@/assets/icons/sub.svg";

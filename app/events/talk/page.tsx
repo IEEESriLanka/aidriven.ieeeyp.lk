@@ -5,12 +5,11 @@ import calendarIcon from '@/assets/icons/Calender 2.png';
 
 import EventCard, { EventFeatCard } from '@/components/Events/EventCard';
 import Image from 'next/image';
-import { ContactCard } from '@/components/AboutUs/Cards';
 import { eventsEditionsData, eventsFeatsData } from '@/lib/data';
 import FAQ from '@/components/Events/FAQ';
 import EditionCard from '@/components/Events/EditionCard';
 
-const page = () => {
+const Page = () => {
   return (
     <main className="container px-[10px] md:px-[40px] mx-auto py-30 flex flex-col gap-20 items-center justify-center">
 
@@ -55,8 +54,8 @@ const page = () => {
             what you will <span className='text-primary'>get</span>
           </div>
           <div className='grid md:grid-cols-2 gap-4 text-white px-[20px] justify-center items-center'>
-            {eventsFeatsData.map((data) => (
-              <EventFeatCard contactDetail={data}/>
+            {eventsFeatsData.map((data, i) => (
+              <EventFeatCard contactDetail={data} key={i}/>
             ))}
           </div>
         </div>

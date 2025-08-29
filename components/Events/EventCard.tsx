@@ -1,6 +1,5 @@
 import { ContactDetailProps } from '@/lib/type';
 import Image from 'next/image';
-import React from 'react'
 
 export const EventFeatCard = ({
   contactDetail,
