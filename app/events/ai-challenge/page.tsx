@@ -64,14 +64,14 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="event-card flex flex-col lg:flex-row w-full items-center justify-between rounded-2xl p-8 text-white">
-        <div className="relative lg:border-r pr-4">
+      <div className="event-card flex w-full flex-col items-center justify-between rounded-2xl p-8 text-white xl:flex-row">
+        <div className="relative pr-4 lg:xl:border-r">
           <Image src={EventImg} alt="" height={320} />
         </div>
         <div className="grid lg:grid-cols-[1fr_35%]">
           <div>
-            <div className="flex w-fit flex-col justify-between gap-y-2 px-8 lg:flex-row lg:items-center">
-              <div className="flex items-center justify-center gap-x-2 lg:border-r-[0.5] px-4">
+            <div className="flex w-fit flex-col items-start justify-between gap-y-2 px-8 lg:items-center xl:flex-row">
+              <div className="flex items-center justify-center gap-x-2 px-4 lg:xl:border-r-[0.5]">
                 <CalendarDays className="text-primary size-10" />
                 <div className="flex flex-col">
                   <span className="text-white/60 uppercase">Date</span>
@@ -80,7 +80,7 @@ const Page = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-x-2 lg:border-r-[0.5] px-4">
+              <div className="flex items-center justify-center gap-x-2 px-4 lg:xl:border-r-[0.5]">
                 <Watch className="text-primary size-10" />
                 <div className="flex flex-col">
                   <span className="text-white/60 uppercase">Time</span>
@@ -103,7 +103,7 @@ const Page = () => {
               <Link href={"/"} className="underline">
                 Delegate booklet
               </Link>
-              <HeaderButton className="py-4"/>
+              <HeaderButton className="py-4 flex" />
             </div>
           </div>
           <div>
@@ -137,7 +137,7 @@ const Page = () => {
         </p>
         <AccordionRoot
           allowMultiple={true}
-          className="mx-auto grid lg:grid-cols-2 gap-x-2 gap-y-0"
+          className="mx-auto grid gap-x-2 gap-y-0 xl:grid-cols-2"
           variant="splitted"
         >
           {eventsFaqData.map((item) => (
