@@ -63,6 +63,29 @@ body {
   .section-gap-y {
     @apply py-12 lg:py-24;
   }
+
+  .customer-border {
+    border-radius: 40px 40px 4px 40px;
+  }
+
+  .event-card {
+    background: linear-gradient(
+      180deg,
+      #45413d 0%,
+      #3a3531 48.56%,
+      #342f2a 100%
+    );
+  }
+
+  .edition-card {
+    border-radius: 0 40px;
+    background: linear-gradient(
+      180deg,
+      rgba(69, 65, 61, 0.64) 0%,
+      rgba(58, 53, 49, 0.64) 48.56%,
+      rgba(52, 47, 42, 0.64) 100%
+    );
+  }
 }
 
 #about-section {
