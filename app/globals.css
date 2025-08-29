@@ -7,6 +7,8 @@
   --color-primary: hsl(11, 83%, 52%);
   --font-elemental-end: var(--font-elemental-end);
   --font-fzytjw: var(--font-fzytjw);
+
+  --color-c-secondary: #c9c3ba;
 }
 
 body {
