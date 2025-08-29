@@ -80,3 +80,20 @@ export interface MemberDetailProps {
   val: string;
   socials: { icon: ImgSrc; url: string }[];
 }
+
+export interface eventsEditionDataProps {
+  year: string;
+  desc: string;
+  data: {
+    participateCount: number;
+    edition: string;
+    date: string;
+  };
+  imgs: StaticImageData[];
+}
+
+export interface eventsFAQDataProps {
+  value: string;
+  title: string;
+  content: string;
+}
