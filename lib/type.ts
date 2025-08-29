@@ -82,7 +82,7 @@ export interface MemberDetailProps {
 }
 
 export interface eventsEditionDataProps {
-  year: string;
+  title: string;
   desc: string;
   data: {
     participateCount: number;

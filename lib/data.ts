@@ -365,7 +365,7 @@ import img7 from "@/assets/events/image 27.png";
 
 export const eventsEditionsData: eventsEditionDataProps[] = [
   {
-    year: "2023",
+    title: "Community Talk Series 2023",
     desc: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation.Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions",
     data: {
       participateCount: 100,
@@ -375,12 +375,35 @@ export const eventsEditionsData: eventsEditionDataProps[] = [
     imgs: [img1, img3, img2],
   },
   {
-    year: "2024",
+    title: "Community Talk Series 2024",
     desc: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation. Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions",
     data: {
       participateCount: 150,
       edition: "2nd Edition",
       date: "oct 2024",
+    },
+    imgs: [img4, img5, img6, img7],
+  },
+];
+
+export const challengeEventsEditionsData: eventsEditionDataProps[] = [
+  {
+    title: "AI Bootcamp 2024",
+    desc: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation.Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions",
+    data: {
+      participateCount: 350,
+      edition: "3rd Edition",
+      date: "NOV 2024",
+    },
+    imgs: [img1, img3, img2],
+  },
+  {
+    title: "AI Bootcamp 2023",
+    desc: "AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and cutting-edge learning experience designed to propel participants to the forefront of AI innovation. Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four  covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, virtual sessions Training and Deployment strategies and frontend Implementation and Implementing OpenAI Models in Practice. The climax is a thrilling physical hackathon, challenging participants to apply their knowledge to craft innovative solutions to a real-world case study. With a minimal fee for subsequent sessions, the bootcamp ensures access to invaluable resources, mentorship, and the opportunity to showcase solutions",
+    data: {
+      participateCount: 100,
+      edition: "2nd Edition",
+      date: "oct 2023",
     },
     imgs: [img4, img5, img6, img7],
   },
