@@ -71,8 +71,8 @@ const Page = () => {
           <p className='text-white font-elemental-end text-[32px] uppercase text-center md:text-left'>
             our <span className='text-primary'>previous editions</span>
           </p>
-            {eventsEditionsData.map((editions) => (
-              <EditionCard year={editions.year} desc={editions.val} stats={editions.stats} imgs={editions.imgs}/>
+            {eventsEditionsData.map((editions,i) => (
+              <EditionCard key={i} year={editions.year} desc={editions.val} stats={editions.stats} imgs={editions.imgs}/>
             ))}
         </div>
         
