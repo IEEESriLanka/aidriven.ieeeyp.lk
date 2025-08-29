@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function HeaderDropDown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,15 @@ export function HeaderDropDown() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="bg-gradient z-[99999] w-32 translate-y-2 border-0 text-white"
+        className="bg-gradient z-[99999] w-64 translate-y-2 border-0 text-white"
         style={{ "--_angle": "180deg" } as React.CSSProperties}
       >
-        <DropdownMenuCheckboxItem>Create Event</DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem>View Events</DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem>Event Settings</DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>
+          <Link href={"/events/ai-challenge"}> AI Challenge</Link>
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem>
+          <Link href={"/events/talk"}>Community Talk Series</Link>
+        </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
