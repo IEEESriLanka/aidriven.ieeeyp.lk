@@ -12,14 +12,3 @@ export const EventFeatCard = ({
   </div>
 );
 
-const EventCard = ({children, className}: {children: React.ReactNode, className?: string}) => {
-  return (
-    <div className='container bg-[linear-gradient(180deg,#45413D_0%,#3A3531_48.56%,#342F2A_100%)] text-white py-[24px] px-[20px] rounded-[0_40px]'>
-        <div className={className}>
-          {children}
-        </div>
-    </div>
-  )
-}
-
-export default EventCard
