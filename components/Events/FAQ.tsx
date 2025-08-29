@@ -12,7 +12,7 @@ const FaqCard = ({ title, val }: { title: string, val: string }) => {
 
   return (
 
-    <div className='flex flex-col gap-4 bg-[#191919] text-white p-[30px] rounded-[0_10px] shrink' key={title}>
+    <div className='flex flex-col gap-4 bg-[#191919] text-white p-[30px] rounded-[0_10px] shrink'>
       <div className='flex justify-between mx-3 items-center gap-4'>
         <div className='text-[15px] font-semibold uppercase tracking-[1px] select-none'>{title}</div>
         <div className='w-[20px] h-[20px] cursor-pointer' onClick={() => setOpened((prev) => !prev)}>
@@ -37,7 +37,7 @@ const FAQ = () => {
   return (
     <div className='grid md:grid-cols-2 gap-4 text-[15px] items-start'>
       {eventsFaqData.map(({title,val})=>(
-        <FaqCard title={title} val={val} />
+        <FaqCard title={title} val={val} key={title}/>
       ) )}
     </div>
   )
