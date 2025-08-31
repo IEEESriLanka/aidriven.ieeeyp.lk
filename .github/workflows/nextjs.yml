@@ -34,7 +34,12 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/bun.lockb" ] || [ -f "${{ github.workspace }}/bun.lock" ]; then
+            echo "manager=bun" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=bun" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
@@ -53,6 +58,12 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+        if: steps.detect-package-manager.outputs.manager != 'bun'
+      - name: Setup Bun
+        if: steps.detect-package-manager.outputs.manager == 'bun'
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: stable
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -61,7 +72,18 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      - name: Restore cache
+      - name: Restore cache (Bun)
+        if: steps.detect-package-manager.outputs.manager == 'bun'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+            node_modules
+          key: ${{ runner.os }}-nextjs-bun-${{ hashFiles('**/bun.lockb', '**/bun.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-bun-
+      - name: Restore cache (npm/yarn)
+        if: steps.detect-package-manager.outputs.manager != 'bun'
         uses: actions/cache@v4
         with:
           path: |
@@ -71,9 +93,17 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Install dependencies
+      - name: Install dependencies (Bun)
+        if: steps.detect-package-manager.outputs.manager == 'bun'
+        run: bun install
+      - name: Install dependencies (npm/yarn)
+        if: steps.detect-package-manager.outputs.manager != 'bun'
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build with Next.js
+      - name: Build with Next.js (Bun)
+        if: steps.detect-package-manager.outputs.manager == 'bun'
+        run: bun run build
+      - name: Build with Next.js (npm/yarn)
+        if: steps.detect-package-manager.outputs.manager != 'bun'
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
