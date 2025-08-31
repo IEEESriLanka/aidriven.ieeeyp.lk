@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && touch out/.nojekyll && touch out/CNAME && echo aidsl.ieeeyp.lk > out/CNAME",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
