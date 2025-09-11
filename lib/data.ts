@@ -187,6 +187,7 @@ export const timelineData: TimelineItemProps[] = [
       time: "6.30 P.M.",
       venue: "Via ZOOM",
     },
+    month: "Jan",
   },
   {
     title: "The AI Community Talk",
@@ -200,6 +201,7 @@ export const timelineData: TimelineItemProps[] = [
       time: "6.30 P.M.",
       venue: "Via ZOOM",
     },
+    month: "Feb",
   },
   {
     title: "The AI Community Talk",
@@ -213,5 +215,90 @@ export const timelineData: TimelineItemProps[] = [
       time: "6.30 P.M.",
       venue: "Via ZOOM",
     },
+    month: "Mar",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "Apr",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "May",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "Jun",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "Jul",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "Aug",
+  },
+  {
+    title: "The AI Community Talk",
+    caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
+    speaker: {
+      name: "MR. SACHITH GUNASEKARA",
+      bio: "Machine Learning Engineer ~Surge Global",
+    },
+    data: {
+      date: "30th April 2025",
+      time: "6.30 P.M.",
+      venue: "Via ZOOM",
+    },
+    month: "Sep",
   },
 ];

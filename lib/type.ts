@@ -53,4 +53,5 @@ export interface TimelineItemProps {
     time: string;
     venue: string;
   };
+  month?: string;
 }
