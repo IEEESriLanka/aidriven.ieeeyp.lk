@@ -57,6 +57,20 @@ export interface ProjectItemProps {
   };
 }
 
+export interface TimelineItemProps {
+  title: string;
+  caption: string;
+  speaker: {
+    name: string;
+    bio: string;
+  };
+  data: {
+    date: string;
+    time: string;
+    venue: string;
+  };
+  month?: string;
+}
 import type { StaticImageData } from "next/image";
 import { JSX } from "react";
 

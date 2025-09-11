@@ -35,7 +35,7 @@ type CarouselContextProps = {
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
-function useCarousel() {
+export function useCarousel() {
   const context = React.useContext(CarouselContext);
 
   if (!context) {
@@ -170,8 +170,21 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
-  const { orientation } = useCarousel();
+type CarouselItemProps = React.ComponentProps<"div"> & {
+  index?: number;
+  /** Optional class to apply when this item is active */
+  activeClassName?: string;
+};
+
+function CarouselItem({
+  className,
+  index,
+  activeClassName,
+  ...props
+}: CarouselItemProps) {
+  const { orientation, currentIndex } = useCarousel();
+
+  const isActive = typeof index === "number" && index === currentIndex;
 
   return (
     <div
@@ -182,6 +195,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className,
+        isActive && activeClassName,
       )}
       {...props}
     />
@@ -290,6 +304,100 @@ function CarouselIndicators({
   );
 }
 
+function CarouselLineIndicators({
+  className,
+  labels,
+  ...props
+}: React.ComponentProps<"div"> & { labels?: string[] }) {
+  const { currentIndex, slideCount, scrollTo, orientation } = useCarousel();
+
+  if (slideCount <= 1) return null;
+
+  const isHorizontal = orientation === "horizontal";
+
+  return (
+    <div
+      className={cn(
+        "flex items-center justify-center",
+        isHorizontal ? "w-full" : "h-full",
+        className,
+      )}
+      {...props}
+    >
+      {/* track / line */}
+      <div
+        className={cn("relative", isHorizontal ? "h-4 w-full" : "h-full w-4")}
+      >
+        <div
+          className={cn(
+            "bg-primary/20 absolute inset-0 m-auto rounded-full",
+            isHorizontal ? "h-1/2" : "w-1/2",
+          )}
+          style={{
+            // Ensure 4px thickness visually (tailwind fraction sizes are used above).
+            height: isHorizontal ? 4 : undefined,
+            width: isHorizontal ? undefined : 4,
+          }}
+        />
+
+        {/* circles container positioned over the line and spaced evenly */}
+        <div
+          className={cn(
+            "absolute top-0 right-0 bottom-0 left-0 flex",
+            isHorizontal ? "items-center" : "flex-col justify-center",
+          )}
+        >
+          <div
+            className={cn(
+              "flex h-full w-full",
+              isHorizontal
+                ? "items-center justify-between px-2"
+                : "flex-col items-center justify-between py-2",
+            )}
+          >
+            {Array.from({ length: slideCount }).map((_, index) => {
+              const active = index === currentIndex;
+
+              return (
+                <div
+                  key={index}
+                  className={
+                    isHorizontal
+                      ? "flex flex-col items-center"
+                      : "flex flex-row items-center"
+                  }
+                >
+                  <button
+                    onClick={() => scrollTo(index)}
+                    aria-label={`Go to slide ${index + 1}`}
+                    className={cn(
+                      "flex items-center justify-center rounded-full transition-transform",
+                      // circle size
+                      "h-6 w-6",
+                      // visual style
+                      active
+                        ? "bg-primary scale-100"
+                        : "border-primary/30 scale-90 border bg-white/90 hover:scale-95",
+                    )}
+                  />
+                  {/* label under the dot */}
+                  <div
+                    className={cn("absolute mt-6 text-xs text-white/80", {
+                      "mt-0 ml-2": !isHorizontal,
+                    })}
+                  >
+                    {labels?.[index] ?? ""}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export {
   type CarouselApi,
   Carousel,
@@ -298,4 +406,5 @@ export {
   CarouselPrevious,
   CarouselNext,
   CarouselIndicators,
+  CarouselLineIndicators,
 };
