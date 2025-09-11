@@ -29,7 +29,7 @@ jobs:
 
       - name: Build (Static Export)
         run: |
-          npm run build
+          pnpm run build
           touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
