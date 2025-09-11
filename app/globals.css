@@ -65,14 +65,14 @@ body {
   .section-gap-y {
     @apply py-12 lg:py-24;
   }
-  
+
   .timeline-card {
     border-radius: 24px 24px 24px 0;
     background: linear-gradient(
       180deg,
       #45413d 0%,
       #3a3531 48.56%,
-      #13110f 100%
+      #13110f 100%,
       #342f2a 100%
     );
   }
