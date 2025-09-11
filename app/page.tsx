@@ -1,8 +1,21 @@
+import {
+  Testimonials,
+  Hero,
+  UpcomingEvent,
+  Blogs,
+  Projects,
+  Timeline,
+} from "@/components/LandingPage";
+
 export default function Page() {
   return (
-    <div>
-      <h1>Welcome to the AIDSL Project</h1>
-      <p>This is a Next.js application with a clean structure.</p>
-    </div>
+    <main className="relative min-h-screen">
+      <Hero />
+      <UpcomingEvent />
+      <Testimonials />
+      <Blogs />
+      <Timeline />
+      <Projects />
+    </main>
   );
 }

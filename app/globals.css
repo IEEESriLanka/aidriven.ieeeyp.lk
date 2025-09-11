@@ -3,4 +3,93 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-primary: hsl(11, 83%, 52%);
+  --font-elemental-end: var(--font-elemental-end);
+  --font-fzytjw: var(--font-fzytjw);
 
+  --color-c-secondary: #c9c3ba;
+}
+
+body {
+  background: #1c1c1c;
+}
+
+@layer utilities {
+  .body-gradient {
+    --_angle: to right;
+    background: linear-gradient(
+      var(--_angle),
+      #3b2620 -48%,
+      #2a2121 0%,
+      #1b1b1b 40%,
+      #111 60%,
+      #2a2121 120%,
+      #3c241d 100%
+    );
+  }
+  .bg-gradient {
+    --_angle: to right;
+    background: linear-gradient(
+      var(--_angle),
+      rgba(59, 38, 32, 1),
+      rgba(42, 33, 33, 1),
+      rgba(60, 36, 29, 1)
+    );
+  }
+  .section-header {
+    @apply font-elemental-end text-2xl tracking-wide text-white capitalize lg:text-4xl;
+  }
+
+  .event-item-header {
+    background: var(
+      --d-9-d-9-d-9,
+      linear-gradient(180deg, #d5b88d 0%, #fff 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .testimonial-card {
+    border-radius: 32px 48px 4px 48px;
+    border: 0.4px solid var(--d-9-d-9-d-9, #ea421e);
+    background: linear-gradient(
+      180deg,
+      rgba(69, 65, 61, 0.2) 0%,
+      rgba(58, 53, 49, 0.2) 48.56%,
+      rgba(52, 47, 42, 0.2) 100%
+    );
+  }
+
+  .section-gap-y {
+    @apply py-12 lg:py-24;
+  }
+
+  .timeline-card {
+    border-radius: 24px 24px 24px 0;
+    background: linear-gradient(
+      180deg,
+      #45413d 0%,
+      #3a3531 48.56%,
+      #13110f 100%,
+      #342f2a 100%
+    );
+  }
+
+  .edition-card {
+    border-radius: 0 40px;
+    background: linear-gradient(
+      180deg,
+      rgba(69, 65, 61, 0.64) 0%,
+      rgba(58, 53, 49, 0.64) 48.56%,
+      rgba(52, 47, 42, 0.64) 100%
+    );
+  }
+}
+
+#about-section {
+  [data-slot="carousel-content"] {
+    overflow: visible;
+  }
+}
