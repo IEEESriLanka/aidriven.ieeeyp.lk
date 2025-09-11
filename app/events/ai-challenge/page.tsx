@@ -16,7 +16,7 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
 } from "@/components/ui/Accordion/Accordion";
-import { CalendarDays, MapPin, Ticket, Users, Watch } from "lucide-react";
+import { CalendarDays, MapPin, Watch } from "lucide-react";
 import HeaderButton from "@/components/Header/HeaderButton";
 import Link from "next/link";
 
@@ -103,7 +103,7 @@ const Page = () => {
               <Link href={"/"} className="underline">
                 Delegate booklet
               </Link>
-              <HeaderButton className="py-4 flex" />
+              <HeaderButton className="flex py-4" />
             </div>
           </div>
           <div>
