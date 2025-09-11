@@ -9,7 +9,7 @@ import Item from "./item";
 
 export default function Blogs() {
   return (
-    <section className="section-gap-y container mx-auto flex flex-col gap-y-8">
+    <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
       <h1 className="section-header">
         <span>Latest</span>
         <span className="text-primary"> Blog</span>
@@ -20,7 +20,7 @@ export default function Blogs() {
         <Carousel>
           <CarouselContent className="gap-x-16">
             {blogsData.map((blog, index) => (
-              <CarouselItem key={index} className="basis-[500px]">
+              <CarouselItem key={index} className="lg:basis-[500px]">
                 <Item {...blog} />
               </CarouselItem>
             ))}
