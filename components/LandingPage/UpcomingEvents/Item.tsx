@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Item(props: UpcomingEventItemProps) {
   return (
-    <div className="grid min-h-[360px] w-full gap-x-16 gap-y-8 rounded-4xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
+    <div className="grid min-h-[360px] w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
       <div className="flex flex-col justify-around gap-4 py-4">
         <div className="flex flex-col gap-4">
           <h3 className="event-item-header text-2xl font-semibold uppercase">

@@ -14,11 +14,11 @@ export default function Projects() {
         <span>Our</span>
         <span className="text-primary"> Previous Projects</span>
       </h1>
-      <div className="px-2 lg:px-0">
+      <div>
         <Carousel>
-          <CarouselContent className="gap-x-8">
+          <CarouselContent className="ml-0 lg:gap-x-8">
             {projectsData.map((project, index) => (
-              <CarouselItem key={index} className="lg:basis-[45%]">
+              <CarouselItem key={index} className="px-2 lg:basis-[45%]">
                 <Item {...project} />
               </CarouselItem>
             ))}

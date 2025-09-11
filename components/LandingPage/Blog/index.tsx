@@ -16,9 +16,9 @@ export default function Blogs() {
         <span> &</span>
         <span className="text-primary"> Articles</span>
       </h1>
-      <div className="px-2 lg:px-0">
+      <div>
         <Carousel>
-          <CarouselContent className="gap-x-16">
+          <CarouselContent className="ml-0 gap-x-4 lg:gap-x-16">
             {blogsData.map((blog, index) => (
               <CarouselItem key={index} className="lg:basis-[500px]">
                 <Item {...blog} />

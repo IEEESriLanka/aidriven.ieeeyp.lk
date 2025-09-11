@@ -14,13 +14,13 @@ export default function Item(props: TestimonialProps) {
           />
         </div>
         <div className="flex flex-col gap-y-0.5">
-          <h3 className="text-primary text-3xl font-semibold">
+          <h3 className="text-primary text-xl font-semibold lg:text-3xl">
             {props.profile.name}
           </h3>
-          <span>{props.profile.title}</span>
+          <span className="text-sm lg:text-base">{props.profile.title}</span>
         </div>
       </div>
-      <div className="flex gap-x-2">
+      <div className="relative flex gap-x-2 pt-8">
         <div className="text-primary text-3xl">
           <span className="font-fzytjw text-8xl">&quot;</span>
         </div>

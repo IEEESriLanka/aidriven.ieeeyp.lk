@@ -16,7 +16,7 @@ export default function UpcomingEvent() {
         <span>Upcoming</span>
         <span className="text-primary"> Events</span>
       </h1>
-      <div className="px-2 lg:px-0">
+      <div>
         <Carousel>
           <CarouselContent>
             {upcomingEventsData.map((event, index) => (

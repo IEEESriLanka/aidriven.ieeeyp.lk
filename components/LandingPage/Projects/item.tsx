@@ -13,25 +13,25 @@ export default function Item(props: ProjectItemProps) {
           <h3 className="text-primary text-3xl font-medium">{props.title}</h3>
           <p className="text-lg text-balance text-white">{props.description}</p>
         </div>
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full flex-col justify-between gap-y-2 lg:flex-row lg:items-center">
           <div className="flex items-center gap-x-2">
             <Users className="text-primary" />
             <div className="flex flex-col">
-              <span className="text-xl font-semibold text-white">
-                {props.data.participateCount}
+              <span className="font-elemental-end text-xl font-semibold text-white">
+                {props.data.participateCount}+
               </span>
-              <span className="text-white/60">participants</span>
+              <span className="text-white/60 uppercase">participants</span>
             </div>
           </div>
           <div className="flex items-center gap-x-2">
             <Ticket className="text-primary" />
-            <span className="text-xl font-semibold text-white">
+            <span className="font-elemental-end text-xl font-semibold text-white">
               {props.data.edition}
             </span>
           </div>
           <div className="flex items-center gap-x-2">
             <CalendarDays className="text-primary" />
-            <span className="text-xl font-semibold text-white">
+            <span className="font-elemental-end text-xl font-semibold text-white uppercase">
               {props.data.date}
             </span>
           </div>
