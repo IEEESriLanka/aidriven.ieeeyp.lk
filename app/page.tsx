@@ -14,8 +14,8 @@ export default function Page() {
       <UpcomingEvent />
       <Testimonials />
       <Blogs />
-      <Projects />
       <Timeline />
+      <Projects />
     </main>
   );
 }
