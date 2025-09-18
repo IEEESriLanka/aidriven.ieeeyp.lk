@@ -394,9 +394,9 @@ export const contactDetailsData: ContactDetailProps[] = [
 
 export const memberDetailsData: MemberDetailProps[] = [
   {
-    icon: memberPhoto,
-    title: "Nisal Mihiranga",
-    val: "Program Lead",
+    profileImg: memberPhoto,
+    name: "Nisal Mihiranga",
+    position: "Program Lead",
     socials: [
       { icon: instaIcon, url: "" },
       { icon: linkedinIcon, url: "" },
@@ -404,9 +404,9 @@ export const memberDetailsData: MemberDetailProps[] = [
     ],
   },
   {
-    icon: memberPhoto,
-    title: "Nisal Mihiranga",
-    val: "Program Lead",
+    profileImg: memberPhoto,
+    name: "Nisal Mihiranga",
+    position: "Program Lead",
     socials: [
       { icon: instaIcon, url: "" },
       { icon: linkedinIcon, url: "" },
@@ -539,3 +539,33 @@ export const challengeEventsEditionsData: eventsEditionDataProps[] = [
     imgs: [img4, img5, img6, img7],
   },
 ];
+
+export const TeamDetails = {
+  main: {
+    members: [
+      {
+        profileImg: memberPhoto,
+        name: "Nisal Mihiranga",
+        position: "Program Lead",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: memberPhoto,
+        name: "Nisal Mihiranga",
+        position: "Program Lead",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+    ],
+  },
+  secondary: [],
+  third: [],
+  adhoc: [],
+};
