@@ -89,9 +89,10 @@ export interface ContactDetailProps {
 }
 
 export interface MemberDetailProps {
-  icon: ImgSrc;
-  title: string;
-  val: string;
+  profileImg: ImgSrc;
+  name: string;
+  team?: string;
+  position: string;
   socials: { icon: ImgSrc; url: string }[];
 }
 

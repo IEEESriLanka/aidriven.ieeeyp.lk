@@ -58,7 +58,9 @@ export const ContactCard = ({
       <Image className="m-auto size-[40px]" src={contactDetail.icon} alt="" />
     </div>
     <div className="flex flex-col gap-[7px]">
-      <p className="text-[20px] font-bold tracking-[4px] uppercase">{contactDetail.title}</p>
+      <p className="text-[20px] font-bold tracking-[4px] uppercase">
+        {contactDetail.title}
+      </p>
       <p className="text-[16px] font-[300] uppercase">{contactDetail.val}</p>
     </div>
   </div>
@@ -82,14 +84,15 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => (
   <div className="flex flex-col items-center justify-center gap-[20px]">
     <div className="relative z-0">
       <Image
-        src={member.icon}
+        src={member.profileImg}
         className="z-30 h-[162px] w-[100px] object-cover"
         alt=""
       />
       <Parellelo />
     </div>
-    <p className="font-elemental-end text-[20px]">{member.title}</p>
-    <p className="text-[16px]">{member.val}</p>
+    <p className="font-elemental-end text-[20px]">{member.name}</p>
+    {member.team && <p className="text-[16px]">{member.team}</p>}
+    <p className="text-[16px]">{member.position}</p>
     <div className="flex gap-[16px]">
       {member.socials.map((social, i) => (
         <a key={i} href={social.url}>
