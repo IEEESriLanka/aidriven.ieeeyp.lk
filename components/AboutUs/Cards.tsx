@@ -82,17 +82,19 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
 
 export const MemberCard = ({ member }: { member: MemberDetailProps }) => (
   <div className="flex flex-col items-center justify-center gap-[20px]">
-    <div className="relative z-0">
+    <div className="relative z-0 min-w-[158px]">
       <Image
         src={member.profileImg}
-        className="z-30 h-[162px] w-[100px] object-cover"
+        className="z-30 mx-auto h-[182px] w-auto object-cover"
         alt=""
       />
       <Parellelo />
     </div>
-    <p className="font-elemental-end text-[20px]">{member.name}</p>
-    {member.team && <p className="text-[16px]">{member.team}</p>}
-    <p className="text-[16px]">{member.position}</p>
+    <p className="font-elemental-end gradient-text text-[20px]">
+      {member.name}
+    </p>
+    {member.team && <p className="gradient-text text-[16px]">{member.team}</p>}
+    <p className="text-[16px] text-white">{member.position}</p>
     <div className="flex gap-[16px]">
       {member.socials.map((social, i) => (
         <a key={i} href={social.url}>
