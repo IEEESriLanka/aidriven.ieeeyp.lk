@@ -86,6 +86,16 @@ body {
       rgba(52, 47, 42, 0.64) 100%
     );
   }
+
+  .gradient-text {
+    background: var(
+      --d-9-d-9-d-9,
+      linear-gradient(180deg, #d5b88d 0%, #fff 100%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 #about-section {
