@@ -540,13 +540,49 @@ export const challengeEventsEditionsData: eventsEditionDataProps[] = [
   },
 ];
 
+// team photos
+import athsaraPhoto from "@/assets/team/athsara.png";
+import bosiluPhoto from "@/assets/team/bosilu.png";
+import himanPhoto from "@/assets/team/himan.png";
+import kaveenPhoto from "@/assets/team/kaveen.png";
+import malindaPhoto from "@/assets/team/malinda.png";
+import manuraPhoto from "@/assets/team/manura.png";
+import nabeelahPhoto from "@/assets/team/nabeelah.png";
+import neeliaPhoto from "@/assets/team/neelia.png";
+import nipuniHPhoto from "@/assets/team/nipuni_h.png";
+import nipuniKPhoto from "@/assets/team/nipuni_k.png";
+import sasankaPhoto from "@/assets/team/sasanka.png";
+import shadurceyaPhoto from "@/assets/team/shadurceya.png";
+import sisilaPhoto from "@/assets/team/sisila.png";
+import subajananiPhoto from "@/assets/team/subajanani.png";
+import yasiruPhoto from "@/assets/team/yasiru.png";
+
+// export team photos as a single object so they are available and to avoid unused-import errors
+export const teamPhotos = {
+  athsaraPhoto,
+  bosiluPhoto,
+  himanPhoto,
+  kaveenPhoto,
+  malindaPhoto,
+  manuraPhoto,
+  nabeelahPhoto,
+  neeliaPhoto,
+  nipuniHPhoto,
+  nipuniKPhoto,
+  sasankaPhoto,
+  shadurceyaPhoto,
+  sisilaPhoto,
+  subajananiPhoto,
+  yasiruPhoto,
+};
+
 export const TeamDetails = {
   main: {
     members: [
       {
         profileImg: memberPhoto,
-        name: "Nisal Mihiranga",
-        position: "Program Lead",
+        name: "Sasanka Premaratne",
+        position: "Chairperson",
         socials: [
           { icon: instaIcon, url: "" },
           { icon: linkedinIcon, url: "" },
@@ -555,8 +591,8 @@ export const TeamDetails = {
       },
       {
         profileImg: memberPhoto,
-        name: "Nisal Mihiranga",
-        position: "Program Lead",
+        name: "Nipuni Herath",
+        position: "Secretary",
         socials: [
           { icon: instaIcon, url: "" },
           { icon: linkedinIcon, url: "" },
@@ -565,7 +601,40 @@ export const TeamDetails = {
       },
     ],
   },
-  secondary: [],
+  secondary: {
+    members: [
+      {
+        profileImg: memberPhoto,
+        name: "Malinda Kawshalya",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: memberPhoto,
+        name: "Nipuni Kulathunga",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: memberPhoto,
+        name: "Nabeelah Faumi",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+    ],
+  },
   third: [],
   adhoc: [],
 };
