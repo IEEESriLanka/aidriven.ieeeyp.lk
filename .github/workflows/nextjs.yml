@@ -30,6 +30,7 @@ jobs:
       - name: Build (Static Export)
         run: |
           npm run build
+          echo aidriven25.ieeeyp.lk > out/CNAME
           touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
