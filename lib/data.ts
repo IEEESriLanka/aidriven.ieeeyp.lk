@@ -580,7 +580,7 @@ export const TeamDetails = {
   main: {
     members: [
       {
-        profileImg: memberPhoto,
+        profileImg: teamPhotos.sasankaPhoto,
         name: "Sasanka Premaratne",
         position: "Chairperson",
         socials: [
@@ -590,7 +590,7 @@ export const TeamDetails = {
         ],
       },
       {
-        profileImg: memberPhoto,
+        profileImg: teamPhotos.nipuniHPhoto,
         name: "Nipuni Herath",
         position: "Secretary",
         socials: [
@@ -604,7 +604,7 @@ export const TeamDetails = {
   secondary: {
     members: [
       {
-        profileImg: memberPhoto,
+        profileImg: teamPhotos.malindaPhoto,
         name: "Malinda Kawshalya",
         position: "Vice-Chairperson",
         socials: [
@@ -614,7 +614,7 @@ export const TeamDetails = {
         ],
       },
       {
-        profileImg: memberPhoto,
+        profileImg: teamPhotos.nipuniKPhoto,
         name: "Nipuni Kulathunga",
         position: "Vice-Chairperson",
         socials: [
@@ -624,7 +624,7 @@ export const TeamDetails = {
         ],
       },
       {
-        profileImg: memberPhoto,
+        profileImg: teamPhotos.nabeelahPhoto,
         name: "Nabeelah Faumi",
         position: "Vice-Chairperson",
         socials: [
