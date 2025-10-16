@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && touch out/.nojekyll && touch out/CNAME",
+    "build": "next build && echo \"github.ieee.lk\" > out/CNAME && touch out/.nojekyll",
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out --dotfiles"
