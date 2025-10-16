@@ -4,6 +4,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  assetPrefix: "/aidriven.ieeeyp.lk/",
   output: "export",
 };
 
