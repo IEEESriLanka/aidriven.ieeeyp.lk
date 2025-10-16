@@ -5,7 +5,7 @@ const nextConfig = {
   },
 
   assetPrefix: "",
-  basePath: "",
+  basePath: "/aidriven.ieeeyp.lk",
   output: "export",
 };
 
