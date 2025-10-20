@@ -336,12 +336,12 @@ export const navItems: NavItem[] = [
   },
   {
     type: "link" as const,
-    href: "/ourTeam",
+    href: "/our-team",
     label: "Our Team",
   },
   {
     type: "link" as const,
-    href: "/aboutUs",
+    href: "/about-us",
     label: "About Us",
   },
 ];
@@ -635,6 +635,109 @@ export const TeamDetails = {
       },
     ],
   },
-  third: [],
+  third: {
+    members: [
+      {
+        profileImg: teamPhotos.himanPhoto,
+        name: "Himan Withana",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.bosiluPhoto,
+        name: "Bosilu Nisalitha",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.neeliaPhoto,
+        name: "Neelia Makuloluwa",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.yasiruPhoto,
+        name: "Yasiru Dharmathilaka",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.sisilaPhoto,
+        name: "Sisila Dhevasiri",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.subajananiPhoto,
+        name: "Subajanani Swaminathan",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.athsaraPhoto,
+        name: "Athsara Fernando",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.shadurceyaPhoto,
+        name: "Shadurceya Vasanthakumar",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.kaveenPhoto,
+        name: "Kaveen Amarasekara",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: teamPhotos.manuraPhoto,
+        name: "Manura Anuhas",
+        position: "coordinator",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+    ],
+  },
   adhoc: [],
 };
