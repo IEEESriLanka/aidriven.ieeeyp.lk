@@ -33,9 +33,7 @@ jobs:
         run: echo "DEPLOY_ENV=$DEPLOY_ENV"
 
       - name: Build (Static Export)
-        run: |
-          pnpm build
-          touch dist/.nojekyll
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -43,4 +41,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          enable_jekyll: true
+          enable_jekyll: false
