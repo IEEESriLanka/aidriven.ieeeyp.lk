@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Show DEPLOY_ENV
+        run: echo "DEPLOY_ENV=$DEPLOY_ENV"
+
       - name: Build (Static Export)
         run: |
           pnpm build
