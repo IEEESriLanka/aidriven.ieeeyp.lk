@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const repoName = "/aidriven.ieeeyp.lk";
 
+
 const nextConfig = {
   images: {
     unoptimized: true,
