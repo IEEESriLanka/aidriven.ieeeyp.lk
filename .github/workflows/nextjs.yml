@@ -11,6 +11,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_ENV: GH_PAGES
 
     steps:
       - name: Checkout code
@@ -22,14 +24,14 @@ jobs:
           node-version: 18
 
       - name: Setup pnpm
-        run: npm install -g pnpm
+        run: corepack enable
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build (Static Export)
         run: |
-          npm run build
+          pnpm build
           touch dist/.nojekyll
 
       - name: Deploy to GitHub Pages
