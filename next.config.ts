@@ -10,6 +10,7 @@ const nextConfig = {
   assetPrefix: isProd ? `/${repoName}/` : undefined,
   basePath: isProd ? `/${repoName}` : undefined,
   output: "export",
+  distDir: "dist"
 };
 
 export default nextConfig;
