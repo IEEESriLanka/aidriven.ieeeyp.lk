@@ -42,6 +42,7 @@ import type {
   NavDropdownItem,
   eventsEditionDataProps,
   eventsFAQDataProps,
+  OldTimelineItemProps,
 } from "./type";
 
 // header
@@ -74,26 +75,15 @@ export const socialLinks = [
 
 export const upcomingEventsData: UpcomingEventItemProps[] = [
   {
-    title: "April Community Talk",
-    description:
-      "Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four virtual sessions covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, Training and Deployment...",
-    date: "30th April 2025",
-    time: "6.30 P.M.",
-    venue: "Via ZOOM",
-    link: "https://example.com/event1",
-    img: {
-      src: EventImg,
-      alt: "IEEE YP Tech Talk",
-    },
-  },
-  {
-    title: "April Community Talk",
-    description:
-      "Aspiring AI enthusiasts are invited to register for this exceptional journey, delving into four virtual sessions covering OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG) and Fine-tuning LLMs, Training and Deployment...",
-    date: "30th April 2025",
-    time: "6.30 P.M.",
-    venue: "Via ZOOM",
-    link: "https://example.com/event1",
+    title: "Sri Lanka AI Forum",
+    description: [
+      "As a cornerstone event of the YPSL Summit 2024, the Sri Lanka AI Forum convened a panel of industry pioneers for an expert discussion on leveraging Generative AI to enhance work and learning efficiency.",
+      "The AI Forum serves as a premier platform for industry leaders, academic experts, and technology innovators to converge and explore the dynamic landscape of Artificial Intelligence. This forward-thinking event facilitates a powerful dialogue on the latest trends, from machine learning and generative models to ethical considerations and real-world applications.",
+    ],
+    date: undefined,
+    time: undefined,
+    venue: undefined,
+    link: undefined,
     img: {
       src: EventImg,
       alt: "IEEE YP Tech Talk",
@@ -101,6 +91,7 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
   },
 ];
 
+//  testimonials data
 export const testimonialsData: TestimonialProps[] = [
   {
     profile: {
@@ -134,6 +125,7 @@ export const testimonialsData: TestimonialProps[] = [
   },
 ];
 
+//  blogs data
 export const blogsData: BlogItemProps[] = [
   {
     title: "What is AI, and how do programmes like ChatGPT and DeepSeek work?",
@@ -156,44 +148,54 @@ export const blogsData: BlogItemProps[] = [
   },
 ];
 
+//  projects data -> landing page
 export const projectsData: ProjectItemProps[] = [
   {
-    title: "AI Bootcamp",
-    description:
-      "Focuses on educating and training individuals who seek to embark on their journey into Artificial Intelligence and for anyone interested in upskilling in the field",
+    title: "Sri Lanka AI Challenge 2025 (SLAIC 2025)",
+    description: [
+      "Sri Lanka AI Challenge was a key initiative under IEEE Challenge Sphere SL, designed to provide a structured pathway for participants to gain hands-on experience and strengthen their skills in AI technologies through a series of workshops and a competitive hackathon.",
+      // "SLAIC 2025 marked the next phase of Sri Lanka’s leading AI initiative, offering an immersive learning and innovation platform for undergraduates and tech enthusiasts. The challenge focused on developing real-world AI Agent–based solutions, supported by practical workshops, expert mentoring sessions, and a final pitch that encouraged creativity and problem-solving.",
+    ],
     image: Project1Image,
-    data: {
-      participateCount: 300,
-      edition: "3rd Edition ",
-      date: "oct 2023",
-    },
+    data: undefined,
   },
   {
-    title: "AI Summit",
-    description:
-      "The AI Summit is a premier event showcasing AI talks, networking opportunities and company product showcase driving innovation and collaboration",
+    title: "AI Com Talk 2025",
+    description: [
+      "The AI-Driven SL Community Talk Series was a flagship initiative by AI Driven SL, organized together with IEEE Student Branches from leading Sri Lankan universities to promote AI knowledge sharing and practical learning. ",
+      // "The major series “AI Agent Mastery” ran for 3 months and included virtual sessions focused on designing, developing, and deploying AI agents using real-world use cases. This series collaborated with 3 university student branches, including",
+    ],
     image: Project2Image,
-    data: {
-      participateCount: 160,
-      edition: "1st Edition ",
-      date: "jun 2023",
-    },
+    data: undefined,
   },
   {
-    title: "Community Talks",
-    description:
-      "Focus on spreading the word of possibilities of the Machine Learning and the impact of the AI Adoption",
+    title: "AI Boot Camp 2024",
+    description: [
+      "As a cornerstone event of the YPSL Summit 2024, the Sri Lanka AI Forum convened a panel of industry pioneers for an expert discussion on leveraging Generative AI to enhance work and learning efficiency. Moderated by Heminda Jayaweera, the forum featured a distinguished lineup of innovators from leading tech companies including Nagarro, 99x, PickMe, Zone 24x7, IFS, Microsoft, and Sysco Labs SL. ",
+    ],
     image: Project3Image,
-    data: {
-      participateCount: 100,
-      edition: "80+ EVENTS",
-      date: "SINCE 2023",
-    },
+    data: undefined,
+  },
+  {
+    title: "AI Boot Camp 2023",
+    description: [
+      "The bootcamp spanned two months, during which our AI vision partner conducted a series of sessions and facilitated the practical implementation of a mini-project focused on AutoGPT. Ultimately, we obtained case studies from the partnered companies and evaluated the implemented solutions based on specific criteria. The top three teams were selected and awarded prizes.",
+    ],
+    image: Project3Image,
+    data: undefined,
+  },
+  {
+    title: "Episode 7 of the Explorer Series ",
+    description: [
+      "Intelligent Engineering on Generative AI - Episode 7 of the Explorer Series: Intelligent Engineering on Generative AI - Organised by Gapstars in collaboration with AI Driven SL, this session showcased a strong commitment to fostering innovation and excellence in AI. Held at Hatch, the event featured insightful talks, engaging discussions, and collaborative networking, making it a resounding success.",
+    ],
+    image: Project3Image,
+    data: undefined,
   },
 ];
 
-// timeline data
-export const timelineData: TimelineItemProps[] = [
+// timeline data -> old structure :(
+export const timelineData: OldTimelineItemProps[] = [
   {
     title: "The AI Community Talk",
     caption: "A STEP BEYOND THE HYPE: A JOURNEY THROUGH MODERN AI",
@@ -206,7 +208,7 @@ export const timelineData: TimelineItemProps[] = [
       time: "6.30 P.M.",
       venue: "Via ZOOM",
     },
-    month: "Jan",
+    month: "Jan 09",
   },
   {
     title: "The AI Community Talk",
@@ -322,6 +324,78 @@ export const timelineData: TimelineItemProps[] = [
   },
 ];
 
+// timeline data -> landing page
+export const landingTimelineData: TimelineItemProps[] = [
+  {
+    events: [
+      "Finalist Announcement (SLAIC 2025)",
+      "Com. Talk: “The Role of AI in Cybersecurity",
+    ],
+    month: "July",
+  },
+  {
+    events: [
+      "AI Challenge 2025 – Final Hackathon & Pitch",
+      "Com. Talk: “Healthcare Meets AI: From Diagnosis to Robotics”",
+    ],
+    month: "August",
+  },
+  {
+    events: ["Com.Talk: “Ethical AI – Mitigating Bias in Models”"],
+    month: "Sepetember",
+  },
+  {
+    events: [
+      "AI Agent Mastery: “𝗗𝗲𝘀𝗶𝗴𝗻𝗶𝗻𝗴 𝘁𝗵𝗲 𝗔𝗜 𝗔𝗴𝗲𝗻𝘁: 𝗙𝗿𝗼𝗺 𝗣𝗿𝗼𝗯𝗹𝗲𝗺 𝘁𝗼 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲”",
+    ],
+    month: "October",
+  },
+  {
+    events: ["Com.Talk: “Ethical AI – Mitigating Bias in Models”"],
+    month: "November",
+  },
+  {
+    events: ["AI Challenge Awards Ceremony", "AI Forum"],
+    month: "December",
+  },
+];
+
+// timeline data -> event page
+export const eventPageTimelineData: TimelineItemProps[] = [
+  {
+    events: [" SLAIC 2025 Workshops (Gen AI, RAGs, Agent Building)"],
+    month: "May–June",
+  },
+  {
+    events: [
+      "SLAIC 2025 Finalist Announcement",
+    ],
+    month: "July 9",
+  },
+  {
+    events: ["Final Challenge Prep, Mentoring, Code Reviews"],
+    month: "July–August",
+  },
+  {
+    events: [
+      "Cost-Efficient Agentic Implementation Workshop",
+    ],
+    month: "July 19",
+  },
+  {
+    events: ["Final Pitch & Hackathon"],
+    month: "July 26",
+  },
+  {
+    events: ["Awards + Highlight Reel"],
+    month: "Sep",
+  },
+  {
+    events: ["Monthly Com.Talk sessions "],
+    month: "July–Sep",
+  },
+];
+
 type NavItem = NavLinkItem | NavDropdownItem;
 
 export const navItems: NavItem[] = [
@@ -420,27 +494,23 @@ export const eventsFeatsData: ContactDetailProps[] = [
   {
     icon: brainCircuitIcon,
     title:
-      "Learn how to leverage LLM and Prompting to solve real-world problems.",
+      "Master AI in Action",
   },
   {
     icon: factoryIcon,
-    title: "Opportunity to experience an engaging industrial visit.",
+    title: "Hands-On Experience with Cutting-Edge Tools",
   },
   {
     icon: ribbonIcon,
-    title: "Gain hands on exposure to training and deployment.",
+    title: "Build and Deploy Your Own AI Agent",
   },
-  { icon: linkedinIconEvent, title: "Enhance your LinkedIn profile." },
+  { icon: linkedinIconEvent, title: "Exclusive Access to Resources and Mentorship" },
   {
     icon: awardIcon,
     title:
-      "Upon completion receive a valuable certificate acknowledged by giants in IT industry.",
+      "Collaborate with Top Talent",
   },
-  { icon: trophyIcon, title: "Exciting cash prizes to the winners." },
-  {
-    icon: globeIcon,
-    title: "Connect with industry experts in Artificial Intelligence .",
-  },
+  { icon: trophyIcon, title: "Network with Industry Experts" },
 ];
 
 //events faq data
