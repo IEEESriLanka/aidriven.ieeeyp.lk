@@ -38,27 +38,33 @@ const Page = () => {
           </div>
           <div className="mx-auto flex flex-col items-center gap-y-4 text-xl text-white">
             <p>
-              AI Bootcamp 2023 by AI DRIVEN SRI LANKA is an immersive and
-              cutting-edge learning experience designed to propel participants
-              to the forefront of AI innovation.
+              The Sri Lanka AI Challenge 2025, as a part of the IEEE Challenge
+              Sphere, organised under the AI-Driven Sri Lanka initiative,is a
+              premier national program designed to equip aspiring innovators
+              with hands-on, industry-relevant AI expertise.
             </p>
             <p>
-              Aspiring AI enthusiasts are invited to register for this
-              exceptional journey, delving into four virtual sessions
-              covering OpenAI APIs/Prompt engineering, Retrieval Augmented
-              Generation (RAG) and Fine-tuning LLMs, Training and Deployment
-              strategies and frontend Implementation and Implementing OpenAI
-              Models in Practice. The climax is a thrilling physical hackathon,
-              challenging participants to apply their knowledge to craft
-              innovative solutions to a real-world case study. With a minimal
-              fee for subsequent sessions, the bootcamp ensures access to
-              invaluable resources, mentorship, and the opportunity to showcase
-              solutions.
+              The challenge kicks off with a series of comprehensive technical
+              workshops covering cutting-edge topics such as Generative AI,
+              Prompt Engineering, Retrieval-Augmented Generation (RAG), and AI
+              Agent Implementation. These sessions aim to build strong
+              foundational and practical skills among participants. Following
+              the workshops, an Initial Challenge Round will be held where teams
+              compete by developing innovative AI-driven solutions. Based on
+              performance, the top 15 teams will be selected to advance to the
+              next stage.
             </p>
             <p>
-              Don’t miss this chance to be part of Sri Lanka’s most anticipated
-              AI event, where education meets hands-on experience and creativity
-              flourishes!
+              In Stage 2, finalists will work on designing cost-effective and
+              practical AI Agents tailored to real-world use cases. During this
+              phase, teams will receive mentorship from AI professionals and
+              undergo code reviews to refine their solutions. The challenge will
+              conclude at the ChallengeSphere event, where finalists will
+              present their solutions in a final pitch session, followed by an
+              award ceremony recognising the most impactful innovations. The
+              program not only encourages creative problem-solving and
+              collaboration but also offers national exposure to young AI
+              talent, fostering the future of AI-driven innovation in Sri Lanka.
             </p>
           </div>
         </div>
@@ -122,7 +128,8 @@ const Page = () => {
 
       <div className="flex w-full flex-col gap-4 p-5">
         <div className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          what you will <span className="text-primary">get</span>
+          what you will <span className="text-primary">get</span> part under the  <span className="text-primary">SLAIC</span>
+          
         </div>
         <div className="grid items-center justify-center gap-4 px-[20px] text-white md:grid-cols-2">
           {eventsFeatsData.map((data, i) => (
