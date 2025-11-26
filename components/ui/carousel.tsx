@@ -382,7 +382,7 @@ function CarouselLineIndicators({
                   />
                   {/* label under the dot */}
                   <div
-                    className={cn("absolute mt-6 text-xs text-white/80", {
+                    className={cn("absolute mt-6 text-xs text-white/80 text-nowrap", {
                       "mt-0 ml-2": !isHorizontal,
                     })}
                   >
