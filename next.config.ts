@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const repoName = "/aidriven.ieeeyp.lk";
+// const repoName = "/aidriven.ieeeyp.lk";
 
 
 const nextConfig = {
@@ -7,9 +7,9 @@ const nextConfig = {
     unoptimized: true,
   },
   // Ensure static assets resolve correctly when hosted at /<repo-name>/ on GitHub Pages.
-  basePath: repoName,
-  assetPrefix: repoName,
-  trailingSlash: true,
+  // basePath: repoName,
+  // assetPrefix: repoName,
+  // trailingSlash: true,
   output: "export",
   distDir: "dist",
 };
