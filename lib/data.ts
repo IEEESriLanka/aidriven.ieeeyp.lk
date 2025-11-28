@@ -11,10 +11,6 @@ import HansaProfile from "@/assets/testimonials/hansa.png";
 import NisalProfile from "@/assets/testimonials/nisal.png";
 import AkshikaProfile from "@/assets/testimonials/akshika.png";
 
-// blog images
-import Blog1Image from "@/assets/blogs/blog1.png";
-import Blog2Image from "@/assets/blogs/blog2.png";
-
 // project images
 import Project1Image from "@/assets/projects/project1.png";
 import Project2Image from "@/assets/projects/project2.png";
@@ -26,7 +22,6 @@ import factoryIcon from "@/assets/icons/factory.png";
 import ribbonIcon from "@/assets/icons/Person Ribbon.png";
 import awardIcon from "@/assets/icons/Award 2.png";
 import trophyIcon from "@/assets/icons/Trophy.png";
-import globeIcon from "@/assets/icons/Globe Person.png";
 import linkedinIconEvent from "@/assets/icons/Vector.png";
 
 import type {
@@ -125,26 +120,30 @@ export const testimonialsData: TestimonialProps[] = [
   },
 ];
 
+// blog images. import correct images!!!!
+import Blog1Image from "@/assets/blogs/blog1.png";
+import Blog2Image from "@/assets/blogs/blog2.png";
+
 //  blogs data
 export const blogsData: BlogItemProps[] = [
   {
-    title: "What is AI, and how do programmes like ChatGPT and DeepSeek work?",
-    caption: "By Pasindu Dissanayake",
+    title: "AI Meets Quantum Computing: A New Era of Acceleration",
+    caption: " ",
     image: Blog1Image,
-    link: "/blogs/ai-ethics",
+    link: "/blogs/ai-meets-quantum-computing",
+    content: [
+      "Quantum computing is no longer just theoretical; it's starting to complement AI by solving problems classical computers can’t. From drug discovery to advanced encryption, this fusion is unlocking possibilities once thought impossible. While still in early stages, AI + Quantum could redefine how fast and deep machines can think.",
+      // can add more paragrams
+    ],
   },
   {
-    title:
-      "AI integration in financial services: a systematic review of trends and regulatory challenges",
-    caption: "By Vinoli De Silva",
+    title: "Defending with Data: AI in Cybersecurity",
+    caption: " ",
     image: Blog2Image,
-    link: "/blogs/future-of-work",
-  },
-  {
-    title: "What is AI, and how do programmes like ChatGPT and DeepSeek work?",
-    caption: "By Pasindu Dissanayake",
-    image: Blog1Image,
-    link: "/blogs/ai-ethics",
+    link: "/blogs/defending-with-data",
+    content: [
+      "As cyber threats become more sophisticated, AI-driven defense systems are stepping in. These systems detect anomalies, predict breaches, and even autonomously respond to attacks. In 2025, more organizations are trusting AI to guard their digital assets, and students are learning to build the defenses of tomorrow.",
+    ],
   },
 ];
 
@@ -367,9 +366,7 @@ export const eventPageTimelineData: TimelineItemProps[] = [
     month: "May–June",
   },
   {
-    events: [
-      "SLAIC 2025 Finalist Announcement",
-    ],
+    events: ["SLAIC 2025 Finalist Announcement"],
     month: "July 9",
   },
   {
@@ -377,9 +374,7 @@ export const eventPageTimelineData: TimelineItemProps[] = [
     month: "July–August",
   },
   {
-    events: [
-      "Cost-Efficient Agentic Implementation Workshop",
-    ],
+    events: ["Cost-Efficient Agentic Implementation Workshop"],
     month: "July 19",
   },
   {
@@ -493,8 +488,7 @@ export const memberDetailsData: MemberDetailProps[] = [
 export const eventsFeatsData: ContactDetailProps[] = [
   {
     icon: brainCircuitIcon,
-    title:
-      "Master AI in Action",
+    title: "Master AI in Action",
   },
   {
     icon: factoryIcon,
@@ -504,13 +498,42 @@ export const eventsFeatsData: ContactDetailProps[] = [
     icon: ribbonIcon,
     title: "Build and Deploy Your Own AI Agent",
   },
-  { icon: linkedinIconEvent, title: "Exclusive Access to Resources and Mentorship" },
+  {
+    icon: linkedinIconEvent,
+    title: "Exclusive Access to Resources and Mentorship",
+  },
   {
     icon: awardIcon,
-    title:
-      "Collaborate with Top Talent",
+    title: "Collaborate with Top Talent",
   },
   { icon: trophyIcon, title: "Network with Industry Experts" },
+];
+
+export const communityFeatsData: ContactDetailProps[] = [
+  {
+    icon: brainCircuitIcon,
+    title: "Learn how AI agents work and apply them to real-world problems",
+  },
+  {
+    icon: factoryIcon,
+    title: "Get hands-on experience with OpenAI APIs, LangChain, and more",
+  },
+  {
+    icon: ribbonIcon,
+    title: "Build and deploy your own functional AI agent",
+  },
+  {
+    icon: linkedinIconEvent,
+    title: "Access exclusive starter code, tools, and expert guidance",
+  },
+  {
+    icon: awardIcon,
+    title: "Collaborate with top university peers across Sri Lanka",
+  },
+  {
+    icon: trophyIcon,
+    title: "Interact directly with experienced AI professionals",
+  },
 ];
 
 //events faq data
@@ -518,39 +541,90 @@ export const eventsFeatsData: ContactDetailProps[] = [
 export const eventsFaqData: eventsFAQDataProps[] = [
   {
     value: "item-1",
-    title: "What is the AI Bootcamp 2023?",
+    title: "What is the Sri Lanka AI Challenge (SLAIC)?",
     content:
-      "The AI Bootcamp 2023 is an immersive learning program designed to enhance AI skills and creativity, with virtual sessions and a hands-on hackathon.",
+      "SLAIC is a national-level AI innovation program that includes technical workshops, challenge rounds, and mentorship, designed to help participants build real-world AI solutions.",
   },
   {
     value: "item-2",
-    title: "What is AI-Driven Sri Lanka?",
+    title: "Who can take part in SLAIC?",
     content:
-      "AI-Driven Sri Lanka is an initiative focused on providing accessible AI education and fostering a community of AI enthusiasts in Sri Lanka.",
+      "SLAIC is open to university students and recent A/L graduates across Sri Lanka with an interest in artificial intelligence and emerging technologies.",
   },
   {
     value: "item-3",
-    title: "What topics are covered in the virtual sessions?",
+    title: "What topics are covered in the SLAIC workshops?",
     content:
-      "The virtual sessions cover OpenAI APIs/Prompt engineering, Retrieval Augmented Generation (RAG), Fine-tuning LLMs, Training and Deployment strategies, and frontend Implementation of OpenAI Models in Practice.",
+      "The workshops focus on cutting-edge topics like Generative AI, Prompt Engineering, Retrieval-Augmented Generation (RAG), and AI Agent Implementation and emerging AI technologies.",
   },
   {
     value: "item-4",
-    title: "How are the top teams selected for the final presentation?",
+    title: "Is this a team-based competition?",
     content:
-      "Top teams are selected based on their performance during the hackathon and their innovative solutions to real-world case studies presented during the bootcamp.",
+      "Yes. Participants form teams to work on AI-driven solutions during the challenge rounds.",
   },
   {
     value: "item-5",
-    title: "Who can participate in the AI Bootcamp?",
+    title: "Will I receive a certificate for participating?",
     content:
-      "The AI Bootcamp is open to aspiring AI enthusiasts, students, professionals, and anyone interested in upskilling in the field of Artificial Intelligence.",
+      "All participants who actively engage in the program and complete the required milestones will receive a certificate of participation.",
   },
   {
     value: "item-6",
-    title: "What are the benefits of participation?",
+    title: "Are there any prizes or awards?",
     content:
-      "Participants gain hands-on experience with AI technologies, access to valuable resources and mentorship, networking opportunities with industry experts, certificates acknowledged by IT industry giants, and the chance to win exciting cash prizes.",
+      "Yes, top-performing teams are recognised during the final pitch and award ceremony with prizes, opportunities, and certificates of excellence.",
+  },
+  {
+    value: "item-7",
+    title: "How do I pre-order the delegate package?",
+    content:
+      "Registered delegates will receive a link via email and community channels to pre-order their exclusive SLAIC merchandise and materials.",
+  },
+];
+
+export const communityFaqData: eventsFAQDataProps[] = [
+  {
+    value: "item-1",
+    title: "What is the AI-Driven SL Community Talk Series?",
+    content:
+      "The AI-Driven SL Community Talk Series is a flagship initiative by AI Driven Sri Lanka, organized in collaboration with IEEE Student Branches to promote AI knowledge sharing, peer-driven learning, and real-world problem-solving through a series of virtual and physical sessions.",
+  },
+  {
+    value: "item-2",
+    title: "Who can participate in the Community Talk Series?",
+    content:
+      "Participation is open to university students with a keen interest in AI. Each hosting university can nominate up to 50 students, with a total of 200 students selected across all sessions to ensure quality interaction and hands-on learning.",
+  },
+  {
+    value: "item-3",
+    title: "What topics will be covered during the sessions?",
+    content:
+      "The series will walk participants through the full lifecycle of building AI agents covering agent design, tool integration, prompt engineering, coding with OpenAI API and LangChain, and final testing and evaluation using real-world use cases.",
+  },
+  {
+    value: "item-4",
+    title: "How is this different from other AI programs?",
+    content:
+      "This program is highly practical and community-driven. Each session includes live demos, hands-on coding, and access to resources like starter code and repositories. It also promotes university collaboration and knowledge sharing, making it a unique peer-learning opportunity.",
+  },
+  {
+    value: "item-5",
+    title: "What are the benefits of joining the Community Talk Series?",
+    content:
+      "You’ll gain hands-on experience with real-world AI tools, learn from industry experts, access practical resources, and collaborate with peers from leading universities.",
+  },
+  {
+    value: "item-6",
+    title: "How can my university get involved?",
+    content:
+      "The series is hosted in partnership with selected IEEE Student Branches. If your university is not currently a host, reach out to AI Driven SL to explore future collaboration opportunities.",
+  },
+  {
+    value: "item-7",
+    title: "Are the sessions conducted online or in-person?",
+    content:
+      "The main talk sessions are conducted online to ensure wider accessibility. However, certain sessions may be held in person depending on the hosting university and schedule.",
   },
 ];
 
@@ -607,6 +681,22 @@ export const challengeEventsEditionsData: eventsEditionDataProps[] = [
       date: "oct 2023",
     },
     imgs: [img4, img5, img6, img7],
+  },
+];
+
+// new previous event data -> /ai-challenge page
+export const NewChallengeEventsEditionsData: eventsEditionDataProps[] = [
+  {
+    title: "Sri Lanka AI Challenge 2024",
+    desc: [
+      "Sri Lanka AI Challenge 2024, held as part of ChallengeSphere SL in collaboration with IEEE Sri Lanka Section, brought together aspiring innovators from across 18 universities. With a focus on Conditional UI and AI Agents, the program delivered a complete learning experience through expert-led technical workshops, interactive mentoring, and a nationwide innovation challenge.",
+      "Participants had the unique opportunity to explore real-world AI use cases, gaining practical exposure to tools like LangChain and OpenAI APIs. Through hands-on sessions and industry insights, they designed and implemented AI-driven solutions while collaborating with professionals from leading tech firms. The challenge concluded with a curated industry visit to IFS, allowing finalists to connect with top-tier AI experts, engage in discussions, and receive recognition for their efforts.",
+    ],
+    data: {
+      participateCount: 300,
+      edition: "1st Edition",
+      date: "October 2024",
+    },
   },
 ];
 
