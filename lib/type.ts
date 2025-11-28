@@ -44,6 +44,7 @@ export interface BlogItemProps {
   caption: string;
   image: StaticImport;
   link: string;
+  content: string[];
 }
 
 export interface ProjectItemProps {
@@ -105,13 +106,13 @@ export interface MemberDetailProps {
 
 export interface eventsEditionDataProps {
   title: string;
-  desc: string;
+  desc: string | string[];
   data: {
     participateCount: number;
     edition: string;
     date: string;
   };
-  imgs: StaticImageData[];
+  imgs?: StaticImageData[];
 }
 
 export interface eventsFAQDataProps {
