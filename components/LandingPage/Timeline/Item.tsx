@@ -11,7 +11,7 @@ export default function Item({ isActive, ...props }: Props) {
   }, [isActive]);
   return (
     <article
-      className={`flex flex-col items-center justify-between gap-y-4 px-4 py-8 text-white transition-colors duration-300 ${
+      className={`flex h-full flex-col items-center justify-between gap-y-4 px-4 py-8 text-white transition-colors duration-300 ${
         isActive ? "bg-primary!" : "timeline-card"
       }`}
       style={{
@@ -22,8 +22,9 @@ export default function Item({ isActive, ...props }: Props) {
         {props.events.map((ev, i) => (
           <li
             key={i}
-            className={`text-2xl font-medium lg:text-3xl ${isActive ? "text-white" : "text-primary"} transition-colors duration-300 p-4`}
+            className={`flex items-center text-2xl font-medium lg:text-3xl ${isActive ? "text-white" : "text-primary"} p-4 transition-colors duration-300`}
           >
+            <span className="mr-2 text-5xl">&#8226;</span>
             {ev}
           </li>
         ))}

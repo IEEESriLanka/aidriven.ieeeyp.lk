@@ -83,15 +83,23 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
 export const MemberCard = ({ member }: { member: MemberDetailProps }) => (
   <div className="flex flex-col items-center justify-center gap-[20px]">
     <div className="relative z-0 min-w-[158px]">
-      <Image
-        src={member.profileImg}
-        className="z-30 mx-auto h-[182px] w-auto object-cover"
-        alt=""
-      />
+      {typeof member.profileImg === "string" ? (
+        <img
+          src={member.profileImg}
+          className="z-30 mx-auto h-[182px] w-auto object-cover"
+          alt=""
+        />
+      ) : (
+        <Image
+          src={member.profileImg}
+          className="z-30 mx-auto h-[182px] w-auto object-cover"
+          alt=""
+        />
+      )}
       <Parellelo />
     </div>
     <div className="flex flex-col items-center justify-center gap-[8px]">
-      <p className="font-elemental-end gradient-text text-[20px] text-center">
+      <p className="font-elemental-end gradient-text text-center text-[20px]">
         {member.name}
       </p>
       {member.team && (
