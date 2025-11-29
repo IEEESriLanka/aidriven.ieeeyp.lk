@@ -2,7 +2,12 @@ import comTalkImg from "@/assets/events/com-talk-img.png";
 
 import { EventFeatCard } from "@/components/Events/EventCard";
 import Image from "next/image";
-import { eventsEditionsData, eventsFaqData, eventsFeatsData } from "@/lib/data";
+import {
+  eventsEditionsData,
+  communityFaqData,
+  communityFeatsData,
+  communityTalkEditionsData,
+} from "@/lib/data";
 import EditionCard from "@/components/Events/EditionCard";
 import {
   AccordionItem,
@@ -11,7 +16,6 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
 } from "@/components/ui/Accordion/Accordion";
-import { UpcomingEvent } from "@/components/LandingPage";
 
 const Page = () => {
   return (
@@ -26,35 +30,47 @@ const Page = () => {
           </div>
           <div className="mx-auto flex flex-col items-center gap-y-4 text-xl text-white">
             <p>
-              Aspiring AI enthusiasts are invited to register for this
-              exceptional journey, delving into four virtual sessions
-              covering OpenAI APIs/Prompt engineering, Retrieval Augmented
-              Generation (RAG) and Fine-tuning LLMs, Training and Deployment
-              strategies and frontend Implementation and Implementing OpenAI
-              Models in Practice. The climax is a thrilling physical hackathon,
-              challenging participants to apply their knowledge to craft
-              innovative solutions to a real-world case study. With a minimal
-              fee for subsequent sessions, the bootcamp ensures access to
-              invaluable resources, mentorship, and the opportunity to showcase
-              solutions.
+              The AI-Driven SL Community Talk Series is a flagship initiative by
+              AI Driven SL, organized in collaboration with IEEE Student
+              Branches from leading Sri Lankan universities to foster AI
+              knowledge sharing, hands-on learning, and real-world application.
             </p>
             <p>
-              Don’t miss this chance to be part of Sri Lanka’s most anticipated
-              AI event, where education meets hands-on experience and creativity
-              flourishes!
+              Held over 3 months, the series features a blend of virtual
+              sessions focused on designing, developing, and deploying AI agents
+              using real-world use cases.
+            </p>
+            <div className="w-full text-left">
+              <h3 className="text-primary mb-2 font-bold">
+                Collaborating Universities
+              </h3>
+              <ul className="list-inside list-disc space-y-1">
+                <li>University of Peradeniya (IEEE Student Branch)</li>
+                <li>Uva Wellassa University (IEEE Student Branch)</li>
+                <li>
+                  General Sir John Kotelawala Defence University (IEEE Student
+                  Branch)
+                </li>
+              </ul>
+            </div>
+            <p>
+              Each university co-hosts a session, encouraging peer-driven
+              learning and cross-campus collaboration. With participation
+              limited to 200 students prioritizing 50 from each hosting
+              university, the series ensures quality engagement, expert
+              mentorship, and impactful experiences that bridge the gap between
+              academic theory and practical AI implementation.
             </p>
           </div>
         </div>
       </div>
-
-      <UpcomingEvent />
 
       <div className="flex w-full flex-col gap-4 p-5">
         <div className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           what you will <span className="text-primary">get</span>
         </div>
         <div className="grid items-center justify-center gap-4 px-[20px] text-white md:grid-cols-2">
-          {eventsFeatsData.map((data, i) => (
+          {communityFeatsData.map((data, i) => (
             <EventFeatCard contactDetail={data} key={i} />
           ))}
         </div>
@@ -69,7 +85,7 @@ const Page = () => {
           className="mx-auto grid gap-x-2 gap-y-0 lg:grid-cols-2"
           variant="splitted"
         >
-          {eventsFaqData.map((item) => (
+          {communityFaqData.map((item) => (
             <AccordionItem
               key={item.value}
               className="h-fit self-start rounded-none bg-[#1c1c1c]"
@@ -91,7 +107,7 @@ const Page = () => {
         <h3 className="section-header">
           our <span className="text-primary">previous editions</span>
         </h3>
-        {eventsEditionsData.map((editions, i) => (
+        {communityTalkEditionsData.map((editions, i) => (
           <EditionCard
             key={i}
             title={editions.title}
