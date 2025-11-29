@@ -4,7 +4,7 @@ import EventImg from "@/assets/event-img.png";
 import { EventFeatCard } from "@/components/Events/EventCard";
 import Image from "next/image";
 import {
-  challengeEventsEditionsData,
+  NewChallengeEventsEditionsData as challengeEventsEditionsData,
   eventsFaqData,
   eventsFeatsData,
 } from "@/lib/data";
@@ -128,8 +128,8 @@ const Page = () => {
 
       <div className="flex w-full flex-col gap-4 p-5">
         <div className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          what you will <span className="text-primary">get</span> part under the  <span className="text-primary">SLAIC</span>
-          
+          what you will <span className="text-primary">get</span> part under the{" "}
+          <span className="text-primary">SLAIC</span>
         </div>
         <div className="grid items-center justify-center gap-4 px-[20px] text-white md:grid-cols-2">
           {eventsFeatsData.map((data, i) => (
