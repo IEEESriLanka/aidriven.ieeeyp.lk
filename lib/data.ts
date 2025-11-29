@@ -461,28 +461,6 @@ export const contactDetailsData: ContactDetailProps[] = [
   },
 ];
 
-export const memberDetailsData: MemberDetailProps[] = [
-  {
-    profileImg: memberPhoto,
-    name: "Nisal Mihiranga",
-    position: "Program Lead",
-    socials: [
-      { icon: instaIcon, url: "" },
-      { icon: linkedinIcon, url: "" },
-      { icon: whatsappIcon, url: "" },
-    ],
-  },
-  {
-    profileImg: memberPhoto,
-    name: "Nisal Mihiranga",
-    position: "Program Lead",
-    socials: [
-      { icon: instaIcon, url: "" },
-      { icon: linkedinIcon, url: "" },
-      { icon: whatsappIcon, url: "" },
-    ],
-  },
-];
 
 //events talk page data
 export const eventsFeatsData: ContactDetailProps[] = [
@@ -874,8 +852,8 @@ export const TeamDetails = {
         ],
       },
       {
-        profileImg: teamPhotos.subajananiPhoto,
-        name: "Subajanani Swaminathan",
+        profileImg: " ",
+        name: "Zahra Ismail",
         position: "coordinator",
         socials: [
           { icon: instaIcon, url: "" },
@@ -925,5 +903,163 @@ export const TeamDetails = {
       },
     ],
   },
-  adhoc: [],
+  adhoc: {
+    members: [
+      {
+        profileImg: " ",
+        name: "Amsanaa Senthilkumar",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Umaya Walpola",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Senethya Maheli",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Aaqib Mohideen",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Shalitha Rathnayaka",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Chathuranga Dayarathne",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Tehan Isum",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Dinura Sasmitha",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Madhawa Aloka",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Anjana Pasindu",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Selvarajah Keshavanath",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Pamina Guruparan",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+      {
+        profileImg: " ",
+        name: "Sanupa Sanvidu",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: instaIcon, url: "" },
+          { icon: linkedinIcon, url: "" },
+          { icon: whatsappIcon, url: "" },
+        ],
+      },
+    ],
+  },
 };
+
+
+//  about us page 
+export const memberDetailsData: MemberDetailProps[] = [
+  {
+    profileImg: teamPhotos.sasankaPhoto,
+    name: "Sasnka Premarathne",
+    position: "Chairperson",
+    socials: [
+      { icon: instaIcon, url: "" },
+      { icon: linkedinIcon, url: "" },
+      { icon: whatsappIcon, url: "" },
+    ],
+  },
+  {
+    profileImg: teamPhotos.nipuniHPhoto,
+    name: "Nipuni Herath",
+    position: "Secretary",
+    socials: [
+      { icon: instaIcon, url: "" },
+      { icon: linkedinIcon, url: "" },
+      { icon: whatsappIcon, url: "" },
+    ],
+  },
+];
