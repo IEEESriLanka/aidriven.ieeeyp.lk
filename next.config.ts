@@ -9,8 +9,8 @@ const nextConfig = {
   // Ensure static assets resolve correctly when hosted at /<repo-name>/ on GitHub Pages.
   // basePath: repoName,
   // assetPrefix: repoName,
-  // trailingSlash: true,
-  output: "export",
-  distDir: "dist",
+  // // trailingSlash: true,
+  // output: "export",
+  // distDir: "dist",
 };
 export default nextConfig;
