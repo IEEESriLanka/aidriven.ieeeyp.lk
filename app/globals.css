@@ -106,6 +106,9 @@ body {
   .team-grid.third {
     @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
   }
+  .team-grid.adhoc {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
+  }
 }
 
 #about-section {

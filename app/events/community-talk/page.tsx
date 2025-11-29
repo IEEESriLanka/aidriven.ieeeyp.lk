@@ -3,7 +3,6 @@ import comTalkImg from "@/assets/events/com-talk-img.png";
 import { EventFeatCard } from "@/components/Events/EventCard";
 import Image from "next/image";
 import {
-  eventsEditionsData,
   communityFaqData,
   communityFeatsData,
   communityTalkEditionsData,
