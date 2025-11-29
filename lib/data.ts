@@ -509,6 +509,7 @@ export const eventsFeatsData: ContactDetailProps[] = [
   { icon: trophyIcon, title: "Network with Industry Experts" },
 ];
 
+// community talk page data
 export const communityFeatsData: ContactDetailProps[] = [
   {
     icon: brainCircuitIcon,
@@ -537,7 +538,6 @@ export const communityFeatsData: ContactDetailProps[] = [
 ];
 
 //events faq data
-
 export const eventsFaqData: eventsFAQDataProps[] = [
   {
     value: "item-1",
@@ -583,6 +583,7 @@ export const eventsFaqData: eventsFAQDataProps[] = [
   },
 ];
 
+// community talk page faq data
 export const communityFaqData: eventsFAQDataProps[] = [
   {
     value: "item-1",
@@ -629,7 +630,6 @@ export const communityFaqData: eventsFAQDataProps[] = [
 ];
 
 //events editions data
-
 import img1 from "@/assets/events/image 1.png";
 import img2 from "@/assets/events/image 2.png";
 import img3 from "@/assets/events/Team Member Section 1.png";
@@ -661,6 +661,7 @@ export const eventsEditionsData: eventsEditionDataProps[] = [
   },
 ];
 
+// challenge events editions data -> old one
 export const challengeEventsEditionsData: eventsEditionDataProps[] = [
   {
     title: "AI Bootcamp 2024",
@@ -696,6 +697,31 @@ export const NewChallengeEventsEditionsData: eventsEditionDataProps[] = [
       participateCount: 300,
       edition: "1st Edition",
       date: "October 2024",
+    },
+  },
+];
+
+// community talk editions data
+export const communityTalkEditionsData: eventsEditionDataProps[] = [
+  {
+    title: "Community Talk Series 2024",
+    desc: [
+      "AI Community Talk Series 2024 by AI Driven Sri Lanka was a dynamic and inspiring knowledge-sharing initiative that brought together aspiring AI enthusiasts, professionals, and academics through a series of engaging virtual sessions. Spanning across multiple months and hosted in collaboration with leading IEEE Student Branches and industry partners, the 2024 edition explored real-world AI applications, from foundational concepts to advanced practices. Participants gained invaluable insights from expert-led sessions including LLM Career Strategies, Automated Testing with CI for LLMs, Face Tracking under Challenging Illumination, and NLP Fundamentals.",
+      'Special highlights included the "Empowering Tomorrow: Future-Ready AI & Innovation" session with iVedha Inc., and a deep-dive into Large Language Models (LLMs). With real-world case studies, hands-on learning, and opportunities to engage with top minds in AI, the 2024 Community Talk Series continued to fulfill its mission of bridging the gap between theory and application equipping participants to lead the future of AI in Sri Lanka and beyond.',
+    ],
+    data: {
+      participateCount: 150,
+      edition: "2nd Edition",
+      date: "oct 2024",
+    },
+  },
+  {
+    title: "AI Summit",
+    desc: "The AI Summit is a premier event showcasing AI talks, networking opportunities and company product showcase driving innovation and collaboration",
+    data: {
+      participateCount: 200,
+      edition: "1st Edition",
+      date: "Dec 2024",
     },
   },
 ];
