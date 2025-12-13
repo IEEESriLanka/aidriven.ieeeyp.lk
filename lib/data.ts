@@ -720,6 +720,7 @@ import shadurceyaPhoto from "@/assets/team/shadurceya.png";
 import sisilaPhoto from "@/assets/team/sisila.png";
 import subajananiPhoto from "@/assets/team/subajanani.png";
 import yasiruPhoto from "@/assets/team/yasiru.png";
+import zaraPhoto from "@/assets/team/zara.png"
 
 // export team photos as a single object so they are available and to avoid unused-import errors
 export const teamPhotos = {
@@ -738,6 +739,7 @@ export const teamPhotos = {
   sisilaPhoto,
   subajananiPhoto,
   yasiruPhoto,
+  zaraPhoto
 };
 
 export const TeamDetails = {
@@ -852,7 +854,7 @@ export const TeamDetails = {
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.zaraPhoto,
         name: "Zahra Ismail",
         position: "coordinator",
         socials: [
