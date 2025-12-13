@@ -37,7 +37,7 @@ export async function submitContactForm(
   try {
     const { error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // Update this with your verified domain
-      to: [EMAIL, "codebydinil@gmail.com"], // Update this with the destination email
+      to: ["codebydinil@gmail.com"], // Update this with the destination email. [need to configure email]
       subject: `New Contact Form Submission from ${fname} ${lname}`,
       react: ContactFormEmail({ fname, lname, email, comments }),
     });
