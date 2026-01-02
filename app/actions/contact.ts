@@ -1,11 +1,10 @@
 "use server";
 
 import { z } from "zod";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
+import { render } from "@react-email/render";
 import { ContactFormEmail } from "@/components/Emails/ContactFormEmail";
 import { EMAIL } from "@/lib/constant";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   fname: z.string().min(1, "First name is required"),
@@ -35,21 +34,44 @@ export async function submitContactForm(
   const { fname, lname, email, comments } = validatedFields.data;
 
   try {
-    const { error } = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", // Update this with your verified domain
-      to: [EMAIL], // Update this with the destination email. [need to configure email]
-      subject: `New Contact Form Submission from ${fname} ${lname}`,
-      react: ContactFormEmail({ fname, lname, email, comments }),
+    console.log("--- DEBUG CONTACT FORM ---");
+    console.log(
+      "GMAIL_USER:",
+      process.env.GMAIL_USER ? `"${process.env.GMAIL_USER}"` : "UNDEFINED",
+    );
+    console.log(
+      "GMAIL_APP_PASSWORD type:",
+      typeof process.env.GMAIL_APP_PASSWORD,
+    );
+    console.log(
+      "GMAIL_APP_PASSWORD length:",
+      process.env.GMAIL_APP_PASSWORD?.length,
+    );
+    console.log("--------------------------");
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
     });
 
-    if (error) {
-      // ... (existing code)
-      console.error("Resend Error:", error);
-      return { message: "Failed to send email. Please try again later." };
-    }
+    const emailHtml = await render(
+      // @ts-ignore
+      ContactFormEmail({ fname, lname, email, comments }),
+    );
+
+    await transporter.sendMail({
+      from: process.env.GMAIL_USER,
+      to: EMAIL,
+      subject: `New Contact Form Submission from ${fname} ${lname}`,
+      html: emailHtml,
+    });
 
     return { success: true, message: "Message sent successfully!" };
   } catch (err) {
-    return { message: "An unexpected error occurred." };
+    console.error("Nodemailer Error:", err);
+    return { message: "Failed to send email. Please try again later." };
   }
 }
