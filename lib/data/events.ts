@@ -17,6 +17,7 @@ import type {
   TimelineItemProps,
   eventsEditionDataProps,
   eventsFAQDataProps,
+  FeatureItemProps,
 } from "../type";
 
 export const timelineData: OldTimelineItemProps[] = [
@@ -179,7 +180,7 @@ export const eventPageTimelineData: TimelineItemProps[] = [
   },
 ];
 
-export const eventsFeatsData: ContactDetailProps[] = [
+export const eventsFeatsData: FeatureItemProps[] = [
   {
     icon: brainCircuitIcon,
     title: "Master AI in Action",
@@ -203,7 +204,7 @@ export const eventsFeatsData: ContactDetailProps[] = [
   { icon: trophyIcon, title: "Network with Industry Experts" },
 ];
 
-export const communityFeatsData: ContactDetailProps[] = [
+export const communityFeatsData: FeatureItemProps[] = [
   {
     icon: brainCircuitIcon,
     title: "Learn how AI agents work and apply them to real-world problems",

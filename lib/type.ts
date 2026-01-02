@@ -96,6 +96,11 @@ export interface ContactDetailProps {
   val?: string;
 }
 
+export interface FeatureItemProps {
+  icon: ImgSrc;
+  title: string;
+}
+
 export interface MemberDetailProps {
   profileImg: ImgSrc;
   name: string;
