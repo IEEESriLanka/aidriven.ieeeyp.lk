@@ -70,7 +70,7 @@ const Page = () => {
         </div>
         <div className="grid items-center justify-center gap-4 px-[20px] text-white md:grid-cols-2">
           {communityFeatsData.map((data, i) => (
-            <EventFeatCard contactDetail={data} key={i} />
+            <EventFeatCard feature={data} key={i} />
           ))}
         </div>
       </div>
