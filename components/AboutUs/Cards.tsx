@@ -58,7 +58,9 @@ export const ContactCard = ({
       <Image className="m-auto size-[40px]" src={contactDetail.icon} alt="" />
     </div>
     <div className="flex flex-col gap-[7px]">
-      <p className="text-[20px] font-bold tracking-[4px] uppercase">{contactDetail.title}</p>
+      <p className="text-[20px] font-bold tracking-[4px] uppercase">
+        {contactDetail.title}
+      </p>
       <p className="text-[16px] font-[300] uppercase">{contactDetail.val}</p>
     </div>
   </div>
@@ -80,24 +82,39 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
 
 export const MemberCard = ({ member }: { member: MemberDetailProps }) => (
   <div className="flex flex-col items-center justify-center gap-[20px]">
-    <div className="relative z-0">
-      <Image
-        src={member.icon}
-        className="z-30 h-[162px] w-[100px] object-cover"
-        alt=""
-      />
+    <div className="relative z-0 min-w-[158px]">
+      {typeof member.profileImg === "string" ? (
+        <img
+          src={member.profileImg}
+          className="z-30 mx-auto h-[182px] w-auto object-cover"
+          alt=""
+        />
+      ) : (
+        <Image
+          src={member.profileImg}
+          className="z-30 mx-auto h-[182px] w-auto object-cover"
+          alt=""
+        />
+      )}
       <Parellelo />
     </div>
-    <p className="font-elemental-end text-[20px]">{member.title}</p>
-    <p className="text-[16px]">{member.val}</p>
-    <div className="flex gap-[16px]">
-      {member.socials.map((social, i) => (
-        <a key={i} href={social.url}>
-          <div className="size-[36px] rounded-[6px]">
-            <Image src={social.icon} alt="" />
-          </div>
-        </a>
-      ))}
+    <div className="flex flex-col items-center justify-center gap-[8px]">
+      <p className="font-elemental-end gradient-text text-center text-[20px]">
+        {member.name}
+      </p>
+      {member.team && (
+        <p className="gradient-text text-[16px]">{member.team}</p>
+      )}
+      <p className="text-[16px] text-white">{member.position}</p>
+      <div className="flex gap-[16px]">
+        {member.socials.map((social, i) => (
+          <a key={i} href={social.url}>
+            <div className="size-[36px] rounded-[6px]">
+              <Image src={social.icon} alt="" />
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 );

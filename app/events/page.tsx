@@ -1,4 +1,5 @@
-import { Projects, Timeline } from "@/components/LandingPage";
+import Timeline from "@/components/Events/Timeline";
+import { Projects } from "@/components/LandingPage";
 
 export default function Page() {
   return (

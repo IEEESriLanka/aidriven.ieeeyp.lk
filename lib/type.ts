@@ -18,11 +18,11 @@ export type NavItem = NavLinkItem | NavDropdownItem;
 
 export interface UpcomingEventItemProps {
   title: string;
-  description: string;
-  date: string;
-  time: string;
-  venue: string;
-  link: string;
+  description: string[];
+  date?: string;
+  time?: string;
+  venue?: string;
+  link?: string;
   img: {
     src: StaticImport | string;
     alt: string;
@@ -44,20 +44,21 @@ export interface BlogItemProps {
   caption: string;
   image: StaticImport;
   link: string;
+  content: string[];
 }
 
 export interface ProjectItemProps {
   title: string;
-  description: string;
+  description: string[];
   image: StaticImport;
-  data: {
+  data?: {
     participateCount: number;
     edition: string;
     date: string;
   };
 }
 
-export interface TimelineItemProps {
+export interface OldTimelineItemProps {
   title: string;
   caption: string;
   speaker: {
@@ -71,6 +72,13 @@ export interface TimelineItemProps {
   };
   month?: string;
 }
+
+// new timeline props
+export interface TimelineItemProps {
+  events: string[];
+  month?: string;
+}
+
 import type { StaticImageData } from "next/image";
 import { JSX } from "react";
 
@@ -88,22 +96,28 @@ export interface ContactDetailProps {
   val?: string;
 }
 
-export interface MemberDetailProps {
+export interface FeatureItemProps {
   icon: ImgSrc;
   title: string;
-  val: string;
+}
+
+export interface MemberDetailProps {
+  profileImg: ImgSrc;
+  name: string;
+  team?: string;
+  position: string;
   socials: { icon: ImgSrc; url: string }[];
 }
 
 export interface eventsEditionDataProps {
   title: string;
-  desc: string;
+  desc: string | string[];
   data: {
     participateCount: number;
     edition: string;
     date: string;
   };
-  imgs: StaticImageData[];
+  imgs?: StaticImageData[];
 }
 
 export interface eventsFAQDataProps {

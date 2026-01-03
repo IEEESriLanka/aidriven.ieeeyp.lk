@@ -382,11 +382,19 @@ function CarouselLineIndicators({
                   />
                   {/* label under the dot */}
                   <div
-                    className={cn("absolute mt-6 text-xs text-white/80", {
-                      "mt-0 ml-2": !isHorizontal,
-                    })}
+                    className={cn(
+                      "absolute mt-6 text-xs text-nowrap text-white/80",
+                      {
+                        "mt-0 ml-2": !isHorizontal,
+                      },
+                    )}
                   >
-                    {labels?.[index] ?? ""}
+                    <span className="md:hidden">
+                      {labels?.[index]?.slice(0, 3).toUpperCase() ?? ""}
+                    </span>
+                    <span className="hidden md:block">
+                      {labels?.[index] ?? ""}
+                    </span>
                   </div>
                 </div>
               );
