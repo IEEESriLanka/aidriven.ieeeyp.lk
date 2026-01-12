@@ -6,10 +6,10 @@ import {
   CarouselItem,
   CarouselLineIndicators,
 } from "@/components/ui/carousel";
-import { landingTimelineData as TimelineData } from "@/lib/data";
+import { timelineData, landingTimelineData as TimelineData } from "@/lib/data";
 import { useCarousel } from "@/components/ui/carousel";
 import { useEffect } from "react";
-import Item from "./Item";
+import Item from "./Item_old";
 
 export default function Timeline() {
   return (
@@ -42,7 +42,7 @@ function Slides() {
 
   return (
     <>
-      {TimelineData.map((blog, index) => (
+      {timelineData.map((blog, index) => (
         <CarouselItem key={index} index={index} className="lg:basis-[750px]">
           <Item {...blog} isActive={index === currentIndex} />
         </CarouselItem>

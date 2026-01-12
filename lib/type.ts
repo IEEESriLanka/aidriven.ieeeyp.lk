@@ -23,6 +23,7 @@ export interface UpcomingEventItemProps {
   time?: string;
   venue?: string;
   link?: string;
+  linkALT?: string;
   img: {
     src: StaticImport | string;
     alt: string;

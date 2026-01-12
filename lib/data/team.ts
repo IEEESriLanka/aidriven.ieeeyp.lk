@@ -360,7 +360,7 @@ export const TeamDetails: {
 export const memberDetailsData: MemberDetailProps[] = [
   {
     profileImg: teamPhotos.sasankaPhoto,
-    name: "Sasnka Premarathne",
+    name: "Sasanka Premarathne",
     position: "Chairperson",
     socials: [
       { icon: instaIcon, url: "" },

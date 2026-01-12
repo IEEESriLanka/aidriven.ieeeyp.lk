@@ -34,7 +34,7 @@ export default function Item(props: UpcomingEventItemProps) {
 
         {props.link && (
           <div className="flex w-full items-center justify-end uppercase">
-            <Link href={props.link}>Read more</Link>
+            <Link href={props.link}>{props.linkALT || "Read more"}</Link>
           </div>
         )}
       </div>
