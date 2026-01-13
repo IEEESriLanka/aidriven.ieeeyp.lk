@@ -1,6 +1,5 @@
-import instaIcon from "@/assets/icons/fb.png";
+import fbIcon from "@/assets/icons/fb.png";
 import linkedinIcon from "@/assets/icons/linkedin.png";
-import whatsappIcon from "@/assets/icons/whatsapp.png";
 import athsaraPhoto from "@/assets/team/athsara.png";
 import bosiluPhoto from "@/assets/team/bosilu.png";
 import himanPhoto from "@/assets/team/himan.png";
@@ -17,6 +16,27 @@ import sisilaPhoto from "@/assets/team/sisila.png";
 import subajananiPhoto from "@/assets/team/subajanani.png";
 import yasiruPhoto from "@/assets/team/yasiru.png";
 import zaraPhoto from "@/assets/team/zara.png";
+
+// Adhoc imports
+import aaqibPhoto from "@/assets/team/adhoc/aaqib.png";
+import amsanaaPhoto from "@/assets/team/adhoc/amsanaa.png";
+import chathurangaPhoto from "@/assets/team/adhoc/chathuranga.png";
+import dinuraPhoto from "@/assets/team/adhoc/dinura.png";
+import madhawaPhoto from "@/assets/team/adhoc/madhawa.png";
+import sanupaPhoto from "@/assets/team/adhoc/sanupa.png";
+import shalithaPhoto from "@/assets/team/adhoc/shalitha.png";
+import tehanPhoto from "@/assets/team/adhoc/tehan.png";
+import umayaPhoto from "@/assets/team/adhoc/umaya.png";
+
+// Others imports
+import amilaPhoto from "@/assets/team/others/amila.png";
+import dinilPhoto from "@/assets/team/others/dinil.png";
+import induwaraPhoto from "@/assets/team/others/induwara.png";
+import sachilaPhoto from "@/assets/team/others/sachila.png";
+import sashikPhoto from "@/assets/team/others/sashik.png";
+import taluniPhoto from "@/assets/team/others/taluni.png";
+import vithurshikaPhoto from "@/assets/team/others/vithurshika.png";
+
 import type { MemberDetailProps } from "../type";
 
 export const teamPhotos = {
@@ -36,9 +56,27 @@ export const teamPhotos = {
   subajananiPhoto,
   yasiruPhoto,
   zaraPhoto,
+  // Adhoc
+  aaqibPhoto,
+  amsanaaPhoto,
+  chathurangaPhoto,
+  dinuraPhoto,
+  madhawaPhoto,
+  sanupaPhoto,
+  shalithaPhoto,
+  tehanPhoto,
+  umayaPhoto,
+  // Others
+  amilaPhoto,
+  dinilPhoto,
+  induwaraPhoto,
+  sachilaPhoto,
+  sashikPhoto,
+  taluniPhoto,
+  vithurshikaPhoto,
 };
 
-type SocialLink = { icon: typeof instaIcon; url: string };
+type SocialLink = { icon: typeof fbIcon; url: string };
 
 type TeamMember = {
   profileImg: MemberDetailProps["profileImg"];
@@ -64,9 +102,11 @@ export const TeamDetails: {
         name: "Sasanka Premaratne",
         position: "Chairperson",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1B5w91mSfz/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/sasanka-udana",
+          },
         ],
       },
       {
@@ -74,9 +114,14 @@ export const TeamDetails: {
         name: "Nipuni Herath",
         position: "Secretary",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          {
+            icon: fbIcon,
+            url: "https://www.facebook.com/nipuni.herath.381103",
+          },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/nipuni-herath",
+          },
         ],
       },
     ],
@@ -88,9 +133,11 @@ export const TeamDetails: {
         name: "Malinda Kawshalya",
         position: "Vice-Chairperson",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/malinda.kawshalya" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/malinda-kawshalya-270872267/",
+          },
         ],
       },
       {
@@ -98,9 +145,8 @@ export const TeamDetails: {
         name: "Nipuni Kulathunga",
         position: "Vice-Chairperson",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
@@ -108,9 +154,11 @@ export const TeamDetails: {
         name: "Nabeelah Faumi",
         position: "Vice-Chairperson",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/nabeelah-ahamed-faumi",
+          },
         ],
       },
     ],
@@ -122,9 +170,8 @@ export const TeamDetails: {
         name: "Himan Withana",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
@@ -132,9 +179,11 @@ export const TeamDetails: {
         name: "Bosilu Nisalitha",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://web.facebook.com/n1zzy.2k/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/bosilu-pupulewela-5a58a032b",
+          },
         ],
       },
       {
@@ -142,9 +191,11 @@ export const TeamDetails: {
         name: "Neelia Makuloluwa",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/neelia-makuloluwa-5b7a34309",
+          },
         ],
       },
       {
@@ -152,9 +203,8 @@ export const TeamDetails: {
         name: "Yasiru Dharmathilaka",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
@@ -162,9 +212,11 @@ export const TeamDetails: {
         name: "Sisila Dhevasiri",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1CvdHDRgye/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/sisila-dhevasiri/",
+          },
         ],
       },
       {
@@ -172,9 +224,11 @@ export const TeamDetails: {
         name: "Zahra Ismail",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/16xPWZ7yEF/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/zahra-ismail-428b42314/",
+          },
         ],
       },
       {
@@ -182,9 +236,11 @@ export const TeamDetails: {
         name: "Athsara Fernando",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/athsara.fernando/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/athsara-fernando/",
+          },
         ],
       },
       {
@@ -192,9 +248,11 @@ export const TeamDetails: {
         name: "Shadurceya Vasanthakumar",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/shadurceya-vasanthakumar",
+          },
         ],
       },
       {
@@ -202,9 +260,11 @@ export const TeamDetails: {
         name: "Kaveen Amarasekara",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/17Yccmk13h/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/kaveen-amarasekara-1b1b3b211",
+          },
         ],
       },
       {
@@ -212,9 +272,8 @@ export const TeamDetails: {
         name: "Manura Anuhas",
         position: "coordinator",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
     ],
@@ -222,23 +281,27 @@ export const TeamDetails: {
   adhoc: {
     members: [
       {
-        profileImg: " ",
+        profileImg: teamPhotos.amsanaaPhoto,
         name: "Amsanaa Senthilkumar",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/amsanaa-senthilkumar-0b66051aa/",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.umayaPhoto,
         name: "Umaya Walpola",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/umaya-walpola-a24a31201",
+          },
         ],
       },
       {
@@ -246,69 +309,80 @@ export const TeamDetails: {
         name: "Senethya Maheli",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.aaqibPhoto,
         name: "Aaqib Mohideen",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/aaqibmohideen",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.shalithaPhoto,
         name: "Shalitha Rathnayaka",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1L3WFviF5s/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/shalitharathnayaka",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.chathurangaPhoto,
         name: "Chathuranga Dayarathne",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/chathuranga-dayarathne-16b478292",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.tehanPhoto,
         name: "Tehan Isum",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/tehan-isum-b28410306",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.dinuraPhoto,
         name: "Dinura Sasmitha",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1DPMuD1LB8/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/dinura-sasmitha-8a5815269",
+          },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.madhawaPhoto,
         name: "Madhawa Aloka",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1JpxsPVXfb/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/madhawa-aloka-707940271/",
+          },
         ],
       },
       {
@@ -316,9 +390,8 @@ export const TeamDetails: {
         name: "Anjana Pasindu",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
@@ -326,9 +399,8 @@ export const TeamDetails: {
         name: "Selvarajah Keshavanath",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
@@ -336,36 +408,129 @@ export const TeamDetails: {
         name: "Pamina Guruparan",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
+          { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
         ],
       },
       {
-        profileImg: " ",
+        profileImg: teamPhotos.sanupaPhoto,
         name: "Sanupa Sanvidu",
         position: "AD HOC VOLUNTEERS",
         socials: [
-          { icon: instaIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-          { icon: whatsappIcon, url: "" },
+          { icon: fbIcon, url: "https://www.facebook.com/share/1AaGJnUfw5/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/sanupa-indigahawela-290479311",
+          },
+        ],
+      },
+      // Other Members added as Adhoc
+      {
+        profileImg: teamPhotos.amilaPhoto,
+        name: "Amila Fernando",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          {
+            icon: fbIcon,
+            url: "https://www.facebook.com/amila.fernando.31924792",
+          },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/amilashenalfernando",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.dinilPhoto,
+        name: "Dinil Thilakarathne",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/dinil-thilakarathne/",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.induwaraPhoto,
+        name: "Induwara Uthsara",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: fbIcon, url: "https://www.facebook.com/induwa.uthsara/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/induwarauthsara/",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.sachilaPhoto,
+        name: "Sachila Chathnuka",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: fbIcon, url: "https://www.facebook.com/share/19GDNKBPxU/" },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/sachila-chathnuka-1a5a42376",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.sashikPhoto,
+        name: "R. A. Sashik Thivanka",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          { icon: fbIcon, url: "" },
+          {
+            icon: linkedinIcon,
+            url: "https://lk.linkedin.com/in/sashikdevx",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.taluniPhoto,
+        name: "P.A.Taluni Piyumika",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          {
+            icon: fbIcon,
+            url: "https://www.facebook.com/share/14S4jo8pT6v/?mibextid=wwXIfr",
+          },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/taluni-piyumika-ba264639a",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.vithurshikaPhoto,
+        name: "Vithurshika",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          {
+            icon: fbIcon,
+            url: "https://www.facebook.com/profile.php?id=61551029880202",
+          },
+          {
+            icon: linkedinIcon,
+            url: "https://www.linkedin.com/in/vithurshika-rajkumar-351675381?trk=contact-info",
+          },
         ],
       },
     ],
   },
 };
 
-
-// contact us page 
+// contact us page
 export const memberDetailsData: MemberDetailProps[] = [
   {
     profileImg: teamPhotos.sasankaPhoto,
     name: "Sasanka Premarathne",
     position: "Chairperson",
     socials: [
-      { icon: instaIcon, url: "" },
-      { icon: linkedinIcon, url: "" },
-      { icon: whatsappIcon, url: "" },
+      { icon: fbIcon, url: "https://www.facebook.com/share/1B5w91mSfz/" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/sasanka-udana" },
     ],
   },
   {
@@ -373,9 +538,8 @@ export const memberDetailsData: MemberDetailProps[] = [
     name: "Nipuni Herath",
     position: "Secretary",
     socials: [
-      { icon: instaIcon, url: "" },
-      { icon: linkedinIcon, url: "" },
-      { icon: whatsappIcon, url: "" },
+      { icon: fbIcon, url: "https://www.facebook.com/nipuni.herath.381103" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/nipuni-herath" },
     ],
   },
 ];
