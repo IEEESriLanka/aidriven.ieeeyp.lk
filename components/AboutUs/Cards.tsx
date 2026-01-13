@@ -80,41 +80,52 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
   </>
 );
 
-export const MemberCard = ({ member }: { member: MemberDetailProps }) => (
-  <div className="flex flex-col items-center justify-center gap-[20px]">
-    <div className="relative z-0 min-w-[158px]">
-      {typeof member.profileImg === "string" ? (
-        <img
-          src={member.profileImg}
-          className="z-30 mx-auto h-[182px] w-auto object-cover"
-          alt=""
-        />
-      ) : (
-        <Image
-          src={member.profileImg}
-          className="z-30 mx-auto h-[182px] w-auto object-cover"
-          alt=""
-        />
-      )}
-      <Parellelo />
-    </div>
-    <div className="flex flex-col items-center justify-center gap-[8px]">
-      <p className="font-elemental-end gradient-text text-center text-[20px]">
-        {member.name}
-      </p>
-      {member.team && (
-        <p className="gradient-text text-[16px]">{member.team}</p>
-      )}
-      <p className="text-[16px] text-white">{member.position}</p>
-      <div className="flex gap-[16px]">
-        {member.socials.map((social, i) => (
-          <a key={i} href={social.url}>
-            <div className="size-[36px] rounded-[6px]">
-              <Image src={social.icon} alt="" />
-            </div>
-          </a>
-        ))}
+export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
+  if (
+    !member.profileImg ||
+    (typeof member.profileImg === "string" && member.profileImg.trim() === "")
+  ) {
+    return null;
+  }
+
+  return (
+    <div className="flex flex-col items-center justify-center gap-[20px]">
+      <div className="relative z-0 min-w-[158px]">
+        {typeof member.profileImg === "string" ? (
+          <img
+            src={member.profileImg}
+            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            alt=""
+          />
+        ) : (
+          <Image
+            src={member.profileImg}
+            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            alt=""
+          />
+        )}
+        <Parellelo />
+      </div>
+      <div className="flex flex-col items-center justify-center gap-[8px]">
+        <p className="font-elemental-end gradient-text text-center text-[20px]">
+          {member.name}
+        </p>
+        {member.team && (
+          <p className="gradient-text text-[16px]">{member.team}</p>
+        )}
+        <p className="text-[16px] text-white">{member.position}</p>
+        <div className="flex gap-[16px]">
+          {member.socials.map((social, i) =>
+            social.url ? (
+              <a key={i} href={social.url}>
+                <div className="size-[36px] rounded-[6px]">
+                  <Image src={social.icon} alt="" />
+                </div>
+              </a>
+            ) : null,
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

@@ -199,15 +199,6 @@ export const TeamDetails: {
         ],
       },
       {
-        profileImg: teamPhotos.yasiruPhoto,
-        name: "Yasiru Dharmathilaka",
-        position: "coordinator",
-        socials: [
-          { icon: fbIcon, url: "" },
-          { icon: linkedinIcon, url: "" },
-        ],
-      },
-      {
         profileImg: teamPhotos.sisilaPhoto,
         name: "Sisila Dhevasiri",
         position: "coordinator",
