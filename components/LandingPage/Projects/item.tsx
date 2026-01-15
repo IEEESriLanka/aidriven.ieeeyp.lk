@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Item(props: ProjectItemProps) {
   return (
     <article className="relative flex min-h-[320px] flex-col gap-y-4 overflow-clip rounded-xl bg-black px-8 py-12">
-      <div className="absolute top-0 left-0 h-full w-full opacity-70">
+      <div className="absolute top-0 left-0 h-full w-full opacity-40">
         <Image src={props.image} alt={props.title} fill />
       </div>
       <div className="relative z-20 flex h-full grow flex-col justify-between gap-y-8">

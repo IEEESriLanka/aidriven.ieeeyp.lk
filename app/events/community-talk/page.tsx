@@ -1,4 +1,4 @@
-import comTalkImg from "@/assets/events/com-talk-img.png";
+import comTalkImg from "@/assets/events/AIComTalk2025.png";
 
 import { EventFeatCard } from "@/components/Events/EventCard";
 import Image from "next/image";

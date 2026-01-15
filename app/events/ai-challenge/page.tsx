@@ -1,4 +1,4 @@
-import aiChallengeImg from "@/assets/ai-challenge.png";
+import aiChallengeImg from "@/assets/events/SLAIC2025.png";
 import EventImg from "@/assets/event-img.png";
 
 import { EventFeatCard } from "@/components/Events/EventCard";

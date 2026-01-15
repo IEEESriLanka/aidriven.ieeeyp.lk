@@ -98,7 +98,7 @@ body {
   }
 
   .team-grid.main {
-    @apply flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-16;
+    @apply flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-16;
   }
   .team-grid.secondary {
     @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-16;
@@ -108,6 +108,10 @@ body {
   }
   .team-grid.adhoc {
     @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
+  }
+
+  main {
+    @apply relative z-20;
   }
 }
 
