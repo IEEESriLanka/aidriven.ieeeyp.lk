@@ -36,6 +36,7 @@ import sachilaPhoto from "@/assets/team/others/sachila.png";
 import sashikPhoto from "@/assets/team/others/sashik.png";
 import taluniPhoto from "@/assets/team/others/taluni.png";
 import vithurshikaPhoto from "@/assets/team/others/vithurshika.png";
+import gimanthaPhoto from "@/assets/team/gimantha.png";
 
 import type { MemberDetailProps } from "../type";
 
@@ -74,6 +75,7 @@ export const teamPhotos = {
   sashikPhoto,
   taluniPhoto,
   vithurshikaPhoto,
+  gimanthaPhoto,
 };
 
 type SocialLink = { icon: typeof fbIcon; url: string };
@@ -506,6 +508,21 @@ export const TeamDetails: {
           {
             icon: linkedinIcon,
             url: "https://www.linkedin.com/in/vithurshika-rajkumar-351675381?trk=contact-info",
+          },
+        ],
+      },
+      {
+        profileImg: teamPhotos.gimanthaPhoto,
+        name: "Gimantha Induwara",
+        position: "AD HOC VOLUNTEERS",
+        socials: [
+          {
+            icon: fbIcon,
+            url: "",
+          },
+          {
+            icon: linkedinIcon,
+            url: "",
           },
         ],
       },
