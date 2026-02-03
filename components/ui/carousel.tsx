@@ -318,15 +318,22 @@ function CarouselLineIndicators({
   return (
     <div
       className={cn(
-        "flex items-center justify-center",
-        isHorizontal ? "w-full" : "h-full",
+        "flex items-center",
+        isHorizontal
+          ? "no-scrollbar w-full overflow-x-auto md:justify-center"
+          : "h-full justify-center",
         className,
       )}
       {...props}
     >
       {/* track / line */}
       <div
-        className={cn("relative", isHorizontal ? "h-4 w-full" : "h-full w-4")}
+        className={cn(
+          "relative",
+          isHorizontal
+            ? "min-h-24 w-full min-w-[800px] md:min-w-0"
+            : "h-full w-4",
+        )}
       >
         <div
           className={cn(
@@ -389,11 +396,10 @@ function CarouselLineIndicators({
                       },
                     )}
                   >
-                    <span className="md:hidden">
-                      {labels?.[index]?.slice(0, 3).toUpperCase() ?? ""}
-                    </span>
-                    <span className="hidden md:block">
-                      {labels?.[index] ?? ""}
+                    <span className="_hidden flex flex-col items-center text-wrap md:block">
+                      {labels?.[index]?.split(" ").map((word, index) => (
+                        <span key={index}>{word}</span>
+                      ))}
                     </span>
                   </div>
                 </div>

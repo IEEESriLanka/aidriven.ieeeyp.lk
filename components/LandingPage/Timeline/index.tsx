@@ -6,7 +6,9 @@ import {
   CarouselItem,
   CarouselLineIndicators,
 } from "@/components/ui/carousel";
-import { timelineData, landingTimelineData as TimelineData } from "@/lib/data";
+import {
+  detailedTimelineData as timelineData,
+} from "@/lib/data";
 import { useCarousel } from "@/components/ui/carousel";
 import { useEffect } from "react";
 import Item from "./Item_old";
@@ -22,7 +24,7 @@ export default function Timeline() {
         <Carousel>
           <CarouselLineIndicators
             className="mb-8"
-            labels={TimelineData.map((t) => t.month ?? "")}
+            labels={timelineData.map((t) => t.month ?? "")}
           />
           <CarouselContent className="gap-x-16">
             <Slides />
