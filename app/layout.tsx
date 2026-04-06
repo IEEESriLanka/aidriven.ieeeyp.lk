@@ -27,6 +27,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AI Driven Sri Lanka",
   description: "AI Driven Sri Lanka",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

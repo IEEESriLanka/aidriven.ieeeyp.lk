@@ -91,7 +91,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="container flex flex-col gap-[80px]">
+      <div id="contact-us" className="container scroll-mt-28 flex flex-col gap-[80px]">
         <div className="font-elemental-end text-primary text-center text-[32px] uppercase md:text-left">
           <p>
             Get in touch <span className="text-white">and let&apos;s</span>{" "}
