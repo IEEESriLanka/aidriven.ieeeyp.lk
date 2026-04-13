@@ -1,3 +1,5 @@
+import Image from "next/image";
+import aiChallengeLogo from "@/assets/AI-challenge-logo.png";
 import {
   NewChallengeEventsEditionsData as challengeEventsEditionsData,
   eventsFaqData,
@@ -39,20 +41,32 @@ const Page = () => {
 
       {/* Slide 7 — AI Challenge 2026 Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
-        <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
-          AI Challenge 2026
-        </div>
-        <div className="flex flex-col gap-4 text-lg text-white/85 leading-relaxed">
-          <p>
-            AI Challenge 2026 is a national-level AI innovation program designed to develop
-            practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this
-            challenge follows a structured, multi-phase model with mentorship, adversarial
-            testing, refinement cycles, and a physical final round.
-          </p>
-          <p className="font-medium text-white">
-            This is Sri Lanka&apos;s most comprehensive and impact-focused AI competition,
-            bridging academia, industry, and innovation.
-          </p>
+        <div className="flex items-start justify-between gap-6">
+          <div className="flex flex-col gap-3">
+            <div className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
+              AI Challenge 2026
+            </div>
+            <p className="text-sm font-medium uppercase tracking-widest text-white/40">
+              Sri Lanka Artificial Intelligence Challenge
+            </p>
+            <div className="flex flex-col gap-3 text-lg text-white/85 leading-relaxed">
+              <p>
+                AI Challenge 2026 is a national-level AI innovation program designed to develop
+                practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this
+                challenge follows a structured, multi-phase model with mentorship, adversarial
+                testing, refinement cycles, and a physical final round.
+              </p>
+              <p className="font-medium text-white">
+                This is Sri Lanka&apos;s most comprehensive and impact-focused AI competition,
+                bridging academia, industry, and innovation.
+              </p>
+            </div>
+          </div>
+          <Image
+            src={aiChallengeLogo}
+            alt="Sri Lanka AI Challenge"
+            className="hidden shrink-0 drop-shadow-[0_0_24px_rgba(255,91,60,0.35)] md:block md:w-44"
+          />
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[

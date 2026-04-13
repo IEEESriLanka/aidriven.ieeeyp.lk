@@ -1,9 +1,8 @@
-import { EventFeatCard } from "@/components/Events/EventCard";
+import Image from "next/image";
+import insideAILogo from "@/assets/Inside-ai-logo.png";
 import {
   insideAIFaqData,
-  insideAIFeatsData,
   insideAIProgramTimelineData,
-  insideAITopicsData,
 } from "@/lib/data/events";
 import {
   AccordionItem,
@@ -40,8 +39,15 @@ const Page = () => {
 
       {/* Slide 6 — Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
-        <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
-          Inside AI 2026
+        <div className="flex flex-col items-center gap-3 md:items-start">
+          <Image
+            src={insideAILogo}
+            alt="Inside AI"
+            className="w-56 drop-shadow-[0_0_20px_rgba(255,91,60,0.3)] md:w-72"
+          />
+          <p className="font-elemental-end text-xl uppercase tracking-widest text-white/50 md:pl-1">
+            2026 Edition
+          </p>
         </div>
         <div className="flex flex-col gap-4 text-lg text-white/85 leading-relaxed">
           <p>
@@ -62,50 +68,6 @@ const Page = () => {
           <StatCard value="50–70" label="Participants per Session" />
           <StatCard value="500+" label="Total Participants" />
           <StatCard value="100%" label="Hands-on Workshops" />
-        </div>
-      </div>
-
-      {/* Slide 7 — Company Flexibility */}
-      <div className="flex w-full flex-col gap-6">
-        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          complete <span className="text-primary">flexibility</span> for companies
-        </h2>
-        <div className="rounded-[30px] bg-[#191919B8] p-7.5">
-          <p className="mb-6 text-lg text-white/85">
-            Companies have complete flexibility to design their Inside AI session.
-          </p>
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              {
-                icon: "🎯",
-                text: "Choose any topic from our curated AI Topic Pool, or deliver any AI-related theme you prefer",
-              },
-              {
-                icon: "⏱",
-                text: "Conduct a minimum 3-hour session — extend it however you like",
-              },
-              {
-                icon: "⚙️",
-                text: "Customize the structure freely — we support any configuration",
-              },
-              {
-                icon: "📣",
-                text: "AIDSL handles all planning, coordination, marketing, and participant management",
-              },
-              {
-                icon: "🏢",
-                text: "The partner company only needs to host and deliver the session",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 rounded-2xl bg-white/5 p-4 border border-white/10"
-              >
-                <span className="text-2xl">{item.icon}</span>
-                <p className="text-white/80">{item.text}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -135,85 +97,6 @@ const Page = () => {
               <SolutionItem text="Direct engagement with company professionals and live projects" />
             </ul>
           </div>
-        </div>
-      </div>
-
-      {/* Slide 9 — Program Model */}
-      <div className="flex w-full flex-col gap-6">
-        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          program <span className="text-primary">model</span>
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl bg-[#191919B8] p-6">
-            <h3 className="mb-4 text-base font-semibold text-primary uppercase tracking-wide">
-              Expected Outcomes
-            </h3>
-            <ul className="flex flex-col gap-3">
-              {[
-                "Provide practical exposure to real AI workflows, tools, or use cases",
-                "Include interactive elements such as demos, discussions, ted talks, tech activity, or mini challenges",
-                "Share actionable insights into how the company applies AI in real projects",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-white/80">
-                  <span className="mt-1 shrink-0 text-primary font-bold">→</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl bg-[#191919B8] p-6">
-            <h3 className="mb-4 text-base font-semibold text-primary uppercase tracking-wide">
-              Flexible Delivery Framework
-            </h3>
-            <p className="mb-3 text-white/60 text-sm">Companies may choose:</p>
-            <ul className="flex flex-col gap-3">
-              {[
-                "3-Hour Session Model (minimum requirement)",
-                "Full-Day Workshop Model",
-                "Any fully custom structure",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-white/80">
-                  <span className="mt-1 shrink-0 text-primary">●</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-sm text-white/50">
-              AIDSL provides sample agendas, topic areas (if needed), event promotion and marketing.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide 12 — Topic Deck */}
-      <div className="flex w-full flex-col gap-6">
-        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          topic <span className="text-primary">deck</span>
-        </h2>
-        <div className="rounded-[30px] bg-[#191919B8] p-7.5">
-          <p className="mb-2 text-white/80">
-            Companies may select from the following curated list or propose their own topic.
-          </p>
-          <p className="mb-6 text-sm text-white/50">
-            Topic selection is on a first-come, first-served basis. A detailed topic deck will be
-            provided separately.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {insideAITopicsData.map((topic, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-4 py-3 hover:border-primary/40 transition-colors"
-              >
-                <span className="text-primary font-bold text-sm shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-white/85 text-sm">{topic}</span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm text-primary/80 font-medium">
-            Secure your preferred topic early — high demand applies.
-          </p>
         </div>
       </div>
 
