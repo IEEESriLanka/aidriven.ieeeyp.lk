@@ -114,7 +114,7 @@ const Page = () => {
           <p className="text-center text-[20px] uppercase">
             Connect with a member of our team
           </p>
-          <div className="flex flex-col justify-center gap-[20px] md:flex-row">
+          <div className="flex flex-col justify-center gap-[20px] md:flex-row md:gap-16">
             {memberDetailsData.map((dets, i) => (
               <MemberCard key={i} member={dets} />
             ))}

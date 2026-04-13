@@ -14,7 +14,7 @@ export default function Footer() {
         />
       </div>
       <div className="flex w-full flex-col-reverse items-center justify-between gap-y-4 lg:flex-row">
-        <p>© Copyright 2025 AI Driven Sri Lanka. All rights reserved.</p>
+        <p>© Copyright 2026 AI Driven Sri Lanka. All rights reserved.</p>
         <ul className="flex space-x-2">
           {socialLinks.map((link, index) => (
             <li key={index} className="inline">

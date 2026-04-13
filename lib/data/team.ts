@@ -689,21 +689,19 @@ export const Team2026Details: {
 // contact us page
 export const memberDetailsData: MemberDetailProps[] = [
   {
-    profileImg: teamPhotos.sasankaPhoto,
-    name: "Sasanka Premarathne",
+    profileImg: geenothPhoto,
+    name: "Geenoth Viksura",
     position: "Chairperson",
     socials: [
-      { icon: fbIcon, url: "https://www.facebook.com/share/1B5w91mSfz/" },
-      { icon: linkedinIcon, url: "https://www.linkedin.com/in/sasanka-udana" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/geenoth-viksura/" },
     ],
   },
   {
-    profileImg: teamPhotos.nipuniHPhoto,
-    name: "Nipuni Herath",
+    profileImg: hirushiPhoto,
+    name: "Hirushi Gamage",
     position: "Secretary",
     socials: [
-      { icon: fbIcon, url: "https://www.facebook.com/nipuni.herath.381103" },
-      { icon: linkedinIcon, url: "https://www.linkedin.com/in/nipuni-herath" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/hirushi-gamage-b912a9265" },
     ],
   },
 ];

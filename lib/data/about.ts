@@ -31,7 +31,7 @@ export const coreValuesData: ValProps[] = [
 ];
 
 export const contactDetailsData: ContactDetailProps[] = [
-  { icon: phoneIcon, title: "phone number", val: "+94717190257" },
+  { icon: phoneIcon, title: "phone number", val: "+94704448484" },
   { icon: locationIcon, title: "location", val: "Colombo, Sri Lanka" },
   {
     icon: commentIcon,
