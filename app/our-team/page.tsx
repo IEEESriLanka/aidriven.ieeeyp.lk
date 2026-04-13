@@ -3,16 +3,20 @@ import { TeamDetails, Team2026Details } from "@/lib/data";
 
 export default function Page() {
   return (
-    <main className="min-scre container mx-auto flex min-h-screen flex-col gap-[40px] py-[100px]">
+    <main className="min-scre container mx-auto flex min-h-screen flex-col gap-[40px] py-35">
       <h3 className="section-header px-4">
         our <span className="text-primary">team</span>
       </h3>
 
       <section className="border-primary/30 rounded-2xl border bg-[#252320] px-4 py-10">
-        <h3 className="section-header flex items-center gap-2 px-4">
-          <span className="text-primary">current team</span>
-          <span className="text-white/40 text-base font-normal">— 2026</span>
-        </h3>
+        <div className="flex items-center gap-4 px-4">
+          <h3 className="section-header">
+            <span className="text-primary">current team</span>
+          </h3>
+          <span className="font-elemental-end rounded-full border border-primary/40 bg-primary/10 px-3 py-0.5 text-sm text-primary">
+            2026
+          </span>
+        </div>
 
         <div className="mt-8 flex flex-col gap-8 pb-6">
           <div className="team-grid main">
