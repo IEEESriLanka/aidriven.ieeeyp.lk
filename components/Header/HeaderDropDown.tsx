@@ -29,7 +29,7 @@ export function HeaderDropDown() {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="bg-gradient z-[99999] w-64 translate-y-2 border-0 text-white"
+        className="bg-gradient z-99999 w-64 translate-y-2 border-0 text-white"
         style={{ "--_angle": "180deg" } as React.CSSProperties}
       >
         <div className="px-1 py-1">
@@ -44,6 +44,12 @@ export function HeaderDropDown() {
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem>
             <Link href={"/events/community-talk"}>Community Talk Series</Link>
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem>
+            <Link href={"/events/inside-ai"}>Inside AI</Link>
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuCheckboxItem>
+            <Link href={"/events/ai-summit"}>AI Summit</Link>
           </DropdownMenuCheckboxItem>
         </div>
       </DropdownMenuContent>

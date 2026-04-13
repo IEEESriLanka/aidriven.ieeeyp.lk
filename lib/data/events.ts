@@ -382,6 +382,239 @@ export const NewChallengeEventsEditionsData: eventsEditionDataProps[] = [
   },
 ];
 
+export const insideAIFeatsData: FeatureItemProps[] = [
+  {
+    icon: brainCircuitIcon,
+    title: "Explore cutting-edge AI concepts through expert-led sessions",
+  },
+  {
+    icon: factoryIcon,
+    title: "Get an inside look at how AI is applied in real industries",
+  },
+  {
+    icon: ribbonIcon,
+    title: "Engage with AI professionals and researchers",
+  },
+  {
+    icon: linkedinIconEvent,
+    title: "Access exclusive resources, demos, and session recordings",
+  },
+  {
+    icon: awardIcon,
+    title: "Network with like-minded AI enthusiasts across Sri Lanka",
+  },
+  {
+    icon: trophyIcon,
+    title: "Earn recognition and certificates for active participation",
+  },
+];
+
+export const insideAIFaqData: eventsFAQDataProps[] = [
+  {
+    value: "item-1",
+    title: "What is Inside AI?",
+    content:
+      "Inside AI is an initiative by AI Driven Sri Lanka that offers an in-depth look into the world of artificial intelligence through talks, panels, and demonstrations led by industry experts and researchers.",
+  },
+  {
+    value: "item-2",
+    title: "Who can join Inside AI?",
+    content:
+      "Inside AI is open to anyone with an interest in artificial intelligence — from students and fresh graduates to professionals looking to stay updated with the latest AI trends.",
+  },
+  {
+    value: "item-3",
+    title: "What topics are covered in Inside AI sessions?",
+    content:
+      "Sessions cover a wide range of AI topics including machine learning, large language models, AI in industry, responsible AI, and emerging research areas.",
+  },
+  {
+    value: "item-4",
+    title: "Are the sessions online or in-person?",
+    content:
+      "Inside AI sessions are conducted both online and in-person depending on the edition, ensuring broad accessibility for participants across Sri Lanka.",
+  },
+  {
+    value: "item-5",
+    title: "Will I receive a certificate for attending?",
+    content:
+      "Active participants who attend the required sessions will receive a certificate of participation from AI Driven Sri Lanka.",
+  },
+  {
+    value: "item-6",
+    title: "How do I register for Inside AI?",
+    content:
+      "Registration details are shared through the AI Driven Sri Lanka official channels and social media pages. Keep an eye out for announcements.",
+  },
+];
+
+export const aiSummit2026ProgramModel: {
+  icon: string;
+  title: string;
+  desc: string;
+}[] = [
+  {
+    icon: "🎤",
+    title: "Global Keynote Sessions",
+    desc: "Insights and thought leadership from globally recognized AI leaders.",
+  },
+  {
+    icon: "🗣️",
+    title: "Panel Discussions",
+    desc: "Experts from industry, academia & policy tackling critical AI challenges.",
+  },
+  {
+    icon: "🔁",
+    title: "AI Forum",
+    desc: "Roundtables and thematic discussions generating actionable insights.",
+  },
+  {
+    icon: "💡",
+    title: "Innovation Showcase",
+    desc: "10 exclusive bid-and-buy stalls for AI startups & innovators.",
+  },
+  {
+    icon: "🖼️",
+    title: "AI Image Gallery",
+    desc: "Curated AI-generated visuals running alongside the showcase.",
+  },
+  {
+    icon: "🌐",
+    title: "Networking Sessions",
+    desc: "Curated connections designed to spark partnerships and talent engagement.",
+  },
+  {
+    icon: "🥂",
+    title: "Fellowship Gathering",
+    desc: "Exclusive premium networking for speakers, partners & investors.",
+  },
+];
+
+export const aiChallenge2026Phases: {
+  phase: string;
+  mode: string;
+  activities: string[];
+}[] = [
+  {
+    phase: "Phase 1 – Initiation & Problem Framing (Week 1)",
+    mode: "Online",
+    activities: [
+      "Problem definition",
+      '"Before" workflow mapping',
+      "Ideation",
+      "Virtual mentorship",
+    ],
+  },
+  {
+    phase: "Phase 2 – Development & Adversarial Testing (Week 2)",
+    mode: "Hybrid / Physical Preferred",
+    activities: [
+      "V1 prototype build",
+      "Peer testing",
+      "Pitch Sabotage",
+      "Challenge & defense",
+    ],
+  },
+  {
+    phase: "Phase 3 – Patch & Refinement (Week 3 – Part 1)",
+    mode: "Online",
+    activities: [
+      "Optimize V2",
+      "Fix issues",
+      "Improve usability",
+      "Remote reviews",
+    ],
+  },
+  {
+    phase: "Phase 4 – Proof of Impact & Final Round (Week 3 – Part 2)",
+    mode: "Physical",
+    activities: [
+      "Live demo",
+      "User validation",
+      "Storytelling",
+      "Impact metrics",
+    ],
+  },
+];
+
+export const aiChallenge2026Timeline: { period: string; items: string[] }[] = [
+  {
+    period: "May",
+    items: [
+      "Pre-registration opens",
+      "Company onboarding & problem statement alignment",
+    ],
+  },
+  {
+    period: "Week 1 (June)",
+    items: [
+      "Phase 1 – Online problem framing",
+      "Workshops & mentorship",
+    ],
+  },
+  {
+    period: "Week 2 (June)",
+    items: [
+      "Phase 2 – Prototype building (online)",
+      "Physical adversarial testing / pitch sabotage",
+    ],
+  },
+  {
+    period: "Week 3 (June)",
+    items: [
+      "Phase 3 – Refinement (online)",
+      "Final Pitch + Demonstrations (Physical)",
+      "Judging, Awards, Top 3 Selection",
+    ],
+  },
+  {
+    period: "September",
+    items: [
+      "Winners showcased at AI Driven Sri Lanka Summit 2026",
+      "National exposure + industry networking",
+    ],
+  },
+];
+
+export const insideAITopicsData: string[] = [
+  "Reverse Engineering Popular AI Apps",
+  "AI That Actually Makes Money",
+  "AI Security & Prompt Hacking",
+  "AI Side Hustles",
+  "How AI Companies Train Models",
+  "AI Research & Innovation",
+  "AI Startups & Entrepreneurship",
+  "Building AI Agents & Automation Systems",
+  "Designing for \"Human-in-the-Loop\"",
+  "From Code to C-Suite: Evolution of the Chief AI Officer",
+];
+
+export const insideAIProgramTimelineData: { month: string; sessions: string }[] = [
+  { month: "April", sessions: "Inside AI 1" },
+  { month: "May", sessions: "Inside AI 2" },
+  { month: "July", sessions: "Inside AI 3" },
+  { month: "August", sessions: "Inside AI 4" },
+  { month: "October", sessions: "Inside AI 5 & 6" },
+  { month: "November", sessions: "Inside AI 7 & 8" },
+  { month: "December", sessions: "Inside AI 9 & 10" },
+];
+
+export const insideAIEditionsData: eventsEditionDataProps[] = [
+  {
+    title: "Inside AI 2024",
+    desc: [
+      "Inside AI 2024 was a flagship knowledge-sharing event by AI Driven Sri Lanka that brought together AI practitioners, researchers, and enthusiasts for an immersive look into the state of artificial intelligence. The event featured expert talks, live demonstrations, and panel discussions covering topics ranging from generative AI and large language models to real-world deployment strategies.",
+      "Participants had the opportunity to engage directly with industry professionals, ask questions, and gain insights that bridge the gap between academic knowledge and practical AI applications. The event fostered a strong community of AI learners and practitioners across Sri Lanka.",
+    ],
+    data: {
+      participateCount: 250,
+      edition: "1st Edition",
+      date: "Nov 2024",
+    },
+    imgs: [img1, img3, img2],
+  },
+];
+
 export const communityTalkEditionsData: eventsEditionDataProps[] = [
   {
     title: "Community Talk Series 2024",

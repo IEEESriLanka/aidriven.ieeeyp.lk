@@ -1,0 +1,185 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080B12"/>
+      <stop offset="1" stop-color="#0D1520"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E63946"/>
+      <stop offset="1" stop-color="#C1121F"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E63946" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#E63946" stop-opacity="0.8"/>
+      <stop offset="0.5" stop-color="#FF6B6B"/>
+      <stop offset="0.7" stop-color="#E63946" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#E63946" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg3)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="white" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="450" y1="0" x2="450" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="750" y1="0" x2="750" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="1050" y1="0" x2="1050" y2="800" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Background glow blobs -->
+  <ellipse cx="200" cy="400" rx="280" ry="280" fill="#E63946" fill-opacity="0.05"/>
+  <ellipse cx="1000" cy="300" rx="220" ry="220" fill="#E63946" fill-opacity="0.06"/>
+  <ellipse cx="600" cy="700" rx="300" ry="150" fill="#E63946" fill-opacity="0.04"/>
+
+  <!-- Left panel: Neural/brain scan visualization -->
+  <g opacity="0.9">
+    <!-- Brain outline -->
+    <ellipse cx="240" cy="380" rx="140" ry="120" stroke="#E63946" stroke-width="1.5" stroke-opacity="0.3" fill="none"/>
+    <!-- Brain lobes suggestion -->
+    <path d="M155 340 Q175 300 210 310 Q230 280 260 295 Q290 270 320 295 Q345 310 335 340" stroke="#E63946" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+    <path d="M155 340 Q150 380 165 420 Q190 450 230 455 Q260 460 290 455 Q325 445 340 420 Q355 390 355 360" stroke="#E63946" stroke-width="1.5" stroke-opacity="0.4" fill="none"/>
+    <!-- Brain center line -->
+    <line x1="245" y1="280" x2="245" y2="460" stroke="#E63946" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+    <!-- Neural connections inside brain -->
+    <circle cx="210" cy="340" r="5" fill="#E63946" fill-opacity="0.7"/>
+    <circle cx="270" cy="320" r="4" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="300" cy="360" r="5" fill="#E63946" fill-opacity="0.7"/>
+    <circle cx="240" cy="390" r="4" fill="#E63946" fill-opacity="0.5"/>
+    <circle cx="195" cy="400" r="3" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="280" cy="410" r="4" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="230" cy="355" r="3" fill="#ffffff" fill-opacity="0.5"/>
+    <line x1="210" y1="340" x2="270" y2="320" stroke="#E63946" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="270" y1="320" x2="300" y2="360" stroke="#E63946" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="300" y1="360" x2="280" y2="410" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="210" y1="340" x2="195" y2="400" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="240" y1="390" x2="195" y2="400" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="240" y1="390" x2="280" y2="410" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="230" y1="355" x2="210" y2="340" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3"/>
+    <line x1="230" y1="355" x2="270" y2="320" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3"/>
+    <line x1="230" y1="355" x2="240" y2="390" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ECG / Heartbeat line across the full width -->
+  <g filter="url(#glow3)">
+    <path d="M0 460 L80 460 L120 460 L140 400 L160 520 L180 350 L200 540 L220 460 L300 460 L340 460 L360 420 L380 500 L400 380 L420 520 L440 460 L520 460 L560 460 L580 430 L600 490 L620 400 L640 510 L660 460 L740 460 L780 460 L800 440 L820 480 L840 420 L860 500 L880 460 L960 460 L1000 460 L1020 445 L1040 475 L1060 435 L1080 495 L1100 460 L1200 460"
+      stroke="url(#pulseGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Center: Medical cross with AI ring -->
+  <g transform="translate(600, 340)">
+    <!-- Outer rotating ring -->
+    <circle cx="0" cy="0" r="110" stroke="#E63946" stroke-width="1.5" stroke-opacity="0.3" fill="none" stroke-dasharray="8 6"/>
+    <circle cx="0" cy="0" r="85" stroke="#E63946" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+    <!-- Cross background glow -->
+    <ellipse cx="0" cy="0" rx="70" ry="70" fill="#E63946" fill-opacity="0.08"/>
+    <!-- Medical cross -->
+    <rect x="-18" y="-54" width="36" height="108" rx="8" fill="url(#redGlow)" opacity="0.9"/>
+    <rect x="-54" y="-18" width="108" height="36" rx="8" fill="url(#redGlow)" opacity="0.9"/>
+    <!-- Cross highlight -->
+    <rect x="-10" y="-54" width="10" height="108" rx="4" fill="white" fill-opacity="0.15"/>
+    <!-- Ring dots -->
+    <circle cx="0" cy="-110" r="5" fill="#E63946"/>
+    <circle cx="110" cy="0" r="5" fill="#E63946"/>
+    <circle cx="0" cy="110" r="5" fill="#E63946"/>
+    <circle cx="-110" cy="0" r="5" fill="#E63946"/>
+    <circle cx="78" cy="-78" r="3" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="78" cy="78" r="3" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="-78" cy="-78" r="3" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="-78" cy="78" r="3" fill="#E63946" fill-opacity="0.6"/>
+    <!-- AI label -->
+    <text x="0" y="5" text-anchor="middle" fill="white" font-size="16" font-family="monospace" font-weight="bold" opacity="0.9">AI</text>
+  </g>
+
+  <!-- Right panel: Data visualization / scan results -->
+  <g transform="translate(850, 220)">
+    <!-- Card background -->
+    <rect x="0" y="0" width="280" height="340" rx="16" fill="#0F1B2D" fill-opacity="0.8" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- Header bar -->
+    <rect x="0" y="0" width="280" height="48" rx="16" fill="#E63946" fill-opacity="0.15"/>
+    <rect x="0" y="32" width="280" height="16" fill="#E63946" fill-opacity="0.15"/>
+    <!-- Header dots -->
+    <circle cx="24" cy="24" r="6" fill="#E63946" fill-opacity="0.7"/>
+    <circle cx="44" cy="24" r="6" fill="#E63946" fill-opacity="0.4"/>
+    <circle cx="64" cy="24" r="6" fill="#E63946" fill-opacity="0.2"/>
+    <!-- Label -->
+    <text x="90" y="29" fill="white" font-size="11" font-family="monospace" fill-opacity="0.7">SCAN ANALYSIS</text>
+    <!-- Scan bars -->
+    <rect x="20" y="70" width="240" height="8" rx="4" fill="white" fill-opacity="0.06"/>
+    <rect x="20" y="70" width="198" height="8" rx="4" fill="#E63946" fill-opacity="0.7"/>
+    <text x="20" y="62" fill="white" font-size="9" font-family="monospace" fill-opacity="0.5">ANOMALY DETECTION</text>
+    <text x="224" y="82" fill="#E63946" font-size="9" font-family="monospace">82%</text>
+
+    <rect x="20" y="102" width="240" height="8" rx="4" fill="white" fill-opacity="0.06"/>
+    <rect x="20" y="102" width="168" height="8" rx="4" fill="#E63946" fill-opacity="0.5"/>
+    <text x="20" y="94" fill="white" font-size="9" font-family="monospace" fill-opacity="0.5">PATTERN MATCH</text>
+    <text x="224" y="114" fill="#E63946" font-size="9" font-family="monospace">70%</text>
+
+    <rect x="20" y="134" width="240" height="8" rx="4" fill="white" fill-opacity="0.06"/>
+    <rect x="20" y="134" width="216" height="8" rx="4" fill="#E63946" fill-opacity="0.8"/>
+    <text x="20" y="126" fill="white" font-size="9" font-family="monospace" fill-opacity="0.5">CONFIDENCE SCORE</text>
+    <text x="224" y="146" fill="#E63946" font-size="9" font-family="monospace">90%</text>
+
+    <!-- Divider -->
+    <line x1="20" y1="165" x2="260" y2="165" stroke="white" stroke-width="0.5" stroke-opacity="0.1"/>
+
+    <!-- Mini chart area -->
+    <rect x="20" y="178" width="240" height="100" rx="8" fill="white" fill-opacity="0.03"/>
+    <text x="20" y="170" fill="white" font-size="9" font-family="monospace" fill-opacity="0.4">PATIENT VITALS TREND</text>
+    <polyline points="30,255 55,238 80,248 105,222 130,240 155,215 180,232 205,210 230,225 255,205" fill="none" stroke="#E63946" stroke-width="2" stroke-linejoin="round"/>
+    <polyline points="30,270 55,265 80,268 105,258 130,262 155,255 180,260 205,252 230,256 255,248" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.3" stroke-linejoin="round"/>
+
+    <!-- Status -->
+    <rect x="20" y="296" width="240" height="28" rx="6" fill="#E63946" fill-opacity="0.1" stroke="#E63946" stroke-width="0.5" stroke-opacity="0.4"/>
+    <circle cx="36" cy="310" r="5" fill="#E63946"/>
+    <text x="50" y="314" fill="white" font-size="10" font-family="monospace" fill-opacity="0.8">SCREENING COMPLETE — REVIEW FLAGGED</text>
+  </g>
+
+  <!-- Floating stat cards bottom left -->
+  <g transform="translate(60, 580)">
+    <rect x="0" y="0" width="160" height="70" rx="12" fill="#0F1B2D" fill-opacity="0.9" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#E63946" font-size="22" font-weight="bold" font-family="sans-serif">94%</text>
+    <text x="16" y="42" fill="white" font-size="10" font-family="sans-serif" fill-opacity="0.6">Detection Accuracy</text>
+    <text x="16" y="57" fill="white" font-size="9" font-family="monospace" fill-opacity="0.4">Early-stage screening</text>
+  </g>
+  <g transform="translate(250, 580)">
+    <rect x="0" y="0" width="160" height="70" rx="12" fill="#0F1B2D" fill-opacity="0.9" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#E63946" font-size="22" font-weight="bold" font-family="sans-serif">3×</text>
+    <text x="16" y="42" fill="white" font-size="10" font-family="sans-serif" fill-opacity="0.6">Faster Diagnosis</text>
+    <text x="16" y="57" fill="white" font-size="9" font-family="monospace" fill-opacity="0.4">vs. manual review</text>
+  </g>
+  <g transform="translate(440, 580)">
+    <rect x="0" y="0" width="170" height="70" rx="12" fill="#0F1B2D" fill-opacity="0.9" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.4"/>
+    <text x="16" y="24" fill="#E63946" font-size="22" font-weight="bold" font-family="sans-serif">60%</text>
+    <text x="16" y="42" fill="white" font-size="10" font-family="sans-serif" fill-opacity="0.6">Reduced Workload</text>
+    <text x="16" y="57" fill="white" font-size="9" font-family="monospace" fill-opacity="0.4">For clinical teams</text>
+  </g>
+
+  <!-- Title text -->
+  <text x="80" y="130" fill="white" font-size="36" font-weight="bold" font-family="sans-serif" fill-opacity="0.92">AI in Healthcare</text>
+  <text x="80" y="172" fill="#E63946" font-size="18" font-family="sans-serif" fill-opacity="0.9">Smarter Screening, Faster Care</text>
+  <line x1="80" y1="185" x2="380" y2="185" stroke="#E63946" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Top-right label -->
+  <rect x="990" y="36" width="170" height="32" rx="8" fill="#E63946" fill-opacity="0.15" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="1020" y="57" fill="#E63946" font-size="11" font-family="monospace" font-weight="bold">AI-DRIVEN SL BLOG</text>
+</svg>

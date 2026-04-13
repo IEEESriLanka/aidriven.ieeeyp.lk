@@ -1,0 +1,127 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080B12"/>
+      <stop offset="1" stop-color="#0D1520"/>
+    </linearGradient>
+    <linearGradient id="red4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E63946"/>
+      <stop offset="1" stop-color="#C1121F"/>
+    </linearGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg4)"/>
+
+  <!-- Grid -->
+  <g opacity="0.04">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="700" x2="1200" y2="700" stroke="white" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="450" y1="0" x2="450" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="750" y1="0" x2="750" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="800" stroke="white" stroke-width="1"/>
+    <line x1="1050" y1="0" x2="1050" y2="800" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Ambient glows -->
+  <ellipse cx="600" cy="400" rx="350" ry="250" fill="#E63946" fill-opacity="0.04"/>
+  <ellipse cx="150" cy="200" rx="200" ry="200" fill="#E63946" fill-opacity="0.05"/>
+  <ellipse cx="1050" cy="600" rx="220" ry="180" fill="#E63946" fill-opacity="0.05"/>
+
+  <!-- Center: Shield -->
+  <g transform="translate(600, 360)" filter="url(#glow4)">
+    <!-- Outer glow ring -->
+    <circle cx="0" cy="0" r="160" stroke="#E63946" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+    <circle cx="0" cy="0" r="140" stroke="#E63946" stroke-width="1" stroke-opacity="0.1" fill="none" stroke-dasharray="5 5"/>
+    <!-- Shield shape -->
+    <path d="M0 -120 L90 -75 L90 20 Q90 90 0 130 Q-90 90 -90 20 L-90 -75 Z"
+      fill="#E63946" fill-opacity="0.12" stroke="#E63946" stroke-width="2.5" stroke-opacity="0.8"/>
+    <!-- Shield inner highlight -->
+    <path d="M0 -100 L70 -60 L70 18 Q70 75 0 108 Q-70 75 -70 18 L-70 -60 Z"
+      fill="none" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+    <!-- Checkmark inside shield -->
+    <path d="M-38 10 L-12 38 L42 -28" stroke="#E63946" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    <!-- Shield dot accents -->
+    <circle cx="0" cy="-160" r="5" fill="#E63946"/>
+    <circle cx="113" cy="-113" r="4" fill="#E63946" fill-opacity="0.5"/>
+    <circle cx="160" cy="0" r="5" fill="#E63946"/>
+    <circle cx="113" cy="113" r="4" fill="#E63946" fill-opacity="0.5"/>
+    <circle cx="-160" cy="0" r="5" fill="#E63946"/>
+    <circle cx="-113" cy="-113" r="4" fill="#E63946" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Network nodes connecting outward from shield -->
+  <!-- Node cluster left -->
+  <g opacity="0.8">
+    <circle cx="280" cy="280" r="10" fill="#E63946" fill-opacity="0.7"/>
+    <circle cx="200" cy="350" r="8" fill="#E63946" fill-opacity="0.5"/>
+    <circle cx="310" cy="460" r="9" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="180" cy="500" r="6" fill="#E63946" fill-opacity="0.4"/>
+    <line x1="280" y1="280" x2="460" y2="300" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="200" y1="350" x2="460" y2="340" stroke="#E63946" stroke-width="1" stroke-opacity="0.25"/>
+    <line x1="310" y1="460" x2="460" y2="420" stroke="#E63946" stroke-width="1" stroke-opacity="0.25"/>
+    <line x1="280" y1="280" x2="200" y2="350" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <line x1="200" y1="350" x2="310" y2="460" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <line x1="180" y1="500" x2="310" y2="460" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <!-- Node labels -->
+    <rect x="134" y="268" width="80" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="174" y="282" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">TRANSPARENCY</text>
+    <rect x="108" y="338" width="68" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="142" y="352" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">FAIRNESS</text>
+    <rect x="230" y="468" width="60" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="260" y="482" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">OVERSIGHT</text>
+  </g>
+
+  <!-- Node cluster right -->
+  <g opacity="0.8">
+    <circle cx="920" cy="280" r="10" fill="#E63946" fill-opacity="0.7"/>
+    <circle cx="1000" cy="350" r="8" fill="#E63946" fill-opacity="0.5"/>
+    <circle cx="890" cy="460" r="9" fill="#E63946" fill-opacity="0.6"/>
+    <circle cx="1020" cy="500" r="6" fill="#E63946" fill-opacity="0.4"/>
+    <line x1="920" y1="280" x2="740" y2="300" stroke="#E63946" stroke-width="1" stroke-opacity="0.3"/>
+    <line x1="1000" y1="350" x2="740" y2="340" stroke="#E63946" stroke-width="1" stroke-opacity="0.25"/>
+    <line x1="890" y1="460" x2="740" y2="420" stroke="#E63946" stroke-width="1" stroke-opacity="0.25"/>
+    <line x1="920" y1="280" x2="1000" y2="350" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <line x1="1000" y1="350" x2="890" y2="460" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <line x1="1020" y1="500" x2="890" y2="460" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.2"/>
+    <!-- Node labels -->
+    <rect x="940" y="268" width="70" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="975" y="282" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">ACCURACY</text>
+    <rect x="1010" y="338" width="68" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="1044" y="352" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">PRIVACY</text>
+    <rect x="900" y="468" width="76" height="20" rx="4" fill="#0F1B2D" fill-opacity="0.8"/>
+    <text x="938" y="482" text-anchor="middle" fill="white" font-size="9" font-family="monospace" fill-opacity="0.6">AUDITABILITY</text>
+  </g>
+
+  <!-- Bottom progress / trust meter -->
+  <g transform="translate(340, 580)">
+    <rect x="0" y="0" width="520" height="90" rx="14" fill="#0F1B2D" fill-opacity="0.9" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.3"/>
+    <text x="20" y="24" fill="white" font-size="11" font-family="monospace" fill-opacity="0.5">RESPONSIBLE AI SCORE</text>
+    <!-- Trust bar -->
+    <rect x="20" y="36" width="480" height="10" rx="5" fill="white" fill-opacity="0.06"/>
+    <rect x="20" y="36" width="408" height="10" rx="5" fill="#E63946" fill-opacity="0.75"/>
+    <text x="438" y="47" fill="#E63946" font-size="10" font-family="monospace">85%</text>
+    <!-- Pillars -->
+    <text x="20" y="72" fill="white" font-size="9" font-family="monospace" fill-opacity="0.4">BIAS FREE ●  EXPLAINABLE ●  ACCOUNTABLE ●  HUMAN-CENTRED</text>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="130" fill="white" font-size="36" font-weight="bold" font-family="sans-serif" fill-opacity="0.92">Responsible AI</text>
+  <text x="80" y="172" fill="#E63946" font-size="18" font-family="sans-serif" fill-opacity="0.9">Designing Systems People Can Trust</text>
+  <line x1="80" y1="185" x2="440" y2="185" stroke="#E63946" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Top-right label -->
+  <rect x="990" y="36" width="170" height="32" rx="8" fill="#E63946" fill-opacity="0.15" stroke="#E63946" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="1020" y="57" fill="#E63946" font-size="11" font-family="monospace" font-weight="bold">AI-DRIVEN SL BLOG</text>
+</svg>

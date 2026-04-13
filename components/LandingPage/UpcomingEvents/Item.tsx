@@ -16,6 +16,19 @@ export default function Item(props: UpcomingEventItemProps) {
               {desc}
             </p>
           ))}
+          {props.highlights && props.highlights.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <p className="font-semibold text-primary">Experience Includes</p>
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-1">
+                {props.highlights.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2 text-sm">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {props.date && (
