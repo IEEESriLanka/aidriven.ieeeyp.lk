@@ -1,0 +1,77 @@
+[
+  {
+    "fullName": "Hirushi Chamudika Gamage",
+    "position": "Secretary",
+    "linkedin": "https://www.linkedin.com/in/hirushi-gamage-b912a9265"
+  },
+  {
+    "fullName": "Panamulla Arachchige Don Anuda Kaushika Dissanayake",
+    "position": "Vice-Chairperson",
+    "linkedin": "https://www.linkedin.com/in/anuda-kaushika"
+  },
+  {
+    "fullName": "Dinara Thareen Anjana Illesinghe",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/dinara-thareen/"
+  },
+  {
+    "fullName": "Lohansa Munasinghe",
+    "position": "Vice-Chairperson",
+    "linkedin": "https://www.linkedin.com/in/lohansa-munasinghe-5691961b5/"
+  },
+  {
+    "fullName": "Hirusha Perera",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/hirusha-perera-487432341"
+  },
+  {
+    "fullName": "Thulanya Nethaki Dewasurendra",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/thulanya-dewasurendra-80a712344/"
+  },
+  {
+    "fullName": "Tharindu Nimsara Waidyathilake",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/tharindu-nimsara-waidyathilake-578a112a0"
+  },
+  {
+    "fullName": "Withanage Linuk Dinendra Perera",
+    "position": "Vice-Chairperson",
+    "linkedin": "https://www.linkedin.com/in/linukperera"
+  },
+  {
+    "fullName": "Hasandie Mithara Mallikaarachchi",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/mithara-mallikaarachchi-05622735a"
+  },
+  {
+    "fullName": "Dinuth Prabuddha Heshan Ranasinghe",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/heshan-ranasinghe-988b00290"
+  },
+  {
+    "fullName": "Weerasinghe Arachchige Elisha Yashohari Perera",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/elisha-perera"
+  },
+  {
+    "fullName": "Chathumina Kalatuwage",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/chathumina-k-077808249/"
+  },
+  {
+    "fullName": "H P Thevinu Premathilaka",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/thevinu-premathilaka-49583a269"
+  },
+  {
+    "fullName": "Manula Thejan",
+    "position": "Coordinator",
+    "linkedin": "https://www.linkedin.com/in/manula-thejan-90b8172b8/"
+  },
+  {
+    "fullName": "Geenoth Viksura",
+    "position": "Chairperson",
+    "linkedin": "https://www.linkedin.com/in/geenoth-viksura/"
+  }
+]

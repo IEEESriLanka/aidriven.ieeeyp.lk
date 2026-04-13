@@ -1,5 +1,5 @@
 import { MemberCard } from "@/components/AboutUs/Cards";
-import { TeamDetails } from "@/lib/data";
+import { TeamDetails, Team2026Details } from "@/lib/data";
 
 export default function Page() {
   return (
@@ -11,10 +11,26 @@ export default function Page() {
       <section className="border-primary/30 rounded-2xl border bg-[#252320] px-4 py-10">
         <h3 className="section-header flex items-center gap-2 px-4">
           <span className="text-primary">current team</span>
+          <span className="text-white/40 text-base font-normal">— 2026</span>
         </h3>
-        <p className="mt-4 px-4 text-sm text-white/70 lg:text-base">
-          New team members will be added here soon.
-        </p>
+
+        <div className="mt-8 flex flex-col gap-8 pb-6">
+          <div className="team-grid main">
+            {Team2026Details["main"].members.map((team) => (
+              <MemberCard key={team.name} member={team} />
+            ))}
+          </div>
+          <div className="team-grid secondary">
+            {Team2026Details["secondary"].members.map((team) => (
+              <MemberCard key={team.name} member={team} />
+            ))}
+          </div>
+          <div className="team-grid third">
+            {Team2026Details["third"].members.map((team) => (
+              <MemberCard key={team.name} member={team} />
+            ))}
+          </div>
+        </div>
       </section>
 
       <details className="border-primary/30 rounded-2xl border bg-[#2e2c2a] px-4 py-6">

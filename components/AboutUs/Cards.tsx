@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const Parellelo = () => (
   <svg
-    width="158"
-    height="90"
+    width="195"
+    height="111"
     viewBox="0 0 158 90"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -90,17 +90,17 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-[20px]">
-      <div className="relative z-0 min-w-[158px]">
+      <div className="relative z-0 min-w-48.75">
         {typeof member.profileImg === "string" ? (
           <img
             src={member.profileImg}
-            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            className="z-30 mx-auto h-56 w-auto object-cover"
             alt=""
           />
         ) : (
           <Image
             src={member.profileImg}
-            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            className="z-30 mx-auto h-56 w-auto object-cover"
             alt=""
           />
         )}
