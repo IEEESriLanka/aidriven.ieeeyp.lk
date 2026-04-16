@@ -39,15 +39,20 @@ const Page = () => {
 
       {/* Slide 6 — Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
-        <div className="flex flex-col items-center gap-3 md:items-start">
+        <div className="flex items-start justify-between gap-6">
+          <div className="flex flex-col gap-3">
+            <div className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
+              Inside AI 2026
+            </div>
+            <p className="text-sm font-medium uppercase tracking-widest text-white/40">
+              Industry Exposure Series
+            </p>
+          </div>
           <Image
             src={insideAILogo}
             alt="Inside AI"
-            className="w-56 drop-shadow-[0_0_20px_rgba(255,91,60,0.3)] md:w-72"
+            className="hidden shrink-0 drop-shadow-[0_0_24px_rgba(255,91,60,0.35)] md:block md:w-56"
           />
-          <p className="font-elemental-end text-xl uppercase tracking-widest text-white/50 md:pl-1">
-            2026 Edition
-          </p>
         </div>
         <div className="flex flex-col gap-4 text-lg text-white/85 leading-relaxed">
           <p>

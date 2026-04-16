@@ -1,14 +1,14 @@
 import Blog1Image from "@/assets/blogs/blog1.png";
 import Blog2Image from "@/assets/blogs/blog2.png";
-import Blog3Image from "@/assets/blogs/blog3.svg";
-import Blog4Image from "@/assets/blogs/blog4.svg";
-import Blog5Image from "@/assets/blogs/blog5.svg";
+import Blog3Image from "@/assets/blogs/blog3.png";
+import Blog4Image from "@/assets/blogs/blog4.png";
+import Blog5Image from "@/assets/blogs/blog5.png";
 import type { BlogItemProps } from "../type";
 
 export const blogsData: BlogItemProps[] = [
   {
     title: "AI Meets Quantum Computing: A New Era of Acceleration",
-    caption: " ",
+    caption: "How quantum computing is supercharging AI to solve problems classical machines never could.",
     image: Blog1Image,
     link: "/blogs/ai-meets-quantum-computing",
     content: [
@@ -19,7 +19,7 @@ export const blogsData: BlogItemProps[] = [
   },
   {
     title: "Defending with Data: AI in Cybersecurity",
-    caption: " ",
+    caption: "How AI-powered systems are detecting threats faster and keeping digital assets safer.",
     image: Blog2Image,
     link: "/blogs/defending-with-data",
     content: [

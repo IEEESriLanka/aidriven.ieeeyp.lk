@@ -41,6 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} ${FZY.variable} ${poppins.variable} relative antialiased`}
+        suppressHydrationWarning
       >
         <LenisWrapper>
           <BackgroundWrapper>

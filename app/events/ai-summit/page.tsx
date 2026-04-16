@@ -1,4 +1,5 @@
-import { aiSummit2026ProgramModel } from "@/lib/data/events";
+import { aiSummit2026ProgramModel, communityTalkEditionsData } from "@/lib/data/events";
+import EditionCard from "@/components/Events/EditionCard";
 
 const ProblemItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3 text-white/80">
@@ -240,6 +241,22 @@ const Page = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Past Events — Community Talk Series */}
+      <div className="flex w-full flex-col justify-center gap-10">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+          past <span className="text-primary">events</span>
+        </h2>
+        {communityTalkEditionsData.map((edition, i) => (
+          <EditionCard
+            key={i}
+            title={edition.title}
+            desc={edition.desc}
+            data={edition.data}
+            imgs={edition.imgs}
+          />
+        ))}
       </div>
 
     </main>

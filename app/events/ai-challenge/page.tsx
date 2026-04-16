@@ -252,7 +252,7 @@ const Page = () => {
             { icon: "🤝", text: "Mentorship from industry and domain experts" },
             { icon: "📊", text: "Real-world validation & measurable outcomes" },
             { icon: "🏅", text: "National recognition and certification from IEEE" },
-            { icon: "👀", text: "Direct recruitment visibility to partner companies" },
+            { icon: "🎯", text: "Direct recruitment visibility to partner companies" },
             { icon: "📁", text: "High-value portfolio-ready project" },
           ].map((item, i) => (
             <div

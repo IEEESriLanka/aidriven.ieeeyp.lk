@@ -43,9 +43,6 @@ export function HeaderDropDown() {
             <Link href={"/events/ai-challenge"}> AI Challenge</Link>
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem>
-            <Link href={"/events/community-talk"}>Community Talk Series</Link>
-          </DropdownMenuCheckboxItem>
-          <DropdownMenuCheckboxItem>
             <Link href={"/events/inside-ai"}>Inside AI</Link>
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem>
