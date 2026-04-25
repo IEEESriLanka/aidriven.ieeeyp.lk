@@ -1,7 +1,10 @@
+import NeuralNetAnimation from "./NeuralNetAnimation";
+
 export default function Hero() {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
-      <div className="container flex flex-col gap-y-4 px-4 lg:gap-y-8">
+    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+      <NeuralNetAnimation />
+      <div className="container relative z-10 flex flex-col gap-y-4 px-4 lg:gap-y-8">
         <div className="font-elemental-end flex flex-col gap-y-2 text-2xl text-white lg:gap-y-6 lg:text-5xl">
           <span>ONE TEAM. </span>
           <span className="text-primary">Igniting minds.</span>

@@ -34,19 +34,23 @@ export function HeaderDropDown() {
       >
         <div className="px-1 py-1">
           <DropdownMenuCheckboxItem>
-            <Link href="/events" className="block w-full">
+            <Link href="/events" className="block w-full" onClick={() => setIsOpen(false)}>
               All Events
             </Link>
           </DropdownMenuCheckboxItem>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem>
-            <Link href={"/events/ai-challenge"}> AI Challenge</Link>
+            <Link href={"/events/ai-challenge"} onClick={() => setIsOpen(false)}> AI Challenge</Link>
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem>
-            <Link href={"/events/inside-ai"}>Inside AI</Link>
+            <Link href={"/events/inside-ai"} onClick={() => setIsOpen(false)}>Inside AI</Link>
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem>
-            <Link href={"/events/ai-summit"}>AI Summit</Link>
+            <Link href={"/events/ai-summit"} onClick={() => setIsOpen(false)}>AI Summit</Link>
+          </DropdownMenuCheckboxItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuCheckboxItem>
+            <Link href={"/events/past-events"} onClick={() => setIsOpen(false)}>Past Events</Link>
           </DropdownMenuCheckboxItem>
         </div>
       </DropdownMenuContent>

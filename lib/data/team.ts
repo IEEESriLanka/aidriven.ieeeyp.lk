@@ -188,6 +188,7 @@ export const TeamDetails: {
         profileImg: teamPhotos.himanPhoto,
         name: "Himan Withana",
         position: "coordinator",
+        grayscale: true,
         socials: [
           { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
@@ -532,6 +533,7 @@ export const TeamDetails: {
         profileImg: teamPhotos.gimanthaPhoto,
         name: "Gimantha Induwara",
         position: "AD HOC VOLUNTEERS",
+        grayscale: true,
         socials: [
           {
             icon: fbIcon,

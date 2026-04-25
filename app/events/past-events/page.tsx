@@ -1,33 +1,33 @@
 import Item from "@/components/LandingPage/UpcomingEvents/Item";
-import { upcomingEventsData } from "@/lib/data";
+import { pastEventsData } from "@/lib/data/upcoming-events";
 import Link from "next/link";
 
-export default function Page() {
+export default function PastEventsPage() {
   return (
     <main className="section-gap-y container mx-auto flex flex-col gap-y-16 px-4">
       <div className="flex flex-col gap-y-4">
         <h1 className="section-header">
-          <span>Our</span>
+          <span>Past</span>
           <span className="text-primary"> Events</span>
         </h1>
         <p className="text-white/60 max-w-2xl">
-          Explore AI Driven Sri Lanka's signature programs - from national
-          competitions to industry engagement sessions and flagship summits.
+          A look back at the programs and initiatives that have shaped AI Driven
+          Sri Lanka&apos;s journey so far.
         </p>
       </div>
 
       <div className="flex flex-col gap-y-10">
-        {upcomingEventsData.map((event, index) => (
+        {pastEventsData.map((event, index) => (
           <Item key={index} {...event} />
         ))}
       </div>
 
       <div className="flex items-center justify-center">
         <Link
-          href="/events/past-events"
+          href="/events"
           className="text-primary underline underline-offset-4 hover:opacity-80 transition-opacity"
         >
-          View Past Events →
+          ← Back to Events
         </Link>
       </div>
     </main>

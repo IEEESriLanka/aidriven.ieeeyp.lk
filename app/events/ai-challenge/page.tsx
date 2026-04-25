@@ -14,6 +14,13 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
 } from "@/components/ui/Accordion/Accordion";
+import {
+  Brain, Monitor, Rocket, Settings, FlaskConical,
+  Wrench, ShieldCheck, Handshake, BarChart2, Award,
+  Target, FolderOpen, Trophy, Lightbulb, Megaphone,
+  Sprout, Globe, Link2,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const ProblemItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3 text-white/80">
@@ -36,10 +43,39 @@ const phaseModeColor: Record<string, string> = {
 };
 
 const Page = () => {
-  return (
-    <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-[10px] py-30 md:px-[40px]">
+  const audienceCards: { Icon: LucideIcon; label: string }[] = [
+    { Icon: Brain, label: "AI/ML Undergraduates & Postgraduates" },
+    { Icon: Monitor, label: "Engineering, Computer Science & ICT Students" },
+    { Icon: Rocket, label: "Early-career AI Practitioners" },
+    { Icon: Settings, label: "Tech Enthusiasts Capable of Prototyping" },
+    { Icon: FlaskConical, label: "University Research Teams & Innovation Clubs" },
+  ];
 
-      {/* Slide 7 — AI Challenge 2026 Introduction */}
+  const impactCards: { Icon: LucideIcon; text: string }[] = [
+    { Icon: Wrench, text: "Practical end-to-end AI product development skills" },
+    { Icon: FlaskConical, text: "Experience in model robustness, testing, and refinement" },
+    { Icon: ShieldCheck, text: "Ability to defend solutions under pressure" },
+    { Icon: Handshake, text: "Mentorship from industry and domain experts" },
+    { Icon: BarChart2, text: "Real-world validation & measurable outcomes" },
+    { Icon: Award, text: "National recognition and certification from IEEE" },
+    { Icon: Target, text: "Direct recruitment visibility to partner companies" },
+    { Icon: FolderOpen, text: "High-value portfolio-ready project" },
+  ];
+
+  const partnerCards: { Icon: LucideIcon; title: string; desc: string }[] = [
+    { Icon: Target, title: "Access Top AI Talent", desc: "Gain unmatched access to Sri Lanka's top AI talent through a highly competitive, multi-phase innovation challenge." },
+    { Icon: Trophy, title: "Strengthen Employer Brand", desc: "Align with a national-level, IEEE-backed AI competition recognized across universities." },
+    { Icon: Lightbulb, title: "Position as Innovation Leader", desc: "Showcase your commitment to building real, measurable AI solutions and Sri Lanka's AI growth." },
+    { Icon: Megaphone, title: "Wide Network Exposure", desc: "Gain visibility across IEEE and AIDSL's student and tech networks." },
+    { Icon: Sprout, title: "Build Long-term Goodwill", desc: "Support a program that directly uplifts AI education and empowers future innovators." },
+    { Icon: Globe, title: "Drive CSR Impact", desc: "Measurable CSR aligned with SDG 17 through education, youth development, and national AI capacity building." },
+    { Icon: Link2, title: "Strengthen Tech-Community Influence", desc: "Mentor teams, judge final rounds, and demonstrate your organization's AI expertise." },
+  ];
+
+  return (
+    <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-2.5 py-30 md:px-10">
+
+      {/* Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="flex items-start justify-between gap-6">
           <div className="flex flex-col gap-3">
@@ -86,16 +122,14 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 8 — The Challenge & Our Solution */}
+      {/* The Challenge & Our Solution */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           the <span className="text-primary">challenge</span> &amp; our solution
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-[#1c1c1c] border border-red-500/20 p-6">
-            <h3 className="mb-4 text-lg font-semibold text-red-400 uppercase tracking-wide">
-              The Problem
-            </h3>
+            <h3 className="mb-4 text-lg font-semibold text-red-400 uppercase tracking-wide">The Problem</h3>
             <ul className="flex flex-col gap-3">
               <ProblemItem text="Hackathons create one-off, incomplete ideas with no real-world usability" />
               <ProblemItem text="Students lack real-world product-building experience" />
@@ -104,12 +138,9 @@ const Page = () => {
             </ul>
           </div>
           <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6">
-            <h3 className="mb-3 text-lg font-semibold text-primary uppercase tracking-wide">
-              Our Solution
-            </h3>
+            <h3 className="mb-3 text-lg font-semibold text-primary uppercase tracking-wide">Our Solution</h3>
             <p className="mb-4 text-sm text-white/60">
-              AI Challenge introduces a research-backed 4-phase innovation framework that trains
-              participants to:
+              AI Challenge introduces a research-backed 4-phase innovation framework that trains participants to:
             </p>
             <ul className="flex flex-col gap-3">
               <SolutionItem text="Frame problems clearly" />
@@ -125,31 +156,25 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 9 — Target Audience */}
+      {/* Target Audience */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           target <span className="text-primary">audience</span>
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: "🧠", label: "AI/ML Undergraduates & Postgraduates" },
-            { icon: "💻", label: "Engineering, Computer Science & ICT Students" },
-            { icon: "🚀", label: "Early-career AI Practitioners" },
-            { icon: "⚙️", label: "Tech Enthusiasts Capable of Prototyping" },
-            { icon: "🔬", label: "University Research Teams & Innovation Clubs" },
-          ].map((item, i) => (
+          {audienceCards.map(({ Icon, label }, i) => (
             <div
               key={i}
               className="flex items-center gap-4 rounded-2xl bg-[#191919B8] border border-white/10 px-5 py-4 hover:border-primary/40 transition-colors"
             >
-              <span className="text-3xl shrink-0">{item.icon}</span>
-              <span className="text-white/85 font-medium">{item.label}</span>
+              <Icon className="h-6 w-6 shrink-0 text-primary" />
+              <span className="text-white/85 font-medium">{label}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Slide 10 — Program Model (4-Phase) */}
+      {/* Program Model */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           program <span className="text-primary">model</span>
@@ -161,12 +186,8 @@ const Page = () => {
               className="flex flex-col gap-4 rounded-3xl bg-[#191919B8] border border-white/10 p-6"
             >
               <div className="flex items-start justify-between gap-3 flex-wrap">
-                <span className="font-semibold text-white leading-snug flex-1">
-                  {phase.phase}
-                </span>
-                <span
-                  className={`shrink-0 rounded-full border px-3 py-1 text-xs font-medium ${phaseModeColor[phase.mode] ?? "bg-white/10 text-white/60 border-white/20"}`}
-                >
+                <span className="font-semibold text-white leading-snug flex-1">{phase.phase}</span>
+                <span className={`shrink-0 rounded-full border px-3 py-1 text-xs font-medium ${phaseModeColor[phase.mode] ?? "bg-white/10 text-white/60 border-white/20"}`}>
                   {phase.mode}
                 </span>
               </div>
@@ -183,23 +204,18 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 11 — Programme Timeline */}
+      {/* Programme Timeline */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           programme <span className="text-primary">timeline</span>
         </h2>
         <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5">
-          {/* Mobile: vertical */}
           <ol className="flex flex-col gap-0 lg:hidden">
             {aiChallenge2026Timeline.map((item, i) => (
               <li key={i} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold text-xs">
-                    {i + 1}
-                  </div>
-                  {i < aiChallenge2026Timeline.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-primary/40 my-1" />
-                  )}
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold text-xs">{i + 1}</div>
+                  {i < aiChallenge2026Timeline.length - 1 && <div className="w-0.5 flex-1 bg-primary/40 my-1" />}
                 </div>
                 <div className="pb-6 pt-1">
                   <span className="text-xs font-semibold text-primary uppercase tracking-wide">{item.period}</span>
@@ -212,21 +228,16 @@ const Page = () => {
               </li>
             ))}
           </ol>
-          {/* Desktop: horizontal */}
           <div className="hidden lg:flex w-full items-start">
             {aiChallenge2026Timeline.map((item, i) => (
               <div key={i} className="flex flex-1 min-w-0 flex-col items-center">
                 <div className="flex w-full items-center">
                   <div className={`h-0.5 flex-1 ${i === 0 ? "invisible" : "bg-primary/40"}`} />
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold text-sm">
-                    {i + 1}
-                  </div>
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold text-sm">{i + 1}</div>
                   <div className={`h-0.5 flex-1 ${i === aiChallenge2026Timeline.length - 1 ? "invisible" : "bg-primary/40"}`} />
                 </div>
                 <div className="mt-4 flex flex-col items-center text-center px-1 w-full">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                    {item.period}
-                  </span>
+                  <span className="text-xs font-semibold text-primary uppercase tracking-wide">{item.period}</span>
                   <ul className="mt-2 flex flex-col gap-1">
                     {item.items.map((txt, j) => (
                       <li key={j} className="text-xs text-white/60 leading-snug">{txt}</li>
@@ -239,83 +250,32 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 12 — Impact for Participants */}
+      {/* Impact for Participants */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           impact for <span className="text-primary">participants</span>
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { icon: "🛠", text: "Practical end-to-end AI product development skills" },
-            { icon: "🔬", text: "Experience in model robustness, testing, and refinement" },
-            { icon: "🛡", text: "Ability to defend solutions under pressure" },
-            { icon: "🤝", text: "Mentorship from industry and domain experts" },
-            { icon: "📊", text: "Real-world validation & measurable outcomes" },
-            { icon: "🏅", text: "National recognition and certification from IEEE" },
-            { icon: "🎯", text: "Direct recruitment visibility to partner companies" },
-            { icon: "📁", text: "High-value portfolio-ready project" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-5"
-            >
-              <span className="text-2xl shrink-0">{item.icon}</span>
-              <p className="text-sm text-white/80">{item.text}</p>
+          {impactCards.map(({ Icon, text }, i) => (
+            <div key={i} className="flex items-start gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-5">
+              <Icon className="h-5 w-5 shrink-0 text-primary mt-0.5" />
+              <p className="text-sm text-white/80">{text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Slide 13 — Value Proposition for Partners */}
+      {/* Value for Partners */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           value for <span className="text-primary">partners</span>
         </h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              icon: "🎯",
-              title: "Access Top AI Talent",
-              desc: "Gain unmatched access to Sri Lanka's top AI talent through a highly competitive, multi-phase innovation challenge.",
-            },
-            {
-              icon: "🏆",
-              title: "Strengthen Employer Brand",
-              desc: "Align with a national-level, IEEE-backed AI competition recognized across universities.",
-            },
-            {
-              icon: "💡",
-              title: "Position as Innovation Leader",
-              desc: "Showcase your commitment to building real, measurable AI solutions and Sri Lanka's AI growth.",
-            },
-            {
-              icon: "📣",
-              title: "Wide Network Exposure",
-              desc: "Gain visibility across IEEE and AIDSL's student and tech networks.",
-            },
-            {
-              icon: "🌱",
-              title: "Build Long-term Goodwill",
-              desc: "Support a program that directly uplifts AI education and empowers future innovators.",
-            },
-            {
-              icon: "🌍",
-              title: "Drive CSR Impact",
-              desc: "Measurable CSR aligned with SDG 17 through education, youth development, and national AI capacity building.",
-            },
-            {
-              icon: "🔗",
-              title: "Strengthen Tech-Community Influence",
-              desc: "Mentor teams, judge final rounds, and demonstrate your organization's AI expertise.",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors"
-            >
-              <span className="text-3xl">{item.icon}</span>
-              <span className="font-semibold text-white">{item.title}</span>
-              <p className="text-sm text-white/65">{item.desc}</p>
+          {partnerCards.map(({ Icon, title, desc }, i) => (
+            <div key={i} className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors">
+              <Icon className="h-6 w-6 text-primary" />
+              <span className="font-semibold text-white">{title}</span>
+              <p className="text-sm text-white/65">{desc}</p>
             </div>
           ))}
         </div>
@@ -326,16 +286,9 @@ const Page = () => {
         <p className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           fREquEntly <span className="text-primary">AsKED</span> QuEstioNs
         </p>
-        <AccordionRoot
-          allowMultiple={true}
-          className="mx-auto grid gap-x-2 gap-y-0 xl:grid-cols-2 w-full"
-          variant="splitted"
-        >
+        <AccordionRoot allowMultiple={true} className="mx-auto grid gap-x-2 gap-y-0 xl:grid-cols-2 w-full" variant="splitted">
           {eventsFaqData.map((item) => (
-            <AccordionItem
-              key={item.value}
-              className="h-fit self-start rounded-none bg-[#1c1c1c]"
-            >
+            <AccordionItem key={item.value} className="h-fit self-start rounded-none bg-[#1c1c1c]">
               <AccordionItemTrigger value={item.value}>
                 <AccordionItemHeader value={item.value}>
                   <span className="flex-1 text-white">{item.title}</span>
@@ -355,15 +308,10 @@ const Page = () => {
           our <span className="text-primary">previous editions</span>
         </h3>
         {challengeEventsEditionsData.map((editions, i) => (
-          <EditionCard
-            key={i}
-            title={editions.title}
-            desc={editions.desc}
-            data={editions.data}
-            imgs={editions.imgs}
-          />
+          <EditionCard key={i} title={editions.title} desc={editions.desc} data={editions.data} imgs={editions.imgs} />
         ))}
       </div>
+
     </main>
   );
 };

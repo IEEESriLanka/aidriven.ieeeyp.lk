@@ -1,166 +1,246 @@
-// Pure SVG SMIL animation — no JS runtime cost.
-// Neural network with signal flow representing AI data processing.
+"use client";
 
-type Connection = {
-  x1: number; y1: number;
-  x2: number; y2: number;
-  dur: number;   // animation duration in seconds
-  begin: number; // start delay in seconds
-  orange: boolean; // orange signal or faint white
+import { useEffect, useRef } from "react";
+
+type Node = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  r: number;
+  alpha: number;
+  alphaDir: number;
+  isAnchor: boolean;
 };
 
-// Node coordinates — 4 layers: 5 → 4 → 4 → 3
-const INPUT  = [[60, 60],  [60, 140], [60, 220], [60, 300], [60, 380]] as const;
-const H1     = [[210, 100],[210, 180],[210, 260],[210, 340]] as const;
-const H2     = [[360, 100],[360, 180],[360, 260],[360, 340]] as const;
-const OUTPUT = [[510, 140],[510, 220],[510, 300]] as const;
+type Pulse = {
+  fromIdx: number;
+  toIdx: number;
+  t: number;
+};
 
-const ALL_NODES = [...INPUT, ...H1, ...H2, ...OUTPUT];
-
-const CONNECTIONS: Connection[] = [
-  // Input → H1
-  { x1:60,y1:60,  x2:210,y2:100, dur:2.2, begin:0.0,  orange:true  },
-  { x1:60,y1:60,  x2:210,y2:180, dur:2.5, begin:0.4,  orange:false },
-  { x1:60,y1:140, x2:210,y2:100, dur:2.3, begin:0.7,  orange:false },
-  { x1:60,y1:140, x2:210,y2:180, dur:2.6, begin:0.2,  orange:true  },
-  { x1:60,y1:140, x2:210,y2:260, dur:2.4, begin:1.0,  orange:false },
-  { x1:60,y1:220, x2:210,y2:180, dur:2.1, begin:0.5,  orange:false },
-  { x1:60,y1:220, x2:210,y2:260, dur:2.7, begin:0.9,  orange:true  },
-  { x1:60,y1:300, x2:210,y2:260, dur:2.3, begin:0.3,  orange:false },
-  { x1:60,y1:300, x2:210,y2:340, dur:2.5, begin:1.2,  orange:false },
-  { x1:60,y1:380, x2:210,y2:260, dur:2.2, begin:0.6,  orange:true  },
-  { x1:60,y1:380, x2:210,y2:340, dur:2.8, begin:1.4,  orange:false },
-  // H1 → H2
-  { x1:210,y1:100, x2:360,y2:100, dur:2.1, begin:0.6,  orange:false },
-  { x1:210,y1:100, x2:360,y2:180, dur:2.4, begin:1.0,  orange:true  },
-  { x1:210,y1:180, x2:360,y2:100, dur:2.3, begin:0.8,  orange:false },
-  { x1:210,y1:180, x2:360,y2:180, dur:2.6, begin:0.3,  orange:false },
-  { x1:210,y1:180, x2:360,y2:260, dur:2.2, begin:1.3,  orange:true  },
-  { x1:210,y1:260, x2:360,y2:180, dur:2.5, begin:0.5,  orange:false },
-  { x1:210,y1:260, x2:360,y2:260, dur:2.3, begin:1.1,  orange:false },
-  { x1:210,y1:260, x2:360,y2:340, dur:2.7, begin:0.7,  orange:true  },
-  { x1:210,y1:340, x2:360,y2:260, dur:2.4, begin:1.5,  orange:false },
-  { x1:210,y1:340, x2:360,y2:340, dur:2.1, begin:0.9,  orange:false },
-  // H2 → Output
-  { x1:360,y1:100, x2:510,y2:140, dur:2.2, begin:1.0,  orange:true  },
-  { x1:360,y1:100, x2:510,y2:220, dur:2.5, begin:1.4,  orange:false },
-  { x1:360,y1:180, x2:510,y2:140, dur:2.3, begin:0.8,  orange:false },
-  { x1:360,y1:180, x2:510,y2:220, dur:2.6, begin:1.6,  orange:true  },
-  { x1:360,y1:260, x2:510,y2:220, dur:2.4, begin:1.2,  orange:false },
-  { x1:360,y1:260, x2:510,y2:300, dur:2.1, begin:1.8,  orange:true  },
-  { x1:360,y1:340, x2:510,y2:220, dur:2.7, begin:1.0,  orange:false },
-  { x1:360,y1:340, x2:510,y2:300, dur:2.3, begin:2.0,  orange:false },
-];
+const PULSE_SPEED = 0.0012;
+const MAX_PULSES = 5;
 
 export default function NeuralNetAnimation() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let raf: number;
+    let W = 0;
+    let H = 0;
+
+    const resize = () => {
+      W = canvas.width = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const ANCHORS = 5;
+    const FIELD = 18;
+    const TOTAL = ANCHORS + FIELD;
+
+    const nodes: Node[] = Array.from({ length: TOTAL }, (_, i) => {
+      const isAnchor = i < ANCHORS;
+      const xMin = W * 0.05;
+      return {
+        x: xMin + Math.random() * (W - xMin) * 0.95,
+        y: H * 0.08 + Math.random() * H * 0.84,
+        vx: (Math.random() - 0.5) * (isAnchor ? 0.08 : 0.18),
+        vy: (Math.random() - 0.5) * (isAnchor ? 0.08 : 0.18),
+        r: isAnchor ? 2.8 + Math.random() * 1.2 : 1.0 + Math.random() * 0.6,
+        alpha: Math.random() * 0.4 + 0.3,
+        alphaDir: Math.random() > 0.5 ? 1 : -1,
+        isAnchor,
+      };
+    });
+
+    const CONNECT_DIST = 200;
+    const ANCHOR_CONNECT_DIST = 280;
+
+    const pulses: Pulse[] = [];
+
+    function spawnPulse() {
+      // only travel between anchor nodes
+      for (let attempt = 0; attempt < 30; attempt++) {
+        const a = Math.floor(Math.random() * ANCHORS);
+        const b = Math.floor(Math.random() * ANCHORS);
+        if (a === b) continue;
+        const dx = nodes[a].x - nodes[b].x;
+        const dy = nodes[a].y - nodes[b].y;
+        if (Math.sqrt(dx * dx + dy * dy) < ANCHOR_CONNECT_DIST) {
+          pulses.push({ fromIdx: a, toIdx: b, t: 0 });
+          return;
+        }
+      }
+    }
+
+    // seed initial pulses staggered
+    for (let k = 0; k < MAX_PULSES; k++) {
+      spawnPulse();
+      if (pulses[k]) pulses[k].t = Math.random(); // stagger start positions
+    }
+
+    const draw = () => {
+      ctx.clearRect(0, 0, W, H);
+
+      // update nodes
+      for (const n of nodes) {
+        n.x += n.vx;
+        n.y += n.vy;
+
+        const xMin = W * 0.04;
+        if (n.x < xMin || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+        n.x = Math.max(xMin, Math.min(W, n.x));
+        n.y = Math.max(0, Math.min(H, n.y));
+
+        n.alpha += n.alphaDir * 0.004;
+        if (n.alpha > 0.75) { n.alpha = 0.75; n.alphaDir = -1; }
+        if (n.alpha < 0.15) { n.alpha = 0.15; n.alphaDir = 1; }
+      }
+
+      // draw connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const a = nodes[i];
+          const b = nodes[j];
+
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          const maxDist = (a.isAnchor || b.isAnchor) ? ANCHOR_CONNECT_DIST : CONNECT_DIST;
+          if (dist > maxDist) continue;
+
+          const proximity = 1 - dist / maxDist;
+          const bothAnchors = a.isAnchor && b.isAnchor;
+          const oneAnchor = a.isAnchor || b.isAnchor;
+
+          if (bothAnchors) {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `hsla(11,83%,52%,${proximity * 0.55})`;
+            ctx.lineWidth = proximity * 1.4;
+            ctx.stroke();
+          } else if (oneAnchor) {
+            const anchorNode = a.isAnchor ? a : b;
+            const fieldNode = a.isAnchor ? b : a;
+            const grad = ctx.createLinearGradient(anchorNode.x, anchorNode.y, fieldNode.x, fieldNode.y);
+            grad.addColorStop(0, `hsla(11,83%,52%,${proximity * 0.4})`);
+            grad.addColorStop(1, `rgba(255,255,255,${proximity * 0.08})`);
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          } else {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `rgba(255,255,255,${proximity * 0.07})`;
+            ctx.lineWidth = 0.4;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // update & draw pulses
+      for (let k = pulses.length - 1; k >= 0; k--) {
+        const p = pulses[k];
+        p.t += PULSE_SPEED;
+
+        if (p.t >= 1) {
+          pulses.splice(k, 1);
+          spawnPulse();
+          continue;
+        }
+
+        const from = nodes[p.fromIdx];
+        const to = nodes[p.toIdx];
+        const dx = to.x - from.x;
+        const dy = to.y - from.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist > ANCHOR_CONNECT_DIST * 1.1) {
+          pulses.splice(k, 1);
+          spawnPulse();
+          continue;
+        }
+
+        const px = from.x + dx * p.t;
+        const py = from.y + dy * p.t;
+
+        // short soft trail
+        const trailT = Math.max(0, p.t - 0.12);
+        const tx = from.x + dx * trailT;
+        const ty = from.y + dy * trailT;
+        const trail = ctx.createLinearGradient(tx, ty, px, py);
+        trail.addColorStop(0, "hsla(11,83%,60%,0)");
+        trail.addColorStop(1, "hsla(11,83%,60%,0.5)");
+        ctx.beginPath();
+        ctx.moveTo(tx, ty);
+        ctx.lineTo(px, py);
+        ctx.strokeStyle = trail;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+
+        // head dot
+        const head = ctx.createRadialGradient(px, py, 0, px, py, 4);
+        head.addColorStop(0, "hsla(11,83%,75%,0.9)");
+        head.addColorStop(1, "hsla(11,83%,52%,0)");
+        ctx.beginPath();
+        ctx.arc(px, py, 4, 0, Math.PI * 2);
+        ctx.fillStyle = head;
+        ctx.fill();
+      }
+
+      // draw nodes
+      for (const n of nodes) {
+        if (n.isAnchor) {
+          const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 6);
+          glow.addColorStop(0, `hsla(0,90%,42%,${n.alpha * 0.3})`);
+          glow.addColorStop(1, `hsla(11,83%,52%,0)`);
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r * 6, 0, Math.PI * 2);
+          ctx.fillStyle = glow;
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(0,90%,50%,${n.alpha})`;
+          ctx.fill();
+        } else {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${n.alpha * 0.5})`;
+          ctx.fill();
+        }
+      }
+
+      raf = requestAnimationFrame(draw);
+    };
+
+    draw();
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
   return (
     <div className="pointer-events-none absolute inset-0 hidden lg:block">
-      {/* Left-side fade so the SVG doesn't overlap the text */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1c1c1c_30%,transparent_60%)]" />
-
-      <svg
-        viewBox="0 0 590 440"
-        className="absolute right-0 top-1/2 h-[75%] w-auto -translate-y-1/2 opacity-60"
-        preserveAspectRatio="xMidYMid meet"
-        aria-hidden="true"
-      >
-        <defs>
-          {/* Orange glow filter for signals and highlighted nodes */}
-          <filter id="nn-glow" x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          {/* Subtle white glow for nodes */}
-          <filter id="nn-node-glow" x="-60%" y="-60%" width="220%" height="220%">
-            <feGaussianBlur stdDeviation="1.5" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        {/* ── Connection lines ── */}
-        {CONNECTIONS.map((c, i) => (
-          <line
-            key={`line-${i}`}
-            x1={c.x1} y1={c.y1}
-            x2={c.x2} y2={c.y2}
-            stroke="rgba(255,255,255,0.06)"
-            strokeWidth="1"
-          />
-        ))}
-
-        {/* ── Animated signal dots ── */}
-        {CONNECTIONS.map((c, i) => (
-          <circle
-            key={`sig-${i}`}
-            r={c.orange ? 2.8 : 2}
-            fill={c.orange ? "hsl(11,83%,58%)" : "rgba(255,255,255,0.55)"}
-            filter={c.orange ? "url(#nn-glow)" : undefined}
-          >
-            <animateMotion
-              path={`M${c.x1},${c.y1} L${c.x2},${c.y2}`}
-              dur={`${c.dur}s`}
-              begin={`${c.begin}s`}
-              repeatCount="indefinite"
-            />
-          </circle>
-        ))}
-
-        {/* ── Nodes ── */}
-        {ALL_NODES.map(([x, y], i) => {
-          const isOutput = i >= INPUT.length + H1.length + H2.length;
-          const pulseDur = `${2.4 + (i % 5) * 0.4}s`;
-          const pulseBegin = `${(i * 0.35) % 2.5}s`;
-          return (
-            <g key={`node-${i}`}>
-              {/* Pulse ring */}
-              <circle
-                cx={x} cy={y} r="7"
-                fill="none"
-                stroke={isOutput ? "hsl(11,83%,52%)" : "rgba(255,255,255,0.18)"}
-                strokeWidth="0.8"
-                opacity="0"
-              >
-                <animate
-                  attributeName="r"
-                  values="5;11;5"
-                  dur={pulseDur}
-                  begin={pulseBegin}
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  values="0;0.5;0"
-                  dur={pulseDur}
-                  begin={pulseBegin}
-                  repeatCount="indefinite"
-                />
-              </circle>
-              {/* Core node */}
-              <circle
-                cx={x} cy={y} r="3.5"
-                fill={isOutput ? "hsl(11,83%,45%)" : "rgba(255,255,255,0.2)"}
-                stroke={isOutput ? "hsl(11,83%,65%)" : "rgba(255,255,255,0.35)"}
-                strokeWidth="0.8"
-                filter={isOutput ? "url(#nn-node-glow)" : undefined}
-              >
-                <animate
-                  attributeName="opacity"
-                  values="0.5;1;0.5"
-                  dur={`${2 + (i % 4) * 0.5}s`}
-                  begin={`${(i * 0.2) % 1.8}s`}
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-          );
-        })}
-      </svg>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1c1c1c_8%,transparent_40%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_top,#1c1c1c_0%,transparent_20%)]" />
+      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
     </div>
   );
 }

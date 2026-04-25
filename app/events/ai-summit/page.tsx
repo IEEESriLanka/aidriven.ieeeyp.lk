@@ -1,5 +1,13 @@
-import { aiSummit2026ProgramModel, communityTalkEditionsData } from "@/lib/data/events";
+import { aiSummit2026ProgramModel, aiSummitPastEditionsData } from "@/lib/data/events";
 import EditionCard from "@/components/Events/EditionCard";
+import {
+  Globe, Handshake, Lightbulb, Rocket, Building2, FlaskConical,
+  DollarSign, Landmark, GraduationCap, Mic2, MessageSquare, Link2,
+  Eye, Megaphone, CalendarDays,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const programModelIcons: LucideIcon[] = [Mic2, MessageSquare, Globe, Lightbulb, Eye, Handshake, DollarSign];
 
 const ProblemItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3 text-white/80">
@@ -16,10 +24,34 @@ const SolutionItem = ({ text }: { text: string }) => (
 );
 
 const Page = () => {
+  const introCards: { Icon: LucideIcon; label: string }[] = [
+    { Icon: Globe, label: "Sri Lanka's Premier AI Gathering" },
+    { Icon: Handshake, label: "Cross-sector Collaboration" },
+    { Icon: Lightbulb, label: "Global & Local Expert Insights" },
+    { Icon: Rocket, label: "Innovation & Startup Showcases" },
+  ];
+
+  const audienceCards: { Icon: LucideIcon; label: string }[] = [
+    { Icon: Building2, label: "Industry Leaders & Professionals" },
+    { Icon: FlaskConical, label: "AI Researchers & Academics" },
+    { Icon: Rocket, label: "Startup Founders & Innovators" },
+    { Icon: DollarSign, label: "Investors & Venture Capitalists" },
+    { Icon: Landmark, label: "Policymakers & Government Representatives" },
+    { Icon: GraduationCap, label: "Students & Early-career Professionals" },
+  ];
+
+  const partnerCards: { Icon: LucideIcon; title: string; desc: string }[] = [
+    { Icon: Megaphone, title: "Brand Visibility", desc: "Position your brand at the forefront of Sri Lanka's AI movement, gaining visibility across a highly targeted and influential audience." },
+    { Icon: MessageSquare, title: "Thought Leadership", desc: "Contribute to high-level discussions and establish your organization as a thought leader in the AI space." },
+    { Icon: Handshake, title: "Direct Access to Leaders", desc: "Get direct access to industry leaders, policymakers, investors, and the brightest emerging talent in Sri Lanka's AI ecosystem." },
+    { Icon: Link2, title: "Business Opportunities", desc: "Build meaningful partnerships and unlock new business opportunities with the most relevant players in the industry." },
+    { Icon: Eye, title: "Talent Acquisition", desc: "Connect with high-potential professionals and identify the talent that will drive your organization forward." },
+  ];
+
   return (
     <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-[10px] py-30 md:px-[40px]">
 
-      {/* Slide 7 — Event Introduction */}
+      {/* Slide 7 - Event Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
           AI Summit 2026
@@ -31,18 +63,13 @@ const Page = () => {
         </p>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {[
-            { icon: "🌍", label: "Sri Lanka's Premier AI Gathering" },
-            { icon: "🤝", label: "Cross-sector Collaboration" },
-            { icon: "💡", label: "Global & Local Expert Insights" },
-            { icon: "🚀", label: "Innovation & Startup Showcases" },
-          ].map((item, i) => (
+          {introCards.map(({ Icon, label }, i) => (
             <div
               key={i}
               className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#191919] border border-white/10 px-4 py-5 text-center"
             >
-              <span className="text-3xl">{item.icon}</span>
-              <span className="text-xs text-white/70">{item.label}</span>
+              <Icon className="h-7 w-7 text-primary" />
+              <span className="text-xs text-white/70">{label}</span>
             </div>
           ))}
         </div>
@@ -63,7 +90,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 8 — Why AI Summit */}
+      {/* Slide 8 - Why AI Summit */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           why <span className="text-primary">AI Summit</span>?
@@ -92,7 +119,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 9 — Target Audience */}
+      {/* Slide 9 - Target Audience */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           target <span className="text-primary">audience</span>
@@ -101,41 +128,37 @@ const Page = () => {
           The AI Summit will attract a diverse and high-impact audience, including:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { icon: "🏢", label: "Industry Leaders & Professionals" },
-            { icon: "🔬", label: "AI Researchers & Academics" },
-            { icon: "🚀", label: "Startup Founders & Innovators" },
-            { icon: "💰", label: "Investors & Venture Capitalists" },
-            { icon: "🏛️", label: "Policymakers & Government Representatives" },
-            { icon: "🎓", label: "Students & Early-career Professionals" },
-          ].map((item, i) => (
+          {audienceCards.map(({ Icon, label }, i) => (
             <div
               key={i}
               className="flex items-center gap-4 rounded-2xl bg-[#191919B8] border border-white/10 px-5 py-4 hover:border-primary/40 transition-colors"
             >
-              <span className="text-3xl shrink-0">{item.icon}</span>
-              <span className="text-white/85 font-medium">{item.label}</span>
+              <Icon className="h-6 w-6 shrink-0 text-primary" />
+              <span className="text-white/85 font-medium">{label}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Slide 10 — Program Model */}
+      {/* Slide 10 - Program Model */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           program <span className="text-primary">model</span>
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {aiSummit2026ProgramModel.map((item, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors"
-            >
-              <span className="text-3xl">{item.icon}</span>
-              <span className="font-semibold text-white">{item.title}</span>
-              <p className="text-sm text-white/65">{item.desc}</p>
-            </div>
-          ))}
+          {aiSummit2026ProgramModel.map((item, i) => {
+            const Icon = programModelIcons[i] ?? Lightbulb;
+            return (
+              <div
+                key={i}
+                className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors"
+              >
+                <Icon className="h-6 w-6 text-primary" />
+                <span className="font-semibold text-white">{item.title}</span>
+                <p className="text-sm text-white/65">{item.desc}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6 mt-2">
@@ -157,15 +180,15 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 11 — Program Timeline */}
+      {/* Slide 11 - Program Timeline */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           program <span className="text-primary">timeline</span>
         </h2>
         <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5">
           <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold text-sm">
-              📅
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">
+              <CalendarDays className="h-5 w-5" />
             </div>
             <div>
               <p className="font-elemental-end text-primary text-xl uppercase">September 2026</p>
@@ -198,57 +221,31 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 12 — Strategic Value for Partners */}
+      {/* Slide 12 - Strategic Value for Partners */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           strategic value for <span className="text-primary">partners</span>
         </h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            {
-              icon: "📣",
-              title: "Brand Visibility",
-              desc: "Position your brand at the forefront of Sri Lanka's AI movement, gaining visibility across a highly targeted and influential audience.",
-            },
-            {
-              icon: "💬",
-              title: "Thought Leadership",
-              desc: "Contribute to high-level discussions and establish your organization as a thought leader in the AI space.",
-            },
-            {
-              icon: "🤝",
-              title: "Direct Access to Leaders",
-              desc: "Get direct access to industry leaders, policymakers, investors, and the brightest emerging talent in Sri Lanka's AI ecosystem.",
-            },
-            {
-              icon: "🔗",
-              title: "Business Opportunities",
-              desc: "Build meaningful partnerships and unlock new business opportunities with the most relevant players in the industry.",
-            },
-            {
-              icon: "👀",
-              title: "Talent Acquisition",
-              desc: "Connect with high-potential professionals and identify the talent that will drive your organization forward.",
-            },
-          ].map((item, i) => (
+          {partnerCards.map(({ Icon, title, desc }, i) => (
             <div
               key={i}
               className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors"
             >
-              <span className="text-3xl">{item.icon}</span>
-              <span className="font-semibold text-white">{item.title}</span>
-              <p className="text-sm text-white/65">{item.desc}</p>
+              <Icon className="h-6 w-6 text-primary" />
+              <span className="font-semibold text-white">{title}</span>
+              <p className="text-sm text-white/65">{desc}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Past Events — Community Talk Series */}
+      {/* Past Editions */}
       <div className="flex w-full flex-col justify-center gap-10">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          past <span className="text-primary">events</span>
+          past <span className="text-primary">editions</span>
         </h2>
-        {communityTalkEditionsData.map((edition, i) => (
+        {aiSummitPastEditionsData.map((edition, i) => (
           <EditionCard
             key={i}
             title={edition.title}

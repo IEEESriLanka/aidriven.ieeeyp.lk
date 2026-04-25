@@ -94,13 +94,13 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
         {typeof member.profileImg === "string" ? (
           <img
             src={member.profileImg}
-            className="z-30 mx-auto h-56 w-auto object-cover"
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
             alt=""
           />
         ) : (
           <Image
             src={member.profileImg}
-            className="z-30 mx-auto h-56 w-auto object-cover"
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
             alt=""
           />
         )}

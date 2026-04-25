@@ -35,7 +35,7 @@ export default function Sheet({ id, open }: Props) {
           {navItems.map((item, index) => (
             <MobileNavigationTarget key={index} index={index} href={item.href}>
               {item.type === "link" ? (
-                <Link href={item.href}>{item.label}</Link>
+                <Link href={item.href} className="text-white">{item.label}</Link>
               ) : (
                 <item.component />
               )}

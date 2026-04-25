@@ -110,6 +110,7 @@ export interface MemberDetailProps {
   team?: string;
   position: string;
   socials: { icon: ImgSrc; url: string }[];
+  grayscale?: boolean;
 }
 
 export interface eventsEditionDataProps {

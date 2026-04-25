@@ -9,7 +9,7 @@ export const navItems: NavItem[] = [
   },
   {
     type: "link",
-    href: "/#blogs",
+    href: "/blogs",
     label: "Blogs",
   },
   {

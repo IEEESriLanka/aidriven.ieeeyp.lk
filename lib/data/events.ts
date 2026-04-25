@@ -151,32 +151,38 @@ export const timelineData: OldTimelineItemProps[] = [
 
 export const eventPageTimelineData: TimelineItemProps[] = [
   {
-    events: [" SLAIC 2025 Workshops (Gen AI, RAGs, Agent Building)"],
-    month: "May–June",
+    events: ["Inside AI - 01"],
+    month: "May",
   },
   {
-    events: ["SLAIC 2025 Finalist Announcement"],
-    month: "July 9",
+    events: ["Inside AI - 02"],
+    month: "June",
   },
   {
-    events: ["Final Challenge Prep, Mentoring, Code Reviews"],
-    month: "July–August",
+    events: ["AI Challenge SL"],
+    month: "July",
+    highlight: true,
   },
   {
-    events: ["Cost-Efficient Agentic Implementation Workshop"],
-    month: "July 19",
+    events: ["Inside AI - 03"],
+    month: "August",
   },
   {
-    events: ["Final Pitch & Hackathon"],
-    month: "July 26",
+    events: ["AI Driven Sri Lanka Summit"],
+    month: "September",
+    highlight: true,
   },
   {
-    events: ["Awards + Highlight Reel"],
-    month: "Sep",
+    events: ["Inside AI - 04"],
+    month: "October",
   },
   {
-    events: ["Monthly Com.Talk sessions "],
-    month: "July–Sep",
+    events: ["Inside AI - 05", "Inside AI - 06"],
+    month: "November",
+  },
+  {
+    events: ["Inside AI - 07", "Inside AI - 08"],
+    month: "December",
   },
 ];
 
@@ -420,7 +426,7 @@ export const insideAIFaqData: eventsFAQDataProps[] = [
     value: "item-2",
     title: "Who can join Inside AI?",
     content:
-      "Inside AI is open to anyone with an interest in artificial intelligence — from students and fresh graduates to professionals looking to stay updated with the latest AI trends.",
+      "Inside AI is open to anyone with an interest in artificial intelligence - from students and fresh graduates to professionals looking to stay updated with the latest AI trends.",
   },
   {
     value: "item-3",
@@ -539,28 +545,28 @@ export const aiChallenge2026Phases: {
 
 export const aiChallenge2026Timeline: { period: string; items: string[] }[] = [
   {
-    period: "May",
+    period: "June",
     items: [
       "Pre-registration opens",
       "Company onboarding & problem statement alignment",
     ],
   },
   {
-    period: "Week 1 (June)",
+    period: "Week 1 (July)",
     items: [
       "Phase 1 – Online problem framing",
       "Workshops & mentorship",
     ],
   },
   {
-    period: "Week 2 (June)",
+    period: "Week 2 (July)",
     items: [
       "Phase 2 – Prototype building (online)",
       "Physical adversarial testing / pitch sabotage",
     ],
   },
   {
-    period: "Week 3 (June)",
+    period: "Week 3 (July)",
     items: [
       "Phase 3 – Refinement (online)",
       "Final Pitch + Demonstrations (Physical)",
@@ -589,14 +595,15 @@ export const insideAITopicsData: string[] = [
   "From Code to C-Suite: Evolution of the Chief AI Officer",
 ];
 
-export const insideAIProgramTimelineData: { month: string; sessions: string }[] = [
-  { month: "April", sessions: "Inside AI 1" },
-  { month: "May", sessions: "Inside AI 2" },
-  { month: "July", sessions: "Inside AI 3" },
-  { month: "August", sessions: "Inside AI 4" },
-  { month: "October", sessions: "Inside AI 5 & 6" },
-  { month: "November", sessions: "Inside AI 7 & 8" },
-  { month: "December", sessions: "Inside AI 9 & 10" },
+export const insideAIProgramTimelineData: { month: string; sessions: string; highlight?: boolean }[] = [
+  { month: "May", sessions: "Inside AI - 01" },
+  { month: "June", sessions: "Inside AI - 02" },
+  { month: "July", sessions: "AI Challenge SL", highlight: true },
+  { month: "August", sessions: "Inside AI - 03" },
+  { month: "September", sessions: "AI Driven Sri Lanka Summit", highlight: true },
+  { month: "October", sessions: "Inside AI - 04" },
+  { month: "November", sessions: "Inside AI - 05 & 06" },
+  { month: "December", sessions: "Inside AI - 07 & 08" },
 ];
 
 export const insideAIEditionsData: eventsEditionDataProps[] = [
@@ -628,6 +635,9 @@ export const communityTalkEditionsData: eventsEditionDataProps[] = [
       date: "oct 2024",
     },
   },
+];
+
+export const aiSummitPastEditionsData: eventsEditionDataProps[] = [
   {
     title: "AI Summit",
     desc: "The AI Summit is a premier event showcasing AI talks, networking opportunities and company product showcase driving innovation and collaboration",

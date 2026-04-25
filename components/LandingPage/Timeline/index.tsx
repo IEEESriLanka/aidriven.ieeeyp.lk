@@ -148,7 +148,7 @@ export default function Timeline() {
   return (
     <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
       <h2 className="section-header">
-        Event Calendar —{" "}
+        Event Calendar -{" "}
         <span className="text-primary">AIDSL &apos;26</span>
       </h2>
 
