@@ -108,7 +108,7 @@ function TimelineCarouselContent() {
                   className="flex pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
                   <article
-                    className={`relative isolate flex min-h-56 w-full flex-col overflow-hidden rounded-3xl px-6 py-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${tone.card}`}
+                    className={`relative isolate flex w-full flex-col gap-y-4 overflow-hidden rounded-3xl px-6 py-6 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] ${tone.card}`}
                   >
                     {tone.glow && (
                       <div className="pointer-events-none absolute -top-10 -right-10 h-36 w-36 rounded-full bg-primary/20 blur-3xl" />
@@ -121,7 +121,7 @@ function TimelineCarouselContent() {
                       {item.month}
                     </span>
 
-                    <div className="mt-auto pt-8">
+                    <div className="flex flex-col gap-y-1">
                       {item.events.map((event) => (
                         <p
                           key={event}

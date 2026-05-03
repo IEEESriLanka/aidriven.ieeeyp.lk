@@ -11,12 +11,13 @@
   --color-c-secondary: #c9c3ba;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
+  overflow-x: hidden;
   background: #1c1c1c;
 }
 

@@ -21,21 +21,21 @@ const LINES = [
 
 export default function BgSvg() {
   return (
-    <div className="absolute min-h-[120vh] w-screen overflow-clip">
-      <div className="absolute top-0 -right-[20%] h-full w-full">
+    <div className="absolute min-h-[120vh] w-screen overflow-clip" style={{ zIndex: 0 }}>
+      <div className="absolute top-[15%] -right-[20%] h-full w-full">
 
         {/* Original background lines image */}
         <Image
           src={svg}
           alt=""
-          className="h-[120vh] w-full scale-155 object-cover opacity-50"
+          className="h-[120vh] w-full scale-155 object-cover opacity-30"
         />
 
         {/* Animation overlay */}
         <svg
           viewBox="0 0 3143 2112"
           preserveAspectRatio="xMidYMid slice"
-          className="pointer-events-none absolute inset-0 h-[120vh] w-full scale-155"
+          className="pointer-events-none absolute inset-0 h-[120vh] w-full scale-155 opacity-60"
           aria-hidden="true"
         >
           <defs>

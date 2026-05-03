@@ -100,9 +100,19 @@ const Form = () => {
       </div>
       <button
         disabled={isPending}
-        className="h-[44px] w-[174px] cursor-pointer place-content-center rounded-[8px] bg-[linear-gradient(180deg,#EA421E_39.42%,#9D2107_88.46%)] text-center text-white hover:bg-[linear-gradient(0deg,#EA421E_39.42%,#9D2107_88.46%)] hover:transition-colors hover:duration-700 disabled:opacity-50"
+        className="group flex items-center gap-2 self-start rounded-xl border border-primary/40 bg-primary/10 px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isPending ? "Sending..." : "Send Message"}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
       </button>
     </form>
   );

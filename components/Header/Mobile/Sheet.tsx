@@ -6,6 +6,7 @@ import AnimatedCurve from "./Curve";
 import Link from "next/link";
 import MobileNavigationTarget from "./Target";
 import { navItems } from "@/lib/data";
+import { MobileHeaderDropDown } from "@/components/Header/HeaderDropDown";
 
 type Props = { id: string; open: (isOpen: boolean) => void };
 
@@ -37,7 +38,7 @@ export default function Sheet({ id, open }: Props) {
               {item.type === "link" ? (
                 <Link href={item.href} className="text-white">{item.label}</Link>
               ) : (
-                <item.component />
+                <MobileHeaderDropDown onNavigate={() => open(false)} />
               )}
             </MobileNavigationTarget>
           ))}

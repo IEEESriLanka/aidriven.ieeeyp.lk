@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Item(props: UpcomingEventItemProps) {
   return (
-    <div className="grid min-h-[360px] w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
+    <div className="grid w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
       <div className="flex flex-col justify-start gap-4 py-4">
         <div className="flex flex-col gap-4">
           <h3 className="event-item-header text-2xl font-semibold uppercase">
@@ -52,14 +52,15 @@ export default function Item(props: UpcomingEventItemProps) {
         )}
       </div>
 
-      <div className="relative flex items-center justify-end">
+      <div className="relative h-64 w-full overflow-hidden rounded-xl lg:h-full lg:min-h-64 lg:rounded-l-none lg:rounded-r-2xl">
         {props.img && typeof props.img.src === "string" ? (
-          <img src={props.img.src} alt={props.img.alt} />
+          <img src={props.img.src} alt={props.img.alt} className="h-full w-full object-cover" />
         ) : (
           <Image
             src={props.img.src}
             alt={props.img.alt}
-            className="h-auto rounded-xl object-fill lg:rounded-l-none lg:rounded-r-2xl"
+            fill
+            className="object-cover"
           />
         )}
       </div>

@@ -2,18 +2,19 @@ import { BlogItemProps } from "@/lib/type";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Item(props: BlogItemProps) {
+export default function Item(props: BlogItemProps & { priority?: boolean }) {
   return (
     <Link
       href={props.link}
+      prefetch={true}
       className="group relative block h-full min-h-[380px] max-w-[480px] overflow-clip"
       style={{
         borderRadius: "20px 20px 0 20px",
       }}
     >
       <article className="flex h-full flex-col gap-y-4 bg-[rgba(69,65,61,0.8)] px-4 py-8">
-        <div className="border-primary relative h-full min-h-[280px] overflow-clip rounded-xl border">
-          <Image src={props.image} alt={props.title} fill className="brightness-60" />
+        <div className="border-primary relative h-55 shrink-0 overflow-clip rounded-xl border">
+          <Image src={props.image} alt={props.title} fill priority={props.priority} className="brightness-60" />
         </div>
         <div className="flex flex-col gap-y-2">
           <span

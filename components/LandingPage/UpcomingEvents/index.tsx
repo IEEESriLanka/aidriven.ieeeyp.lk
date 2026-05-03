@@ -27,7 +27,7 @@ export default function UpcomingEvent() {
           </CarouselContent>
           <CarouselPrevious className="hidden lg:inline-flex" />
           <CarouselNext className="hidden lg:inline-flex" />
-          <CarouselIndicators />
+          <CarouselIndicators className="mt-3" />
         </Carousel>
       </div>
     </section>

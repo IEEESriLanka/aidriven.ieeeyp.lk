@@ -24,7 +24,7 @@ export default function Header() {
   if (!isClient) return null;
 
   return (
-    <header className={`fixed inset-0 top-4 z-[999] container mx-auto flex h-[70px] w-full items-center justify-between overflow-x-clip rounded-2xl px-4 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] ${scrolled ? "border border-white/15" : "backdrop-blur-lg"}`}>
+    <header className={`fixed inset-0 top-4 z-[999] container mx-auto flex h-[70px] w-full items-center justify-between overflow-x-clip rounded-2xl px-4 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] backdrop-blur-lg`}>
       <div className={`bg-gradient absolute top-0 left-0 h-full w-full rounded-xl transition-opacity duration-500 ${scrolled ? "opacity-0" : "opacity-95"}`} />
       <div className="relative">
         <Link href="/" className="flex items-center">
@@ -35,7 +35,7 @@ export default function Header() {
         <nav>
           <ul className="flex items-center space-x-6 text-xl font-semibold">
             {navItems.map((item, index) => (
-              <li key={index}>
+              <li key={index} className={scrolled ? "[text-shadow:0_0_12px_rgba(0,0,0,0.9),0_1px_4px_rgba(0,0,0,0.8)]" : ""}>
                 {item.type === "link" ? (
                   <Link href={item.href}>{item.label}</Link>
                 ) : (
@@ -49,7 +49,7 @@ export default function Header() {
       <div className="relative hidden items-center justify-end lg:flex">
         <Link
           href="/about-us#contact-us"
-          className="rounded-lg bg-white px-6 py-2 text-lg font-semibold text-orange-500 transition hover:bg-white/90"
+          className="rounded-xl border border-primary px-6 py-2 text-base font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white"
         >
           Contact Us
         </Link>

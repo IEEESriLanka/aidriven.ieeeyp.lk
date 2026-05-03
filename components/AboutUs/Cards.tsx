@@ -58,17 +58,17 @@ export const ContactCard = ({
       <Image className="m-auto size-[40px]" src={contactDetail.icon} alt="" />
     </div>
     <div className="flex flex-col gap-[7px]">
-      <p className="text-[20px] font-bold tracking-[4px] uppercase">
+      <p className="text-[20px] font-bold uppercase whitespace-nowrap">
         {contactDetail.title}
       </p>
-      <p className="text-[16px] font-[300] uppercase">{contactDetail.val}</p>
+      <p className="text-[16px] font-[300]">{contactDetail.val}</p>
     </div>
   </div>
 );
 
 export const ValueCard = ({ img, title, text }: ValProps) => (
   <>
-    <div className="container flex h-[380px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] px-[19px] py-[24px]">
+    <div className="container flex h-[380px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.95)_0%,rgba(58,53,49,0.95)_51.44%,rgba(69,65,61,0.95)_100%)] px-[19px] py-[24px]">
       <div className="py-[12px]">
         <Image src={img} className="size-[80px] object-cover" alt={title} />
       </div>

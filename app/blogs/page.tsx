@@ -3,8 +3,8 @@ import Item from "@/components/LandingPage/Blog/item";
 
 export default function BlogsPage() {
   return (
-    <main className="section-gap-y container mx-auto flex flex-col gap-y-12 px-4 md:px-10">
-      <div className="flex flex-col gap-y-3">
+    <main className="container mx-auto flex flex-col gap-y-6 px-4 pt-32 pb-24 md:px-10 lg:pt-40">
+      <div className="flex flex-col gap-y-6">
         <h1 className="section-header">
           <span>Blogs</span>
           <span className="text-primary"> &amp; Articles</span>
@@ -15,7 +15,7 @@ export default function BlogsPage() {
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {blogsData.map((blog, index) => (
-          <Item key={index} {...blog} />
+          <Item key={index} {...blog} priority={index < 3} />
         ))}
       </div>
     </main>

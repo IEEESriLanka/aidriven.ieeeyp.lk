@@ -12,9 +12,9 @@ export default function Page() {
     <main className="relative min-h-screen">
       <Hero />
       <UpcomingEvent />
+      <Timeline />
       <Testimonials />
       <Blogs />
-      <Timeline />
       <Projects />
     </main>
   );

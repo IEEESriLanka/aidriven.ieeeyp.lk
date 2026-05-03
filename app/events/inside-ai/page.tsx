@@ -53,7 +53,7 @@ const Page = () => {
   ];
 
   return (
-    <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-2.5 py-30 md:px-10">
+    <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-2.5 pt-32 pb-24 md:px-10 lg:pt-40">
 
       {/* Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">

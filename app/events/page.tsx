@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="section-gap-y container mx-auto flex flex-col gap-y-16 px-4">
+    <main className="container mx-auto flex flex-col gap-y-8 px-4 pt-32 pb-24 lg:pt-40">
       <div className="flex flex-col gap-y-4">
         <h1 className="section-header">
           <span>Our</span>
