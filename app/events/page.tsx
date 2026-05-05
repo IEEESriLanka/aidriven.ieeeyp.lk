@@ -10,7 +10,7 @@ export default function Page() {
           <span>Our</span>
           <span className="text-primary"> Events</span>
         </h1>
-        <p className="text-white/60 max-w-2xl">
+        <p className="text-base text-white/60 max-w-2xl">
           Explore AI Driven Sri Lanka's signature programs - from national
           competitions to industry engagement sessions and flagship summits.
         </p>

@@ -11,7 +11,7 @@ export default function PastEventsPage() {
           <span>Past</span>
           <span className="text-primary"> Events</span>
         </h1>
-        <p className="text-white/60 text-sm">
+        <p className="text-base text-white/60">
           A look back at the programs and initiatives that have shaped AI Driven Sri Lanka&apos;s journey so far.
         </p>
       </div>

@@ -61,7 +61,7 @@ export const ContactCard = ({
       <p className="text-[20px] font-bold uppercase whitespace-nowrap">
         {contactDetail.title}
       </p>
-      <p className="text-[16px] font-[300]">{contactDetail.val}</p>
+      <p className="text-base font-light">{contactDetail.val}</p>
     </div>
   </div>
 );
@@ -75,7 +75,7 @@ export const ValueCard = ({ img, title, text }: ValProps) => (
       <div className="font-elemental-end text-[20px] tracking-[1px] uppercase">
         {title}
       </div>
-      <div className="text-center text-[16px]">{text}</div>
+      <div className="text-center text-base">{text}</div>
     </div>
   </>
 );
@@ -111,9 +111,9 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
           {member.name}
         </p>
         {member.team && (
-          <p className="gradient-text text-[16px]">{member.team}</p>
+          <p className="gradient-text text-base">{member.team}</p>
         )}
-        <p className="text-[16px] text-white">{member.position}</p>
+        <p className="text-base text-white">{member.position}</p>
         <div className="flex gap-[16px]">
           {member.socials.map((social, i) =>
             social.url ? (

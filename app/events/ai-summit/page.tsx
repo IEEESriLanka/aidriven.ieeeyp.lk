@@ -1,5 +1,4 @@
-import { aiSummit2026ProgramModel, aiSummitPastEditionsData } from "@/lib/data/events";
-import EditionCard from "@/components/Events/EditionCard";
+import { aiSummit2026ProgramModel } from "@/lib/data/events";
 import {
   Globe, Handshake, Lightbulb, Rocket, Building2, FlaskConical,
   DollarSign, Landmark, GraduationCap, Mic2, MessageSquare, Link2,
@@ -69,7 +68,7 @@ const Page = () => {
               className="flex flex-col items-center justify-center gap-2 rounded-2xl bg-[#191919] border border-white/10 px-4 py-5 text-center"
             >
               <Icon className="h-7 w-7 text-primary" />
-              <span className="text-xs text-white/70">{label}</span>
+              <span className="text-sm text-white/70">{label}</span>
             </div>
           ))}
         </div>
@@ -77,15 +76,15 @@ const Page = () => {
         <div className="flex flex-wrap gap-6 pt-2">
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">200+</span>
-            <span className="text-white/70 text-sm">Participants</span>
+            <span className="text-white/70 text-base">Participants</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">6+</span>
-            <span className="text-white/70 text-sm">Sessions</span>
+            <span className="text-white/70 text-base">Sessions</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">1</span>
-            <span className="text-white/70 text-sm">High-impact Day</span>
+            <span className="text-white/70 text-base">High-impact Day</span>
           </div>
         </div>
       </div>
@@ -155,7 +154,7 @@ const Page = () => {
               >
                 <Icon className="h-6 w-6 text-primary" />
                 <span className="font-semibold text-white">{item.title}</span>
-                <p className="text-sm text-white/65">{item.desc}</p>
+                <p className="text-base text-white/65">{item.desc}</p>
               </div>
             );
           })}
@@ -192,7 +191,7 @@ const Page = () => {
             </div>
             <div>
               <p className="font-elemental-end text-primary text-xl uppercase">September 2026</p>
-              <p className="text-sm text-white/50">AI Driven Sri Lanka Summit 2026</p>
+              <p className="text-base text-white/50">AI Driven Sri Lanka Summit 2026</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -212,8 +211,8 @@ const Page = () => {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">{item.phase}</p>
-                  <p className="text-xs text-white/50 mt-1">{item.detail}</p>
+                  <p className="text-base font-semibold text-white">{item.phase}</p>
+                  <p className="text-sm text-white/50 mt-1">{item.detail}</p>
                 </div>
               </div>
             ))}
@@ -234,27 +233,12 @@ const Page = () => {
             >
               <Icon className="h-6 w-6 text-primary" />
               <span className="font-semibold text-white">{title}</span>
-              <p className="text-sm text-white/65">{desc}</p>
+              <p className="text-base text-white/65">{desc}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Past Editions */}
-      <div className="flex w-full flex-col justify-center gap-10">
-        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          past <span className="text-primary">editions</span>
-        </h2>
-        {aiSummitPastEditionsData.map((edition, i) => (
-          <EditionCard
-            key={i}
-            title={edition.title}
-            desc={edition.desc}
-            data={edition.data}
-            imgs={edition.imgs}
-          />
-        ))}
-      </div>
 
     </main>
   );

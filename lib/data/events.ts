@@ -240,45 +240,39 @@ export const communityFeatsData: FeatureItemProps[] = [
 export const eventsFaqData: eventsFAQDataProps[] = [
   {
     value: "item-1",
-    title: "What is the Sri Lanka AI Challenge (SLAIC)?",
+    title: "What is AI Challenge 2026?",
     content:
-      "SLAIC is a national-level AI innovation program that includes technical workshops, challenge rounds, and mentorship, designed to help participants build real-world AI solutions.",
+      "A national-level AI innovation challenge focused on practical, measurable AI solutions. Unlike ordinary hackathons, it follows a structured 4-phase model with mentorship, adversarial testing, refinement cycles, and a physical final round.",
   },
   {
     value: "item-2",
-    title: "Who can take part in SLAIC?",
+    title: "Who can participate?",
     content:
-      "SLAIC is open to university students and recent A/L graduates across Sri Lanka with an interest in artificial intelligence and emerging technologies.",
+      "Undergraduates, postgraduates, early-career professionals, researchers, and innovators with the ability to prototype AI solutions.",
   },
   {
     value: "item-3",
-    title: "What topics are covered in the SLAIC workshops?",
+    title: "Is this a team-based competition?",
     content:
-      "The workshops focus on cutting-edge topics like Generative AI, Prompt Engineering, Retrieval-Augmented Generation (RAG), and AI Agent Implementation and emerging AI technologies.",
+      "Yes. Participants can join individually or in teams based on the final guidelines released before the program begins.",
   },
   {
     value: "item-4",
-    title: "Is this a team-based competition?",
+    title: "Will certificates be provided?",
     content:
-      "Yes. Participants form teams to work on AI-driven solutions during the challenge rounds.",
+      "Yes. Participants and finalists will receive recognition and certification from IEEE upon completing the required milestones.",
   },
   {
     value: "item-5",
-    title: "Will I receive a certificate for participating?",
+    title: "Are there prizes?",
     content:
-      "All participants who actively engage in the program and complete the required milestones will receive a certificate of participation.",
+      "Yes. Awards and recognition will be announced before the final round. Top teams will be showcased at the AI Driven Sri Lanka Summit 2026.",
   },
   {
     value: "item-6",
-    title: "Are there any prizes or awards?",
+    title: "How can companies partner with the challenge?",
     content:
-      "Yes, top-performing teams are recognised during the final pitch and award ceremony with prizes, opportunities, and certificates of excellence.",
-  },
-  {
-    value: "item-7",
-    title: "How do I pre-order the delegate package?",
-    content:
-      "Registered delegates will receive a link via email and community channels to pre-order their exclusive SLAIC merchandise and materials.",
+      "Companies can partner through sponsorship, mentorship, recruitment visibility, or in-kind partnerships. Contact the Finance & Partnerships team for package details.",
   },
 ];
 
@@ -375,10 +369,20 @@ export const challengeEventsEditionsData: eventsEditionDataProps[] = [
 
 export const NewChallengeEventsEditionsData: eventsEditionDataProps[] = [
   {
+    title: "Sri Lanka AI Challenge 2025",
+    desc: [
+      "Sri Lanka AI Challenge 2025 was a key initiative under IEEE Challenge Sphere SL, designed to provide a structured pathway for participants to gain hands-on experience and strengthen their skills in AI technologies through a series of workshops and a competitive hackathon.",
+    ],
+    data: {
+      participateCount: 400,
+      edition: "2nd Edition",
+      date: "2025",
+    },
+  },
+  {
     title: "Sri Lanka AI Challenge 2024",
     desc: [
-      "Sri Lanka AI Challenge 2024, held as part of ChallengeSphere SL in collaboration with IEEE Sri Lanka Section, brought together aspiring innovators from across 18 universities. With a focus on Conditional UI and AI Agents, the program delivered a complete learning experience through expert-led technical workshops, interactive mentoring, and a nationwide innovation challenge.",
-      "Participants had the unique opportunity to explore real-world AI use cases, gaining practical exposure to tools like LangChain and OpenAI APIs. Through hands-on sessions and industry insights, they designed and implemented AI-driven solutions while collaborating with professionals from leading tech firms. The challenge concluded with a curated industry visit to IFS, allowing finalists to connect with top-tier AI experts, engage in discussions, and receive recognition for their efforts.",
+      "Sri Lanka AI Challenge 2024 brought together aspiring innovators from across universities with a focus on Conditional UI and AI Agents. Participants gained hands-on experience through expert-led workshops, intensive mentoring, and a nationwide innovation challenge.",
     ],
     data: {
       participateCount: 300,
@@ -506,7 +510,7 @@ export const aiChallenge2026Phases: {
     mode: "Online",
     activities: [
       "Problem definition",
-      '"Before" workflow mapping',
+      '"Before" workflow analysis',
       "Ideation",
       "Virtual mentorship",
     ],
@@ -517,12 +521,12 @@ export const aiChallenge2026Phases: {
     activities: [
       "V1 prototype build",
       "Peer testing",
-      "Pitch Sabotage",
+      "Pitch sabotage",
       "Challenge & defense",
     ],
   },
   {
-    phase: "Phase 3 – Patch & Refinement (Week 3 – Part 1)",
+    phase: "Phase 3 – Patch & Refinement (Week 3)",
     mode: "Online",
     activities: [
       "Optimize V2",
@@ -532,12 +536,12 @@ export const aiChallenge2026Phases: {
     ],
   },
   {
-    phase: "Phase 4 – Proof of Impact & Final Round (Week 3 – Part 2)",
+    phase: "Phase 4 – Proof of Impact & Final Round (Week 4)",
     mode: "Physical",
     activities: [
       "Live demo",
       "User validation",
-      "Storytelling",
+      "Final pitching",
       "Impact metrics",
     ],
   },
@@ -548,36 +552,39 @@ export const aiChallenge2026Timeline: { period: string; items: string[] }[] = [
     period: "June",
     items: [
       "Pre-registration opens",
-      "Company onboarding & problem statement alignment",
+      "Company onboarding",
+      "Problem statement alignment",
     ],
   },
   {
-    period: "Week 1 (July)",
+    period: "July – Week 01",
     items: [
-      "Phase 1 – Online problem framing",
+      "Initiation & problem framing",
       "Workshops & mentorship",
+      "Submit problem documentation",
     ],
   },
   {
-    period: "Week 2 (July)",
+    period: "July – Week 02",
     items: [
-      "Phase 2 – Prototype building (online)",
-      "Physical adversarial testing / pitch sabotage",
+      "Prototype building (online)",
+      "Physical adversarial testing",
+      "Pitch sabotage",
     ],
   },
   {
-    period: "Week 3 (July)",
+    period: "July – Week 03",
     items: [
-      "Phase 3 – Refinement (online)",
-      "Final Pitch + Demonstrations (Physical)",
-      "Judging, Awards, Top 3 Selection",
+      "Judging period",
+      "Final pitch sabotage preparation",
     ],
   },
   {
-    period: "September",
+    period: "August – Week 01",
     items: [
-      "Winners showcased at AI Driven Sri Lanka Summit 2026",
-      "National exposure + industry networking",
+      "Final Round",
+      "Final demo & pitch presentation",
+      "Judging & Awards Ceremony",
     ],
   },
 ];

@@ -17,7 +17,7 @@ import type { LucideIcon } from "lucide-react";
 const StatCard = ({ value, label }: { value: string; label: string }) => (
   <div className="flex flex-col items-center justify-center rounded-2xl bg-[#191919] border border-white/10 px-6 py-5 text-center">
     <span className="font-elemental-end text-primary text-3xl md:text-4xl">{value}</span>
-    <span className="mt-1 text-sm text-white/70">{label}</span>
+    <span className="mt-1 text-base text-white/70">{label}</span>
   </div>
 );
 
@@ -136,8 +136,8 @@ const Page = () => {
                   {i < insideAIProgramTimelineData.length - 1 && <div className="w-0.5 flex-1 bg-primary/40 my-1" />}
                 </div>
                 <div className="pb-6 pt-1">
-                  <span className="text-xs text-white/50 uppercase tracking-wide">{item.month}</span>
-                  <p className={`text-sm font-semibold mt-0.5 ${item.highlight ? "text-primary" : "text-white"}`}>{item.sessions}</p>
+                  <span className="text-sm text-white/50 uppercase tracking-wide">{item.month}</span>
+                  <p className={`text-base font-semibold mt-0.5 ${item.highlight ? "text-primary" : "text-white"}`}>{item.sessions}</p>
                 </div>
               </li>
             ))}
@@ -152,8 +152,8 @@ const Page = () => {
                   <div className={`h-0.5 flex-1 ${i === insideAIProgramTimelineData.length - 1 ? "invisible" : "bg-primary/40"}`} />
                 </div>
                 <div className="mt-4 flex flex-col items-center text-center px-1 w-full">
-                  <span className="text-xs text-white/50 uppercase tracking-wide">{item.month}</span>
-                  <span className={`text-xs font-semibold mt-1 leading-tight ${item.highlight ? "text-primary" : "text-white"}`}>{item.sessions}</span>
+                  <span className="text-sm text-white/50 uppercase tracking-wide">{item.month}</span>
+                  <span className={`text-sm font-semibold mt-1 leading-tight ${item.highlight ? "text-primary" : "text-white"}`}>{item.sessions}</span>
                 </div>
               </div>
             ))}
@@ -192,7 +192,7 @@ const Page = () => {
             <div key={i} className="flex flex-col items-center text-center rounded-2xl bg-[#191919B8] border border-white/10 p-6 gap-3 hover:border-primary/40 transition-colors">
               <Icon className="h-8 w-8 text-primary" />
               <span className="font-semibold text-white">{label}</span>
-              <span className="text-sm text-white/50">{sub}</span>
+              <span className="text-base text-white/50">{sub}</span>
             </div>
           ))}
         </div>

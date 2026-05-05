@@ -7,7 +7,7 @@ export default function Hero() {
           <span className="text-primary">Igniting minds.</span>
           <span>LIMITLESS POSSIBILITIES.</span>
         </div>
-        <div className="w-full text-sm text-balance text-white lg:max-w-[55ch] lg:text-base">
+        <div className="w-full text-base text-balance text-white lg:max-w-[55ch]">
           <p>
             AI-Driven Sri Lanka is an initiative by IEEE Young Professionals Sri
             Lanka formed in 2020 that strives to bridge the gap between

@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function Page() {
   return (
-    <main className="container mx-auto flex min-h-screen flex-col gap-10 pt-32 pb-24 lg:pt-40">
+    <main className="container mx-auto flex min-h-screen flex-col gap-10 px-4 pt-32 pb-24 lg:px-16 lg:pt-40">
       <div className="flex items-center gap-4 px-4">
         <h3 className="section-header">
           our <span className="text-primary">team</span>

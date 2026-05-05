@@ -21,7 +21,7 @@ export default function Item(props: UpcomingEventItemProps) {
               <p className="font-semibold text-primary">Experience Includes</p>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-1">
                 {props.highlights.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm">
+                  <li key={index} className="flex items-start gap-2 text-base">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     {item}
                   </li>
@@ -47,20 +47,20 @@ export default function Item(props: UpcomingEventItemProps) {
 
         {props.link && (
           <div className="flex w-full items-center justify-start">
-            <Link href={props.link} className="text-sm text-primary">Learn More</Link>
+            <Link href={props.link} className="text-base text-primary">Learn More</Link>
           </div>
         )}
       </div>
 
       <div className="relative h-64 w-full overflow-hidden rounded-xl lg:h-full lg:min-h-64 lg:rounded-l-none lg:rounded-r-2xl">
         {props.img && typeof props.img.src === "string" ? (
-          <img src={props.img.src} alt={props.img.alt} className="h-full w-full object-cover" />
+          <img src={props.img.src} alt={props.img.alt} className="h-full w-full object-cover object-center" />
         ) : (
           <Image
             src={props.img.src}
             alt={props.img.alt}
             fill
-            className="object-cover"
+            className="object-cover object-center"
           />
         )}
       </div>

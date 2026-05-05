@@ -21,7 +21,7 @@ const EditionCard = ({ title, desc, data, imgs }: eventsEditionDataProps) => {
         <div className="flex items-center gap-2">
           <Users className="text-primary h-5 w-5" />
           <span className="font-elemental-end text-primary text-3xl">{data.participateCount}+</span>
-          <span className="text-white/70 text-sm">Participants</span>
+          <span className="text-white/70 text-base">Participants</span>
         </div>
         <div className="flex items-center gap-2">
           <Ticket className="text-primary h-5 w-5" />

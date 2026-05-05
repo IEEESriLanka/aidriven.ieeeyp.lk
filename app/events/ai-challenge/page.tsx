@@ -44,11 +44,12 @@ const phaseModeColor: Record<string, string> = {
 
 const Page = () => {
   const audienceCards: { Icon: LucideIcon; label: string }[] = [
-    { Icon: Brain, label: "AI/ML Undergraduates & Postgraduates" },
+    { Icon: Brain, label: "AI / ML Undergraduates & Postgraduates" },
     { Icon: Monitor, label: "Engineering, Computer Science & ICT Students" },
     { Icon: Rocket, label: "Early-career AI Practitioners" },
     { Icon: Settings, label: "Tech Enthusiasts Capable of Prototyping" },
-    { Icon: FlaskConical, label: "University Research Teams & Innovation Clubs" },
+    { Icon: FlaskConical, label: "University Research Teams" },
+    { Icon: Lightbulb, label: "Innovation Clubs" },
   ];
 
   const impactCards: { Icon: LucideIcon; text: string }[] = [
@@ -106,10 +107,10 @@ const Page = () => {
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { value: "3-Week", label: "National AI Innovation Challenge" },
-            { value: "Hybrid", label: "Online + Physical Model" },
-            { value: "Summit", label: "Finalists Showcased at AIDSL Summit 2026" },
-            { value: "Real", label: "Deployable AI Solutions" },
+            { value: "4-Week", label: "National AI Innovation Challenge" },
+            { value: "Hybrid", label: "Online + Physical Stages" },
+            { value: "Final Round", label: "Physical Summit & Awards Ceremony" },
+            { value: "Real Impact", label: "Deployable AI Solutions" },
           ].map((stat, i) => (
             <div
               key={i}
@@ -139,18 +140,18 @@ const Page = () => {
           </div>
           <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6">
             <h3 className="mb-3 text-lg font-semibold text-primary uppercase tracking-wide">Our Solution</h3>
-            <p className="mb-4 text-sm text-white/60">
-              AI Challenge introduces a research-backed 4-phase innovation framework that trains participants to:
+            <p className="mb-4 text-base text-white/60">
+              Research-backed 4-phase innovation framework that trains participants to:
             </p>
             <ul className="flex flex-col gap-3">
               <SolutionItem text="Frame problems clearly" />
               <SolutionItem text="Build real prototypes" />
-              <SolutionItem text="Defend ideas under challenge" />
-              <SolutionItem text="Patch, refine, and test" />
+              <SolutionItem text="Challenge ideas under pressure" />
+              <SolutionItem text="Refine, patch, and test" />
               <SolutionItem text="Demonstrate measurable real-world impact" />
             </ul>
-            <p className="mt-4 text-sm text-white/60 italic">
-              This method produces industry-ready solutions and industry-ready talent.
+            <p className="mt-4 text-base text-white/60 italic">
+              Produces industry-ready solutions and future-ready talent.
             </p>
           </div>
         </div>
@@ -193,8 +194,8 @@ const Page = () => {
               </div>
               <ul className="flex flex-col gap-2">
                 {phase.activities.map((act, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-white/70">
-                    <span className="mt-1 shrink-0 text-primary text-xs">●</span>
+                  <li key={j} className="flex items-start gap-2 text-base text-white/70">
+                    <span className="mt-1.5 shrink-0 text-primary text-xs">●</span>
                     <span>{act}</span>
                   </li>
                 ))}
@@ -218,10 +219,10 @@ const Page = () => {
                   {i < aiChallenge2026Timeline.length - 1 && <div className="w-0.5 flex-1 bg-primary/40 my-1" />}
                 </div>
                 <div className="pb-6 pt-1">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wide">{item.period}</span>
+                  <span className="text-sm font-semibold text-primary uppercase tracking-wide">{item.period}</span>
                   <ul className="mt-1 flex flex-col gap-1">
                     {item.items.map((txt, j) => (
-                      <li key={j} className="text-xs text-white/60 leading-snug">{txt}</li>
+                      <li key={j} className="text-sm text-white/60 leading-snug">{txt}</li>
                     ))}
                   </ul>
                 </div>
@@ -237,10 +238,10 @@ const Page = () => {
                   <div className={`h-0.5 flex-1 ${i === aiChallenge2026Timeline.length - 1 ? "invisible" : "bg-primary/40"}`} />
                 </div>
                 <div className="mt-4 flex flex-col items-center text-center px-1 w-full">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wide">{item.period}</span>
+                  <span className="text-sm font-semibold text-primary uppercase tracking-wide">{item.period}</span>
                   <ul className="mt-2 flex flex-col gap-1">
                     {item.items.map((txt, j) => (
-                      <li key={j} className="text-xs text-white/60 leading-snug">{txt}</li>
+                      <li key={j} className="text-sm text-white/60 leading-snug">{txt}</li>
                     ))}
                   </ul>
                 </div>
@@ -259,7 +260,7 @@ const Page = () => {
           {impactCards.map(({ Icon, text }, i) => (
             <div key={i} className="flex items-start gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-5">
               <Icon className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-              <p className="text-sm text-white/80">{text}</p>
+              <p className="text-base text-white/80">{text}</p>
             </div>
           ))}
         </div>
@@ -275,7 +276,7 @@ const Page = () => {
             <div key={i} className="flex flex-col gap-3 rounded-2xl bg-[#191919B8] border border-white/10 p-6 hover:border-primary/40 transition-colors">
               <Icon className="h-6 w-6 text-primary" />
               <span className="font-semibold text-white">{title}</span>
-              <p className="text-sm text-white/65">{desc}</p>
+              <p className="text-base text-white/65">{desc}</p>
             </div>
           ))}
         </div>

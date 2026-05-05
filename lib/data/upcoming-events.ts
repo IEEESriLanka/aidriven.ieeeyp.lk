@@ -1,4 +1,4 @@
-import ai_challenge_2026_img from "@/assets/events/aidsl.jpg";
+import ai_challenge_2026_img from "@/assets/events/ai-challenge-image.jpeg";
 import inside_ai_img from "@/assets/events/explorerSeries.png";
 import ai_summit_img from "@/assets/events/ai-summit.png";
 import SLAIC25Image from "@/assets/events/SLAIC2025.png";

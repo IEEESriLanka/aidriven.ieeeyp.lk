@@ -9,7 +9,7 @@ export default function BlogsPage() {
           <span>Blogs</span>
           <span className="text-primary"> &amp; Articles</span>
         </h1>
-        <p className="text-white/60 max-w-2xl">
+        <p className="text-base text-white/60 max-w-2xl">
           Insights, research, and perspectives on artificial intelligence from the AIDSL community.
         </p>
       </div>
