@@ -47,6 +47,7 @@ export interface BlogItemProps {
   image: StaticImport;
   link: string;
   content: string[];
+  tags?: string[];
 }
 
 export interface ProjectItemProps {

@@ -16,6 +16,7 @@
     "@react-email/render": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "gh-pages": "^6.3.0",
     "gsap": "^3.13.0",

@@ -1,3 +1,7 @@
+"use client";
+
+import { useMemo, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +14,18 @@ import Item from "./Item";
 import { upcomingEventsData } from "@/lib/data";
 
 export default function UpcomingEvent() {
+  const autoplayRef = useRef(
+    Autoplay({
+      delay: 4000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
+      stopOnFocusIn: false,
+      playOnInit: true,
+    }),
+  );
+  const plugins = useMemo(() => [autoplayRef.current], []);
+  const opts = useMemo(() => ({ loop: true }), []);
+
   return (
     <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
       <h1 className="section-header">
@@ -17,10 +33,10 @@ export default function UpcomingEvent() {
         <span className="text-primary"> Events</span>
       </h1>
       <div>
-        <Carousel>
+        <Carousel opts={opts} plugins={plugins}>
           <CarouselContent>
             {upcomingEventsData.map((event, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="flex">
                 <Item {...event} />
               </CarouselItem>
             ))}

@@ -17,14 +17,21 @@ export default function Item(props: BlogItemProps & { priority?: boolean }) {
           <Image src={props.image} alt={props.title} fill priority={props.priority} className="brightness-60" />
         </div>
         <div className="flex flex-col gap-y-2">
-          <span
-            className="text-primary w-fit bg-[#191919] p-1 text-sm"
-            style={{
-              borderRadius: "12px 4px",
-            }}
-          >
-            article
-          </span>
+          {props.tags && props.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {props.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="text-primary w-fit bg-[#191919] px-2 py-1 text-xs"
+                  style={{
+                    borderRadius: "12px 4px",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
           <h3 className="text-xl font-medium text-white">{props.title}</h3>
           <p className="text-white/70">{props.caption}</p>
         </div>

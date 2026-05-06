@@ -8,13 +8,13 @@ export const navItems: NavItem[] = [
     label: "Home",
   },
   {
+    type: "dropdown",
+    component: HeaderDropDown,
+  },
+  {
     type: "link",
     href: "/blogs",
     label: "Blogs",
-  },
-  {
-    type: "dropdown",
-    component: HeaderDropDown,
   },
   {
     type: "link",

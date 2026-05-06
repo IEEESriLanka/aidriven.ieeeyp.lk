@@ -87,7 +87,7 @@ const Page = () => {
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           <StatCard value="8" label="Sessions Across the Year" />
-          <StatCard value="50–70" label="Participants per Session" />
+          <StatCard value="30–50" label="Participants per Session" />
           <StatCard value="500+" label="Total Participants" />
           <StatCard value="100%" label="Hands-on Workshops" />
         </div>

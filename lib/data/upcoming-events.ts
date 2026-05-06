@@ -1,9 +1,9 @@
 import ai_challenge_2026_img from "@/assets/events/ai-challenge-image.jpeg";
-import inside_ai_img from "@/assets/events/explorerSeries.png";
-import ai_summit_img from "@/assets/events/ai-summit.png";
-import SLAIC25Image from "@/assets/events/SLAIC2025.png";
-import AIComTalk25Image from "@/assets/events/AIComTalk2025.png";
-import AIForum2024Image from "@/assets/events/AIFrorum2024.png";
+import inside_ai_img from "@/assets/events/explorerSeries.webp";
+import ai_summit_img from "@/assets/events/ai-summit.webp";
+import SLAIC25Image from "@/assets/events/SLAIC2025.webp";
+import AIComTalk25Image from "@/assets/events/AIComTalk2025.webp";
+import AIForum2024Image from "@/assets/events/AIFrorum2024.webp";
 import type { UpcomingEventItemProps } from "../type";
 
 export const upcomingEventsData: UpcomingEventItemProps[] = [

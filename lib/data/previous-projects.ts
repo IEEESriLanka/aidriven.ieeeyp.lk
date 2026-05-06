@@ -1,8 +1,8 @@
 import Project3Image from "@/assets/projects/project3.png";
 
-import SLAIC25Image from "@/assets/events/SLAIC2025.png";
-import AIComTalk25Image from "@/assets/events/AIComTalk2025.png";
-import ExplorerSeriesImage from "@/assets/events/explorerSeries.png";
+import SLAIC25Image from "@/assets/events/SLAIC2025.webp";
+import AIComTalk25Image from "@/assets/events/AIComTalk2025.webp";
+import ExplorerSeriesImage from "@/assets/events/explorerSeries.webp";
 import type { ProjectItemProps } from "../type";
 
 export const projectsData: ProjectItemProps[] = [

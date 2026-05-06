@@ -4,25 +4,34 @@ import Logo from "@/assets/footerLogo.png";
 
 export default function Footer() {
   return (
-    <footer className="container mx-auto bg-transparent p-4 py-6 text-center text-white">
-      <div className="flex w-full items-center justify-end">
-        <Image
-          src={Logo}
-          alt="AIDSL Logo"
-          width={220}
-          className="mb-4 h-auto"
-        />
-      </div>
-      <div className="flex w-full flex-col-reverse items-center justify-between gap-y-4 lg:flex-row">
-        <p>© Copyright 2026 AI Driven Sri Lanka. All rights reserved.</p>
-        <ul className="flex space-x-2">
+    <footer className="relative w-full border-t border-white/10 bg-[#0d0d0d] text-white">
+      <div className="container mx-auto flex flex-col items-center gap-6 px-4 py-10 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex items-center justify-center lg:justify-start">
+          <Image
+            src={Logo}
+            alt="AIDSL Logo"
+            width={200}
+            className="h-auto"
+          />
+        </div>
+
+        <p className="text-center text-sm text-white/70 lg:text-left">
+          © Copyright 2026 AI Driven Sri Lanka. All rights reserved.
+        </p>
+
+        <ul className="flex items-center gap-3">
           {socialLinks.map((link, index) => (
-            <li key={index} className="inline">
-              <a href={link.href} target="_blank" rel="noopener noreferrer">
+            <li key={index}>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-opacity hover:opacity-80"
+              >
                 <Image
                   src={link.icon}
                   alt={link.name}
-                  className="inline-block h-12 w-12"
+                  className="h-10 w-10"
                 />
               </a>
             </li>
