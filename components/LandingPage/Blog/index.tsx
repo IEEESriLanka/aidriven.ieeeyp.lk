@@ -3,13 +3,15 @@ import {
   CarouselContent,
   CarouselIndicators,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { blogsData } from "@/lib/data";
 import Item from "./item";
 
 export default function Blogs() {
   return (
-    <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
+    <section id="blogs" className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
       <h1 className="section-header">
         <span>Latest</span>
         <span className="text-primary"> Blog</span>
@@ -25,6 +27,8 @@ export default function Blogs() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="hidden lg:inline-flex" />
+          <CarouselNext className="hidden lg:inline-flex" />
           <CarouselIndicators />
         </Carousel>
       </div>

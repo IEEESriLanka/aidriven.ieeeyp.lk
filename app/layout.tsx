@@ -27,6 +27,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AI Driven Sri Lanka",
   description: "AI Driven Sri Lanka",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -38,13 +41,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} ${FZY.variable} ${poppins.variable} relative antialiased`}
+        suppressHydrationWarning
       >
         <LenisWrapper>
           <BackgroundWrapper>
             <Header />
             {children}
-            <Footer />
           </BackgroundWrapper>
+          <Footer />
         </LenisWrapper>
       </body>
     </html>

@@ -5,11 +5,13 @@ export default function BackgroundWrapper({
 }: React.PropsWithChildren) {
   return (
     <div
-      className="body-gradient"
+      className="relative body-gradient"
       style={{ "--_angle": "100deg" } as React.CSSProperties}
     >
       <BgSvg />
-      {children}
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 }

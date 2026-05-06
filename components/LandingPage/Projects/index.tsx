@@ -3,6 +3,8 @@ import {
   CarouselContent,
   CarouselIndicators,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { projectsData } from "@/lib/data";
 import Item from "./item";
@@ -23,6 +25,8 @@ export default function Projects() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="hidden lg:inline-flex" />
+          <CarouselNext className="hidden lg:inline-flex" />
           <CarouselIndicators />
         </Carousel>
       </div>

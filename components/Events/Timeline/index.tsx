@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/carousel";
 import { eventPageTimelineData as TimelineData } from "@/lib/data";
 import { useCarousel } from "@/components/ui/carousel";
-import { useEffect } from "react";
 import Item from "./Item";
 
 export default function Timeline() {
@@ -36,14 +35,10 @@ export default function Timeline() {
 function Slides() {
   const { currentIndex } = useCarousel();
 
-  useEffect(() => {
-    console.log(currentIndex);
-  }, [currentIndex]);
-
   return (
     <>
       {TimelineData.map((blog, index) => (
-        <CarouselItem key={index} index={index} className="lg:basis-[750px]">
+        <CarouselItem key={index} index={index} className="lg:basis-187.5">
           <Item {...blog} isActive={index === currentIndex} />
         </CarouselItem>
       ))}

@@ -19,6 +19,7 @@ export type NavItem = NavLinkItem | NavDropdownItem;
 export interface UpcomingEventItemProps {
   title: string;
   description: string[];
+  highlights?: string[];
   date?: string;
   time?: string;
   venue?: string;
@@ -46,6 +47,7 @@ export interface BlogItemProps {
   image: StaticImport;
   link: string;
   content: string[];
+  tags?: string[];
 }
 
 export interface ProjectItemProps {
@@ -78,6 +80,7 @@ export interface OldTimelineItemProps {
 export interface TimelineItemProps {
   events: string[];
   month?: string;
+  highlight?: boolean;
 }
 
 import type { StaticImageData } from "next/image";
@@ -108,6 +111,7 @@ export interface MemberDetailProps {
   team?: string;
   position: string;
   socials: { icon: ImgSrc; url: string }[];
+  grayscale?: boolean;
 }
 
 export interface eventsEditionDataProps {

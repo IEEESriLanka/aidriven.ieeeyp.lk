@@ -11,8 +11,37 @@
   --color-c-secondary: #c9c3ba;
 }
 
+html {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
 body {
+  overflow-x: hidden;
   background: #1c1c1c;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(11, 83%, 52%) #2a2a2a;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsl(11, 83%, 52%);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(11, 83%, 62%);
 }
 
 @layer utilities {
@@ -64,6 +93,15 @@ body {
 
   .section-gap-y {
     @apply py-12 lg:py-24;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 
   .timeline-card {

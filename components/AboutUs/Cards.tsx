@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const Parellelo = () => (
   <svg
-    width="158"
-    height="90"
+    width="195"
+    height="111"
     viewBox="0 0 158 90"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -58,24 +58,24 @@ export const ContactCard = ({
       <Image className="m-auto size-[40px]" src={contactDetail.icon} alt="" />
     </div>
     <div className="flex flex-col gap-[7px]">
-      <p className="text-[20px] font-bold tracking-[4px] uppercase">
+      <p className="text-[20px] font-bold uppercase whitespace-nowrap">
         {contactDetail.title}
       </p>
-      <p className="text-[16px] font-[300] uppercase">{contactDetail.val}</p>
+      <p className="text-base font-light">{contactDetail.val}</p>
     </div>
   </div>
 );
 
 export const ValueCard = ({ img, title, text }: ValProps) => (
   <>
-    <div className="container flex h-[380px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.32)_0%,rgba(58,53,49,0.32)_51.44%,rgba(69,65,61,0.32)_100%)] px-[19px] py-[24px]">
+    <div className="container flex h-[380px] flex-col items-center justify-center gap-[24px] rounded-[4px_24px] bg-[linear-gradient(180deg,rgba(52,47,42,0.95)_0%,rgba(58,53,49,0.95)_51.44%,rgba(69,65,61,0.95)_100%)] px-[19px] py-[24px]">
       <div className="py-[12px]">
         <Image src={img} className="size-[80px] object-cover" alt={title} />
       </div>
       <div className="font-elemental-end text-[20px] tracking-[1px] uppercase">
         {title}
       </div>
-      <div className="text-center text-[16px]">{text}</div>
+      <div className="text-center text-base">{text}</div>
     </div>
   </>
 );
@@ -90,17 +90,17 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-[20px]">
-      <div className="relative z-0 min-w-[158px]">
+      <div className="relative z-0 min-w-48.75">
         {typeof member.profileImg === "string" ? (
           <img
             src={member.profileImg}
-            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
             alt=""
           />
         ) : (
           <Image
             src={member.profileImg}
-            className="z-30 mx-auto h-[182px] w-auto object-cover"
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
             alt=""
           />
         )}
@@ -111,9 +111,9 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
           {member.name}
         </p>
         {member.team && (
-          <p className="gradient-text text-[16px]">{member.team}</p>
+          <p className="gradient-text text-base">{member.team}</p>
         )}
-        <p className="text-[16px] text-white">{member.position}</p>
+        <p className="text-base text-white">{member.position}</p>
         <div className="flex gap-[16px]">
           {member.socials.map((social, i) =>
             social.url ? (

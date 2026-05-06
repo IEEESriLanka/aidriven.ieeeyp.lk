@@ -20,13 +20,13 @@ export default function AboutUs() {
         <span className="text-primary">people Say </span>
         <span>About us ?</span>
       </h1>
-      <div className="mt-16 flex lg:ml-4 lg:gap-x-8">
+      <div className="mt-8 flex lg:ml-4 lg:gap-x-8">
         <Carousel className="w-full overflow-x-clip overflow-y-visible">
-          <CarouselContent className="flex w-full overflow-visible pl-4 lg:gap-x-8 lg:px-16">
+          <CarouselContent className="flex w-full overflow-visible pl-4 lg:gap-x-8 lg:px-4">
             {testimonialsData.map((testimonial, index) => (
               <CarouselItem
                 key={index}
-                className="min-h-[280px] lg:basis-[40%]"
+                className="lg:basis-[40%]"
               >
                 <Item {...testimonial} />
               </CarouselItem>
@@ -34,7 +34,7 @@ export default function AboutUs() {
           </CarouselContent>
           <CarouselPrevious className="hidden lg:inline-flex" />
           <CarouselNext className="hidden lg:inline-flex" />
-          <CarouselIndicators />
+          <CarouselIndicators className="mt-6" />
         </Carousel>
       </div>
     </section>

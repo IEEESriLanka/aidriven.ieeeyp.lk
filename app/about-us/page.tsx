@@ -25,7 +25,7 @@ const Page = () => {
           <p className="font-elemental-end text-center text-[32px] md:text-left">
             ABOUT <span className="text-primary">AIDSL</span>
           </p>
-          <p className="text-[14px] text-white">
+          <p className="text-base text-white/85 leading-relaxed lg:text-lg">
             AI-Driven Sri Lanka is an initiative launched in 2020 by IEEE Young
             Professionals Sri Lanka to empower young individuals in Sri Lanka
             with an analytical background and a keen interest in the field of
@@ -37,6 +37,7 @@ const Page = () => {
         </div>
       </div>
 
+      {/* Mission & Vision section — commented out, do not remove
       <div className="container flex flex-col gap-[40px]">
         <div>
           <p className="font-elemental-end text-center text-[32px] md:text-left">
@@ -50,7 +51,7 @@ const Page = () => {
 
         <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
           <div className="text-primary text-[32px]">Mission</div>
-          <div className="container px-[40px] py-[35px] text-[14px]">
+          <div className="container px-[40px] py-[35px] text-base text-white/85 leading-relaxed lg:text-lg">
             Our mission is to bridge the gap between undergraduates and
             graduates in the AI industry by offering comprehensive AI education,
             practical skills, and a supportive community through a holistic
@@ -62,20 +63,21 @@ const Page = () => {
 
         <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
           <div className="text-primary text-[32px]">Vision</div>
-          <div className="container px-[40px] py-[35px] text-[14px]">
+          <div className="container px-[40px] py-[35px] text-base text-white/85 leading-relaxed lg:text-lg">
             Empowering Sri Lankan Youth with AI Excellence.
           </div>
         </div>
       </div>
+      */}
 
       <div className="container flex flex-col gap-[32px]">
         <div>
           <p className="font-elemental-end text-center text-[32px] md:text-left">
             OUR <span className="text-primary">CORE VALUES</span>
           </p>
-          <p className="px-[40px] py-[40px] text-[14px]">
+          <p className="px-[40px] py-[40px] text-base text-white/85 leading-relaxed lg:text-lg">
             Our core values shape our identity, guiding us to empower AI
-            enthusiasts, fosterinnovation, pursue excellence, and thrive through
+            enthusiasts, foster innovation, pursue excellence, and thrive through
             collective collaboration.
           </p>
         </div>
@@ -91,7 +93,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="container flex flex-col gap-[80px]">
+      <div id="contact-us" className="container scroll-mt-28 flex flex-col gap-6">
         <div className="font-elemental-end text-primary text-center text-[32px] uppercase md:text-left">
           <p>
             Get in touch <span className="text-white">and let&apos;s</span>{" "}
@@ -114,7 +116,7 @@ const Page = () => {
           <p className="text-center text-[20px] uppercase">
             Connect with a member of our team
           </p>
-          <div className="flex flex-col justify-center gap-[20px] md:flex-row">
+          <div className="flex flex-col justify-center gap-[20px] md:flex-row md:gap-16">
             {memberDetailsData.map((dets, i) => (
               <MemberCard key={i} member={dets} />
             ))}

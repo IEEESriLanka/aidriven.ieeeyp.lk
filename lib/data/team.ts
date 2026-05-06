@@ -1,5 +1,22 @@
 import fbIcon from "@/assets/icons/fb.png";
 import linkedinIcon from "@/assets/icons/linkedin.png";
+
+// 2026 team imports
+import geenothPhoto from "@/assets/team-2026/Geenoth Viksura.png";
+import hirushiPhoto from "@/assets/team-2026/Hirushi Gamage.png";
+import kaushikaPhoto from "@/assets/team-2026/Kaushika Dissanayake.png";
+import lohansaPhoto from "@/assets/team-2026/Lohansa Munasinghe.png";
+import linukPhoto from "@/assets/team-2026/Linuk Perera.png";
+import dinaraPhoto from "@/assets/team-2026/Dinara Thareen.png";
+import hirushaPhoto from "@/assets/team-2026/Hirusha Perera.png";
+import thulanyaPhoto from "@/assets/team-2026/6.png";
+import tharinduNimsaraPhoto from "@/assets/team-2026/Tharindu Nimsara.png";
+import mitharaPhoto from "@/assets/team-2026/Mithara Mallikaarachchi.png";
+import heshanPhoto from "@/assets/team-2026/Heshan Ranasinghe.png";
+import elishaPhoto from "@/assets/team-2026/Elisha Perera.png";
+import chathuminaPhoto from "@/assets/team-2026/Chathumina Kalatuwage.png";
+import thevinuPhoto from "@/assets/team-2026/Thevinu Premathilaka.png";
+import manulaPhoto from "@/assets/team-2026/Manula Thejan.png";
 import athsaraPhoto from "@/assets/team/athsara.png";
 import bosiluPhoto from "@/assets/team/bosilu.png";
 import himanPhoto from "@/assets/team/himan.png";
@@ -85,6 +102,7 @@ type TeamMember = {
   name: string;
   position: string;
   socials: SocialLink[];
+  grayscale?: boolean;
 };
 
 type TeamSection = {
@@ -171,6 +189,7 @@ export const TeamDetails: {
         profileImg: teamPhotos.himanPhoto,
         name: "Himan Withana",
         position: "coordinator",
+        grayscale: true,
         socials: [
           { icon: fbIcon, url: "" },
           { icon: linkedinIcon, url: "" },
@@ -515,6 +534,7 @@ export const TeamDetails: {
         profileImg: teamPhotos.gimanthaPhoto,
         name: "Gimantha Induwara",
         position: "AD HOC VOLUNTEERS",
+        grayscale: true,
         socials: [
           {
             icon: fbIcon,
@@ -530,24 +550,161 @@ export const TeamDetails: {
   },
 };
 
+export const Team2026Details: {
+  main: TeamSection;
+  secondary: TeamSection;
+  third: TeamSection;
+} = {
+  main: {
+    members: [
+      {
+        profileImg: geenothPhoto,
+        name: "Geenoth Viksura",
+        position: "Chairperson",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/geenoth-viksura/" },
+        ],
+      },
+      {
+        profileImg: hirushiPhoto,
+        name: "Hirushi Gamage",
+        position: "Secretary",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/hirushi-gamage-b912a9265" },
+        ],
+      },
+    ],
+  },
+  secondary: {
+    members: [
+      {
+        profileImg: kaushikaPhoto,
+        name: "Kaushika Dissanayake",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/anuda-kaushika" },
+        ],
+      },
+      {
+        profileImg: lohansaPhoto,
+        name: "Lohansa Munasinghe",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/lohansa-munasinghe-5691961b5/" },
+        ],
+      },
+      {
+        profileImg: linukPhoto,
+        name: "Linuk Perera",
+        position: "Vice-Chairperson",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/linukperera" },
+        ],
+      },
+    ],
+  },
+  third: {
+    members: [
+      {
+        profileImg: dinaraPhoto,
+        name: "Dinara Thareen",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/dinara-thareen/" },
+        ],
+      },
+      {
+        profileImg: manulaPhoto,
+        name: "Manula Thejan",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/manula-thejan-90b8172b8/" },
+        ],
+      },
+      {
+        profileImg: thulanyaPhoto,
+        name: "Thulanya Dewasurendra",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/thulanya-dewasurendra-80a712344/" },
+        ],
+      },
+      {
+        profileImg: tharinduNimsaraPhoto,
+        name: "Tharindu Nimsara",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/tharindu-nimsara-waidyathilake-578a112a0" },
+        ],
+      },
+      {
+        profileImg: mitharaPhoto,
+        name: "Mithara Mallikaarachchi",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/mithara-mallikaarachchi-05622735a" },
+        ],
+      },
+      {
+        profileImg: heshanPhoto,
+        name: "Heshan Ranasinghe",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/heshan-ranasinghe-988b00290" },
+        ],
+      },
+      {
+        profileImg: elishaPhoto,
+        name: "Elisha Perera",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/elisha-perera" },
+        ],
+      },
+      {
+        profileImg: chathuminaPhoto,
+        name: "Chathumina Kalatuwage",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/chathumina-k-077808249/" },
+        ],
+      },
+      {
+        profileImg: thevinuPhoto,
+        name: "Thevinu Premathilaka",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/thevinu-premathilaka-49583a269" },
+        ],
+      },
+      {
+        profileImg: hirushaPhoto,
+        name: "Hirusha Perera",
+        position: "Coordinator",
+        socials: [
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/hirusha-perera-487432341" },
+        ],
+      },
+    ],
+  },
+};
+
 // contact us page
 export const memberDetailsData: MemberDetailProps[] = [
   {
-    profileImg: teamPhotos.sasankaPhoto,
-    name: "Sasanka Premarathne",
+    profileImg: geenothPhoto,
+    name: "Geenoth Viksura",
     position: "Chairperson",
     socials: [
-      { icon: fbIcon, url: "https://www.facebook.com/share/1B5w91mSfz/" },
-      { icon: linkedinIcon, url: "https://www.linkedin.com/in/sasanka-udana" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/geenoth-viksura/" },
     ],
   },
   {
-    profileImg: teamPhotos.nipuniHPhoto,
-    name: "Nipuni Herath",
+    profileImg: hirushiPhoto,
+    name: "Hirushi Gamage",
     position: "Secretary",
     socials: [
-      { icon: fbIcon, url: "https://www.facebook.com/nipuni.herath.381103" },
-      { icon: linkedinIcon, url: "https://www.linkedin.com/in/nipuni-herath" },
+      { icon: linkedinIcon, url: "https://www.linkedin.com/in/hirushi-gamage-b912a9265" },
     ],
   },
 ];

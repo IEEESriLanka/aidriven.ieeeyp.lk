@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Item(props: UpcomingEventItemProps) {
   return (
-    <div className="grid min-h-[360px] w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
+    <div className="grid h-full w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
       <div className="flex flex-col justify-start gap-4 py-4">
         <div className="flex flex-col gap-4">
           <h3 className="event-item-header text-2xl font-semibold uppercase">
@@ -16,6 +16,19 @@ export default function Item(props: UpcomingEventItemProps) {
               {desc}
             </p>
           ))}
+          {props.highlights && props.highlights.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <p className="font-semibold text-primary">Experience Includes</p>
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-1">
+                {props.highlights.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2 text-base">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {props.date && (
@@ -33,20 +46,21 @@ export default function Item(props: UpcomingEventItemProps) {
         )}
 
         {props.link && (
-          <div className="flex w-full items-center justify-end uppercase">
-            <Link href={props.link}>{props.linkALT || "Read more"}</Link>
+          <div className="flex w-full items-center justify-start">
+            <Link href={props.link} className="text-base text-primary">Learn More</Link>
           </div>
         )}
       </div>
 
-      <div className="relative flex items-center justify-end">
+      <div className="relative h-64 w-full overflow-hidden rounded-xl lg:h-full lg:min-h-64 lg:rounded-l-none lg:rounded-r-2xl">
         {props.img && typeof props.img.src === "string" ? (
-          <img src={props.img.src} alt={props.img.alt} />
+          <img src={props.img.src} alt={props.img.alt} className="h-full w-full object-cover object-center" />
         ) : (
           <Image
             src={props.img.src}
             alt={props.img.alt}
-            className="h-auto rounded-xl object-fill lg:rounded-l-none lg:rounded-r-2xl"
+            fill
+            className="object-cover object-center"
           />
         )}
       </div>

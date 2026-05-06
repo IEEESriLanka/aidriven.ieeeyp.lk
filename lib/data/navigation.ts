@@ -13,6 +13,11 @@ export const navItems: NavItem[] = [
   },
   {
     type: "link",
+    href: "/blogs",
+    label: "Blogs",
+  },
+  {
+    type: "link",
     href: "/our-team",
     label: "Our Team",
   },

@@ -25,7 +25,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   }
 
   return (
-    <main className="container mx-auto min-h-screen px-4 pt-[20vh] pb-12 sm:px-6 lg:px-8">
+    <main className="container mx-auto min-h-screen px-4 pt-28 pb-12 sm:px-6 lg:px-8">
       <article className="space-y-8">
         <div className="space-y-4">
           <h1 className="text-3xl leading-tight font-bold text-white sm:text-4xl md:text-5xl">

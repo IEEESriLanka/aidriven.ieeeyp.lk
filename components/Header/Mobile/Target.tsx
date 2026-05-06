@@ -27,7 +27,7 @@ export default function MobileNavigationTarget({
 
   return (
     <motion.li
-      className="font-dm-sans bg-clip-text pb-1 text-4xl font-semibold text-white transition-colors"
+      className="font-dm-sans pb-1 text-4xl font-semibold text-white transition-colors"
       role="link"
       onClick={() => {
         if (href && local) {
