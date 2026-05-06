@@ -102,6 +102,7 @@ type TeamMember = {
   name: string;
   position: string;
   socials: SocialLink[];
+  grayscale?: boolean;
 };
 
 type TeamSection = {
