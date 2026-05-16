@@ -151,6 +151,28 @@ body {
   main {
     @apply relative z-20;
   }
+
+  .animate-marquee-left {
+    animation: marquee-left 30s linear infinite;
+  }
+
+  .animate-marquee-right {
+    animation: marquee-right 25s linear infinite;
+  }
+
+  .partners-slider:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 #about-section {
