@@ -89,18 +89,18 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-[20px]">
+    <div className="flex flex-col items-center justify-start gap-[20px]">
       <div className="relative z-0 min-w-48.75">
         {typeof member.profileImg === "string" ? (
           <img
             src={member.profileImg}
-            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}${member.flipX ? " -scale-x-100" : ""}`}
             alt=""
           />
         ) : (
           <Image
             src={member.profileImg}
-            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}`}
+            className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}${member.flipX ? " -scale-x-100" : ""}`}
             alt=""
           />
         )}

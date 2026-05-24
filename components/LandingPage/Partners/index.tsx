@@ -25,7 +25,6 @@ const row2Logos = [
   "/partnerLogos/19.png",
   "/partnerLogos/20.png",
   "/partnerLogos/21.png",
-  "/partnerLogos/1.png",
 ];
 
 export default function Partners() {
@@ -37,19 +36,19 @@ export default function Partners() {
       </h1>
 
       <div className="partners-slider relative mt-8">
-        {/* White pill container */}
-        <div className="overflow-hidden rounded-2xl bg-white py-6 shadow-lg flex flex-col gap-y-4">
+        {/* Dark pill container */}
+        <div className="overflow-hidden rounded-3xl bg-[#252323] border border-white/7 py-2 flex flex-col">
           {/* Row 1 — scrolls left */}
-          <div className="flex overflow-hidden">
+          <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-left flex w-max items-center">
               {[...row1Logos, ...row1Logos].map((src, i) => (
                 <div key={i} className="mx-6 flex flex-shrink-0 items-center justify-center">
                   <Image
                     src={src}
                     alt="Partner logo"
-                    width={120}
-                    height={48}
-                    className="h-12 w-auto object-contain"
+                    width={480}
+                    height={192}
+                    className="h-48 w-auto object-contain"
                   />
                 </div>
               ))}
@@ -57,27 +56,30 @@ export default function Partners() {
           </div>
 
           {/* Row 2 — scrolls right */}
-          <div className="flex overflow-hidden">
+          <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-right flex w-max items-center">
-              {[...row2Logos, ...row2Logos].map((src, i) => (
-                <div key={i} className="mx-6 flex flex-shrink-0 items-center justify-center">
-                  <Image
-                    src={src}
-                    alt="Partner logo"
-                    width={120}
-                    height={48}
-                    className="h-12 w-auto object-contain"
-                  />
-                </div>
-              ))}
+              {[...row2Logos, ...row2Logos].map((src, i) => {
+                const is12 = src === "/partnerLogos/12.png";
+                return (
+                  <div key={i} className="mx-6 flex flex-shrink-0 items-center justify-center">
+                    <Image
+                      src={src}
+                      alt="Partner logo"
+                      width={is12 ? 552 : 480}
+                      height={is12 ? 208 : 192}
+                      className={`${is12 ? "h-52" : "h-48"} w-auto object-contain`}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
 
         {/* Left fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 rounded-l-2xl bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-4 rounded-l-3xl bg-gradient-to-r from-[#222121] to-transparent" />
         {/* Right fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 rounded-r-2xl bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-4 rounded-r-3xl bg-gradient-to-l from-[#222121] to-transparent" />
       </div>
     </section>
   );

@@ -136,16 +136,16 @@ body {
   }
 
   .team-grid.main {
-    @apply flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-16;
+    @apply flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start lg:gap-16;
   }
   .team-grid.secondary {
-    @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-16;
+    @apply grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-16;
   }
   .team-grid.third {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
+    @apply grid grid-cols-1 items-start gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
   }
   .team-grid.adhoc {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
+    @apply grid grid-cols-1 items-start gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
   }
 
   main {
@@ -154,14 +154,12 @@ body {
 
   .animate-marquee-left {
     animation: marquee-left 30s linear infinite;
+    animation-play-state: running !important;
   }
 
   .animate-marquee-right {
     animation: marquee-right 25s linear infinite;
-  }
-
-  .partners-slider:hover .marquee-track {
-    animation-play-state: paused;
+    animation-play-state: running !important;
   }
 }
 

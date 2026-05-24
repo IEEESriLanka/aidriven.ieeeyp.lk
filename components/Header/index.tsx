@@ -8,12 +8,21 @@ import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { navItems } from "@/lib/data";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isOpen, open] = useLockingBodyScroll();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const isClient = useIsClient();
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href?: string) => {
+    if (!href) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -34,15 +43,27 @@ export default function Header() {
       <div className="relative hidden items-center justify-center lg:flex">
         <nav>
           <ul className="flex items-center space-x-6 text-xl font-semibold">
-            {navItems.map((item, index) => (
-              <li key={index} className={scrolled ? "[text-shadow:0_0_12px_rgba(0,0,0,0.9),0_1px_4px_rgba(0,0,0,0.8)]" : ""}>
-                {item.type === "link" ? (
-                  <Link href={item.href}>{item.label}</Link>
-                ) : (
-                  <item.component />
-                )}
-              </li>
-            ))}
+            {navItems.map((item, index) => {
+              const active = item.type === "link" ? isActive(item.href) : pathname.startsWith("/events");
+              return (
+                <li
+                  key={index}
+                  className={cn(
+                    "transition-colors duration-200 hover:text-primary",
+                    scrolled && "[text-shadow:0_0_12px_rgba(0,0,0,0.9),0_1px_4px_rgba(0,0,0,0.8)]",
+                    active && "text-primary",
+                  )}
+                >
+                  {item.type === "link" ? (
+                    <Link href={item.href} aria-current={active ? "page" : undefined}>
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <item.component active={active} />
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>

@@ -15,16 +15,16 @@ import {
   AccordionRoot,
 } from "@/components/ui/Accordion/Accordion";
 import {
-  Brain, Monitor, Rocket, Settings, FlaskConical,
+  Brain, Monitor, Settings, FlaskConical,
   Wrench, ShieldCheck, Handshake, BarChart2, Award,
-  Target, FolderOpen, Trophy, Lightbulb, Megaphone,
+  Target, FolderOpen, Trophy, Megaphone,
   Sprout, Globe, Link2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const ProblemItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3 text-white/80">
-    <span className="mt-1 shrink-0 text-red-400">✕</span>
+    <span className="mt-1 shrink-0 text-white/50">•</span>
     <span>{text}</span>
   </li>
 );
@@ -38,18 +38,15 @@ const SolutionItem = ({ text }: { text: string }) => (
 
 const phaseModeColor: Record<string, string> = {
   Online: "bg-blue-500/20 text-blue-300 border-blue-500/30",
-  "Hybrid / Physical Preferred": "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
+  "Physical / Online": "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   Physical: "bg-primary/20 text-primary border-primary/30",
 };
 
 const Page = () => {
   const audienceCards: { Icon: LucideIcon; label: string }[] = [
-    { Icon: Brain, label: "AI / ML Undergraduates & Postgraduates" },
-    { Icon: Monitor, label: "Engineering, Computer Science & ICT Students" },
-    { Icon: Rocket, label: "Early-career AI Practitioners" },
-    { Icon: Settings, label: "Tech Enthusiasts Capable of Prototyping" },
-    { Icon: FlaskConical, label: "University Research Teams" },
-    { Icon: Lightbulb, label: "Innovation Clubs" },
+    { Icon: Brain, label: "Artificial Intelligence & Machine Learning (AI/ML) Undergraduates & Postgraduates" },
+    { Icon: Monitor, label: "Computer Science, Software Engineering & IT Undergraduates & Postgraduates" },
+    { Icon: Settings, label: "Engineering & Technology Undergraduates & Postgraduates" },
   ];
 
   const impactCards: { Icon: LucideIcon; text: string }[] = [
@@ -65,11 +62,10 @@ const Page = () => {
 
   const partnerCards: { Icon: LucideIcon; title: string; desc: string }[] = [
     { Icon: Target, title: "Access Top AI Talent", desc: "Gain unmatched access to Sri Lanka's top AI talent through a highly competitive, multi-phase innovation challenge." },
-    { Icon: Trophy, title: "Strengthen Employer Brand", desc: "Align with a national-level, IEEE-backed AI competition recognized across universities." },
-    { Icon: Lightbulb, title: "Position as Innovation Leader", desc: "Showcase your commitment to building real, measurable AI solutions and Sri Lanka's AI growth." },
-    { Icon: Megaphone, title: "Wide Network Exposure", desc: "Gain visibility across IEEE and AIDSL's student and tech networks." },
     { Icon: Sprout, title: "Build Long-term Goodwill", desc: "Support a program that directly uplifts AI education and empowers future innovators." },
-    { Icon: Globe, title: "Drive CSR Impact", desc: "Measurable CSR aligned with SDG 17 through education, youth development, and national AI capacity building." },
+    { Icon: Trophy, title: "Strengthen Employer Brand", desc: "Align with a national-level, IEEE-backed AI competition recognized across universities." },
+    { Icon: Globe, title: "Drive CSR Impact", desc: "Measurable CSR impact aligned with SDG 17 through education, youth development, and national AI capacity building." },
+    { Icon: Megaphone, title: "Wide Network Exposure", desc: "Gain wide exposure across IEEE and AIDSL's student and tech networks." },
     { Icon: Link2, title: "Strengthen Tech-Community Influence", desc: "Mentor teams, judge final rounds, and demonstrate your organization's AI expertise." },
   ];
 
@@ -107,7 +103,7 @@ const Page = () => {
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {[
-            { value: "4-Week", label: "National AI Innovation Challenge" },
+            { value: "8-Week", label: "National AI Innovation Challenge" },
             { value: "Hybrid", label: "Online + Physical Stages" },
             { value: "Final Round", label: "Physical Summit & Awards Ceremony" },
             { value: "Real Impact", label: "Deployable AI Solutions" },
@@ -134,25 +130,22 @@ const Page = () => {
             <ul className="flex flex-col gap-3">
               <ProblemItem text="Hackathons create one-off, incomplete ideas with no real-world usability" />
               <ProblemItem text="Students lack real-world product-building experience" />
-              <ProblemItem text="Companies struggle to find practical AI problem-solving skills beyond theory" />
+              <ProblemItem text="Companies struggle to find AI talent to solve real world problems beyond theory" />
               <ProblemItem text="Need for structured, measurable innovation" />
             </ul>
           </div>
           <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6">
             <h3 className="mb-3 text-lg font-semibold text-primary uppercase tracking-wide">Our Solution</h3>
             <p className="mb-4 text-base text-white/60">
-              Research-backed 4-phase innovation framework that trains participants to:
+              A research-backed, multi-stage innovation framework that produces industry-ready solutions and talent by training participants to:
             </p>
             <ul className="flex flex-col gap-3">
               <SolutionItem text="Frame problems clearly" />
               <SolutionItem text="Build real prototypes" />
-              <SolutionItem text="Challenge ideas under pressure" />
-              <SolutionItem text="Refine, patch, and test" />
+              <SolutionItem text="Defend ideas under challenge" />
+              <SolutionItem text="Patch, refine, test & deploy" />
               <SolutionItem text="Demonstrate measurable real-world impact" />
             </ul>
-            <p className="mt-4 text-base text-white/60 italic">
-              Produces industry-ready solutions and future-ready talent.
-            </p>
           </div>
         </div>
       </div>
@@ -279,6 +272,12 @@ const Page = () => {
               <p className="text-base text-white/65">{desc}</p>
             </div>
           ))}
+        </div>
+        <div className="flex items-center gap-3 rounded-2xl border border-primary/30 bg-primary/10 px-6 py-5">
+          <Trophy className="h-6 w-6 shrink-0 text-primary" />
+          <p className="text-base font-medium text-white/90">
+            Position your company as a leading AI innovator driving Sri Lanka&apos;s AI growth through real-world solutions.
+          </p>
         </div>
       </div>
 

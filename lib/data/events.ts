@@ -506,27 +506,24 @@ export const aiChallenge2026Phases: {
   activities: string[];
 }[] = [
   {
-    phase: "Phase 1 – Initiation & Problem Framing (Week 1)",
+    phase: "Phase 1 – Initiation & Problem Framing",
     mode: "Online",
     activities: [
-      "Problem definition",
-      '"Before" workflow analysis',
-      "Ideation",
-      "Virtual mentorship",
+      "Follow guidelines and ideate",
+      "Build V1 prototype",
     ],
   },
   {
-    phase: "Phase 2 – Development & Adversarial Testing (Week 2)",
-    mode: "Hybrid / Physical Preferred",
+    phase: "Phase 2 – Development & Adversarial Testing",
+    mode: "Physical / Online",
     activities: [
-      "V1 prototype build",
-      "Peer testing",
+      "Peer testing V1 prototypes",
       "Pitch sabotage",
       "Challenge & defense",
     ],
   },
   {
-    phase: "Phase 3 – Patch & Refinement (Week 3)",
+    phase: "Phase 3 – Patch & Refinement",
     mode: "Online",
     activities: [
       "Optimize V2",
@@ -536,12 +533,12 @@ export const aiChallenge2026Phases: {
     ],
   },
   {
-    phase: "Phase 4 – Proof of Impact & Final Round (Week 4)",
+    phase: "Phase 4 – Proof of Impact & Final Round",
     mode: "Physical",
     activities: [
       "Live demo",
       "User validation",
-      "Final pitching",
+      "Pitching",
       "Impact metrics",
     ],
   },
@@ -549,41 +546,37 @@ export const aiChallenge2026Phases: {
 
 export const aiChallenge2026Timeline: { period: string; items: string[] }[] = [
   {
-    period: "June",
+    period: "June – Week 03",
     items: [
-      "Pre-registration opens",
-      "Company onboarding",
-      "Problem statement alignment",
-    ],
-  },
-  {
-    period: "July – Week 01",
-    items: [
-      "Initiation & problem framing",
-      "Workshops & mentorship",
-      "Submit problem documentation",
+      "Registration open",
+      "Company onboarding & problem statement alignment",
     ],
   },
   {
     period: "July – Week 02",
     items: [
-      "Prototype building (online)",
-      "Physical adversarial testing",
-      "Pitch sabotage",
+      "Initial Problem Framing",
+      "Workshops & Mentorship",
     ],
   },
   {
     period: "July – Week 03",
     items: [
-      "Judging period",
-      "Final pitch sabotage preparation",
+      "Project Pilot Submission (Virtual submission)",
+      "Results of top 15",
+    ],
+  },
+  {
+    period: "July – Week 04",
+    items: [
+      "First Physical Session",
+      "Pitch Sabotage Round",
     ],
   },
   {
     period: "August – Week 01",
     items: [
-      "Final Round",
-      "Final demo & pitch presentation",
+      "Final Round – final demo & pitch presentation",
       "Judging & Awards Ceremony",
     ],
   },
