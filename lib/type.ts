@@ -9,7 +9,7 @@ export interface NavLinkItem {
 
 export interface NavDropdownItem {
   type: "dropdown";
-  component: () => JSX.Element;
+  component: (props: { active?: boolean }) => JSX.Element;
   href?: string;
   label?: string;
 }
@@ -112,6 +112,7 @@ export interface MemberDetailProps {
   position: string;
   socials: { icon: ImgSrc; url: string }[];
   grayscale?: boolean;
+  flipX?: boolean;
 }
 
 export interface eventsEditionDataProps {

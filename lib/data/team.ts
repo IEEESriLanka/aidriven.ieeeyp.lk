@@ -668,6 +668,7 @@ export const Team2026Details: {
         socials: [
           { icon: linkedinIcon, url: "https://www.linkedin.com/in/chathumina-k-077808249/" },
         ],
+        flipX: true,
       },
       {
         profileImg: thevinuPhoto,

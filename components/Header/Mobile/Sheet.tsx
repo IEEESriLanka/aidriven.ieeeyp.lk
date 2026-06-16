@@ -7,11 +7,19 @@ import Link from "next/link";
 import MobileNavigationTarget from "./Target";
 import { navItems } from "@/lib/data";
 import { MobileHeaderDropDown } from "@/components/Header/HeaderDropDown";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 type Props = { id: string; open: (isOpen: boolean) => void };
 
 export default function Sheet({ id, open }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isActive = (href?: string) => {
+    if (!href) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
   return (
     <motion.div
       ref={containerRef}
@@ -33,15 +41,24 @@ export default function Sheet({ id, open }: Props) {
             e.stopPropagation();
           }}
         >
-          {navItems.map((item, index) => (
-            <MobileNavigationTarget key={index} index={index} href={item.href}>
-              {item.type === "link" ? (
-                <Link href={item.href} className="text-white">{item.label}</Link>
-              ) : (
-                <MobileHeaderDropDown onNavigate={() => open(false)} />
-              )}
-            </MobileNavigationTarget>
-          ))}
+          {navItems.map((item, index) => {
+            const active = item.type === "link" ? isActive(item.href) : pathname.startsWith("/events");
+            return (
+              <MobileNavigationTarget key={index} index={index} href={item.href}>
+                {item.type === "link" ? (
+                  <Link
+                    href={item.href}
+                    className={cn(active ? "text-primary" : "text-white")}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <MobileHeaderDropDown onNavigate={() => open(false)} />
+                )}
+              </MobileNavigationTarget>
+            );
+          })}
         </ul>
       </div>
       <div aria-hidden className="my-6 flex-1" />

@@ -9,6 +9,7 @@ import {
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const eventLinks = [
   { href: "/events", label: "All Events" },
@@ -18,13 +19,16 @@ const eventLinks = [
   { href: "/events/past-events", label: "Past Events" },
 ];
 
-export function HeaderDropDown() {
+export function HeaderDropDown({ active }: { active?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isLinkActive = (href: string) =>
+    href === "/events" ? pathname === "/events" : pathname === href || pathname.startsWith(href + "/");
 
   return (
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen} modal={false}>
       <DropdownMenuTrigger asChild>
-        <button className="flex cursor-pointer items-center space-x-2">
+        <button className={cn("flex cursor-pointer items-center space-x-2", active && "text-primary")}>
           <span>Events</span>
           <ChevronDown
             className={cn("h-4 w-4 transition-transform duration-200", {
@@ -40,7 +44,11 @@ export function HeaderDropDown() {
         {/* Top-level */}
         <Link
           href="/events"
-          className="block rounded px-3 py-2 text-base font-semibold text-white transition-colors hover:text-primary"
+          className={cn(
+            "block rounded px-3 py-2 text-base font-semibold transition-colors hover:text-primary",
+            isLinkActive("/events") ? "text-primary" : "text-white",
+          )}
+          aria-current={isLinkActive("/events") ? "page" : undefined}
           onClick={() => setIsOpen(false)}
         >
           All Events
@@ -56,7 +64,11 @@ export function HeaderDropDown() {
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded px-2 py-1.5 text-sm text-white/60 transition-colors hover:text-white"
+              className={cn(
+                "block rounded px-2 py-1.5 text-sm transition-colors hover:text-white",
+                isLinkActive(item.href) ? "text-primary" : "text-white/60",
+              )}
+              aria-current={isLinkActive(item.href) ? "page" : undefined}
               onClick={() => setIsOpen(false)}
             >
               {item.label}
@@ -69,7 +81,11 @@ export function HeaderDropDown() {
         {/* Bottom-level */}
         <Link
           href="/events/past-events"
-          className="block rounded px-3 py-2 text-base font-semibold text-white transition-colors hover:text-primary"
+          className={cn(
+            "block rounded px-3 py-2 text-base font-semibold transition-colors hover:text-primary",
+            isLinkActive("/events/past-events") ? "text-primary" : "text-white",
+          )}
+          aria-current={isLinkActive("/events/past-events") ? "page" : undefined}
           onClick={() => setIsOpen(false)}
         >
           Past Events
@@ -80,12 +96,16 @@ export function HeaderDropDown() {
 }
 
 export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const inEvents = pathname.startsWith("/events");
+  const [isOpen, setIsOpen] = useState(inEvents);
+  const isLinkActive = (href: string) =>
+    href === "/events" ? pathname === "/events" : pathname === href || pathname.startsWith(href + "/");
 
   return (
     <div className="flex flex-col">
       <button
-        className="flex items-center justify-between text-white"
+        className={cn("flex items-center justify-between", inEvents ? "text-primary" : "text-white")}
         onClick={() => setIsOpen((v) => !v)}
       >
         <span>Events</span>
@@ -101,7 +121,11 @@ export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void })
           {/* Top-level: All Events */}
           <Link
             href="/events"
-            className="text-xl font-semibold text-white transition-colors hover:text-primary"
+            className={cn(
+              "text-xl font-semibold transition-colors hover:text-primary",
+              isLinkActive("/events") ? "text-primary" : "text-white",
+            )}
+            aria-current={isLinkActive("/events") ? "page" : undefined}
             onClick={onNavigate}
           >
             All Events
@@ -109,15 +133,24 @@ export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void })
 
           {/* Sub-events */}
           <div className="my-1 ml-2 flex flex-col gap-y-1 border-l border-white/10 pl-4">
-            <Link href="/events/ai-challenge" className="text-lg text-white/60 transition-colors hover:text-white" onClick={onNavigate}>
-              AI Challenge
-            </Link>
-            <Link href="/events/inside-ai" className="text-lg text-white/60 transition-colors hover:text-white" onClick={onNavigate}>
-              Inside AI
-            </Link>
-            <Link href="/events/ai-summit" className="text-lg text-white/60 transition-colors hover:text-white" onClick={onNavigate}>
-              AI Summit
-            </Link>
+            {[
+              { href: "/events/ai-challenge", label: "AI Challenge" },
+              { href: "/events/inside-ai", label: "Inside AI" },
+              { href: "/events/ai-summit", label: "AI Summit" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "text-lg transition-colors hover:text-white",
+                  isLinkActive(item.href) ? "text-primary" : "text-white/60",
+                )}
+                aria-current={isLinkActive(item.href) ? "page" : undefined}
+                onClick={onNavigate}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* Divider */}
@@ -126,7 +159,11 @@ export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void })
           {/* Bottom-level: Past Events */}
           <Link
             href="/events/past-events"
-            className="text-xl font-semibold text-white transition-colors hover:text-primary"
+            className={cn(
+              "text-xl font-semibold transition-colors hover:text-primary",
+              isLinkActive("/events/past-events") ? "text-primary" : "text-white",
+            )}
+            aria-current={isLinkActive("/events/past-events") ? "page" : undefined}
             onClick={onNavigate}
           >
             Past Events

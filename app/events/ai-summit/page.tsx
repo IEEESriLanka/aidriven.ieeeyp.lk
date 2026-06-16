@@ -10,7 +10,7 @@ const programModelIcons: LucideIcon[] = [Mic2, MessageSquare, Globe, Lightbulb, 
 
 const ProblemItem = ({ text }: { text: string }) => (
   <li className="flex items-start gap-3 text-white/80">
-    <span className="mt-1 shrink-0 text-red-400">✕</span>
+    <span className="mt-1 shrink-0 text-white/50">•</span>
     <span>{text}</span>
   </li>
 );

@@ -44,3 +44,16 @@ next-env.d.ts
 
 CLAUDE.md
 .claude
+
+# playwright mcp
+.playwright-mcp/
+
+# docs
+docs/
+
+# editors
+.vscode/
+.idea/
+
+# logs
+*.log
