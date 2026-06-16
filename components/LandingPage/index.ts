@@ -4,5 +4,6 @@ import Testimonials from "./Testimonials";
 import Blogs from "./Blog";
 import Projects from "./Projects";
 import Timeline from "./Timeline";
+import Partners from "./Partners";
 
-export { Hero, UpcomingEvent, Testimonials, Blogs, Projects, Timeline };
+export { Hero, UpcomingEvent, Testimonials, Blogs, Projects, Timeline, Partners };
