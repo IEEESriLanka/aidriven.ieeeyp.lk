@@ -103,6 +103,7 @@ type TeamMember = {
   position: string;
   socials: SocialLink[];
   grayscale?: boolean;
+  flipX?: boolean;
 };
 
 type TeamSection = {
