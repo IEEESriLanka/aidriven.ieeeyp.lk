@@ -596,8 +596,8 @@ export const insideAITopicsData: string[] = [
 ];
 
 export const insideAIProgramTimelineData: { month: string; sessions: string; highlight?: boolean }[] = [
-  { month: "May", sessions: "Inside AI - 01" },
-  { month: "June", sessions: "Inside AI - 02" },
+  { month: "June", sessions: "Inside AI - 01" },
+  { month: "July", sessions: "Inside AI - 02" },
   { month: "July", sessions: "AI Challenge SL", highlight: true },
   { month: "August", sessions: "Inside AI - 03" },
   { month: "September", sessions: "AI Driven Sri Lanka Summit", highlight: true },
@@ -639,8 +639,8 @@ export const communityTalkEditionsData: eventsEditionDataProps[] = [
 
 export const aiSummitPastEditionsData: eventsEditionDataProps[] = [
   {
-    title: "AI Summit",
-    desc: "The AI Summit is a premier event showcasing AI talks, networking opportunities and company product showcase driving innovation and collaboration",
+    title: "AIDSL Summit",
+    desc: "The AIDSL Summit is a premier event showcasing AI talks, networking opportunities and company product showcase driving innovation and collaboration",
     data: {
       participateCount: 200,
       edition: "1st Edition",

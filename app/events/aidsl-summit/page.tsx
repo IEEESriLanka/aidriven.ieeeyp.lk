@@ -53,10 +53,10 @@ const Page = () => {
       {/* Slide 7 - Event Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
-          AI Summit 2026
+          AIDSL Summit 2026
         </div>
         <p className="text-lg text-white/85 leading-relaxed">
-          The AI Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing
+          The AIDSL Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing
           together top global and local AI experts, innovators, and policymakers for a high-impact
           one-day forum focused on advancing the country&apos;s AI landscape.
         </p>
@@ -89,10 +89,10 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Slide 8 - Why AI Summit */}
+      {/* Slide 8 - Why AIDSL Summit */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          why <span className="text-primary">AI Summit</span>?
+          why <span className="text-primary">AIDSL Summit</span>?
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-[#1c1c1c] border border-red-500/20 p-6">
@@ -124,7 +124,7 @@ const Page = () => {
           target <span className="text-primary">audience</span>
         </h2>
         <p className="text-white/70 -mt-2">
-          The AI Summit will attract a diverse and high-impact audience, including:
+          The AIDSL Summit will attract a diverse and high-impact audience, including:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {audienceCards.map(({ Icon, label }, i) => (
