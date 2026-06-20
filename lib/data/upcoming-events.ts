@@ -8,9 +8,9 @@ import type { UpcomingEventItemProps } from "../type";
 
 export const upcomingEventsData: UpcomingEventItemProps[] = [
   {
-    title: "AI Summit 2026",
+    title: "AIDSL Summit 2026",
     description: [
-      "The AI Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing together top global and local AI experts, innovators, and policymakers for a high-impact one-day forum focused on advancing Sri Lanka's AI landscape.",
+      "The AIDSL Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing together top global and local AI experts, innovators, and policymakers for a high-impact one-day forum focused on advancing Sri Lanka's AI landscape.",
       "Featuring global keynote sessions, panel discussions, an innovation showcase, and exclusive networking - the Summit is Sri Lanka's premier platform for cross-sector AI collaboration between academia, industry, startups, and government.",
     ],
     highlights: [
@@ -24,11 +24,11 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
     date: undefined,
     time: undefined,
     venue: undefined,
-    link: "/events/ai-summit",
+    link: "/events/aidsl-summit",
     linkALT: "Learn More",
     img: {
       src: ai_summit_img,
-      alt: "AI Summit 2026",
+      alt: "AIDSL Summit 2026",
     },
   },
   {

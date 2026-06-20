@@ -3,8 +3,8 @@ import type { TimelineItemProps } from "../type";
 export const timelineTitle = "Event Calendar - AIDSL '26";
 
 export const calendarTimelineData: TimelineItemProps[] = [
-  { month: "May", events: ["Inside AI - 01"] },
-  { month: "June", events: ["Inside AI - 02"] },
+  { month: "June", events: ["Inside AI - 01"] },
+  { month: "July", events: ["Inside AI - 02"] },
   { month: "July", events: ["AI Challenge Sri Lanka"], highlight: true },
   { month: "August", events: ["Inside AI - 03"] },
   {
