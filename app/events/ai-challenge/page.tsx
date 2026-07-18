@@ -5,6 +5,9 @@ import {
   eventsFaqData,
   aiChallenge2026Phases,
   aiChallenge2026Timeline,
+  aiChallenge2026TeamGuidelines,
+  aiChallenge2026SpecialRoundsIntro,
+  aiChallenge2026SpecialRounds,
 } from "@/lib/data";
 import EditionCard from "@/components/Events/EditionCard";
 import {
@@ -19,6 +22,7 @@ import {
   Wrench, ShieldCheck, Handshake, BarChart2, Award,
   Target, FolderOpen, Trophy, Megaphone,
   Sprout, Globe, Link2,
+  Users, Network, GraduationCap,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -198,6 +202,52 @@ const Page = () => {
         </div>
       </div>
 
+      {/* Team Forming Guidelines */}
+      <div className="flex w-full flex-col gap-6">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+          team forming <span className="text-primary">guidelines</span>
+        </h2>
+        <div className="flex flex-col gap-4">
+          {aiChallenge2026TeamGuidelines.map((text, i) => {
+            const Icon = [Users, Network, GraduationCap][i] ?? Users;
+            return (
+              <div
+                key={i}
+                className="flex items-center gap-5 rounded-3xl bg-[#191919B8] border border-white/10 px-6 py-5 hover:border-primary/40 transition-colors"
+              >
+                <Icon className="h-8 w-8 shrink-0 text-primary" />
+                <span className="text-lg text-white/85 font-medium">{text}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Special Challenge Rounds */}
+      <div className="flex w-full flex-col gap-6">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+          special challenge <span className="text-primary">rounds</span>
+        </h2>
+        <p className="text-lg text-white/70 text-center md:text-left leading-relaxed">
+          {aiChallenge2026SpecialRoundsIntro}
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {aiChallenge2026SpecialRounds.map((round, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-4 rounded-3xl bg-[#191919B8] border border-white/10 p-8 text-center hover:border-primary/40 transition-colors"
+            >
+              <div className="flex flex-col items-center gap-1">
+                <h3 className="text-2xl font-bold text-primary leading-snug">{round.title}</h3>
+                <span className="text-base font-semibold text-white/80">{round.subtitle}</span>
+              </div>
+              <div className="h-px w-24 bg-white/15" />
+              <p className="text-base text-white/70 leading-relaxed">{round.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Programme Timeline */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
@@ -213,6 +263,7 @@ const Page = () => {
                 </div>
                 <div className="pb-6 pt-1">
                   <span className="text-sm font-semibold text-primary uppercase tracking-wide">{item.period}</span>
+                  <p className="mt-1 text-base font-bold text-white leading-snug">{item.title}</p>
                   <ul className="mt-1 flex flex-col gap-1">
                     {item.items.map((txt, j) => (
                       <li key={j} className="text-sm text-white/60 leading-snug">{txt}</li>
@@ -232,7 +283,8 @@ const Page = () => {
                 </div>
                 <div className="mt-4 flex flex-col items-center text-center px-1 w-full">
                   <span className="text-sm font-semibold text-primary uppercase tracking-wide">{item.period}</span>
-                  <ul className="mt-2 flex flex-col gap-1">
+                  <p className="mt-2 text-base font-bold text-white leading-snug">{item.title}</p>
+                  <ul className="mt-1 flex flex-col gap-1">
                     {item.items.map((txt, j) => (
                       <li key={j} className="text-sm text-white/60 leading-snug">{txt}</li>
                     ))}
