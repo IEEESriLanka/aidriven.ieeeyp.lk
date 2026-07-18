@@ -544,41 +544,61 @@ export const aiChallenge2026Phases: {
   },
 ];
 
-export const aiChallenge2026Timeline: { period: string; items: string[] }[] = [
-  {
-    period: "June – Week 03",
-    items: [
-      "Registration open",
-      "Company onboarding & problem statement alignment",
-    ],
-  },
-  {
-    period: "July – Week 02",
-    items: [
-      "Initial Problem Framing",
-      "Workshops & Mentorship",
-    ],
-  },
+export const aiChallenge2026Timeline: {
+  period: string;
+  title: string;
+  items: string[];
+}[] = [
   {
     period: "July – Week 03",
-    items: [
-      "Project Pilot Submission (Virtual submission)",
-      "Results of top 15",
-    ],
+    title: "Registrations",
+    items: [],
   },
   {
     period: "July – Week 04",
-    items: [
-      "First Physical Session",
-      "Pitch Sabotage Round",
-    ],
+    title: "AI Buildathon",
+    items: ["Development Phase"],
   },
   {
-    period: "August – Week 01",
-    items: [
-      "Final Round – final demo & pitch presentation",
-      "Judging & Awards Ceremony",
-    ],
+    period: "August – Week 03",
+    title: "AI Battle",
+    items: ["Pitch Sabotage Phase", "(15 Teams Selected)"],
+  },
+  {
+    period: "August – Week 03",
+    title: "AI Impact",
+    items: ["Real User Validation Phase", "(5 Teams Selected)"],
+  },
+  {
+    period: "August – Week 04",
+    title: "Grand Finale",
+    items: [],
+  },
+];
+
+export const aiChallenge2026TeamGuidelines: string[] = [
+  "Each team must have 3–5 participants",
+  "Same university or Cross-university collaboration is welcome",
+  "Open for both undergraduate and postgraduate students",
+];
+
+export const aiChallenge2026SpecialRoundsIntro =
+  "During the hackathon, you'll encounter surprise rounds designed to test resilience and product thinking.";
+
+export const aiChallenge2026SpecialRounds: {
+  title: string;
+  subtitle: string;
+  desc: string;
+}[] = [
+  {
+    title: "Sabotage Round",
+    subtitle: "(AI Battle)",
+    desc: "A phase where you have to defend your solution against rival teams.",
+  },
+  {
+    title: "Real User Interaction Round",
+    subtitle: "(AI Impact)",
+    desc: "You will be given an entire phase to test your product with real users. Listen, observe, and improve based on their feedback.",
   },
 ];
 
