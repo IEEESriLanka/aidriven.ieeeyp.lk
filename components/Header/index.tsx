@@ -25,16 +25,32 @@ export default function Header() {
   };
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => {
+      const lenis = (window as any).lenis;
+      const scrollPosition = lenis ? lenis.actualScroll : window.scrollY;
+      setScrolled(scrollPosition > 80);
+    };
+    
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // Also listen to Lenis scroll event if available
+    const handleLenisScroll = () => onScroll();
+    window.addEventListener("lenis-scroll", handleLenisScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("lenis-scroll", handleLenisScroll);
+    };
   }, []);
 
   if (!isClient) return null;
 
   return (
-    <header className={`fixed inset-0 top-4 z-[999] container mx-auto flex h-[70px] w-full items-center justify-between overflow-x-clip rounded-2xl px-4 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] backdrop-blur-lg`}>
-      <div className={`bg-gradient absolute top-0 left-0 h-full w-full rounded-xl transition-opacity duration-500 ${scrolled ? "opacity-0" : "opacity-95"}`} />
+    <header 
+      className={`fixed top-0 left-0 right-0 z-[999] w-full flex h-[70px] items-center justify-between px-4 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr]`} 
+      style={{ backdropFilter: "blur(8px)" }}
+      data-lenis-prevent
+    >
+      <div className={`absolute top-0 left-0 h-full w-full -z-10 transition-all duration-500 ${scrolled ? "bg-black/70" : "bg-gradient opacity-95"}`} />
       <div className="relative">
         <Link href="/" className="flex items-center">
           <Image src={Logo} alt="AIDSL Logo" width={150} height={50} />

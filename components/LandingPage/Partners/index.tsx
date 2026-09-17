@@ -29,16 +29,28 @@ const row2Logos = [
 
 export default function Partners() {
   return (
-    <section className="section-gap-y container mx-auto px-4">
-      <h1 className="section-header">
-        <span>Our</span>
-        <span className="text-primary"> Partners</span>
-      </h1>
+    <section className="py-24 bg-[#0A0103] border-t border-outline-variant/30 relative">
+      <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#24040B] border border-primary-container/40 text-primary uppercase font-label-mono-xs text-label-mono-xs tracking-widest mb-3">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+              <span className="">LEGACY PARTNERS</span>
+            </div>
+            <h2 className="text-xl md:text-3xl font-headline-xl font-bold text-white uppercase tracking-tight">
+              OUR PREVIOUS PARTNERS
+            </h2>
+          </div>
+          <p className="text-xs text-on-surface-variant font-body-sm leading-relaxed whitespace-normal md:whitespace-nowrap text-left md:text-right mt-4 md:mt-0">
+            These incredible organizations have supported our journey as partners in our previous events.
+          </p>
+        </div>
+      </div>
 
       <div className="partners-slider relative mt-8">
         {/* Dark pill container */}
         <div className="overflow-hidden rounded-3xl bg-[#252323] border border-white/7 py-2 flex flex-col">
-          {/* Row 1 — scrolls left */}
+          {/* Row 1 - scrolls left */}
           <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-left flex w-max items-center">
               {[...row1Logos, ...row1Logos].map((src, i) => (
@@ -55,7 +67,7 @@ export default function Partners() {
             </div>
           </div>
 
-          {/* Row 2 — scrolls right */}
+          {/* Row 2 - scrolls right */}
           <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-right flex w-max items-center">
               {[...row2Logos, ...row2Logos].map((src, i) => {

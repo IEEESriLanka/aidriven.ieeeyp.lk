@@ -169,7 +169,7 @@ export const eventPageTimelineData: TimelineItemProps[] = [
   },
   {
     events: ["AI Driven Sri Lanka Summit"],
-    month: "September",
+    month: "October",
     highlight: true,
   },
   {
@@ -463,121 +463,121 @@ export const aiSummit2026ProgramModel: {
   title: string;
   desc: string;
 }[] = [
-  {
-    icon: "🎤",
-    title: "Global Keynote Sessions",
-    desc: "Insights and thought leadership from globally recognized AI leaders.",
-  },
-  {
-    icon: "🗣️",
-    title: "Panel Discussions",
-    desc: "Experts from industry, academia & policy tackling critical AI challenges.",
-  },
-  {
-    icon: "🔁",
-    title: "AI Forum",
-    desc: "Roundtables and thematic discussions generating actionable insights.",
-  },
-  {
-    icon: "💡",
-    title: "Innovation Showcase",
-    desc: "10 exclusive bid-and-buy stalls for AI startups & innovators.",
-  },
-  {
-    icon: "🖼️",
-    title: "AI Image Gallery",
-    desc: "Curated AI-generated visuals running alongside the showcase.",
-  },
-  {
-    icon: "🌐",
-    title: "Networking Sessions",
-    desc: "Curated connections designed to spark partnerships and talent engagement.",
-  },
-  {
-    icon: "🥂",
-    title: "Fellowship Gathering",
-    desc: "Exclusive premium networking for speakers, partners & investors.",
-  },
-];
+    {
+      icon: "🎤",
+      title: "Global Keynote Sessions",
+      desc: "Insights and thought leadership from globally recognized AI leaders.",
+    },
+    {
+      icon: "🗣️",
+      title: "Panel Discussions",
+      desc: "Experts from industry, academia & policy tackling critical AI challenges.",
+    },
+    {
+      icon: "🔁",
+      title: "AI Forum",
+      desc: "Roundtables and thematic discussions generating actionable insights.",
+    },
+    {
+      icon: "💡",
+      title: "Innovation Showcase",
+      desc: "10 exclusive bid-and-buy stalls for AI startups & innovators.",
+    },
+    {
+      icon: "🖼️",
+      title: "AI Image Gallery",
+      desc: "Curated AI-generated visuals running alongside the showcase.",
+    },
+    {
+      icon: "🌐",
+      title: "Networking Sessions",
+      desc: "Curated connections designed to spark partnerships and talent engagement.",
+    },
+    {
+      icon: "🥂",
+      title: "Fellowship Gathering",
+      desc: "Exclusive premium networking for speakers, partners & investors.",
+    },
+  ];
 
 export const aiChallenge2026Phases: {
   phase: string;
   mode: string;
   activities: string[];
 }[] = [
-  {
-    phase: "Phase 1 – Initiation & Problem Framing",
-    mode: "Online",
-    activities: [
-      "Follow guidelines and ideate",
-      "Build V1 prototype",
-    ],
-  },
-  {
-    phase: "Phase 2 – Development & Adversarial Testing",
-    mode: "Physical / Online",
-    activities: [
-      "Peer testing V1 prototypes",
-      "Pitch sabotage",
-      "Challenge & defense",
-    ],
-  },
-  {
-    phase: "Phase 3 – Patch & Refinement",
-    mode: "Online",
-    activities: [
-      "Optimize V2",
-      "Fix issues",
-      "Improve usability",
-      "Remote reviews",
-    ],
-  },
-  {
-    phase: "Phase 4 – Proof of Impact & Final Round",
-    mode: "Physical",
-    activities: [
-      "Live demo",
-      "User validation",
-      "Pitching",
-      "Impact metrics",
-    ],
-  },
-];
+    {
+      phase: "Phase 1 - Initiation & Problem Framing",
+      mode: "Online",
+      activities: [
+        "Follow guidelines and ideate",
+        "Build V1 prototype",
+      ],
+    },
+    {
+      phase: "Phase 2 - Development & Adversarial Testing",
+      mode: "Physical / Online",
+      activities: [
+        "Peer testing V1 prototypes",
+        "Pitch sabotage",
+        "Challenge & defense",
+      ],
+    },
+    {
+      phase: "Phase 3 - Patch & Refinement",
+      mode: "Online",
+      activities: [
+        "Optimize V2",
+        "Fix issues",
+        "Improve usability",
+        "Remote reviews",
+      ],
+    },
+    {
+      phase: "Phase 4 - Proof of Impact & Final Round",
+      mode: "Physical",
+      activities: [
+        "Live demo",
+        "User validation",
+        "Pitching",
+        "Impact metrics",
+      ],
+    },
+  ];
 
 export const aiChallenge2026Timeline: {
   period: string;
   title: string;
   items: string[];
 }[] = [
-  {
-    period: "July – Week 03",
-    title: "Registrations",
-    items: [],
-  },
-  {
-    period: "July – Week 04",
-    title: "AI Buildathon",
-    items: ["Development Phase"],
-  },
-  {
-    period: "August – Week 03",
-    title: "AI Battle",
-    items: ["Pitch Sabotage Phase", "(15 Teams Selected)"],
-  },
-  {
-    period: "August – Week 03",
-    title: "AI Impact",
-    items: ["Real User Validation Phase", "(5 Teams Selected)"],
-  },
-  {
-    period: "August – Week 04",
-    title: "Grand Finale",
-    items: [],
-  },
-];
+    {
+      period: "July - Week 03",
+      title: "Registrations",
+      items: [],
+    },
+    {
+      period: "July - Week 04",
+      title: "AI Buildathon",
+      items: ["Development Phase"],
+    },
+    {
+      period: "August - Week 03",
+      title: "AI Battle",
+      items: ["Pitch Sabotage Phase", "(15 Teams Selected)"],
+    },
+    {
+      period: "August - Week 03",
+      title: "AI Impact",
+      items: ["Real User Validation Phase", "(5 Teams Selected)"],
+    },
+    {
+      period: "August - Week 04",
+      title: "Grand Finale",
+      items: [],
+    },
+  ];
 
 export const aiChallenge2026TeamGuidelines: string[] = [
-  "Each team must have 3–5 participants",
+  "Each team must have 3-5 participants",
   "Same university or Cross-university collaboration is welcome",
   "Open for both undergraduate and postgraduate students",
 ];
@@ -590,17 +590,17 @@ export const aiChallenge2026SpecialRounds: {
   subtitle: string;
   desc: string;
 }[] = [
-  {
-    title: "Sabotage Round",
-    subtitle: "(AI Battle)",
-    desc: "A phase where you have to defend your solution against rival teams.",
-  },
-  {
-    title: "Real User Interaction Round",
-    subtitle: "(AI Impact)",
-    desc: "You will be given an entire phase to test your product with real users. Listen, observe, and improve based on their feedback.",
-  },
-];
+    {
+      title: "Sabotage Round",
+      subtitle: "(AI Battle)",
+      desc: "A phase where you have to defend your solution against rival teams.",
+    },
+    {
+      title: "Real User Interaction Round",
+      subtitle: "(AI Impact)",
+      desc: "You will be given an entire phase to test your product with real users. Listen, observe, and improve based on their feedback.",
+    },
+  ];
 
 export const insideAITopicsData: string[] = [
   "Reverse Engineering Popular AI Apps",
@@ -620,7 +620,7 @@ export const insideAIProgramTimelineData: { month: string; sessions: string; hig
   { month: "July", sessions: "Inside AI - 02" },
   { month: "July", sessions: "AI Challenge SL", highlight: true },
   { month: "August", sessions: "Inside AI - 03" },
-  { month: "September", sessions: "AI Driven Sri Lanka Summit", highlight: true },
+  { month: "October", sessions: "AI Driven Sri Lanka Summit", highlight: true },
   { month: "October", sessions: "Inside AI - 04" },
   { month: "November", sessions: "Inside AI - 05 & 06" },
   { month: "December", sessions: "Inside AI - 07 & 08" },

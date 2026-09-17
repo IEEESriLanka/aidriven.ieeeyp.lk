@@ -53,12 +53,10 @@ const Page = () => {
       {/* Slide 7 - Event Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
-          AIDSL Summit 2026
+          AI Driven Sri Lanka 2026
         </div>
         <p className="text-lg text-white/85 leading-relaxed">
-          The AIDSL Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing
-          together top global and local AI experts, innovators, and policymakers for a high-impact
-          one-day forum focused on advancing the country&apos;s AI landscape.
+          AI Driven Sri Lanka 2026 is the flagship national gathering shaping the conversation around Sri Lanka's AI future. The summit brings together global and local AI pioneers, industry leaders, policymakers, researchers, startups, and emerging talent to exchange ideas, showcase breakthrough innovations, and unlock meaningful collaborations.
         </p>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -76,23 +74,23 @@ const Page = () => {
         <div className="flex flex-wrap gap-6 pt-2">
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">200+</span>
-            <span className="text-white/70 text-base">Participants</span>
+            <span className="text-white/70 text-base">Delegates</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">6+</span>
             <span className="text-white/70 text-base">Sessions</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-elemental-end text-primary text-3xl">1</span>
-            <span className="text-white/70 text-base">High-impact Day</span>
+            <span className="font-elemental-end text-primary text-3xl">12+</span>
+            <span className="text-white/70 text-base">AI Leaders</span>
           </div>
         </div>
       </div>
 
-      {/* Slide 8 - Why AIDSL Summit */}
+      {/* Slide 8 - Why AI Driven Sri Lanka */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          why <span className="text-primary">AIDSL Summit</span>?
+          why <span className="text-primary">AI DRIVEN SRI LANKA</span>?
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-[#1c1c1c] border border-red-500/20 p-6">
@@ -124,7 +122,7 @@ const Page = () => {
           target <span className="text-primary">audience</span>
         </h2>
         <p className="text-white/70 -mt-2">
-          The AIDSL Summit will attract a diverse and high-impact audience, including:
+          AI Driven Sri Lanka 2026 will attract a diverse and high-impact audience, including:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {audienceCards.map(({ Icon, label }, i) => (
@@ -162,13 +160,16 @@ const Page = () => {
 
         <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6 mt-2">
           <h3 className="mb-4 text-base font-semibold text-primary uppercase tracking-wide">
-            Expected Outcomes
+            Participant Benefits
           </h3>
           <ul className="flex flex-col gap-3">
             {[
-              "Participants gain exposure to cutting-edge AI trends & global perspectives",
-              "Cross-sector connections between industry, academia & government",
-              "Actionable insights and collaborations that extend beyond the event",
+              "Gain strategic insights from global AI pioneers and industry visionaries",
+              "Experience breakthrough AI innovations and discover tomorrow's leading startups",
+              "Get exclusive access to the Fellowship Gathering for informal time with speakers and investors",
+              "Influence tomorrow through high-impact discussions with policymakers",
+              "Build real connections with industry leaders and peers",
+              "Gain career and talent visibility with companies actively looking for AI talent",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-white/80">
                 <span className="mt-1 shrink-0 text-primary font-bold">→</span>
@@ -190,18 +191,17 @@ const Page = () => {
               <CalendarDays className="h-5 w-5" />
             </div>
             <div>
-              <p className="font-elemental-end text-primary text-xl uppercase">September 2026</p>
-              <p className="text-base text-white/50">AI Driven Sri Lanka Summit 2026</p>
+              <p className="font-elemental-end text-primary text-xl uppercase">October 2026</p>
+              <p className="text-base text-white/50">AI Driven Sri Lanka 2026</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { phase: "Registration & Arrival", detail: "Participant check-in, badge collection & networking warm-up" },
-              { phase: "Opening Ceremony", detail: "Welcome address & agenda overview by AIDSL leadership" },
-              { phase: "Global Keynote Sessions", detail: "Thought leadership from globally recognized AI leaders" },
-              { phase: "Panel Discussions", detail: "Experts from industry, academia & policy on critical AI challenges" },
-              { phase: "Innovation Showcase & AI Forum", detail: "10 startup stalls, AI gallery & roundtable discussions" },
-              { phase: "Fellowship Gathering", detail: "Exclusive premium networking for speakers, partners & investors" },
+              { phase: "Registration & Networking", detail: "Registration, networking, and startup showcase" },
+              { phase: "Opening Ceremony", detail: "Welcome addresses and ceremonial opening" },
+              { phase: "Global Keynotes", detail: "Global keynotes and expert sessions featuring visionary AI leaders" },
+              { phase: "Executive Panels", detail: "Executive panel discussions driving the future of AI policy, industry, and innovation" },
+              { phase: "Curated Networking", detail: "Curated networking sessions among speakers, partners, and delegates" },
             ].map((item, i) => (
               <div
                 key={i}

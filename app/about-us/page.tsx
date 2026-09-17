@@ -37,7 +37,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Mission & Vision section — commented out, do not remove
+      {/* Mission & Vision section - commented out, do not remove
       <div className="container flex flex-col gap-[40px]">
         <div>
           <p className="font-elemental-end text-center text-[32px] md:text-left">
