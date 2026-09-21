@@ -534,7 +534,7 @@ export default function Page() {
 
       <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#0A0103]" id="programme">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
-          <div className="mb-16">
+          <div className="mb-16 flex flex-col items-center text-center">
             <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">05 // AGENDA</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-2">
               PROGRAMME
@@ -542,64 +542,52 @@ export default function Page() {
             <p className="text-on-surface-variant font-label-mono-sm text-xs">A single high-impact day - Date to be announced soon</p>
           </div>
 
-          <div className="border-t border-outline-variant/40 divide-y divide-outline-variant/20">
+          <div className="border-t border-outline-variant/40 divide-y divide-outline-variant/20 w-fit mx-auto">
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">2:00 PM – 2:45 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">01 - Registration &amp; Arrival</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">Participant check-in, badge collection &amp; networking warm-up</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-outline-variant">Foyer / Atrium</span>
-              </div>
             </div>
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">2:45 PM – 3:00 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">02 - Opening Ceremony</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">Welcome address &amp; agenda overview by AIDSL leadership</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-outline-variant">Main Auditorium</span>
-              </div>
             </div>
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">3:00 PM – 4:45 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">03 - Global Keynote Sessions</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">Thought leadership from globally recognised AI leaders</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-primary font-bold">Plenary Stage</span>
-              </div>
             </div>
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">5:00 PM – 6:10 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">04 - Panel Discussions</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">Experts from industry, academia &amp; policy on critical AI challenges</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-outline-variant">Auditorium</span>
-              </div>
             </div>
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">6:10 PM – 6:40 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">05 - Innovation Showcase &amp; AI Forum</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">10 startup stalls, AI gallery &amp; roundtable discussions</p>
                   <div className="mt-2 text-xs font-label-mono-xs text-primary font-bold">
@@ -607,23 +595,18 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-outline-variant">Exhibition Hall</span>
-              </div>
             </div>
 
-            <div className="py-8 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest min-w-[120px]">To be announced soon</span>
-                <div>
+            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">6:40 PM – 9:00 PM</span>
+                <div className="text-left">
                   <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">06 - Fellowship Gathering</h3>
                   <p className="text-xs text-on-surface-variant font-body-sm mt-1">Exclusive premium networking for speakers, partners &amp; investors</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="text-[11px] font-label-mono-xs uppercase tracking-widest text-primary font-bold">Private Pavilion</span>
-              </div>
             </div>
+
           </div>
         </div>
       </section>

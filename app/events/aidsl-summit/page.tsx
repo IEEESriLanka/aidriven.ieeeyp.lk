@@ -185,34 +185,47 @@ const Page = () => {
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           program <span className="text-primary">timeline</span>
         </h2>
-        <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">
-              <CalendarDays className="h-5 w-5" />
+        <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5 shadow-xl">
+          <div className="flex items-center gap-4 mb-10">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary border border-primary/30">
+              <CalendarDays className="h-6 w-6" />
             </div>
             <div>
-              <p className="font-elemental-end text-primary text-xl uppercase">October 2026</p>
-              <p className="text-base text-white/50">AI Driven Sri Lanka 2026</p>
+              <p className="font-elemental-end text-primary text-xl uppercase tracking-wider">October 2026</p>
+              <p className="text-base text-white/60">AI Driven Sri Lanka 2026</p>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="relative flex flex-col gap-5 pl-4 md:pl-0">
+            {/* The vertical separator line */}
+            <div className="absolute left-[8px] md:left-[219px] top-6 bottom-6 w-1 rounded-full bg-gradient-to-b from-primary/80 via-primary/40 to-transparent"></div>
+
             {[
-              { phase: "Registration & Networking", detail: "Registration, networking, and startup showcase" },
-              { phase: "Opening Ceremony", detail: "Welcome addresses and ceremonial opening" },
-              { phase: "Global Keynotes", detail: "Global keynotes and expert sessions featuring visionary AI leaders" },
-              { phase: "Executive Panels", detail: "Executive panel discussions driving the future of AI policy, industry, and innovation" },
-              { phase: "Curated Networking", detail: "Curated networking sessions among speakers, partners, and delegates" },
+              { time: "2:00 PM – 2:45 PM", phase: "Registration & Networking", detail: "Welcome, registration, startup showcase" },
+              { time: "2:45 PM – 3:00 PM", phase: "Opening Ceremony", detail: "Welcome addresses & ceremonial opening" },
+              { time: "3:00 PM – 4:45 PM", phase: "Global Keynotes & Expert Sessions", detail: "Visionary AI leaders unveiling the technologies shaping tomorrow." },
+              { time: "5:00 PM – 6:10 PM", phase: "Executive Panel Discussion", detail: "High-impact conversations driving the future of AI policy, industry, and innovation." },
+              { time: "6:10 PM – 6:40 PM", phase: "Recognition & Closing", detail: "Partner appreciation, event highlights & official closing" },
+              { time: "6:40 PM – 9:00 PM", phase: "Networking Session", detail: "Networking among speakers, partners & delegates" },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-4"
-              >
-                <span className="mt-0.5 text-primary font-bold text-sm shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="text-base font-semibold text-white">{item.phase}</p>
-                  <p className="text-sm text-white/50 mt-1">{item.detail}</p>
+              <div key={i} className="relative flex flex-col md:flex-row gap-4 md:gap-10 items-start md:items-center w-full">
+                {/* Time Block */}
+                <div className="ml-6 md:ml-0 md:w-[200px] shrink-0">
+                  <div className="flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 py-4 font-semibold text-white/80 shadow-md">
+                    {item.time}
+                  </div>
+                </div>
+
+                {/* Responsive Dot on the line */}
+                <div className="hidden md:block absolute left-[214px] top-1/2 -translate-y-1/2 h-3.5 w-3.5 rounded-full bg-primary shadow-[0_0_10px_rgba(239,68,68,0.8)] z-10"></div>
+                <div className="md:hidden absolute left-[3px] top-8 h-3.5 w-3.5 rounded-full bg-primary z-10"></div>
+
+                {/* Content Block */}
+                <div className="ml-6 md:ml-0 flex-1 w-[calc(100%-1.5rem)] md:w-auto">
+                  <div className="group flex flex-col justify-center rounded-xl bg-white/5 border border-white/5 px-6 py-5 hover:bg-white/10 hover:border-white/10 transition-all duration-300">
+                    <p className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">{item.phase}</p>
+                    <p className="text-[15px] text-white/60 leading-relaxed">{item.detail}</p>
+                  </div>
                 </div>
               </div>
             ))}
