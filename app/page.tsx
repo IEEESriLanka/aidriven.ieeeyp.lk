@@ -10,6 +10,9 @@ import kaushikaPhoto from "@/assets/team-2026/Kaushika Dissanayake.png";
 import lohansaPhoto from "@/assets/team-2026/Lohansa Munasinghe.png";
 import linukPhoto from "@/assets/team-2026/Linuk Perera.png";
 import webElement from "@/assets/web-element.png";
+import aidslLogo from "@/assets/AIDSL_FullLOGO_DARKNoBG.png";
+import navbarLogo from "@/assets/AIDSL_FullLOGO_DARKNoBG_1.png";
+import footerLogo from "@/assets/YPSL_Logo.png";
 const UpcomingEvent = dynamic(() => import("@/components/LandingPage/UpcomingEvents"));
 const Timeline = dynamic(() => import("@/components/LandingPage/Timeline"));
 const Partners = dynamic(() => import("@/components/LandingPage/Partners"));
@@ -69,20 +72,18 @@ export default function Page() {
   const handleMobileMenuToggle = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <div className="bg-[#0A0103] text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white overflow-x-hidden flex flex-col min-h-screen">
+    <div className="bg-[#050505] text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white overflow-x-hidden flex flex-col min-h-screen">
 
 
 
 
-      <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-outline-variant/60 shadow-sm w-screen transition-colors duration-300 ${isScrolled ? "bg-[#1C0309]/30" : "bg-[#1C0309]/95"}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-outline-variant/60 shadow-sm w-screen transition-colors duration-300 ${isScrolled ? "bg-[#140206]/30" : "bg-[#140206]/95"}`}>
         <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin h-20">
 
           <a className="flex items-center gap-3 group" href="#!">
-            <span className="inline-block w-3 h-10 bg-primary-container shadow-[0_0_15px_#FF1E56] group-hover:shadow-[0_0_25px_#FF1E56] transition-shadow duration-300"></span>
-            <span className="flex flex-col font-headline-xl font-black uppercase tracking-[0.15em] leading-[1.1]">
-              <span className="text-white text-base md:text-lg">AI DRIVEN</span>
-              <span className="text-primary text-[10px] md:text-xs tracking-[0.2em]">SRI LANKA 2026</span>
-            </span>
+            <div className="relative w-32 h-10 md:w-40 md:h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <Image src={aidslLogo} alt="AI Driven Sri Lanka Logo" fill className="object-contain" />
+            </div>
           </a>
 
           <nav className="hidden md:flex items-center space-x-6 text-xs">
@@ -95,21 +96,8 @@ export default function Page() {
 
           <div className="flex items-center space-x-4">
 
-            <div className="relative group hidden lg:block">
-              <button className="flex items-center gap-1.5 text-on-surface-variant hover:text-primary font-label-mono-sm text-xs uppercase tracking-wider py-2 transition-colors">
-                AIDSL <span className="text-xs">▾</span>
-              </button>
-              <div className="absolute right-0 top-full pt-4 w-48 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-                <div className="bg-[#1C0309] border border-outline-variant/60 shadow-2xl p-2 flex flex-col space-y-1">
-                  <a className="px-3 py-2 text-xs font-label-mono-sm text-on-surface-variant hover:text-white hover:bg-[#30040E] transition-colors" href="/events/past-events">Our Past Events</a>
-                  <a className="px-3 py-2 text-xs font-label-mono-sm text-on-surface-variant hover:text-white hover:bg-[#30040E] transition-colors" href="/blogs">Blogs</a>
-                  <a className="px-3 py-2 text-xs font-label-mono-sm text-on-surface-variant hover:text-white hover:bg-[#30040E] transition-colors" href="/our-team">Our Team</a>
-                  <a className="px-3 py-2 text-xs font-label-mono-sm text-on-surface-variant hover:text-white hover:bg-[#30040E] transition-colors" href="/about-us">About Us</a>
-                  <a className="px-3 py-2 text-xs font-label-mono-sm text-on-surface-variant hover:text-white hover:bg-[#30040E] transition-colors" href="#contact">Contact Us</a>
-                </div>
-              </div>
-            </div>
-            <a className="bg-primary-container text-white font-headline-md text-xs font-bold tracking-widest uppercase px-5 py-2.5 border border-[#FF3366] hover:bg-[#FF2A55] crimson-btn-glow transition-all duration-150 active:opacity-80" href="#register">
+
+            <a className="bg-[#8B0000] text-white font-headline-md text-xs font-bold tracking-widest uppercase px-5 py-2.5 border border-[#8B0000] hover:bg-[red] crimson-btn-glow transition-all duration-150 active:opacity-80" href="#register">
               REGISTER NOW
             </a>
             <button aria-label="Toggle Menu" className="md:hidden text-on-surface hover:text-primary p-2 focus:outline-none" id="mobile-menu-btn" onClick={handleMobileMenuToggle}>
@@ -118,36 +106,53 @@ export default function Page() {
           </div>
         </div>
 
-        <div id="mobile-menu" className={`md:hidden bg-[#1C0309] border-b border-outline-variant/40 px-6 py-6 space-y-4 ${isMobileMenuOpen ? "block" : "hidden"}`}>
+        <div id="mobile-menu" className={`md:hidden bg-[#140206] border-b border-outline-variant/40 px-6 py-6 space-y-4 ${isMobileMenuOpen ? "block" : "hidden"}`}>
           <a className="block font-label-mono-sm uppercase tracking-widest text-on-surface hover:text-primary" href="#about">About</a>
           <a className="block font-label-mono-sm uppercase tracking-widest text-on-surface hover:text-primary" href="#experience">Experience</a>
           <a className="block font-label-mono-sm uppercase tracking-widest text-on-surface hover:text-primary" href="#programme">Programme</a>
           <a className="block font-label-mono-sm uppercase tracking-widest text-on-surface hover:text-primary" href="#partners">Partners</a>
           <a className="block font-label-mono-sm uppercase tracking-widest text-on-surface hover:text-primary" href="#faq">FAQ</a>
-          <hr className="border-outline-variant/40 my-2" />
-          <span className="block text-xs uppercase tracking-widest text-primary font-bold">AIDSL Ecosystem</span>
-          <a className="block pl-3 text-xs text-on-surface-variant hover:text-primary" href="/events/past-events">Our Past Events</a>
-          <a className="block pl-3 text-xs text-on-surface-variant hover:text-primary" href="/blogs">Blogs</a>
-          <a className="block pl-3 text-xs text-on-surface-variant hover:text-primary" href="/our-team">Our Team</a>
-          <a className="block pl-3 text-xs text-on-surface-variant hover:text-primary" href="/about-us">About Us</a>
-          <a className="block pl-3 text-xs text-on-surface-variant hover:text-primary" href="#contact">Contact Us</a>
+
         </div>
       </header>
+
+      <div className="absolute top-[4.5rem] lg:top-24 right-margin-mobile md:right-margin z-[45] hidden md:flex flex-col items-center drop-shadow-md saturate-150">
+        <div className="flex items-start text-white/50 font-sans opacity-70">
+          {/* Days */}
+          <div className="flex flex-col items-center w-7 lg:w-10">
+            <span className="text-xl lg:text-2xl font-black tracking-tighter leading-none tabular-nums text-center">{timeLeft.days}</span>
+            <span className="text-[7px] lg:text-[8px] font-bold tracking-wider mt-0.5 text-center">DAYS</span>
+          </div>
+          <span className="text-lg lg:text-xl font-bold mx-0.5 leading-none mt-0.5 opacity-90">:</span>
+          {/* Hours */}
+          <div className="flex flex-col items-center w-7 lg:w-10">
+            <span className="text-xl lg:text-2xl font-black tracking-tighter leading-none tabular-nums text-center">{timeLeft.hours}</span>
+            <span className="text-[7px] lg:text-[8px] font-bold tracking-wider mt-0.5 text-center">HRS</span>
+          </div>
+          <span className="text-lg lg:text-xl font-bold mx-0.5 leading-none mt-0.5 opacity-90">:</span>
+          {/* Minutes */}
+          <div className="flex flex-col items-center w-7 lg:w-10">
+            <span className="text-xl lg:text-2xl font-black tracking-tighter leading-none tabular-nums text-center">{timeLeft.mins}</span>
+            <span className="text-[7px] lg:text-[8px] font-bold tracking-wider mt-0.5 text-center">MINS</span>
+          </div>
+          <span className="text-lg lg:text-xl font-bold mx-0.5 leading-none mt-0.5 opacity-90">:</span>
+          {/* Seconds */}
+          <div className="flex flex-col items-center w-7 lg:w-10">
+            <span className="text-xl lg:text-2xl font-black tracking-tighter leading-none tabular-nums text-center">{timeLeft.secs}</span>
+            <span className="text-[7px] lg:text-[8px] font-bold tracking-wider mt-0.5 border-b border-white/50 pb-[1px] text-center">SECS</span>
+          </div>
+        </div>
+      </div>
 
       <section className="relative min-h-[942px] flex items-start justify-center custom-radial-glow hero-grid-pattern overflow-hidden pt-24 pb-32 border-b border-outline-variant/30">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-gradient-to-tr from-[#FF1E56]/20 via-[#940023]/30 to-transparent rounded-full blur-3xl pointer-events-none -z-0 opacity-75"></div>
 
         <div className="relative z-10 max-w-screen-2xl mx-auto px-margin-mobile md:px-margin w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-16 md:pt-28">
 
-          <div className="lg:col-span-7 flex flex-col items-start xl:-mt-16 lg:-mt-8">
+          <div className="lg:col-span-12 flex flex-col items-start mt-4 lg:mt-8 xl:mt-12 w-full max-w-6xl">
 
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#24040B] border border-primary-container/60 text-primary uppercase font-label-mono-xs tracking-widest mb-4 shadow-[0_0_15px_rgba(255,30,86,0.25)] text-[10px]">
-              <span className="w-1 h-1 bg-primary animate-ping inline-block"></span>
-              <span>AN INITIATIVE BY IEEE YOUNG PROFESSIONALS SRI LANKA</span>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl lg:text-[82px] lg:tracking-tighter font-headline-xl font-bold tracking-tight text-white uppercase leading-[1.05] mb-5">
-              <span className="whitespace-nowrap">AI DRIVEN SRI LANKA</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#FFA8BA] to-white inline-block pr-1">2026</span>
+            <h1 className="text-4xl md:text-5xl lg:text-[70px] lg:tracking-tighter font-headline-xl font-bold tracking-tight text-white uppercase leading-[1.05] mb-5">
+              <span className="whitespace-nowrap">The Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#940023] inline-block pr-1">Thinks Here.</span>
             </h1>
 
             <h2 className="text-lg md:text-xl font-headline-md text-primary font-medium tracking-wide mb-4">
@@ -158,18 +163,18 @@ export default function Page() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-3 px-4 py-2.5 bg-[#1C0309] border border-outline-variant/60 text-on-surface font-label-mono-sm text-label-mono-sm tracking-wide shadow-sm">
+              <div className="flex items-center gap-3 px-4 py-2.5 bg-[#140206] border border-outline-variant/60 text-on-surface font-label-mono-sm text-label-mono-sm tracking-wide shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary shrink-0"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
                 <span>Date to be announced soon</span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-2.5 bg-[#1C0309] border border-outline-variant/60 text-on-surface font-label-mono-sm text-label-mono-sm tracking-wide shadow-sm">
+              <div className="flex items-center gap-3 px-4 py-2.5 bg-[#140206] border border-outline-variant/60 text-on-surface font-label-mono-sm text-label-mono-sm tracking-wide shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 <span>Venue to be announced soon · Colombo</span>
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-5 mb-10">
-              <a className="px-8 py-4 bg-primary-container text-white font-headline-md text-label-mono-sm font-bold uppercase tracking-widest hover:bg-[#FF2A55] crimson-btn-glow transition-all" href="#register">
+              <a className="px-8 py-4 bg-[#8B0000] text-white font-headline-md text-label-mono-sm font-bold uppercase tracking-widest hover:bg-[red] crimson-btn-glow transition-all" href="#register">
                 Register Now
               </a>
               <a className="px-8 py-4 bg-transparent text-[#FFEBF0] border border-primary-container/60 font-headline-md text-label-mono-sm font-bold uppercase tracking-widest hover:border-primary hover:bg-primary/10 transition-all" href="#programme">
@@ -183,39 +188,6 @@ export default function Page() {
               <span>Scroll to Explore</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19" /><polyline points="19 12 12 19 5 12" /></svg>
             </a>
-          </div>
-
-          <div className="hidden lg:flex lg:col-span-5 flex-col items-center justify-center relative group perspective pb-10">
-            <div className="relative w-[90%] h-[280px] xl:h-[360px] z-10 transition-all duration-[600ms] ease-out hover:scale-105 group-hover:drop-shadow-[0_0_20px_rgba(255,30,86,0.45)] animate-float mt-16">
-              <Image src={webElement} alt="AI Driven Web Element" fill className="object-contain" priority />
-            </div>
-
-            <div className="w-[380px] px-4 py-3 bg-[#1C0309]/95 border border-outline-variant/50 backdrop-blur-sm shadow-[0_0_20px_rgba(255,30,86,0.12)] mt-4">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-[9px] uppercase font-label-mono-xs tracking-widest text-primary font-bold">Event Countdown</span>
-              </div>
-              <div className="grid grid-cols-4 gap-2 text-center">
-                <div className="py-1 bg-[#24040B] border border-outline-variant/40">
-                  <span className="text-lg font-headline-md font-bold text-white block">{timeLeft.days}</span>
-                  <span className="text-[8px] uppercase font-label-mono-xs text-on-surface-variant tracking-widest">Days</span>
-                </div>
-                <div className="py-1 bg-[#24040B] border border-outline-variant/40">
-                  <span className="text-lg font-headline-md font-bold text-white block">{timeLeft.hours}</span>
-                  <span className="text-[8px] uppercase font-label-mono-xs text-on-surface-variant tracking-widest">Hrs</span>
-                </div>
-                <div className="py-1 bg-[#24040B] border border-outline-variant/40">
-                  <span className="text-lg font-headline-md font-bold text-white block">{timeLeft.mins}</span>
-                  <span className="text-[8px] uppercase font-label-mono-xs text-on-surface-variant tracking-widest">Min</span>
-                </div>
-                <div className="py-1 bg-[#24040B] border border-outline-variant/40">
-                  <span className="text-lg font-headline-md font-bold text-white block">{timeLeft.secs}</span>
-                  <span className="text-[8px] uppercase font-label-mono-xs text-on-surface-variant tracking-widest">Sec</span>
-                </div>
-              </div>
-              <div className="text-center mt-2 pt-1 border-t border-outline-variant/30/50">
-                <span className="text-[8px] uppercase font-label-mono-xs tracking-widest text-primary font-bold">Registrations Open Soon</span>
-              </div>
-            </div>
           </div>
 
         </div></section>
@@ -243,11 +215,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#0A0103] relative" id="about">
+      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#050505] relative" id="about">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16 items-center">
             <div className="lg:col-span-7">
-              <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-3 font-bold">01 // ECOSYSTEM GATHERING</span>
+              <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-3 font-bold">ECOSYSTEM GATHERING</span>
               <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-6 leading-tight">
                 WHERE SRI LANKA'S AI ECOSYSTEM COMES TOGETHER
               </h2>
@@ -267,7 +239,7 @@ export default function Page() {
 
                 {/* Static Central NodeGraphic */}
                 <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                  <div className="w-[60%] h-[60%] bg-[#1A0207] border border-primary/40 rounded-full shadow-[0_0_30px_rgba(255,30,86,0.3)] backdrop-blur-sm flex flex-col items-center justify-center text-center">
+                  <div className="w-[60%] h-[60%] bg-[#0D0D0D] border border-primary/40 rounded-full shadow-[0_0_30px_rgba(255,30,86,0.3)] backdrop-blur-sm flex flex-col items-center justify-center text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-1.5 opacity-90"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /><path d="M2 12h20" /></svg>
                     <span className="text-white font-headline-md font-bold uppercase tracking-widest text-xs">GLOBAL</span>
                     <span className="text-primary text-[8px] font-label-mono-xs uppercase tracking-[0.2em] mt-0.5">NETWORK</span>
@@ -280,12 +252,12 @@ export default function Page() {
                 <div className="absolute top-[45%] left-[-4%] w-3 h-3 bg-outline-variant border border-primary rounded-sm rotate-45 animate-spin" style={{ animationDuration: '8s' }}></div>
 
                 {/* Data Glass cards */}
-                <div className="absolute -right-16 md:-right-24 top-1/4 bg-[#1C0309]/90 backdrop-blur-md border border-outline-variant/50 px-4 py-3 rounded-lg shadow-2xl animate-float" style={{ animationDelay: '1s' }}>
+                <div className="absolute -right-16 md:-right-24 top-1/4 bg-[#140206]/90 backdrop-blur-md border border-outline-variant/50 px-4 py-3 rounded-lg shadow-2xl animate-float" style={{ animationDelay: '1s' }}>
                   <div className="text-xl font-headline-xl font-bold text-white leading-none tracking-wider">KEY</div>
                   <div className="text-[9px] text-on-surface-variant font-label-mono-xs uppercase tracking-widest mt-1.5 font-bold">INNOVATORS</div>
                 </div>
 
-                <div className="absolute -left-16 md:-left-24 bottom-1/4 bg-[#1C0309]/90 backdrop-blur-md border border-outline-variant/50 px-4 py-3 rounded-lg shadow-2xl animate-float">
+                <div className="absolute -left-16 md:-left-24 bottom-1/4 bg-[#140206]/90 backdrop-blur-md border border-outline-variant/50 px-4 py-3 rounded-lg shadow-2xl animate-float">
                   <div className="text-xl font-headline-xl font-bold text-primary leading-none tracking-wider">CROSS</div>
                   <div className="text-[9px] text-on-surface-variant font-label-mono-xs uppercase tracking-widest mt-1.5 font-bold">INDUSTRY</div>
                 </div>
@@ -294,7 +266,7 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all">
               <div className="w-8 h-1 bg-primary-container shadow-[0_0_8px_#FF1E56] mb-6"></div>
               <span className="text-primary font-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PILLAR 01</span>
               <h3 className="text-lg font-headline-md font-bold text-white mb-3 tracking-wide uppercase">LEARN</h3>
@@ -302,7 +274,7 @@ export default function Page() {
                 Global AI insight delivered directly by international thought leaders and top AI researchers.
               </p>
             </div>
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all">
               <div className="w-8 h-1 bg-primary-container shadow-[0_0_8px_#FF1E56] mb-6"></div>
               <span className="text-primary font-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PILLAR 02</span>
               <h3 className="text-lg font-headline-md font-bold text-white mb-3 tracking-wide uppercase">CONNECT</h3>
@@ -310,7 +282,7 @@ export default function Page() {
                 Academia, industry &amp; government bridging functional divides in high-caliber curated roundtables.
               </p>
             </div>
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all">
               <div className="w-8 h-1 bg-primary-container shadow-[0_0_8px_#FF1E56] mb-6"></div>
               <span className="text-primary font-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PILLAR 03</span>
               <h3 className="text-lg font-headline-md font-bold text-white mb-3 tracking-wide uppercase">INNOVATE</h3>
@@ -318,7 +290,7 @@ export default function Page() {
                 Startup and AI showcase providing tangible product viability and direct commercial acceleration.
               </p>
             </div>
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all">
               <div className="w-8 h-1 bg-primary-container shadow-[0_0_8px_#FF1E56] mb-6"></div>
               <span className="text-primary font-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PILLAR 04</span>
               <h3 className="text-lg font-headline-md font-bold text-white mb-3 tracking-wide uppercase">TRANSFORM</h3>
@@ -330,15 +302,15 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 border-b border-outline-variant/30 bg-[#0A0103]">
+      <section className="py-24 border-b border-outline-variant/30 bg-[#050505]">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-12">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">02 // STRATEGIC IMPERATIVE</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">STRATEGIC IMPERATIVE</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white">WHY AIDSL 2026?</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            <div className="p-8 md:p-10 bg-[#1C0309] border border-outline-variant/50 relative">
+            <div className="p-8 md:p-10 bg-[#140206] border border-outline-variant/50 relative">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-outline-variant/30">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary shrink-0"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase tracking-wider text-primary">THE PROBLEM</h3>
@@ -359,7 +331,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className="p-8 md:p-10 bg-[#24040B] border border-primary-container/60 shadow-[0_0_30px_-4px_rgba(255,30,86,0.3)] relative">
+            <div className="p-8 md:p-10 bg-[#1C0409] border border-primary-container/60 shadow-[0_0_30px_-4px_rgba(255,30,86,0.3)] relative">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-primary-container/40">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase tracking-wider text-white">OUR SOLUTION</h3>
@@ -383,16 +355,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#0A0103]" id="experience">
+      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#050505]" id="experience">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-16">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">03 // IMMERSIVE FORMAT</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">IMMERSIVE FORMAT</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white">THE AIDSL EXPERIENCE</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">GLOBAL KEYNOTE SESSIONS</h3>
@@ -405,7 +377,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" /><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">PANEL DISCUSSIONS</h3>
@@ -418,7 +390,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-5.224 4.668A3.999 3.999 0 0 0 2.25 15.5a4 4 0 0 0 4.213 3.491.5.5 0 0 1 .494.61A4.001 4.001 0 0 0 12 24h.01a4.001 4.001 0 0 0 5.043-4.398.5.5 0 0 1 .494-.61A4 4 0 0 0 21.75 15.5a3.999 3.999 0 0 0 1.471-5.707 4 4 0 0 0-5.224-4.668A3 3 0 1 0 12 5Z" /><path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">AI FORUM</h3>
@@ -433,7 +405,7 @@ export default function Page() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">INNOVATION SHOWCASE</h3>
@@ -446,7 +418,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="M18 22H4a2 2 0 0 1-2-2V6" /><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" /><circle cx="12" cy="8" r="2" /><rect width="16" height="16" x="6" y="2" rx="2" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">AI IMAGE GALLERY</h3>
@@ -459,7 +431,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col justify-between h-full">
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                 <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">NETWORKING SESSIONS</h3>
@@ -474,7 +446,7 @@ export default function Page() {
           </div>
 
           <div className="w-full">
-            <div className="p-8 bg-[#24040B] border border-primary-container/60 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="p-8 bg-[#1C0409] border border-primary-container/60 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="flex items-start md:items-center gap-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-7.38 7.38a6 6 0 1 0 8.5 8.5l1.5-1.5" /><path d="M3 21l3-3" /><path d="m3 3 7.37 7.38a3 3 0 0 0 4.24 0L19 5.5a2 2 0 0 0 0-2.82l-.4-.4a2 2 0 0 0-2.8 0l-5.3 5.3" /></svg>
                 <div>
@@ -485,7 +457,7 @@ export default function Page() {
                 </div>
               </div>
               <div className="text-right">
-                <span className="inline-block px-4 py-1.5 bg-[#1C0309] border border-outline-variant/60 text-xs font-label-mono-xs uppercase tracking-widest text-primary font-bold">
+                <span className="inline-block px-4 py-1.5 bg-[#140206] border border-outline-variant/60 text-xs font-label-mono-xs uppercase tracking-widest text-primary font-bold">
                   Private Lounge Access
                 </span>
               </div>
@@ -494,37 +466,37 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 border-b border-outline-variant/30 bg-[#0A0103]">
+      <section className="py-24 border-b border-outline-variant/30 bg-[#050505]">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-12">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">04 // ATTENDANCE PROFILE</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">ATTENDANCE PROFILE</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white">
               WHO SHOULD ATTEND
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">Industry Leaders &amp; Professionals</span>
             </div>
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">AI Researchers &amp; Academics</span>
             </div>
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">Startup Founders &amp; Innovators</span>
             </div>
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">Investors &amp; Venture Capitalists</span>
             </div>
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">Policymakers &amp; Government Representatives</span>
             </div>
-            <div className="px-6 py-5 bg-[#1C0309] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
-              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_#FF2A55]"></span>
+            <div className="px-6 py-5 bg-[#140206] border border-outline-variant/50 hover:border-primary transition-colors flex items-center gap-4">
+              <span className="w-2 h-2 bg-primary shadow-[0_0_6px_red]"></span>
               <span className="font-headline-md font-medium text-white text-sm tracking-wide">Students &amp; Early-career Professionals</span>
             </div>
           </div>
@@ -532,78 +504,78 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#0A0103]" id="programme">
+      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#050505]" id="programme">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-16 flex flex-col items-center text-center">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">05 // AGENDA</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">AGENDA</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-2">
               PROGRAMME
             </h2>
             <p className="text-on-surface-variant font-label-mono-sm text-xs">A single high-impact day - Date to be announced soon</p>
           </div>
 
-          <div className="border-t border-outline-variant/40 divide-y divide-outline-variant/20 w-fit mx-auto">
+          <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto w-full">
 
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">2:00 PM – 2:45 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">01 - Registration &amp; Arrival</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">Participant check-in, badge collection &amp; networking warm-up</p>
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">2:00 PM – 2:45 PM</span>
+              </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">01 - Registration &amp; Arrival</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Participant check-in, badge collection &amp; networking warm-up</p>
+              </div>
+            </div>
+
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">2:45 PM – 3:00 PM</span>
+              </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">02 - Opening Ceremony</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Welcome address &amp; agenda overview by AIDSL leadership</p>
+              </div>
+            </div>
+
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">3:00 PM – 4:45 PM</span>
+              </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">03 - Global Keynote Sessions</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Thought leadership from globally recognised AI leaders</p>
+              </div>
+            </div>
+
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">5:00 PM – 6:10 PM</span>
+              </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">04 - Panel Discussions</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Experts from industry, academia &amp; policy on critical AI challenges</p>
+              </div>
+            </div>
+
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">6:10 PM – 6:40 PM</span>
+              </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6 w-full">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">05 - Innovation Showcase &amp; AI Forum</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">10 startup stalls, AI gallery &amp; roundtable discussions</p>
+                <div className="mt-2 py-2 px-3 bg-[#1C0409] border-l-2 border-primary text-xs font-label-mono-xs text-primary font-bold inline-block">
+                  ↳ includes the AI Challenge 2026 National Final Showcase
                 </div>
               </div>
             </div>
 
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">2:45 PM – 3:00 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">02 - Opening Ceremony</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">Welcome address &amp; agenda overview by AIDSL leadership</p>
-                </div>
+            <div className="p-5 md:py-6 md:px-10 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col md:flex-row md:items-center gap-4 hover:border-primary group">
+              <div className="shrink-0 md:w-[180px]">
+                <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">6:40 PM – 9:00 PM</span>
               </div>
-            </div>
-
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">3:00 PM – 4:45 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">03 - Global Keynote Sessions</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">Thought leadership from globally recognised AI leaders</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">5:00 PM – 6:10 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">04 - Panel Discussions</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">Experts from industry, academia &amp; policy on critical AI challenges</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">6:10 PM – 6:40 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">05 - Innovation Showcase &amp; AI Forum</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">10 startup stalls, AI gallery &amp; roundtable discussions</p>
-                  <div className="mt-2 text-xs font-label-mono-xs text-primary font-bold">
-                    ↳ includes the AI Challenge 2026 National Final Showcase
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="py-8 flex justify-start hover:bg-[#1C0309] px-4 transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
-                <span className="font-label-mono-sm text-primary font-bold tracking-widest md:min-w-[200px] text-left">6:40 PM – 9:00 PM</span>
-                <div className="text-left">
-                  <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide">06 - Fellowship Gathering</h3>
-                  <p className="text-xs text-on-surface-variant font-body-sm mt-1">Exclusive premium networking for speakers, partners &amp; investors</p>
-                </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">06 - Fellowship Gathering</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Exclusive premium networking for speakers, partners &amp; investors</p>
               </div>
             </div>
 
@@ -611,10 +583,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 border-b border-outline-variant/30 bg-[#0A0103]">
+      <section className="py-24 border-b border-outline-variant/30 bg-[#050505]">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-14">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">06 // KEYNOTE VOICES</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">KEYNOTE VOICES</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-4">
               MEET THE MINDS SHAPING AI
             </h2>
@@ -624,64 +596,64 @@ export default function Page() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Keynote / Global</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Keynote / Frontier</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Industry</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Academia</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Policy</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Forum Moderator</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Startup Judge</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
             </div>
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
-              <div className="w-24 h-24 bg-[#24040B] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 flex flex-col items-center text-center group crimson-glow-card">
+              <div className="w-24 h-24 bg-[#1C0409] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
                 <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
               </div>
@@ -694,10 +666,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#0A0103] custom-radial-glow relative" id="register">
+      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#050505] custom-radial-glow relative" id="register">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">07 // PASS SELECTION</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PASS SELECTION</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-4">
               SECURE YOUR SEAT
             </h2>
@@ -708,7 +680,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto gap-8 items-stretch mb-12">
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 flex flex-col justify-between crimson-glow-card">
+            <div className="p-8 bg-[#1C0409] border border-primary/70 shadow-[0_0_40px_-5px_rgba(255,30,86,0.4)] hover:shadow-[0_0_90px_0px_rgba(255,30,86,0.55)] flex flex-col justify-between transition-all duration-500 relative z-10 cursor-default">
               <div>
                 <div className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-2 font-bold">Member Privilege</div>
                 <h3 className="text-lg font-headline-md font-bold uppercase text-white mb-4">IEEE MEMBER PASS</h3>
@@ -732,17 +704,17 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <button className="w-full py-4 bg-transparent border border-outline-variant/50 hover:border-primary text-white font-headline-md text-label-mono-sm uppercase tracking-widest transition-colors">
+              <button className="w-full py-4 bg-[#050505] border border-primary/40 hover:border-primary hover:bg-primary/20 hover:shadow-[0_0_25px_rgba(255,30,86,0.6)] text-white font-headline-md text-label-mono-sm uppercase tracking-widest transition-all duration-300 cursor-pointer">
                 Register
               </button>
             </div>
 
-            <div className="p-8 bg-[#1C0309] border border-outline-variant/50 flex flex-col justify-between crimson-glow-card">
+            <div className="p-8 bg-[#140206] border border-outline-variant/50 flex flex-col justify-between crimson-glow-card">
               <div>
                 <div className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-2 font-bold">General Admission</div>
                 <h3 className="text-lg font-headline-md font-bold uppercase text-white mb-4">STANDARD DELEGATE PASS</h3>
                 <div className="text-2xl font-headline-xl font-bold text-white mb-6"><span className="text-base md:text-lg font-headline-md text-white font-bold">Pricing to be announced soon</span></div>
-                <ul className="space-y-4 text-xs text-white font-body-sm pb-8 border-b border-primary-container/40 mb-8">
+                <ul className="space-y-4 text-xs text-on-surface-variant font-body-sm pb-8 border-b border-primary-container/40 mb-8">
                   <li className="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><polyline points="20 6 9 17 4 12" /></svg>
                     <span className="">Everything in IEEE Member Pass</span>
@@ -761,7 +733,7 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-              <button className="w-full py-4 bg-transparent border border-outline-variant/50 hover:border-primary text-white font-headline-md text-label-mono-sm uppercase tracking-widest transition-colors">
+              <button className="w-full py-4 bg-[#050505] border border-primary/40 hover:border-primary hover:bg-primary/20 hover:shadow-[0_0_25px_rgba(255,30,86,0.6)] text-white font-headline-md text-label-mono-sm uppercase tracking-widest transition-all duration-300 cursor-pointer">
                 Register
               </button>
             </div>
@@ -773,10 +745,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 border-b border-outline-variant/30 bg-[#0A0103]" id="partners">
+      <section className="py-24 border-b border-outline-variant/30 bg-[#050505]" id="partners">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-14">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">08 // ECOSYSTEM ALLIANCES</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">ECOSYSTEM ALLIANCES</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-4">
               OUR PARTNERS
             </h2>
@@ -787,13 +759,13 @@ export default function Page() {
             <div>
               <span className="text-[11px] font-label-mono-xs text-primary uppercase tracking-widest block mb-4 font-bold">STRATEGIC PARTNERS</span>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div className="h-24 bg-[#1C0309] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant hover:border-primary transition-colors">
+                <div className="h-24 bg-[#140206] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant hover:border-primary transition-colors">
                   <div className="flex items-center gap-2 opacity-50"><div className="w-5 h-5 bg-current rounded-sm"></div><span>LOGO</span></div>
                 </div>
-                <div className="h-24 bg-[#1C0309] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant hover:border-primary transition-colors">
+                <div className="h-24 bg-[#140206] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant hover:border-primary transition-colors">
                   <div className="flex items-center gap-2 opacity-50"><div className="w-5 h-5 bg-current rounded-sm"></div><span>LOGO</span></div>
                 </div>
-                <div className="h-24 bg-[#1C0309] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant col-span-2 md:col-span-1 hover:border-primary transition-colors">
+                <div className="h-24 bg-[#140206] border border-outline-variant/60 flex items-center justify-center font-headline-md text-xs uppercase tracking-widest text-on-surface-variant col-span-2 md:col-span-1 hover:border-primary transition-colors">
                   <div className="flex items-center gap-2 opacity-50"><div className="w-5 h-5 bg-current rounded-sm"></div><span>LOGO</span></div>
                 </div>
               </div>
@@ -803,10 +775,10 @@ export default function Page() {
               <div>
                 <span className="text-[11px] font-label-mono-xs text-primary uppercase tracking-widest block mb-4 font-bold">GOLD PARTNERS</span>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="h-16 bg-[#1C0309] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
+                  <div className="h-16 bg-[#140206] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
                     <div className="flex items-center gap-2 opacity-40"><div className="w-4 h-4 bg-current rounded-sm"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-16 bg-[#1C0309] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
+                  <div className="h-16 bg-[#140206] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
                     <div className="flex items-center gap-2 opacity-40"><div className="w-4 h-4 bg-current rounded-sm"></div><span>LOGO</span></div>
                   </div>
                 </div>
@@ -814,10 +786,10 @@ export default function Page() {
               <div>
                 <span className="text-[11px] font-label-mono-xs text-primary uppercase tracking-widest block mb-4 font-bold">TECHNOLOGY PARTNERS</span>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="h-16 bg-[#1C0309] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
+                  <div className="h-16 bg-[#140206] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
                     <div className="flex items-center gap-2 opacity-40"><div className="w-4 h-4 bg-current rounded-sm"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-16 bg-[#1C0309] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
+                  <div className="h-16 bg-[#140206] border border-outline-variant/50 flex items-center justify-center text-xs font-label-mono-sm text-on-surface-variant hover:border-primary transition-colors">
                     <div className="flex items-center gap-2 opacity-40"><div className="w-4 h-4 bg-current rounded-sm"></div><span>LOGO</span></div>
                   </div>
                 </div>
@@ -828,13 +800,13 @@ export default function Page() {
               <div>
                 <span className="text-[11px] font-label-mono-xs text-primary uppercase tracking-widest block mb-4 font-bold">MEDIA PARTNERS</span>
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
                 </div>
@@ -842,13 +814,13 @@ export default function Page() {
               <div>
                 <span className="text-[11px] font-label-mono-xs text-primary uppercase tracking-widest block mb-4 font-bold">COMMUNITY PARTNERS</span>
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
-                  <div className="h-14 bg-[#1C0309] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
+                  <div className="h-14 bg-[#140206] border border-outline-variant/40 flex items-center justify-center text-[11px] font-label-mono-xs text-outline hover:border-primary transition-colors">
                     <div className="flex items-center gap-1.5 opacity-30"><div className="w-3 h-3 bg-current rounded-[2px]"></div><span>LOGO</span></div>
                   </div>
                 </div>
@@ -856,24 +828,23 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="p-8 bg-[#1C0309] border border-outline-variant/50 shadow-[0_0_24px_rgba(255,30,86,0.12)]">
+          <div className="p-8 bg-[#140206] border border-outline-variant/50 shadow-[0_0_24px_rgba(255,30,86,0.12)]">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
               <div>
                 <h3 className="text-lg font-headline-md font-bold uppercase text-white mb-2">BECOME A PARTNER</h3>
                 <p className="text-xs text-on-surface-variant mb-4">Elevate your brand at Sri Lanka's benchmark machine intelligence forum.</p>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-[#24040B] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Brand Visibility</span>
-                  <span className="px-3 py-1 bg-[#24040B] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Thought Leadership</span>
-                  <span className="px-3 py-1 bg-[#24040B] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Direct Access to Leaders</span>
-                  <span className="px-3 py-1 bg-[#24040B] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Business Opportunities</span>
-                  <span className="px-3 py-1 bg-[#24040B] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Talent Acquisition</span>
+                  <span className="px-3 py-1 bg-[#1C0409] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Brand Visibility</span>
+                  <span className="px-3 py-1 bg-[#1C0409] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Thought Leadership</span>
+                  <span className="px-3 py-1 bg-[#1C0409] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Direct Access to Leaders</span>
+                  <span className="px-3 py-1 bg-[#1C0409] text-[11px] font-label-mono-xs uppercase text-primary border border-primary-container/30">Business Opportunities</span>
                 </div>
               </div>
               <div className="flex items-center gap-4 shrink-0">
-                <button className="px-6 py-3 bg-[#24040B] hover:bg-[#3F0615] border border-primary-container/60 text-white font-label-mono-sm text-label-mono-sm uppercase tracking-widest transition-colors">
+                <button className="px-6 py-3 bg-[#1C0409] hover:bg-[#3F0615] border border-primary-container/60 text-white font-label-mono-sm text-label-mono-sm uppercase tracking-widest transition-colors">
                   Download Sponsorship Deck
                 </button>
-                <a className="px-6 py-3 bg-primary-container text-white font-label-mono-sm text-label-mono-sm uppercase tracking-widest font-bold hover:bg-[#FF2A55] crimson-btn-glow transition-colors" href="#contact">
+                <a className="px-6 py-3 bg-primary-container text-white font-label-mono-sm text-label-mono-sm uppercase tracking-widest font-bold hover:bg-[red] crimson-btn-glow transition-colors" href="#contact">
                   Talk to Us
                 </a>
               </div>
@@ -884,10 +855,10 @@ export default function Page() {
 
       <Partners />
 
-      <section className="py-24 border-b border-outline-variant/30 bg-[#0A0103]" id="faq">
+      <section className="py-24 border-b border-outline-variant/30 bg-[#050505]" id="faq">
         <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin">
           <div className="mb-14 text-center">
-            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">09 // CLARIFICATIONS</span>
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">CLARIFICATIONS</span>
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white">
               FREQUENTLY ASKED QUESTIONS
             </h2>
@@ -902,7 +873,7 @@ export default function Page() {
               { "q": "How much does it cost / is registration free?", "a": "Pass pricing is structured across two tiers: IEEE Member Pass and Standard Delegate Pass. Official pricing and registration deadlines will be announced soon. Selected fellowship opportunities exist for demonstrated research excellence." },
               { "q": "What's included in my pass?", "a": "All passes cover stage access, innovation showcase access, curated catering, official delegate kits, and institutional certificates. Higher tier passes include exclusive roundtable sessions and private fellowship lounges." }
             ].map((faq, i) => (
-              <div key={i} className="border border-outline-variant/50 bg-[#1C0309]">
+              <div key={i} className="border border-outline-variant/50 bg-[#140206]">
                 <button onClick={() => toggleFaq(i)} className="faq-toggle w-full p-5 text-left flex justify-between items-center text-white font-headline-md font-medium text-sm">
                   <span>{faq.q}</span>
                   <span className="text-primary text-xl transition-transform duration-200">
@@ -928,19 +899,19 @@ export default function Page() {
           <p className="text-on-surface-variant text-sm md:text-base max-w-2xl mx-auto mb-10 font-body-md leading-relaxed">
             Join the innovators, researchers, founders and leaders building the country's AI future - in one room, for one day.
           </p>
-          <a className="inline-block px-10 py-5 bg-primary-container text-white font-headline-md text-label-mono-sm font-bold uppercase tracking-widest hover:bg-[#FF2A55] crimson-btn-glow transition-all" href="#register">
+          <a className="inline-block px-10 py-5 bg-[#8B0000] text-white font-headline-md text-label-mono-sm font-bold uppercase tracking-widest hover:bg-[red] crimson-btn-glow transition-all" href="#register">
             Register Now
           </a>
         </div>
 
       </section>
 
-      <div className="bg-[#0A0103] text-[#FFEBF0] border-t border-outline-variant/30 py-16">
+      <div className="bg-[#050505] text-[#FFEBF0] border-t border-outline-variant/30 py-16">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-outline-variant/30 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#24040B] border border-primary-container/40 text-primary uppercase font-label-mono-xs text-label-mono-xs tracking-widest mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1C0409] border border-primary-container/40 text-primary uppercase font-label-mono-xs text-label-mono-xs tracking-widest mb-3">
                 <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                 <span className="">ORGANISATION &amp; ECOSYSTEM</span>
               </div>
@@ -956,8 +927,8 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
 
             {/* Chairperson */}
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
-              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#24040B] rounded-none border border-outline-variant/60 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
+              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#1C0409] rounded-none border border-outline-variant/60 relative overflow-hidden">
                 <Image src={geenothPhoto} alt="Geenoth Viksura" fill className="object-cover" />
               </div>
               <h3 className="text-lg font-headline-md font-bold text-white mb-2 uppercase">Geenoth Viksura</h3>
@@ -971,23 +942,23 @@ export default function Page() {
             </div>
 
             {/* Secretary */}
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
-              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#24040B] rounded-none border border-outline-variant/60 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
+              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#1C0409] rounded-none border border-outline-variant/60 relative overflow-hidden">
                 <Image src={hirushiPhoto} alt="Hirushi Gamage" fill className="object-cover" />
               </div>
               <h3 className="text-lg font-headline-md font-bold text-white mb-2 uppercase">Hirushi Gamage</h3>
               <p className="text-xs font-label-mono-sm uppercase text-primary font-bold mb-4 leading-relaxed">
-                Secretary | AIDSL’26
+                Secretary <br /> AIDSL’26
               </p>
               <div className="w-full pt-4 border-t border-outline-variant/30 text-xs text-on-surface-variant font-body-sm flex flex-col gap-2 mt-auto">
-                <a href="tel:60464199" className="hover:text-primary transition-colors block">60464199</a>
+                <a href="tel:0760464199" className="hover:text-primary transition-colors block">076 046 4199</a>
                 <a href="mailto:hirushigamagect@gmail.com" className="hover:text-primary transition-colors block break-all">hirushigamagect@gmail.com</a>
               </div>
             </div>
 
             {/* Vice-Chairperson Finance */}
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
-              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#24040B] rounded-none border border-outline-variant/60 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
+              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#1C0409] rounded-none border border-outline-variant/60 relative overflow-hidden">
                 <Image src={lohansaPhoto} alt="Lohansa Munasinghe" fill className="object-cover" />
               </div>
               <h3 className="text-lg font-headline-md font-bold text-white mb-2 uppercase">Lohansa Munasinghe</h3>
@@ -1001,8 +972,8 @@ export default function Page() {
             </div>
 
             {/* Vice-Chairperson Program */}
-            <div className="p-6 bg-[#1C0309] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
-              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#24040B] rounded-none border border-outline-variant/60 relative overflow-hidden">
+            <div className="p-6 bg-[#140206] border border-outline-variant/50 crimson-glow-card transition-all flex flex-col items-center text-center">
+              <div className="w-40 h-40 md:w-48 md:h-48 mb-4 bg-[#1C0409] rounded-none border border-outline-variant/60 relative overflow-hidden">
                 <Image src={linukPhoto} alt="Linuk Perera" fill className="object-cover" />
               </div>
               <h3 className="text-lg font-headline-md font-bold text-white mb-2 uppercase">Linuk Perera</h3>
@@ -1018,41 +989,43 @@ export default function Page() {
           </div>
 
 
-          <div className="p-8 bg-[#140206] border border-outline-variant/50 mt-16 mb-8 md:mt-24 md:mb-12" id="contact">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="mb-10 mt-16 md:mt-24" id="contact">
+            <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">INQUIRIES &amp; ENGAGEMENT</span>
+            <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white mb-4">
+              GET IN TOUCH
+            </h2>
+          </div>
+
+          <div className="p-8 md:p-10 bg-[#140206] border border-outline-variant/50 mb-8 md:mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
               <div className="lg:col-span-5">
-                <span className="text-xs uppercase font-label-mono-xs tracking-widest text-primary block mb-2 font-bold">INQUIRIES &amp; ENGAGEMENT</span>
-                <h3 className="text-xl font-headline-xl font-bold text-white uppercase mb-3">GET IN TOUCH</h3>
-                <p className="text-xs text-on-surface-variant leading-relaxed mb-6">
+                <p className="text-xs text-on-surface-variant leading-relaxed mb-8">
                   Have inquiries regarding the AIDSL 2026 summit, sponsorship deck, or community initiatives? Reach our coordination desk directly.
                 </p>
-                <div className="space-y-2 text-xs font-label-mono-sm">
+                <div className="space-y-4 text-xs font-label-mono-sm">
                   <p className="text-white"><span className="text-primary font-bold">EMAIL:</span> aidrivensrilanka@gmail.com</p>
                   <p className="text-white"><span className="text-primary font-bold">PHONE:</span> +94 70 444 8484</p>
-                  <p className="text-on-surface-variant"><span className="text-primary font-bold">LOCATION:</span> Colombo, Sri Lanka</p>
+                  <p className="text-white"><span className="text-primary font-bold">LOCATION:</span> Colombo, Sri Lanka</p>
                 </div>
               </div>
-              <div className="lg:col-span-7">
-                <form className="grid grid-cols-1 sm:grid-cols-2 gap-3" onSubmit={(e) => { e.preventDefault(); }}>
-                  <div>
-                    <input className="w-full bg-[#1C0309] border border-outline-variant/60 focus:border-primary text-white px-3 py-2.5 text-xs rounded-none focus:outline-none placeholder:text-on-surface-variant/50" placeholder="First &amp; Last Name *" required={true} type="text" />
-                  </div>
-                  <div>
-                    <input className="w-full bg-[#1C0309] border border-outline-variant/60 focus:border-primary text-white px-3 py-2.5 text-xs rounded-none focus:outline-none placeholder:text-on-surface-variant/50" placeholder="Email Address *" required={true} type="email" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <input className="w-full bg-[#1C0309] border border-outline-variant/60 focus:border-primary text-white px-3 py-2.5 text-xs rounded-none focus:outline-none placeholder:text-on-surface-variant/50" placeholder="Organisation / Company" type="text" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <textarea className="w-full bg-[#1C0309] border border-outline-variant/60 focus:border-primary text-white p-3 text-xs rounded-none focus:outline-none placeholder:text-on-surface-variant/50" placeholder="Message or Partnership Query..." rows={3}></textarea>
-                  </div>
-                  <div className="sm:col-span-2 flex items-center justify-between">
-                    <span className="text-[10px] text-on-surface-variant/70">For AIDSL 2026 delegate &amp; partner alignments.</span>
-                    <button className="px-6 py-2.5 bg-primary-container text-white font-label-mono-sm text-xs uppercase tracking-widest font-bold hover:bg-[#FF2A55] crimson-btn-glow transition-all" type="submit">
-                      Send Message
-                    </button>
-                  </div>
-                </form>
+              <div className="lg:col-span-7 flex flex-col sm:flex-row gap-4 h-full items-end lg:justify-end pb-8 flex-wrap">
+                <a
+                  href="https://wa.me/94704448484"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1DA851] text-white font-headline-md text-sm font-bold uppercase tracking-widest transition-all text-center flex items-center justify-center gap-2 drop-shadow-lg"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.76.46 3.4 1.25 4.88L2 22l5.12-1.34C8.6 21.46 10.24 22 12.01 22c5.52 0 10-4.48 10-10 0-5.52-4.48-10-10-10zm0 18.25c-1.57 0-3.09-.4-4.44-1.16l-.32-.19-3.29.86.87-3.21-.21-.34C3.81 14.86 3.39 13.45 3.39 12c0-4.75 3.86-8.61 8.6-8.61s8.6 3.86 8.6 8.61-3.86 8.61-8.61 8.61zm4.72-6.42c-.26-.13-1.53-.76-1.77-.84-.23-.08-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-1.52-.77-2.67-1.42-3.69-2.93-.15-.22.02-.21.15-.47.16-.31.33-.49.5-.74.15-.22.08-.43-.04-.69-.13-.26-.58-1.41-.8-1.93-.21-.5-.43-.43-.58-.43h-.49c-.21 0-.56.08-.85.39-.29.31-1.12 1.09-1.12 2.66 0 1.57 1.15 3.09 1.3 3.31.17.23 2.25 3.44 5.46 4.82 2.22.96 3.04 1.02 4.14.86 1.15-.16 2.37-.97 2.7-1.91.33-.94.33-1.74.23-1.91-.1-.17-.36-.26-.62-.39z" /></svg>
+                  WhatsApp Us
+                </a>
+
+                <a
+                  href="mailto:aidrivensrilanka@gmail.com"
+                  className="w-full sm:w-auto px-8 py-4 bg-[#8B0000] hover:bg-[red] text-white font-headline-md text-sm font-bold uppercase tracking-widest transition-all text-center flex items-center justify-center gap-2 drop-shadow-lg crimson-btn-glow border border-transparent hover:border-white/20"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Send Email
+                </a>
               </div>
             </div>
           </div>
@@ -1060,19 +1033,31 @@ export default function Page() {
         <footer className="w-full bg-[#050001] border-t border-outline-variant/40 text-on-surface-variant font-body-sm relative z-10 pt-16 pb-12 mt-auto">
           <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-outline-variant/30">
-              <div className="lg:col-span-4 space-y-4">
-                <a className="text-headline-md font-headline-md tracking-wider uppercase text-white flex items-center gap-2" href="#!">
-                  <span className="inline-block w-2.5 h-6 bg-primary-container shadow-[0_0_12px_#FF1E56]"></span>
-                  <span className="text-base font-bold">AI DRIVEN SRI LANKA 2026</span>
-                </a>
-                <p className="text-xs text-on-surface-variant leading-relaxed max-w-sm">
-                  AIDSL 2026 · Date to be announced soon · Colombo, Sri Lanka - An initiative by IEEE Young Professionals Sri Lanka.
-                </p>
-                <div className="pt-2">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#1C0309] border border-outline-variant/50 text-[11px] font-label-mono-xs uppercase tracking-widest text-primary">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping inline-block"></span>
-                    Empowering Sri Lanka's AI Future
-                  </span>
+              <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:pr-4">
+                <div className="bg-[#050505] border border-outline-variant/30 p-6 relative flex flex-col items-center justify-center text-center group transition-colors hover:border-primary/50">
+                  <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-primary/50 transition-colors group-hover:border-primary"></div>
+                  <div className="h-10 w-full relative mb-6 mt-2">
+                    <Image src={aidslLogo} alt="AI Driven Sri Lanka Logo" fill className="object-contain" />
+                  </div>
+                  <div className="min-h-[40px] flex items-center justify-center mb-4 mt-auto">
+                    <h4 className="text-[11px] font-headline-md font-bold uppercase tracking-wider text-white text-center">AI DRIVEN SRI LANKA</h4>
+                  </div>
+                  <div className="px-2 py-1.5 border border-primary/40 w-full transition-colors group-hover:bg-primary/10">
+                    <span className="text-[9px] font-label-mono-xs uppercase text-primary tracking-widest font-bold">ORGANIZING COMMITTEE</span>
+                  </div>
+                </div>
+
+                <div className="bg-[#050505] border border-outline-variant/30 p-6 relative flex flex-col items-center justify-center text-center group transition-colors hover:border-primary/50">
+                  <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-primary/50 transition-colors group-hover:border-primary"></div>
+                  <div className="h-12 w-full relative mb-6 mt-2">
+                    <Image src={footerLogo} alt="IEEE Young Professionals Sri Lanka Logo" fill className="object-contain" />
+                  </div>
+                  <div className="min-h-[40px] flex items-center justify-center mb-4 mt-auto">
+                    <h4 className="text-[11px] font-headline-md font-bold text-white text-center leading-relaxed uppercase">IEEE YOUNG PROFESSIONALS<br />SRI LANKA</h4>
+                  </div>
+                  <div className="px-2 py-1.5 border border-primary/40 w-full transition-colors group-hover:bg-primary/10">
+                    <span className="text-[9px] font-label-mono-xs uppercase text-primary tracking-widest font-bold">CO-ORGANIZING PARTNER</span>
+                  </div>
                 </div>
               </div>
               <div className="lg:col-span-2 sm:col-span-1">
@@ -1086,33 +1071,22 @@ export default function Page() {
                   <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="#faq">FAQ</a></li>
                 </ul>
               </div>
-              <div className="lg:col-span-2 sm:col-span-1">
-                <h4 className="text-xs font-label-mono-xs uppercase tracking-widest text-white font-bold mb-4">ORGANISATION</h4>
-                <ul className="space-y-2.5 text-xs font-label-mono-sm">
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="/events/past-events">Our Past Events</a></li>
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="/about-us">Milestones</a></li>
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="/events">2026 Programs</a></li>
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="/blogs">Latest Insights</a></li>
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="/our-team">Leadership &amp; Team</a></li>
-                  <li className=""><a className="text-on-surface-variant hover:text-primary transition-colors block" href="#contact">Contact Desk</a></li>
-                </ul>
-              </div>
               <div className="lg:col-span-4 space-y-4">
                 <h4 className="text-xs font-label-mono-xs uppercase tracking-widest text-white font-bold mb-4">CONNECT &amp; COMMUNITY</h4>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
                   Follow AI-Driven Sri Lanka for official speaker releases, ticket alerts, and national hackathon announcements.
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  <a className="px-3 py-2 bg-[#1C0309] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.linkedin.com/company/ai-driven-sri-lanka/" target="_blank">
+                  <a className="px-3 py-2 bg-[#140206] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.linkedin.com/company/ai-driven-sri-lanka/" target="_blank">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>LinkedIn
                   </a>
-                  <a className="px-3 py-2 bg-[#1C0309] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.instagram.com/aidrivensrilanka/" target="_blank">
+                  <a className="px-3 py-2 bg-[#140206] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.instagram.com/aidrivensrilanka/" target="_blank">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>Instagram
                   </a>
-                  <a className="px-3 py-2 bg-[#1C0309] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.facebook.com/aidrivensrilanka" target="_blank">
+                  <a className="px-3 py-2 bg-[#140206] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="https://www.facebook.com/aidrivensrilanka" target="_blank">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>Facebook
                   </a>
-                  <a className="px-3 py-2 bg-[#1C0309] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="#contact">
+                  <a className="px-3 py-2 bg-[#140206] border border-outline-variant/50 hover:border-primary text-xs font-label-mono-xs uppercase tracking-wider text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="#contact">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>WhatsApp
                   </a>
                 </div>
@@ -1127,3 +1101,5 @@ export default function Page() {
     </div >
   );
 }
+
+

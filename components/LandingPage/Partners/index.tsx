@@ -49,7 +49,7 @@ export default function Partners() {
 
       <div className="partners-slider relative mt-8">
         {/* Dark pill container */}
-        <div className="overflow-hidden rounded-3xl bg-[#252323] border border-white/7 py-2 flex flex-col">
+        <div className="overflow-hidden bg-transparent border border-white/7 py-2 flex flex-col">
           {/* Row 1 - scrolls left */}
           <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-left flex w-max items-center">
@@ -89,9 +89,9 @@ export default function Partners() {
         </div>
 
         {/* Left fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-4 rounded-l-3xl bg-gradient-to-r from-[#222121] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#0A0103] to-transparent" />
         {/* Right fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-4 rounded-r-3xl bg-gradient-to-l from-[#222121] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#0A0103] to-transparent" />
       </div>
     </section>
   );

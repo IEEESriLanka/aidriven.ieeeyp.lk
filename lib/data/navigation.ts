@@ -4,7 +4,7 @@ import type { NavItem } from "../type";
 export const navItems: NavItem[] = [
   {
     type: "link",
-    href: "/",
+    href: "/home",
     label: "Home",
   },
   {
