@@ -1,14 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* Fix navbar to stay visible above Lenis */
+body {
+  position: relative;
+}
+
+html {
+  overflow: visible !important;
+}
+
 @theme {
-  --color-primary: hsl(11, 83%, 52%);
   --font-elemental-end: var(--font-elemental-end);
   --font-fzytjw: var(--font-fzytjw);
 
   --color-c-secondary: #c9c3ba;
+
+  --color-inverse-primary: #FF4F00;
+  --color-primary-fixed-dim: #FFEDD5;
+  --color-on-tertiary-fixed-variant: #991C00;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #991C00;
+  --color-primary-fixed: #FFEDD5;
+  --color-on-primary: #FFFFFF;
+  --color-surface-container: #1F0A04;
+  --color-on-secondary-container: #FFEDD5;
+  --color-surface-variant: #2A0E05;
+  --color-surface-tint: #FF4F00;
+  --color-tertiary: #FFEDD5;
+  --color-surface-dim: #080200;
+  --color-tertiary-fixed: #FFF7ED;
+  --color-on-primary-fixed: #661200;
+  --color-surface-container-low: #170703;
+  --color-on-secondary-fixed: #661200;
+  --color-secondary-container: #991C00;
+  --color-on-error-container: #FFF7ED;
+  --color-outline: #991C00;
+  --color-on-background: #FFF7ED;
+  --color-on-tertiary: #991C00;
+  --color-surface-container-lowest: #080200;
+  --color-surface-container-highest: #2A0E05;
+  --color-on-surface: #FFF7ED;
+  --color-background: #080200;
+  --color-secondary-fixed-dim: #FFEDD5;
+  --color-secondary: #E33800;
+  --color-primary-container: #FF4F00;
+  --color-on-surface-variant: #FFEDD5;
+  --color-surface-bright: #991C00;
+  --color-secondary-fixed: #FFEDD5;
+  --color-tertiary-fixed-dim: #FFEDD5;
+  --color-on-primary-fixed-variant: #991C00;
+  --color-on-secondary: #FFFFFF;
+  --color-on-tertiary-fixed: #661200;
+  --color-on-primary-container: #FFFFFF;
+  --color-inverse-on-surface: #1F0A04;
+  --color-on-tertiary-container: #FFFFFF;
+  --color-outline-variant: #991C00;
+  --color-tertiary-container: #FF4F00;
+  --color-surface: #0F0502;
+  --color-inverse-surface: #FFF7ED;
+  --color-error: #FFEDD5;
+  --color-primary: #FF4F00;
+  --color-on-secondary-fixed-variant: #991C00;
+  --color-surface-container-high: #2A0E05;
+
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-margin: 4rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+
+  --font-headline-xl: "Space Grotesk", sans-serif;
+  --font-headline-lg-mobile: "Space Grotesk", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-headline-xl-mobile: "Space Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-display-hero-mobile: "Space Grotesk", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero: "Space Grotesk", sans-serif;
+  --font-label-mono-sm: "Space Grotesk", sans-serif;
+  --font-label-mono-xs: "Space Grotesk", sans-serif;
+  --font-body-xl: "Plus Jakarta Sans", sans-serif;
 }
 
 html {
@@ -47,34 +128,84 @@ body {
 @layer utilities {
   .body-gradient {
     --_angle: to right;
-    background: linear-gradient(
-      var(--_angle),
-      #3b2620 -48%,
-      #2a2121 0%,
-      #1b1b1b 40%,
-      #111 60%,
-      #2a2121 120%,
-      #3c241d 100%
-    );
+    background: linear-gradient(var(--_angle),
+        #3b2620 -48%,
+        #2a2121 0%,
+        #1b1b1b 40%,
+        #111 60%,
+        #2a2121 120%,
+        #3c241d 100%);
   }
+
   .bg-gradient {
     --_angle: to right;
-    background: linear-gradient(
-      var(--_angle),
-      rgba(59, 38, 32, 1),
-      rgba(42, 33, 33, 1),
-      rgba(60, 36, 29, 1)
-    );
+    background: linear-gradient(var(--_angle),
+        rgba(59, 38, 32, 1),
+        rgba(42, 33, 33, 1),
+        rgba(60, 36, 29, 1));
   }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-family: 'Material Symbols Outlined';
+  }
+
+  .custom-radial-glow {
+    background: radial-gradient(120% 90% at 60% 40%, #991C00 0%, #2A0E05 45%, #080200 100%);
+  }
+
+  .space-stars {
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
+      radial-gradient(1.5px 1.5px at 140px 70px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 50px 160px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+      radial-gradient(1px 1px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+      radial-gradient(1.5px 1.5px at 230px 180px, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: stars-drift 100s linear infinite;
+  }
+
+  @keyframes stars-drift {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 300px -300px;
+    }
+  }
+
+  .orange-glow-card {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .orange-glow-card:hover {
+    box-shadow: 0 0 28px -2px rgba(255, 79, 0, 0.45);
+    border-color: rgba(255, 79, 0, 0.7);
+  }
+
+  .orange-btn-glow {
+    box-shadow: 0 0 16px rgba(255, 79, 0, 0.35);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .orange-btn-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 79, 0, 0.7);
+    transform: translateY(-1px);
+  }
+
   .section-header {
     @apply font-elemental-end text-2xl tracking-wide text-white capitalize lg:text-4xl;
   }
 
   .event-item-header {
-    background: var(
-      --d-9-d-9-d-9,
-      linear-gradient(180deg, #d5b88d 0%, #fff 100%)
-    );
+    background: var(--d-9-d-9-d-9,
+        linear-gradient(180deg, #d5b88d 0%, #fff 100%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -82,13 +213,11 @@ body {
 
   .testimonial-card {
     border-radius: 32px 48px 4px 48px;
-    border: 0.4px solid var(--d-9-d-9-d-9, #ea421e);
-    background: linear-gradient(
-      180deg,
-      rgba(69, 65, 61, 0.2) 0%,
-      rgba(58, 53, 49, 0.2) 48.56%,
-      rgba(52, 47, 42, 0.2) 100%
-    );
+    border: 0.4px solid var(--d-9-d-9-d-9, #FF4F00);
+    background: linear-gradient(180deg,
+        rgba(69, 65, 61, 0.2) 0%,
+        rgba(58, 53, 49, 0.2) 48.56%,
+        rgba(52, 47, 42, 0.2) 100%);
   }
 
   .section-gap-y {
@@ -106,30 +235,24 @@ body {
 
   .timeline-card {
     border-radius: 24px 24px 24px 0;
-    background: linear-gradient(
-      180deg,
-      #45413d 0%,
-      #3a3531 48.56%,
-      #13110f 100%,
-      #342f2a 100%
-    );
+    background: linear-gradient(180deg,
+        #45413d 0%,
+        #3a3531 48.56%,
+        #13110f 100%,
+        #342f2a 100%);
   }
 
   .edition-card {
     border-radius: 0 40px;
-    background: linear-gradient(
-      180deg,
-      rgba(69, 65, 61, 0.64) 0%,
-      rgba(58, 53, 49, 0.64) 48.56%,
-      rgba(52, 47, 42, 0.64) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(69, 65, 61, 0.64) 0%,
+        rgba(58, 53, 49, 0.64) 48.56%,
+        rgba(52, 47, 42, 0.64) 100%);
   }
 
   .gradient-text {
-    background: var(
-      --d-9-d-9-d-9,
-      linear-gradient(180deg, #d5b88d 0%, #fff 100%)
-    );
+    background: var(--d-9-d-9-d-9,
+        linear-gradient(180deg, #d5b88d 0%, #fff 100%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -138,12 +261,15 @@ body {
   .team-grid.main {
     @apply flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start lg:gap-16;
   }
+
   .team-grid.secondary {
     @apply grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-16;
   }
+
   .team-grid.third {
     @apply grid grid-cols-1 items-start gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
   }
+
   .team-grid.adhoc {
     @apply grid grid-cols-1 items-start gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16;
   }
@@ -164,13 +290,41 @@ body {
 }
 
 @keyframes marquee-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-16px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
 #about-section {

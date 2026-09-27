@@ -53,12 +53,10 @@ const Page = () => {
       {/* Slide 7 - Event Introduction */}
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
-          AIDSL Summit 2026
+          AI Driven Sri Lanka 2026
         </div>
         <p className="text-lg text-white/85 leading-relaxed">
-          The AIDSL Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing
-          together top global and local AI experts, innovators, and policymakers for a high-impact
-          one-day forum focused on advancing the country&apos;s AI landscape.
+          AI Driven Sri Lanka 2026 is the flagship national gathering shaping the conversation around Sri Lanka's AI future. The summit brings together global and local AI pioneers, industry leaders, policymakers, researchers, startups, and emerging talent to exchange ideas, showcase breakthrough innovations, and unlock meaningful collaborations.
         </p>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -76,23 +74,23 @@ const Page = () => {
         <div className="flex flex-wrap gap-6 pt-2">
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">200+</span>
-            <span className="text-white/70 text-base">Participants</span>
+            <span className="text-white/70 text-base">Delegates</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="font-elemental-end text-primary text-3xl">6+</span>
             <span className="text-white/70 text-base">Sessions</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-elemental-end text-primary text-3xl">1</span>
-            <span className="text-white/70 text-base">High-impact Day</span>
+            <span className="font-elemental-end text-primary text-3xl">12+</span>
+            <span className="text-white/70 text-base">AI Leaders</span>
           </div>
         </div>
       </div>
 
-      {/* Slide 8 - Why AIDSL Summit */}
+      {/* Slide 8 - Why AI Driven Sri Lanka */}
       <div className="flex w-full flex-col gap-6">
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
-          why <span className="text-primary">AIDSL Summit</span>?
+          why <span className="text-primary">AI DRIVEN SRI LANKA</span>?
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-[#1c1c1c] border border-red-500/20 p-6">
@@ -124,7 +122,7 @@ const Page = () => {
           target <span className="text-primary">audience</span>
         </h2>
         <p className="text-white/70 -mt-2">
-          The AIDSL Summit will attract a diverse and high-impact audience, including:
+          AI Driven Sri Lanka 2026 will attract a diverse and high-impact audience, including:
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {audienceCards.map(({ Icon, label }, i) => (
@@ -162,13 +160,16 @@ const Page = () => {
 
         <div className="rounded-3xl bg-[#1c1c1c] border border-primary/20 p-6 mt-2">
           <h3 className="mb-4 text-base font-semibold text-primary uppercase tracking-wide">
-            Expected Outcomes
+            Participant Benefits
           </h3>
           <ul className="flex flex-col gap-3">
             {[
-              "Participants gain exposure to cutting-edge AI trends & global perspectives",
-              "Cross-sector connections between industry, academia & government",
-              "Actionable insights and collaborations that extend beyond the event",
+              "Gain strategic insights from global AI pioneers and industry visionaries",
+              "Experience breakthrough AI innovations and discover tomorrow's leading startups",
+              "Get exclusive access to the Fellowship Gathering for informal time with speakers and investors",
+              "Influence tomorrow through high-impact discussions with policymakers",
+              "Build real connections with industry leaders and peers",
+              "Gain career and talent visibility with companies actively looking for AI talent",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-white/80">
                 <span className="mt-1 shrink-0 text-primary font-bold">→</span>
@@ -184,35 +185,47 @@ const Page = () => {
         <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           program <span className="text-primary">timeline</span>
         </h2>
-        <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">
-              <CalendarDays className="h-5 w-5" />
+        <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5 shadow-xl">
+          <div className="flex items-center gap-4 mb-10">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary border border-primary/30">
+              <CalendarDays className="h-6 w-6" />
             </div>
             <div>
-              <p className="font-elemental-end text-primary text-xl uppercase">September 2026</p>
-              <p className="text-base text-white/50">AI Driven Sri Lanka Summit 2026</p>
+              <p className="font-elemental-end text-primary text-xl uppercase tracking-wider">October 2026</p>
+              <p className="text-base text-white/60">AI Driven Sri Lanka 2026</p>
             </div>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="relative flex flex-col gap-5 pl-4 md:pl-0">
+            {/* The vertical separator line */}
+            <div className="absolute left-[8px] md:left-[219px] top-6 bottom-6 w-1 rounded-full bg-gradient-to-b from-primary/80 via-primary/40 to-transparent"></div>
+
             {[
-              { phase: "Registration & Arrival", detail: "Participant check-in, badge collection & networking warm-up" },
-              { phase: "Opening Ceremony", detail: "Welcome address & agenda overview by AIDSL leadership" },
-              { phase: "Global Keynote Sessions", detail: "Thought leadership from globally recognized AI leaders" },
-              { phase: "Panel Discussions", detail: "Experts from industry, academia & policy on critical AI challenges" },
-              { phase: "Innovation Showcase & AI Forum", detail: "10 startup stalls, AI gallery & roundtable discussions" },
-              { phase: "Fellowship Gathering", detail: "Exclusive premium networking for speakers, partners & investors" },
+              { time: "2:00 PM – 2:45 PM", phase: "Registration & Networking", detail: "Welcome, registration, startup showcase" },
+              { time: "2:45 PM – 3:00 PM", phase: "Opening Ceremony", detail: "Welcome addresses & ceremonial opening" },
+              { time: "3:00 PM – 4:45 PM", phase: "Global Keynotes & Expert Sessions", detail: "Visionary AI leaders unveiling the technologies shaping tomorrow." },
+              { time: "5:00 PM – 6:10 PM", phase: "Executive Panel Discussion", detail: "High-impact conversations driving the future of AI policy, industry, and innovation." },
+              { time: "6:10 PM – 6:40 PM", phase: "Recognition & Closing", detail: "Partner appreciation, event highlights & official closing" },
+              { time: "6:40 PM – 9:00 PM", phase: "Networking Session", detail: "Networking among speakers, partners & delegates" },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-4"
-              >
-                <span className="mt-0.5 text-primary font-bold text-sm shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p className="text-base font-semibold text-white">{item.phase}</p>
-                  <p className="text-sm text-white/50 mt-1">{item.detail}</p>
+              <div key={i} className="relative flex flex-col md:flex-row gap-4 md:gap-10 items-start md:items-center w-full">
+                {/* Time Block */}
+                <div className="ml-6 md:ml-0 md:w-[200px] shrink-0">
+                  <div className="flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 py-4 font-semibold text-white/80 shadow-md">
+                    {item.time}
+                  </div>
+                </div>
+
+                {/* Responsive Dot on the line */}
+                <div className="hidden md:block absolute left-[214px] top-1/2 -translate-y-1/2 h-3.5 w-3.5 rounded-full bg-primary shadow-[0_0_10px_rgba(239,68,68,0.8)] z-10"></div>
+                <div className="md:hidden absolute left-[3px] top-8 h-3.5 w-3.5 rounded-full bg-primary z-10"></div>
+
+                {/* Content Block */}
+                <div className="ml-6 md:ml-0 flex-1 w-[calc(100%-1.5rem)] md:w-auto">
+                  <div className="group flex flex-col justify-center rounded-xl bg-white/5 border border-white/5 px-6 py-5 hover:bg-white/10 hover:border-white/10 transition-all duration-300">
+                    <p className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">{item.phase}</p>
+                    <p className="text-[15px] text-white/60 leading-relaxed">{item.detail}</p>
+                  </div>
                 </div>
               </div>
             ))}

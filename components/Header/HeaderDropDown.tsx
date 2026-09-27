@@ -15,7 +15,7 @@ const eventLinks = [
   { href: "/events", label: "All Events" },
   { href: "/events/ai-challenge", label: "AI Challenge" },
   { href: "/events/inside-ai", label: "Inside AI" },
-  { href: "/events/aidsl-summit", label: "AIDSL Summit" },
+  { href: "/events/aidsl-summit", label: "AI Driven Sri Lanka" },
   { href: "/events/past-events", label: "Past Events" },
 ];
 
@@ -59,7 +59,7 @@ export function HeaderDropDown({ active }: { active?: boolean }) {
           {[
             { href: "/events/ai-challenge", label: "AI Challenge" },
             { href: "/events/inside-ai", label: "Inside AI" },
-            { href: "/events/aidsl-summit", label: "AIDSL Summit" },
+            { href: "/events/aidsl-summit", label: "AI Driven Sri Lanka" },
           ].map((item) => (
             <Link
               key={item.href}
@@ -136,7 +136,7 @@ export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void })
             {[
               { href: "/events/ai-challenge", label: "AI Challenge" },
               { href: "/events/inside-ai", label: "Inside AI" },
-              { href: "/events/aidsl-summit", label: "AIDSL Summit" },
+              { href: "/events/aidsl-summit", label: "AI Driven Sri Lanka" },
             ].map((item) => (
               <Link
                 key={item.href}

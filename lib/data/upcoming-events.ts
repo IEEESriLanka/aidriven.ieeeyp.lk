@@ -1,27 +1,27 @@
-import ai_challenge_2026_img from "@/assets/events/ai-challenge-image.jpeg";
+
 import inside_ai_img from "@/assets/events/explorerSeries.webp";
 import ai_summit_img from "@/assets/events/ai-summit.webp";
 import SLAIC25Image from "@/assets/events/SLAIC2025.webp";
 import AIComTalk25Image from "@/assets/events/AIComTalk2025.webp";
 import AIForum2024Image from "@/assets/events/AIFrorum2024.webp";
+import AIChallenge2026GroupPhoto from "@/assets/events/AI Challenge sri lanka 2026 group photo.jpg";
+import InsideAI1Photo from "@/assets/events/Inside AI 1.0 photo.jpg";
+import InsideAI2Photo from "@/assets/events/Inside AI 2.0 photo.jpg";
+import InsideAI3Photo from "@/assets/events/Inside AI 3.0 photo.jpg";
 import type { UpcomingEventItemProps } from "../type";
 
 export const upcomingEventsData: UpcomingEventItemProps[] = [
   {
-    title: "AIDSL Summit 2026",
+    title: "AI Driven Sri Lanka 2026",
     description: [
-      "The AIDSL Summit 2026 is the flagship national event of AI Driven Sri Lanka, bringing together top global and local AI experts, innovators, and policymakers for a high-impact one-day forum focused on advancing Sri Lanka's AI landscape.",
-      "Featuring global keynote sessions, panel discussions, an innovation showcase, and exclusive networking - the Summit is Sri Lanka's premier platform for cross-sector AI collaboration between academia, industry, startups, and government.",
+      "AI Driven Sri Lanka 2026 is the flagship national gathering shaping the conversation around Sri Lanka's AI future. The summit brings together global and local AI pioneers, industry leaders, policymakers, researchers, startups, and emerging talent to exchange ideas, showcase breakthrough innovations, and unlock meaningful collaborations. Discussions will focus on the future of AI, real-world applications, emerging technologies, and entrepreneurial opportunities to accelerate innovation and strengthen Sri Lanka's position in the global AI landscape."
     ],
     highlights: [
-      "Global keynote sessions",
-      "Panel discussions & AI Forum",
-      "Innovation showcase - 10 startup stalls",
-      "Fellowship gathering for partners",
-      "200+ participants",
-      "6+ sessions",
+      "200+ Total Delegates",
+      "6+ Sessions",
+      "12+ AI Leaders and Global Insights",
     ],
-    date: undefined,
+    date: "October 2026",
     time: undefined,
     venue: undefined,
     link: "/events/aidsl-summit",
@@ -53,11 +53,71 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
       alt: "Inside AI 2026",
     },
   },
+
+];
+
+export const pastEventsData: UpcomingEventItemProps[] = [
+  {
+    title: "Inside AI 3.0 - AI That Actually Makes Money",
+    description: [
+      "In collaboration with Codimite, Inside AI 3.0 tackled the business side of artificial intelligence, focusing on 'AI that actually makes money'. The session provided actionable insights on building profitable AI products, monetization strategies, and delivering tangible ROI through AI-driven business models."
+    ],
+    highlights: [
+      "AI ROI measurement",
+      "Monetization strategies",
+      "Profitable AI products",
+      "Industry collaboration with Codimite"
+    ],
+    date: undefined,
+    time: undefined,
+    venue: undefined,
+    img: {
+      src: InsideAI3Photo,
+      alt: "Inside AI 3.0",
+    },
+  },
+  {
+    title: "Inside AI 2.0 - AI Agents & Automated Systems",
+    description: [
+      "Inside AI 2.0 partnered with Virtusa to delve deep into the world of AI agents and automated systems. Participants learned how intelligent agentic workflows and advanced automation are revolutionizing enterprise efficiency and modern software architecture."
+    ],
+    highlights: [
+      "Agentic workflows",
+      "Advanced enterprise automation",
+      "Modern software architecture",
+      "Industry collaboration with Virtusa"
+    ],
+    date: undefined,
+    time: undefined,
+    venue: undefined,
+    img: {
+      src: InsideAI2Photo,
+      alt: "Inside AI 2.0",
+    },
+  },
+  {
+    title: "Inside AI 1.0 - AI Research and Innovation",
+    description: [
+      "Hosted in collaboration with WSO2, Inside AI 1.0 explored the frontiers of AI research and innovation. The session highlighted breakthrough methodologies and how leading tech companies translate cutting-edge AI research into scalable industry solutions."
+    ],
+    highlights: [
+      "Breakthrough AI methodologies",
+      "Translating research to solutions",
+      "Scalable industry applications",
+      "Industry collaboration with WSO2"
+    ],
+    date: undefined,
+    time: undefined,
+    venue: undefined,
+    img: {
+      src: InsideAI1Photo,
+      alt: "Inside AI 1.0",
+    },
+  },
   {
     title: "AI Challenge 2026",
     description: [
-      "AI Challenge 2026 is a national-level AI innovation program designed to develop practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this challenge follows a structured, multi-phase model with mentorship, adversarial testing, refinement cycles, and a physical final round - focused on building industry-ready skills through real-world problem solving and team-based innovation.",
-      "This is Sri Lanka's most comprehensive and impact-focused AI competition, bridging academia, industry, and innovation. Featuring a 3-week online and physical hybrid format, the finals are showcased at the AI Driven Sri Lanka Summit 2026.",
+      "AI Challenge 2026 was a national-level AI innovation program designed to develop practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this challenge followed a structured, multi-phase model with mentorship, adversarial testing, refinement cycles, and a physical final round. The event successfully focused on building industry-ready skills through real-world problem-solving and team-based innovation."
     ],
     highlights: [
       "Problem identification to final pitching",
@@ -73,13 +133,10 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
     link: "/events/ai-challenge",
     linkALT: "Learn More",
     img: {
-      src: ai_challenge_2026_img,
-      alt: "AI Challenge 2026",
+      src: AIChallenge2026GroupPhoto,
+      alt: "AI Challenge 2026 Group Photo",
     },
   },
-];
-
-export const pastEventsData: UpcomingEventItemProps[] = [
   {
     title: "Sri Lanka AI Challenge 2025",
     description: [

@@ -3,9 +3,8 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 
 import LenisWrapper from "@/components/LenisWrapper";
-import Header from "@/components/Header";
+import { ConditionalHeader, ConditionalFooter } from "@/components/ConditionalElements";
 import { ElementalEnd, FZY } from "@/fonts";
-import Footer from "@/components/Footer";
 import BackgroundWrapper from "@/components/common/BgWrapper";
 
 const poppins = Poppins({
@@ -43,12 +42,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${ElementalEnd.variable} ${FZY.variable} ${poppins.variable} relative antialiased`}
         suppressHydrationWarning
       >
+        <ConditionalHeader />
         <LenisWrapper>
           <BackgroundWrapper>
-            <Header />
             {children}
           </BackgroundWrapper>
-          <Footer />
+          <ConditionalFooter />
         </LenisWrapper>
       </body>
     </html>

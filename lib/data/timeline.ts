@@ -8,7 +8,7 @@ export const calendarTimelineData: TimelineItemProps[] = [
   { month: "July", events: ["AI Challenge Sri Lanka"], highlight: true },
   { month: "August", events: ["Inside AI - 03"] },
   {
-    month: "September",
+    month: "October",
     events: ["AI Driven Sri Lanka Summit"],
     highlight: true,
   },

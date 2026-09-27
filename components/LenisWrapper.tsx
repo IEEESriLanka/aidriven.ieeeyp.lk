@@ -18,7 +18,7 @@ function LenisWrapper({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
+    <ReactLenis options={{ autoRaf: false }} root={true} ref={lenisRef}>
       {children}
     </ReactLenis>
   );
