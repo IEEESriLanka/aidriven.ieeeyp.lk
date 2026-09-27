@@ -20,53 +20,53 @@ html {
 
   --color-c-secondary: #c9c3ba;
 
-  --color-inverse-primary: #FF1744;
-  --color-primary-fixed-dim: #FFA0B2;
-  --color-on-tertiary-fixed-variant: #85001C;
+  --color-inverse-primary: #FF4F00;
+  --color-primary-fixed-dim: #FFEDD5;
+  --color-on-tertiary-fixed-variant: #991C00;
   --color-on-error: #FFFFFF;
-  --color-error-container: #93000a;
-  --color-primary-fixed: #FFD3DC;
+  --color-error-container: #991C00;
+  --color-primary-fixed: #FFEDD5;
   --color-on-primary: #FFFFFF;
-  --color-surface-container: #24040B;
-  --color-on-secondary-container: #FFA0B2;
-  --color-surface-variant: #3F0615;
-  --color-surface-tint: #FF2A55;
-  --color-tertiary: #FFA0B2;
-  --color-surface-dim: #0A0103;
-  --color-tertiary-fixed: #FFE3E7;
-  --color-on-primary-fixed: #3E000B;
-  --color-surface-container-low: #1C0309;
-  --color-on-secondary-fixed: #3E000B;
-  --color-secondary-container: #68061C;
-  --color-on-error-container: #FFDAD6;
-  --color-outline: #873243;
-  --color-on-background: #FFEBF0;
-  --color-on-tertiary: #550010;
-  --color-surface-container-lowest: #060002;
-  --color-surface-container-highest: #3A0513;
-  --color-on-surface: #FFEBF0;
-  --color-background: #0A0103;
-  --color-secondary-fixed-dim: #FFA0B2;
-  --color-secondary: #FF5376;
-  --color-primary-container: #FF1E56;
-  --color-on-surface-variant: #E8B2BC;
-  --color-surface-bright: #4F081C;
-  --color-secondary-fixed: #FFD3DC;
-  --color-tertiary-fixed-dim: #FFA0B2;
-  --color-on-primary-fixed-variant: #940023;
+  --color-surface-container: #1F0A04;
+  --color-on-secondary-container: #FFEDD5;
+  --color-surface-variant: #2A0E05;
+  --color-surface-tint: #FF4F00;
+  --color-tertiary: #FFEDD5;
+  --color-surface-dim: #080200;
+  --color-tertiary-fixed: #FFF7ED;
+  --color-on-primary-fixed: #661200;
+  --color-surface-container-low: #170703;
+  --color-on-secondary-fixed: #661200;
+  --color-secondary-container: #991C00;
+  --color-on-error-container: #FFF7ED;
+  --color-outline: #991C00;
+  --color-on-background: #FFF7ED;
+  --color-on-tertiary: #991C00;
+  --color-surface-container-lowest: #080200;
+  --color-surface-container-highest: #2A0E05;
+  --color-on-surface: #FFF7ED;
+  --color-background: #080200;
+  --color-secondary-fixed-dim: #FFEDD5;
+  --color-secondary: #E33800;
+  --color-primary-container: #FF4F00;
+  --color-on-surface-variant: #FFEDD5;
+  --color-surface-bright: #991C00;
+  --color-secondary-fixed: #FFEDD5;
+  --color-tertiary-fixed-dim: #FFEDD5;
+  --color-on-primary-fixed-variant: #991C00;
   --color-on-secondary: #FFFFFF;
-  --color-on-tertiary-fixed: #3B000A;
+  --color-on-tertiary-fixed: #661200;
   --color-on-primary-container: #FFFFFF;
-  --color-inverse-on-surface: #2C040E;
+  --color-inverse-on-surface: #1F0A04;
   --color-on-tertiary-container: #FFFFFF;
-  --color-outline-variant: #4E071A;
-  --color-tertiary-container: #FF2A55;
-  --color-surface: #140206;
-  --color-inverse-surface: #FFEBF0;
-  --color-error: #FFB4AB;
-  --color-primary: #FF2A55;
-  --color-on-secondary-fixed-variant: #85001C;
-  --color-surface-container-high: #30040E;
+  --color-outline-variant: #991C00;
+  --color-tertiary-container: #FF4F00;
+  --color-surface: #0F0502;
+  --color-inverse-surface: #FFF7ED;
+  --color-error: #FFEDD5;
+  --color-primary: #FF4F00;
+  --color-on-secondary-fixed-variant: #991C00;
+  --color-surface-container-high: #2A0E05;
 
   --spacing-space-sm: 0.5rem;
   --spacing-space-xs: 0.25rem;
@@ -154,32 +154,48 @@ body {
   }
 
   .custom-radial-glow {
-    background: radial-gradient(120% 90% at 60% 40%, #75091E 0%, #30040E 45%, #0A0103 100%);
+    background: radial-gradient(120% 90% at 60% 40%, #991C00 0%, #2A0E05 45%, #080200 100%);
   }
 
-  .hero-grid-pattern {
-    background-size: 40px 40px;
+  .space-stars {
     background-image:
-      linear-gradient(to right, rgba(255, 42, 85, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 42, 85, 0.08) 1px, transparent 1px);
+      radial-gradient(1px 1px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
+      radial-gradient(1.5px 1.5px at 140px 70px, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 50px 160px, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0)),
+      radial-gradient(1px 1px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+      radial-gradient(1.5px 1.5px at 230px 180px, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0)),
+      radial-gradient(2px 2px at 160px 120px, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0));
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: stars-drift 100s linear infinite;
   }
 
-  .crimson-glow-card {
+  @keyframes stars-drift {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 300px -300px;
+    }
+  }
+
+  .orange-glow-card {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .crimson-glow-card:hover {
-    box-shadow: 0 0 28px -2px rgba(255, 30, 86, 0.45);
-    border-color: rgba(255, 42, 85, 0.7);
+  .orange-glow-card:hover {
+    box-shadow: 0 0 28px -2px rgba(255, 79, 0, 0.45);
+    border-color: rgba(255, 79, 0, 0.7);
   }
 
-  .crimson-btn-glow {
-    box-shadow: 0 0 16px rgba(255, 30, 86, 0.35);
+  .orange-btn-glow {
+    box-shadow: 0 0 16px rgba(255, 79, 0, 0.35);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .crimson-btn-glow:hover {
-    box-shadow: 0 0 30px rgba(255, 30, 86, 0.7);
+  .orange-btn-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 79, 0, 0.7);
     transform: translateY(-1px);
   }
 
@@ -197,7 +213,7 @@ body {
 
   .testimonial-card {
     border-radius: 32px 48px 4px 48px;
-    border: 0.4px solid var(--d-9-d-9-d-9, #ea421e);
+    border: 0.4px solid var(--d-9-d-9-d-9, #FF4F00);
     background: linear-gradient(180deg,
         rgba(69, 65, 61, 0.2) 0%,
         rgba(58, 53, 49, 0.2) 48.56%,
