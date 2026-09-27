@@ -10,6 +10,7 @@ import kaushikaPhoto from "@/assets/team-2026/Kaushika Dissanayake.png";
 import lohansaPhoto from "@/assets/team-2026/Lohansa Munasinghe.png";
 import linukPhoto from "@/assets/team-2026/Linuk Perera.png";
 import webElement from "@/assets/web-element.png";
+import webElementSvg from "@/assets/AIDSL_Web_Element.svg";
 import aidslLogo from "@/assets/AIDSL_FullLOGO_DARKNoBG.png";
 import navbarLogo from "@/assets/AIDSL_FullLOGO_DARKNoBG_1.png";
 import footerLogo from "@/assets/YPSL_Logo.png";
@@ -144,12 +145,12 @@ export default function Page() {
         </div>
       </div>
 
-      <section className="relative min-h-[942px] flex items-start justify-center custom-radial-glow hero-grid-pattern overflow-hidden pt-24 pb-32 border-b border-outline-variant/30">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-gradient-to-tr from-[#FF1E56]/20 via-[#940023]/30 to-transparent rounded-full blur-3xl pointer-events-none -z-0 opacity-75"></div>
+      <section className="relative min-h-[942px] flex items-start justify-center custom-radial-glow hero-grid-pattern pt-24 pb-32 border-b border-outline-variant/30">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-gradient-to-tr from-[#FF1E56]/20 via-[#940023]/30 to-transparent rounded-full blur-3xl pointer-events-none -z-0 opacity-75 overflow-x-clip"></div>
 
-        <div className="relative z-10 max-w-screen-2xl mx-auto px-margin-mobile md:px-margin w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center pt-16 md:pt-28">
+        <div className="relative z-10 max-w-screen-2xl mx-auto px-margin-mobile md:px-margin w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start pt-16 md:pt-28">
 
-          <div className="lg:col-span-12 flex flex-col items-start mt-4 lg:mt-8 xl:mt-12 w-full max-w-6xl">
+          <div className="lg:col-span-7 flex flex-col items-start mt-4 lg:mt-8 xl:mt-12 w-full">
 
             <h1 className="text-4xl md:text-5xl lg:text-[70px] lg:tracking-tighter font-headline-xl font-bold tracking-tight text-white uppercase leading-[1.05] mb-5">
               <span className="whitespace-nowrap">The Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#940023] inline-block pr-1">Thinks Here.</span>
@@ -190,9 +191,16 @@ export default function Page() {
             </a>
           </div>
 
-        </div></section>
+          <div className="lg:col-span-5 mt-10 lg:-mt-10 xl:-mt-16 flex justify-center lg:justify-end items-start pointer-events-none relative z-10">
+            <div className="relative w-[110%] max-w-[500px] lg:max-w-none lg:w-[150%] xl:w-[170%] lg:-ml-[5%] xl:-ml-[15%] lg:-mr-[10%] xl:-mr-[15%] aspect-[4/5] lg:aspect-[4/4.5] drop-shadow-[0_0_40px_rgba(255,30,86,0.2)] pointer-events-auto">
+              <Image src={webElementSvg} alt="AIDSL Web Element" fill className="object-contain object-center lg:object-right lg:object-bottom" priority />
+            </div>
+          </div>
 
-      <section className="w-full bg-[#050001] border-b border-outline-variant/30 py-8" id="quick-facts">
+        </div>
+      </section>
+
+      <section className="w-full bg-[#050001] border-y border-outline-variant/30 py-8 relative z-30 -mt-12 md:-mt-24 lg:-mt-[150px] xl:-mt-[200px]" id="quick-facts">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
             <div className="p-4 md:px-6 md:py-2 text-center">
