@@ -48,7 +48,7 @@ export default function Header() {
     <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[999] w-[95%] max-w-7xl transition-all duration-500">
       <header
         className={cn(
-          "w-full flex h-[70px] items-center justify-between px-6 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] rounded-2xl overflow-hidden border",
+          "w-full flex h-[70px] items-center justify-between px-6 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] overflow-hidden border",
           scrolled ? "bg-[#2D1B19]/50 backdrop-blur-md border-white/10" : "bg-[#2D1B19]/95 border-transparent shadow-xl"
         )}
         data-lenis-prevent

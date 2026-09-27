@@ -50,7 +50,7 @@ export default function Page() {
 
 
 
-      <header className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] w-[95%] max-w-screen-2xl rounded-[32px] transition-all duration-300 ${isScrolled ? "bg-[#0F0502]/40" : "bg-[#0F0502]/80"}`}>
+      <header className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] w-[95%] max-w-screen-2xl transition-all duration-300 ${isScrolled ? "bg-[#0F0502]/40" : "bg-[#0F0502]/80"}`}>
         <div className="flex justify-between items-center w-full px-6 md:px-10 h-16 md:h-20">
 
           <a className="flex items-center gap-3 group" href="#!">
@@ -97,10 +97,10 @@ export default function Page() {
           <div className="lg:col-span-7 flex flex-col items-start mt-4 lg:mt-8 xl:mt-12 w-full">
 
             <h1 className="text-5xl md:text-6xl lg:text-[85px] lg:tracking-tighter font-headline-xl font-black tracking-tight text-white uppercase leading-[1.05] mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-              <span className="whitespace-nowrap">The Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] via-[#FF4F00] to-[#E33800] inline-block pr-2 drop-shadow-[0_0_10px_rgba(255,79,0,0.3)]">Thinks Here.</span>
+              <span className="whitespace-nowrap">The AI Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] via-[#FF4F00] to-[#E33800] inline-block pr-2 drop-shadow-[0_0_10px_rgba(255,79,0,0.3)]">Thinks Here.</span>
             </h1>
 
-            <div className="inline-flex items-center px-5 py-2 mb-6 rounded-full bg-[#FF4F00]/10 border border-[#FF4F00]/40 backdrop-blur-md shadow-[0_0_20px_rgba(255,79,0,0.15)]">
+            <div className="inline-flex items-center px-5 py-2 mb-6 bg-[#FF4F00]/10 border border-[#FF4F00]/40 backdrop-blur-md shadow-[0_0_20px_rgba(255,79,0,0.15)]">
               <span className="w-2 h-2 rounded-full bg-[#FF6A00] mr-3 animate-pulse shadow-[0_0_8px_#FF6A00]"></span>
               <h2 className="text-sm lg:text-base font-headline-md text-[#FF6A00] font-bold tracking-widest uppercase">
                 Sri Lanka's Premier AI Gathering
@@ -112,11 +112,11 @@ export default function Page() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/90 font-label-mono-sm text-[11px] uppercase tracking-widest shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-[#FF4F00]/50 transition-colors">
+              <div className="flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-md border border-white/10 text-white/90 font-label-mono-sm text-[11px] uppercase tracking-widest shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-[#FF4F00]/50 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#FF6A00] shrink-0 drop-shadow-[0_0_8px_#FF6A00]"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
                 <span>Date to be announced soon</span>
               </div>
-              <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white/90 font-label-mono-sm text-[11px] uppercase tracking-widest shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-[#FF4F00]/50 transition-colors">
+              <div className="flex items-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-md border border-white/10 text-white/90 font-label-mono-sm text-[11px] uppercase tracking-widest shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-[#FF4F00]/50 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#FF6A00] shrink-0 drop-shadow-[0_0_8px_#FF6A00]"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 <span>Venue to be announced soon · Colombo</span>
               </div>
@@ -143,7 +143,7 @@ export default function Page() {
           </div>
 
           <div className="lg:col-span-5 mt-10 lg:-mt-10 xl:-mt-16 flex justify-center lg:justify-end items-start pointer-events-none relative z-10">
-            <div className="relative w-[110%] max-w-[500px] lg:max-w-none lg:w-[150%] xl:w-[170%] lg:-ml-[5%] xl:-ml-[15%] lg:-mr-[10%] xl:-mr-[15%] aspect-[4/5] lg:aspect-[4/4.5] drop-shadow-[0_0_40px_rgba(255, 79, 0,0.2)] pointer-events-auto">
+            <div className="relative w-[110%] max-w-[500px] lg:max-w-none lg:w-[150%] xl:w-[170%] lg:-ml-[5%] xl:-ml-[15%] lg:-mr-[10%] xl:-mr-[15%] aspect-[4/5] lg:aspect-[4/4.5] drop-shadow-[0_0_40px_rgba(255,79,0,0.2)] hover:drop-shadow-[0_0_60px_rgba(255,79,0,0.5)] transition-all duration-700 pointer-events-auto">
               <Image src={webElementSvg} alt="AIDSL Web Element" fill className="object-contain object-center lg:object-right lg:object-bottom" priority />
             </div>
           </div>
@@ -558,7 +558,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Keynote / Global</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -566,7 +566,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Keynote / Frontier</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -574,7 +574,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Industry</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -582,7 +582,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Academia</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -590,7 +590,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Panelist / Policy</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -598,7 +598,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Forum Moderator</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -606,7 +606,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Startup Judge</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -614,7 +614,7 @@ export default function Page() {
             <div className="p-6 bg-[#0F0502] border border-outline-variant/50 flex flex-col items-center text-center group orange-glow-card">
               <div className="w-24 h-24 bg-[#170703] rounded-none border border-outline-variant/60 flex items-center justify-center mb-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/30 to-transparent"></div>
-                <span className="material-symbols-outlined text-outline text-3xl opacity-50 group-hover:text-primary transition-colors">person</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-outline opacity-50 group-hover:text-primary transition-colors relative z-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
               </div>
               <span className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-1 font-bold">Keynote / Global</span>
               <span className="text-xs font-headline-md text-white font-medium">Speaker to be announced soon</span>
@@ -625,8 +625,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 border-b border-outline-variant/30 bg-[#050505] relative overflow-hidden" id="register">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,79,0,0.4)_0%,_rgba(153,28,0,0.35)_40%,_transparent_80%)] pointer-events-none"></div>
+      <section className="py-24 md:py-32 border-y border-[#FF4F00]/50 bg-gradient-to-br from-[#7A1F00] via-[#4A0A00] to-[#601200] relative overflow-hidden" id="register">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,106,0,0.5)_0%,_transparent_70%)] pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#FF4F00]/50 to-transparent"></div>
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest block mb-2 font-bold">PASS SELECTION</span>
@@ -640,7 +641,7 @@ export default function Page() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto gap-8 items-stretch mb-12">
 
-            <div className="p-8 bg-[#170703] border border-[#FF4F00]/50 shadow-[0_0_40px_rgba(255,79,0,0.2)] hover:shadow-[0_0_50px_rgba(255,79,0,0.4)] hover:border-[#FF4F00] hover:-translate-y-1 flex flex-col justify-between transition-all duration-300 relative z-10">
+            <div className="p-8 bg-gradient-to-br from-[#3D0A00] to-[#1F0400] border border-[#FF4F00]/80 shadow-[0_0_60px_rgba(255,79,0,0.45)] hover:shadow-[0_0_80px_rgba(255,106,0,0.65)] hover:border-[#FF6A00] hover:-translate-y-2 flex flex-col justify-between transition-all duration-300 relative z-20 scale-100 lg:scale-105">
               <div>
                 <div className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-2 font-bold">Member Privilege</div>
                 <h3 className="text-lg font-headline-md font-bold uppercase text-white mb-4">IEEE MEMBER PASS</h3>
@@ -669,7 +670,7 @@ export default function Page() {
               </button>
             </div>
 
-            <div className="p-8 bg-[#0F0502] border border-outline-variant/50 flex flex-col justify-between orange-glow-card">
+            <div className="p-8 bg-gradient-to-bl from-[#2A0500] to-[#140200] border border-[#FF4F00]/40 hover:border-[#FF4F00]/70 hover:shadow-[0_0_50px_rgba(255,79,0,0.3)] hover:-translate-y-1 flex flex-col justify-between transition-all duration-300 z-10">
               <div>
                 <div className="text-xs font-label-mono-xs uppercase tracking-widest text-primary mb-2 font-bold">General Admission</div>
                 <h3 className="text-lg font-headline-md font-bold uppercase text-white mb-4">STANDARD DELEGATE PASS</h3>
@@ -896,7 +897,7 @@ export default function Page() {
                 Chairperson <br /> AIDSL’26
               </p>
               <div className="w-full pt-4 border-t border-outline-variant/30 text-xs text-on-surface-variant font-body-sm flex flex-col gap-2 mt-auto">
-                <a href="tel:0704448484" className="hover:text-primary transition-colors block">070 444 8484</a>
+                <a href="tel:0743538484" className="hover:text-primary transition-colors block">074 353 8484</a>
                 <a href="mailto:gvwgeenoth365@gmail.com" className="hover:text-primary transition-colors block break-all">gvwgeenoth365@gmail.com</a>
               </div>
             </div>
@@ -964,13 +965,13 @@ export default function Page() {
                 </p>
                 <div className="space-y-4 text-xs font-label-mono-sm">
                   <p className="text-white"><span className="text-primary font-bold">EMAIL:</span> aidrivensrilanka@gmail.com</p>
-                  <p className="text-white"><span className="text-primary font-bold">PHONE:</span> +94 70 444 8484</p>
+                  <p className="text-white"><span className="text-primary font-bold">PHONE:</span> +94 74 353 8484</p>
                   <p className="text-white"><span className="text-primary font-bold">LOCATION:</span> Colombo, Sri Lanka</p>
                 </div>
               </div>
               <div className="lg:col-span-7 flex flex-col sm:flex-row gap-4 h-full items-end lg:justify-end pb-8 flex-wrap">
                 <a
-                  href="https://wa.me/94704448484"
+                  href="https://wa.me/94743538484"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1DA851] text-white font-headline-md text-sm font-bold uppercase tracking-widest transition-all text-center flex items-center justify-center gap-2 drop-shadow-lg"
