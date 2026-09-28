@@ -149,7 +149,7 @@ export default function Page() {
                 maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)"
               }}
             >
-              <Image src={webElementSvg} alt="AIDSL Web Element" fill className="object-contain object-center lg:object-right lg:object-bottom" priority />
+              <Image src={webElementSvg} alt="AIDSL Web Element" fill className="object-contain object-center lg:object-right lg:object-bottom" priority unoptimized />
             </div>
           </div>
 
