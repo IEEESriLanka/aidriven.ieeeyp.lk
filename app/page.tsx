@@ -89,16 +89,10 @@ export default function Page() {
         </div>
       </header>
 
-      <section className="relative min-h-[942px] flex items-start justify-center custom-radial-glow space-stars pt-24 pb-32 border-b border-outline-variant/30">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-gradient-to-tr from-[#FF4F00]/20 via-[#991C00]/30 to-transparent rounded-full blur-3xl pointer-events-none -z-0 opacity-75 overflow-x-clip"></div>
-
+      <section className="relative min-h-[942px] flex items-start justify-center space-stars pt-24 pb-32 border-b border-outline-variant/30">
         <div className="relative z-10 max-w-screen-2xl mx-auto px-margin-mobile md:px-margin w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start pt-16 md:pt-28">
 
           <div className="lg:col-span-7 flex flex-col items-start mt-4 lg:mt-8 xl:mt-12 w-full">
-
-            <h1 className="text-5xl md:text-6xl lg:text-[85px] lg:tracking-tighter font-headline-xl font-black tracking-tight text-white uppercase leading-[1.05] mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-              <span className="whitespace-nowrap">The AI Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] via-[#FF4F00] to-[#E33800] inline-block pr-2 drop-shadow-[0_0_10px_rgba(255,79,0,0.3)]">Thinks Here.</span>
-            </h1>
 
             <div className="inline-flex items-center px-5 py-2 mb-6 bg-[#FF4F00]/10 border border-[#FF4F00]/40 backdrop-blur-md shadow-[0_0_20px_rgba(255,79,0,0.15)]">
               <span className="w-2 h-2 rounded-full bg-[#FF6A00] mr-3 animate-pulse shadow-[0_0_8px_#FF6A00]"></span>
@@ -106,6 +100,10 @@ export default function Page() {
                 Sri Lanka's Premier AI Gathering
               </h2>
             </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-[85px] xl:tracking-tighter font-headline-xl font-black tracking-tight text-white uppercase leading-[1.05] mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+              <span className="whitespace-nowrap">The AI Future</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6A00] via-[#FF4F00] to-[#E33800] inline-block pr-2 drop-shadow-[0_0_10px_rgba(255,79,0,0.3)]">Thinks Here.</span>
+            </h1>
 
             <p className="max-w-xl text-base md:text-lg text-white/85 font-body-md mb-6 leading-relaxed font-light">
               One high-impact day bringing together global and local AI experts, innovators, startups and policymakers to shape the country's AI future.
@@ -142,8 +140,15 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="lg:col-span-5 mt-10 lg:-mt-10 xl:-mt-16 flex justify-center lg:justify-end items-start pointer-events-none relative z-10">
-            <div className="relative w-[110%] max-w-[500px] lg:max-w-none lg:w-[150%] xl:w-[170%] lg:-ml-[5%] xl:-ml-[15%] lg:-mr-[10%] xl:-mr-[15%] aspect-[4/5] lg:aspect-[4/4.5] drop-shadow-[0_0_40px_rgba(255,79,0,0.2)] hover:drop-shadow-[0_0_60px_rgba(255,79,0,0.5)] transition-all duration-700 pointer-events-auto">
+          <div className="lg:col-span-5 mt-10 lg:mt-8 xl:-mt-16 flex justify-center lg:justify-end items-start pointer-events-none relative z-10 group">
+            <div className="absolute left-1/2 top-1/2 lg:left-auto lg:right-[15%] lg:top-[40%] -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[100%] max-w-[400px] aspect-square bg-[#FF4F00]/60 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-[1500ms] z-[-1]"></div>
+            <div
+              className="relative w-[110%] max-w-[500px] lg:max-w-none lg:w-[125%] xl:w-[170%] lg:ml-0 xl:-ml-[15%] lg:mr-0 xl:-mr-[15%] lg:mt-16 xl:mt-0 aspect-[4/5] lg:aspect-[4/4.5] transition-all duration-700 pointer-events-auto"
+              style={{
+                WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)",
+                maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)"
+              }}
+            >
               <Image src={webElementSvg} alt="AIDSL Web Element" fill className="object-contain object-center lg:object-right lg:object-bottom" priority />
             </div>
           </div>
@@ -151,7 +156,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="w-full bg-[#080200] border-y border-outline-variant/30 py-8 relative z-30 -mt-12 md:-mt-24 lg:-mt-[150px] xl:-mt-[200px]" id="quick-facts">
+      <section className="w-full bg-[#080200] border-y border-outline-variant/30 py-8 relative z-30 -mt-8 md:-mt-16 lg:-mt-[100px] xl:-mt-[150px]" id="quick-facts">
         <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
             <div className="p-4 md:px-6 md:py-2 text-center">
@@ -159,12 +164,12 @@ export default function Page() {
               <div className="text-xs font-label-mono-sm uppercase tracking-widest text-on-surface-variant">Participants</div>
             </div>
             <div className="p-4 md:px-6 md:py-2 text-center">
-              <div className="text-3xl lg:text-4xl font-headline-xl font-bold text-primary mb-1">6+</div>
-              <div className="text-xs font-label-mono-sm uppercase tracking-widest text-on-surface-variant">Sessions</div>
+              <div className="text-3xl lg:text-4xl font-headline-xl font-bold text-primary mb-1">12+</div>
+              <div className="text-xs font-label-mono-sm uppercase tracking-widest text-on-surface-variant">AI Leaders</div>
             </div>
             <div className="p-4 md:px-6 md:py-2 text-center">
-              <div className="text-3xl lg:text-4xl font-headline-xl font-bold text-primary mb-1">10</div>
-              <div className="text-xs font-label-mono-sm uppercase tracking-widest text-on-surface-variant">Startup Stalls</div>
+              <div className="text-3xl lg:text-4xl font-headline-xl font-bold text-primary mb-1">6+</div>
+              <div className="text-xs font-label-mono-sm uppercase tracking-widest text-on-surface-variant">Sessions</div>
             </div>
             <div className="p-4 md:px-6 md:py-2 text-center">
               <div className="text-3xl lg:text-4xl font-headline-xl font-bold text-primary mb-1">1</div>
@@ -321,7 +326,7 @@ export default function Page() {
             <h2 className="text-2xl md:text-4xl font-headline-xl font-bold uppercase tracking-tight text-white">THE AIDSL EXPERIENCE</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
 
             <div className="p-8 bg-[#0F0502] border border-outline-variant/50 orange-glow-card transition-all flex flex-col justify-between h-full">
               <div>
@@ -359,34 +364,6 @@ export default function Page() {
               </div>
               <div className="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-xs text-primary uppercase tracking-widest font-bold">
                 Actionable Outcomes
-              </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-
-            <div className="p-8 bg-[#0F0502] border border-outline-variant/50 orange-glow-card transition-all flex flex-col justify-between h-full">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7" /></svg>
-                <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">INNOVATION SHOWCASE</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm leading-relaxed">
-                  10 exclusive bid-and-buy stalls for AI startups and innovators.
-                </p>
-              </div>
-              <div className="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-xs text-primary uppercase tracking-widest font-bold">
-                Commercial Stalls
-              </div>
-            </div>
-
-            <div className="p-8 bg-[#0F0502] border border-outline-variant/50 orange-glow-card transition-all flex flex-col justify-between h-full">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-6"><path d="M18 22H4a2 2 0 0 1-2-2V6" /><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18" /><circle cx="12" cy="8" r="2" /><rect width="16" height="16" x="6" y="2" rx="2" /></svg>
-                <h3 className="text-base font-headline-md font-bold uppercase text-white mb-3">AI IMAGE GALLERY</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm leading-relaxed">
-                  Curated AI-generated visuals running alongside the showcase.
-                </p>
-              </div>
-              <div className="mt-8 pt-4 border-t border-outline-variant/20 text-[10px] font-label-mono-xs text-primary uppercase tracking-widest font-bold">
-                Generative Art
               </div>
             </div>
 
@@ -480,8 +457,8 @@ export default function Page() {
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">2:00 PM – 2:45 PM</span>
               </div>
               <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">01 - Registration &amp; Arrival</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">Participant check-in, badge collection &amp; networking warm-up</p>
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Registration &amp; Networking</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Welcome, registration, startup showcase</p>
               </div>
             </div>
 
@@ -490,8 +467,8 @@ export default function Page() {
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">2:45 PM – 3:00 PM</span>
               </div>
               <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">02 - Opening Ceremony</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">Welcome address &amp; agenda overview by AIDSL leadership</p>
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Opening Ceremony</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Welcome addresses &amp; ceremonial opening</p>
               </div>
             </div>
 
@@ -500,8 +477,8 @@ export default function Page() {
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">3:00 PM – 4:45 PM</span>
               </div>
               <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">03 - Global Keynote Sessions</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">Thought leadership from globally recognised AI leaders</p>
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Global Keynotes &amp; Expert Sessions</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Visionary AI leaders unveiling the technologies shaping tomorrow.</p>
               </div>
             </div>
 
@@ -510,8 +487,8 @@ export default function Page() {
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">5:00 PM – 6:10 PM</span>
               </div>
               <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">04 - Panel Discussions</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">Experts from industry, academia &amp; policy on critical AI challenges</p>
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Executive Panel Discussion</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">High-impact conversations driving the future of AI policy, industry, and innovation.</p>
               </div>
             </div>
 
@@ -519,12 +496,9 @@ export default function Page() {
               <div className="shrink-0 md:w-[180px]">
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">6:10 PM – 6:40 PM</span>
               </div>
-              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6 w-full">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">05 - Innovation Showcase &amp; AI Forum</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">10 startup stalls, AI gallery &amp; roundtable discussions</p>
-                <div className="mt-2 py-2 px-3 bg-[#170703] border-l-2 border-primary text-xs font-label-mono-xs text-primary font-bold inline-block">
-                  ↳ includes the AI Challenge 2026 National Final Showcase
-                </div>
+              <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Recognition &amp; Closing</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Partner appreciation, event highlights &amp; official closing</p>
               </div>
             </div>
 
@@ -533,8 +507,8 @@ export default function Page() {
                 <span className="font-label-mono-sm text-primary font-bold tracking-widest block text-left">6:40 PM – 9:00 PM</span>
               </div>
               <div className="text-left flex-grow border-l-0 md:border-l border-outline-variant/30 md:pl-6">
-                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">06 - Fellowship Gathering</h3>
-                <p className="text-xs text-on-surface-variant font-body-sm">Exclusive premium networking for speakers, partners &amp; investors</p>
+                <h3 className="text-base md:text-lg font-headline-md font-bold text-white tracking-wide mb-1 group-hover:text-primary transition-colors">Networking Session</h3>
+                <p className="text-xs text-on-surface-variant font-body-sm">Networking among speakers, partners &amp; delegates</p>
               </div>
             </div>
 
@@ -976,7 +950,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1DA851] text-white font-headline-md text-sm font-bold uppercase tracking-widest transition-all text-center flex items-center justify-center gap-2 drop-shadow-lg"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.76.46 3.4 1.25 4.88L2 22l5.12-1.34C8.6 21.46 10.24 22 12.01 22c5.52 0 10-4.48 10-10 0-5.52-4.48-10-10-10zm0 18.25c-1.57 0-3.09-.4-4.44-1.16l-.32-.19-3.29.86.87-3.21-.21-.34C3.81 14.86 3.39 13.45 3.39 12c0-4.75 3.86-8.61 8.6-8.61s8.6 3.86 8.6 8.61-3.86 8.61-8.61 8.61zm4.72-6.42c-.26-.13-1.53-.76-1.77-.84-.23-.08-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-1.52-.77-2.67-1.42-3.69-2.93-.15-.22.02-.21.15-.47.16-.31.33-.49.5-.74.15-.22.08-.43-.04-.69-.13-.26-.58-1.41-.8-1.93-.21-.5-.43-.43-.58-.43h-.49c-.21 0-.56.08-.85.39-.29.31-1.12 1.09-1.12 2.66 0 1.57 1.15 3.09 1.3 3.31.17.23 2.25 3.44 5.46 4.82 2.22.96 3.04 1.02 4.14.86 1.15-.16 2.37-.97 2.7-1.91.33-.94.33-1.74.23-1.91-.1-.17-.36-.26-.62-.39z" /></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51h-.57c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741 1.201 1.222-3.649-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
                   WhatsApp Us
                 </a>
 
