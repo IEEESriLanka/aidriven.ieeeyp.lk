@@ -54,7 +54,7 @@ export default function Header() {
         data-lenis-prevent
       >
         <div className="relative z-10">
-          <Link href="/home" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image src={Logo} alt="AIDSL Logo" width={150} height={50} />
           </Link>
         </div>

@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 
 export function ConditionalHeader() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  if (pathname === "/summitTemplate") return null;
   return <Header />;
 }
 
 export function ConditionalFooter() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
+  if (pathname === "/summitTemplate") return null;
   return <Footer />;
 }
