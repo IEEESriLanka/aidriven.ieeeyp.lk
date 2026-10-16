@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
-      <div className="container relative z-10 flex flex-col gap-y-4 px-4 mt-16 md:mt-24 lg:gap-y-8">
+    <div className="relative flex min-h-[calc(100svh-100px)] w-full items-center overflow-hidden lg:min-h-[calc(100svh-122px)]">
+      <div className="relative z-10 mx-auto flex w-[95%] max-w-7xl flex-col gap-y-4 px-6 lg:gap-y-8">
         <div className="font-elemental-end flex flex-col gap-y-2 text-2xl text-white lg:gap-y-6 lg:text-5xl">
           <span>ONE TEAM. </span>
           <span className="text-primary">Igniting minds.</span>
