@@ -30,6 +30,7 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
       src: ai_summit_img,
       alt: "AIDSL Summit 2026",
     },
+    hidden: true,
   },
   {
     title: "Inside AI 2026",

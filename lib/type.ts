@@ -29,6 +29,7 @@ export interface UpcomingEventItemProps {
     src: StaticImport | string;
     alt: string;
   };
+  hidden?: boolean;
 }
 
 export interface TestimonialProps {
@@ -41,13 +42,21 @@ export interface TestimonialProps {
   message: string;
 }
 
+// A plain string renders as a paragraph
+export type BlogContentBlock =
+  | string
+  | { heading: string }
+  | { list: string[] }
+  | { quote: string };
+
 export interface BlogItemProps {
   title: string;
   caption: string;
   image: StaticImport;
   link: string;
-  content: string[];
+  content: BlogContentBlock[];
   tags?: string[];
+  date?: string;
 }
 
 export interface ProjectItemProps {
