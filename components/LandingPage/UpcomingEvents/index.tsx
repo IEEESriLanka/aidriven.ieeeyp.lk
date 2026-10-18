@@ -13,6 +13,8 @@ import {
 import Item from "./Item";
 import { upcomingEventsData } from "@/lib/data";
 
+const landingEvents = upcomingEventsData.filter((event) => !event.hidden);
+
 export default function UpcomingEvent() {
   const autoplayRef = useRef(
     Autoplay({
@@ -35,15 +37,19 @@ export default function UpcomingEvent() {
       <div>
         <Carousel opts={opts} plugins={plugins}>
           <CarouselContent>
-            {upcomingEventsData.map((event, index) => (
+            {landingEvents.map((event, index) => (
               <CarouselItem key={index} className="flex">
                 <Item {...event} />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:inline-flex" />
-          <CarouselNext className="hidden lg:inline-flex" />
-          <CarouselIndicators className="mt-3" />
+          {landingEvents.length > 1 && (
+            <>
+              <CarouselPrevious className="hidden lg:inline-flex" />
+              <CarouselNext className="hidden lg:inline-flex" />
+              <CarouselIndicators className="mt-3" />
+            </>
+          )}
         </Carousel>
       </div>
     </section>

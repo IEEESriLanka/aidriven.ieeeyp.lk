@@ -20,7 +20,7 @@ export default function Item(props: BlogItemProps & { priority?: boolean }) {
             fill
             priority={props.priority}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
-            className="object-cover brightness-60"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
         <div className="flex min-w-0 flex-col gap-y-2">

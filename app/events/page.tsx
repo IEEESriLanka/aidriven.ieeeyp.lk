@@ -17,7 +17,7 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col gap-y-10">
-        {upcomingEventsData.map((event, index) => (
+        {upcomingEventsData.filter((event) => !event.hidden).map((event, index) => (
           <Item key={index} {...event} />
         ))}
       </div>

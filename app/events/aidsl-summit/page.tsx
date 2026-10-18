@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { aiSummit2026ProgramModel } from "@/lib/data/events";
 import {
   Globe, Handshake, Lightbulb, Rocket, Building2, FlaskConical,
@@ -22,7 +23,12 @@ const SolutionItem = ({ text }: { text: string }) => (
   </li>
 );
 
+// Page is hidden for now; remove this check to bring it back
+const IS_HIDDEN = true;
+
 const Page = () => {
+  if (IS_HIDDEN) notFound();
+
   const introCards: { Icon: LucideIcon; label: string }[] = [
     { Icon: Globe, label: "Sri Lanka's Premier AI Gathering" },
     { Icon: Handshake, label: "Cross-sector Collaboration" },

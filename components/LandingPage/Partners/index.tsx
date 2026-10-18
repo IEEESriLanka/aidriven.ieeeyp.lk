@@ -29,27 +29,15 @@ const row2Logos = [
 
 export default function Partners() {
   return (
-    <section className="py-24 bg-[#0A0103] border-t border-outline-variant/30 relative">
-      <div className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin mb-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#24040B] border border-primary-container/40 text-primary uppercase font-label-mono-xs text-label-mono-xs tracking-widest mb-3">
-              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-              <span className="">LEGACY PARTNERS</span>
-            </div>
-            <h2 className="text-xl md:text-3xl font-headline-xl font-bold text-white uppercase tracking-tight">
-              OUR PREVIOUS PARTNERS
-            </h2>
-          </div>
-          <p className="text-xs text-on-surface-variant font-body-sm leading-relaxed whitespace-normal md:whitespace-nowrap text-left md:text-right mt-4 md:mt-0">
-            These incredible organizations have supported our journey as partners in our previous events.
-          </p>
-        </div>
-      </div>
+    <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
+      <h1 className="section-header">
+        <span>Our Previous</span>
+        <span className="text-primary"> Partners</span>
+      </h1>
 
-      <div className="partners-slider relative mt-8">
-        {/* Dark pill container */}
-        <div className="overflow-hidden bg-transparent border border-white/7 py-2 flex flex-col">
+      <div className="partners-slider rounded-2xl bg-[#111] py-4">
+        {/* Logos fade out at the card edges via a mask */}
+        <div className="flex flex-col overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
           {/* Row 1 - scrolls left */}
           <div className="flex h-32 overflow-hidden">
             <div className="marquee-track animate-marquee-left flex w-max items-center">
@@ -87,11 +75,6 @@ export default function Partners() {
             </div>
           </div>
         </div>
-
-        {/* Left fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#0A0103] to-transparent" />
-        {/* Right fade edge */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#0A0103] to-transparent" />
       </div>
     </section>
   );
