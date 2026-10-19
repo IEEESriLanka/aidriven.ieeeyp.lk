@@ -23,11 +23,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "An initiative of IEEE Young Professionals Sri Lanka, connecting the country's students, graduates and industry through national AI events, challenges and workshops since 2020.";
+
 export const metadata: Metadata = {
-  title: "AI Driven Sri Lanka",
-  description: "AI Driven Sri Lanka",
+  metadataBase: new URL("https://aidriven.ieeeyp.lk"),
+  title: {
+    default: "AI Driven Sri Lanka | IEEE Young Professionals Sri Lanka",
+    template: "%s | AI Driven Sri Lanka",
+  },
+  description: siteDescription,
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "AI Driven Sri Lanka",
+    title: "AI Driven Sri Lanka",
+    description: siteDescription,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Driven Sri Lanka",
+    description: siteDescription,
   },
 };
 

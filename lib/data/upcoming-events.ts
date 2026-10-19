@@ -177,7 +177,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
     },
   },
   {
-    title: "AI Boot Camp 2024",
+    title: "Sri Lanka AI Forum 2024",
     description: [
       "As a cornerstone event of the YPSL Summit 2024, the Sri Lanka AI Forum convened a panel of industry pioneers for an expert discussion on leveraging Generative AI to enhance work and learning efficiency. Moderated by Heminda Jayaweera, the forum featured a distinguished lineup of innovators from leading tech companies including Nagarro, 99x, PickMe, Zone 24x7, IFS, Microsoft, and Sysco Labs SL.",
     ],
@@ -192,7 +192,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
     venue: undefined,
     img: {
       src: AIForum2024Image,
-      alt: "AI Boot Camp 2024",
+      alt: "Sri Lanka AI Forum 2024",
     },
   },
 ];

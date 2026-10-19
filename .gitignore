@@ -57,3 +57,5 @@ docs/
 
 # logs
 *.log
+# superpowers brainstorm mockups
+.superpowers/

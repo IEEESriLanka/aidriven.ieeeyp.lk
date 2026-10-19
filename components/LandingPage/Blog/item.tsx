@@ -7,7 +7,7 @@ export default function Item(props: BlogItemProps & { priority?: boolean }) {
     <Link
       href={props.link}
       prefetch={true}
-      className="group relative block h-full w-full min-h-[380px] max-w-[480px] overflow-hidden bg-[rgba(45,42,39,0.95)]"
+      className="group hover:border-primary/40 relative block h-full w-full min-h-[380px] max-w-[480px] overflow-hidden border border-transparent bg-[rgba(45,42,39,0.95)] transition-colors duration-300"
       style={{
         borderRadius: "20px 20px 0 20px",
       }}
