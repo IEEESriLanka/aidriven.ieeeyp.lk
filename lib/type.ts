@@ -42,6 +42,12 @@ export interface TestimonialProps {
   message: string;
 }
 
+export interface HeroStatProps {
+  value: number;
+  suffix: string;
+  label: string;
+}
+
 // A plain string renders as a paragraph
 export type BlogContentBlock =
   | string

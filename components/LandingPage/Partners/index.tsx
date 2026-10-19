@@ -31,8 +31,8 @@ export default function Partners() {
   return (
     <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
       <h1 className="section-header">
-        <span>Our Previous</span>
-        <span className="text-primary"> Partners</span>
+        <span>Trusted by</span>
+        <span className="text-primary"> Industry</span>
       </h1>
 
       <div className="partners-slider rounded-2xl bg-[#111] py-4">

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Item(props: UpcomingEventItemProps) {
   return (
-    <article className="group flex h-full w-full flex-col overflow-hidden rounded-2xl bg-[#111] text-white">
+    <article className="group hover:border-primary/40 flex h-full w-full flex-col overflow-hidden rounded-2xl border border-transparent bg-[#111] text-white transition-colors duration-300">
       <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden">
         <Image
           src={props.img.src}
