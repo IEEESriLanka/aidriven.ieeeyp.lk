@@ -1,5 +1,6 @@
 import { blogsData } from "@/lib/data";
 import type { BlogContentBlock } from "@/lib/type";
+import { pageMetadata, staticImageSrc } from "@/lib/seo";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -13,6 +14,21 @@ export async function generateStaticParams() {
   return blogsData.map((blog) => ({
     slug: blog.link.replace("/blogs/", ""),
   }));
+}
+
+export async function generateMetadata({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const blog = blogsData.find((b) => b.link === `/blogs/${slug}`);
+  if (!blog) return {};
+
+  return pageMetadata({
+    title: blog.title,
+    description: blog.caption,
+    path: blog.link,
+    keywords: blog.tags,
+    type: "article",
+    images: [staticImageSrc(blog.image)],
+  });
 }
 
 function getReadTime(content: BlogContentBlock[]) {

@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import aiChallengeLogo from "@/assets/AI-challenge-logo.png";
 import {
@@ -45,6 +46,13 @@ const phaseModeColor: Record<string, string> = {
   "Physical / Online": "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
   Physical: "bg-primary/20 text-primary border-primary/30",
 };
+
+export const metadata = pageMetadata({
+  title: "AI Challenge Sri Lanka 2026",
+  description: "AI Challenge Sri Lanka 2026 is a national-level AI innovation programme by AI Driven Sri Lanka, taking student teams from problem identification through mentorship, prototyping and testing to a physical final round.",
+  path: "/events/ai-challenge",
+  keywords: ["AI Challenge Sri Lanka", "AI Challenge 2026", "AI competition Sri Lanka", "AI hackathon Sri Lanka", "SLAIC"],
+});
 
 const Page = () => {
   const audienceCards: { Icon: LucideIcon; label: string }[] = [

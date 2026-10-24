@@ -100,6 +100,8 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
         ) : (
           <Image
             src={member.profileImg}
+            // Photos render ~224px tall (h-56); without this the browser fetches full-width versions
+            sizes="240px"
             className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}${member.flipX ? " -scale-x-100" : ""}`}
             alt=""
           />

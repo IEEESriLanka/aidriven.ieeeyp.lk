@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import comTalkImg from "@/assets/events/AIComTalk2025.webp";
 
 import { EventFeatCard } from "@/components/Events/EventCard";
@@ -15,6 +16,13 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
 } from "@/components/ui/Accordion/Accordion";
+
+export const metadata = pageMetadata({
+  title: "AI Community Talk Series",
+  description: "The AI Community Talk Series by AI Driven Sri Lanka brings AI knowledge sharing to Sri Lankan universities, organized with IEEE Student Branches and industry experts.",
+  path: "/events/community-talk",
+  keywords: ["AI Community Talk Series", "AI talks Sri Lanka", "IEEE Student Branch AI", "university AI sessions"],
+});
 
 const Page = () => {
   return (

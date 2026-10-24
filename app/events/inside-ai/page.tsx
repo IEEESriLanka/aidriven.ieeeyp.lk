@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import insideAILogo from "@/assets/Inside-ai-logo.png";
 import { insideAIFaqData, insideAIProgramTimelineData } from "@/lib/data/events";
@@ -34,6 +35,13 @@ const SolutionItem = ({ text }: { text: string }) => (
     <span>{text}</span>
   </li>
 );
+
+export const metadata = pageMetadata({
+  title: "Inside AI 2026",
+  description: "Inside AI 2026 is a year-long industry engagement series by AI Driven Sri Lanka, with hands-on AI sessions and workshops hosted at leading tech companies including WSO2, Virtusa and Codimite.",
+  path: "/events/inside-ai",
+  keywords: ["Inside AI", "Inside AI 2026", "AI workshops Sri Lanka", "industry AI sessions", "WSO2", "Virtusa", "Codimite"],
+});
 
 const Page = () => {
   const impactCards: { Icon: LucideIcon; text: string }[] = [

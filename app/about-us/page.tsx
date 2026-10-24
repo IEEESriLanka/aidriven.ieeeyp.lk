@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 
 import aboutImage from "@/assets/aboutImageContainer.png";
@@ -8,6 +9,13 @@ import {
 } from "@/lib/data";
 import { ContactCard, MemberCard, ValueCard } from "@/components/AboutUs/Cards";
 import Form from "@/components/AboutUs/Form";
+
+export const metadata = pageMetadata({
+  title: "About Us",
+  description: "AI Driven Sri Lanka is an IEEE Young Professionals Sri Lanka initiative founded in 2020, bridging the gap between Sri Lanka's undergraduates, graduates and the AI industry. Get in touch to partner with us.",
+  path: "/about-us",
+  keywords: ["about AI Driven Sri Lanka", "partner with AI Driven Sri Lanka", "contact AIDSL"],
+});
 
 const Page = () => {
   return (

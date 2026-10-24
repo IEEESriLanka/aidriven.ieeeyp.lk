@@ -1,9 +1,12 @@
 name: Deploy to GitHub Pages
 
+# Disabled: the site is deployed by Vercel, and the GitHub Pages export config
+# was removed from next.config.ts. Restore the push trigger to re-enable.
 on:
-  push:
-    branches:
-      - main # or your default branch
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main # or your default branch
 
 permissions:
   contents: write

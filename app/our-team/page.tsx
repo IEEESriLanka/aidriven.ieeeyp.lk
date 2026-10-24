@@ -1,10 +1,66 @@
 import { MemberCard } from "@/components/AboutUs/Cards";
+import JsonLd from "@/components/common/JsonLd";
 import { TeamDetails, Team2026Details } from "@/lib/data";
+import { SITE_URL } from "@/lib/constant";
+import { pageMetadata, staticImageSrc } from "@/lib/seo";
 import { ChevronDown } from "lucide-react";
+
+const team2026 = [
+  ...Team2026Details.main.members,
+  ...Team2026Details.secondary.members,
+  ...Team2026Details.third.members,
+];
+
+const namesWithRole = (role: string) =>
+  team2026.filter((m) => m.position === role).map((m) => m.name);
+
+const listNames = (names: string[]) =>
+  names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names.join("");
+
+export const metadata = pageMetadata({
+  title: "Our Team 2026",
+  description:
+    `Meet the 2026 organizing committee of AI Driven Sri Lanka, an IEEE Young Professionals Sri Lanka initiative: ` +
+    `Chairperson ${listNames(namesWithRole("Chairperson"))}, Secretary ${listNames(namesWithRole("Secretary"))}, ` +
+    `Vice-Chairpersons ${listNames(namesWithRole("Vice-Chairperson"))}, and ${namesWithRole("Coordinator").length} coordinators.`,
+  path: "/our-team",
+  keywords: [
+    "AI Driven Sri Lanka team",
+    "AIDSL 2026 committee",
+    "AI Driven Sri Lanka organizing committee",
+    ...team2026.map((m) => m.name),
+  ],
+});
+
+// Lists each 2026 member and their role as part of the organization
+const teamJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "AI Driven Sri Lanka",
+  url: SITE_URL,
+  member: team2026.map((m) => {
+    const linkedin = m.socials.map((s) => s.url).filter(Boolean);
+    const image = staticImageSrc(m.profileImg);
+    return {
+      "@type": "OrganizationRole",
+      roleName: m.position,
+      startDate: "2026",
+      member: {
+        "@type": "Person",
+        name: m.name,
+        jobTitle: `${m.position}, AI Driven Sri Lanka 2026`,
+        image: new URL(image, SITE_URL).href,
+        ...(linkedin.length > 0 && { sameAs: linkedin }),
+      },
+    };
+  }),
+};
 
 export default function Page() {
   return (
     <main className="container mx-auto flex min-h-screen flex-col gap-10 px-4 pt-32 pb-24 lg:px-16 lg:pt-40">
+      <JsonLd data={teamJsonLd} />
       <div className="flex items-center gap-4 px-4">
         <h3 className="section-header">
           our <span className="text-primary">team</span>
