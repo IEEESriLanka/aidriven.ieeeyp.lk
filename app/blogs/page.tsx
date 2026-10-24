@@ -1,5 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
 import { blogsData } from "@/lib/data";
 import Item from "@/components/LandingPage/Blog/item";
+
+export const metadata = pageMetadata({
+  title: "Blogs & Articles",
+  description: "Insights, research and perspectives on artificial intelligence from the AI Driven Sri Lanka community, from agentic AI and on-device models to AI careers and local-language AI.",
+  path: "/blogs",
+  keywords: ["AI blog Sri Lanka", "AI articles", "agentic AI", "Sinhala Tamil AI"],
+});
 
 export default function BlogsPage() {
   return (

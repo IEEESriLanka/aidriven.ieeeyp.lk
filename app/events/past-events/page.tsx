@@ -1,7 +1,15 @@
+import { pageMetadata } from "@/lib/seo";
 import Item from "@/components/LandingPage/UpcomingEvents/Item";
 import { pastEventsData } from "@/lib/data/upcoming-events";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+
+export const metadata = pageMetadata({
+  title: "Past Events",
+  description: "A look back at AI Driven Sri Lanka's past events, from the Inside AI sessions and AI Challenge to AI bootcamps, community talks and the Sri Lanka AI Forum.",
+  path: "/events/past-events",
+  keywords: ["AI Driven Sri Lanka past events", "Sri Lanka AI Forum 2024", "AI Bootcamp Sri Lanka", "Sri Lanka AI Challenge 2025"],
+});
 
 export default function PastEventsPage() {
   return (

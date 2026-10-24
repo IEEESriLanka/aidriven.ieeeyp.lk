@@ -5,7 +5,7 @@ export const timelineTitle = "Event Calendar - AIDSL '26";
 export const calendarTimelineData: TimelineItemProps[] = [
   { month: "June", events: ["Inside AI - 01"] },
   { month: "July", events: ["Inside AI - 02"] },
-  { month: "July", events: ["AI Challenge Sri Lanka"], highlight: true },
+  { month: "August", events: ["AI Challenge Sri Lanka"], highlight: true },
   { month: "August", events: ["Inside AI - 03"] },
   { month: "October", events: ["Inside AI - 04"] },
   { month: "November", events: ["Inside AI - 05 & 06"] },

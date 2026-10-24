@@ -1,6 +1,14 @@
+import { pageMetadata } from "@/lib/seo";
 import Item from "@/components/LandingPage/UpcomingEvents/Item";
 import { upcomingEventsData } from "@/lib/data";
 import Link from "next/link";
+
+export const metadata = pageMetadata({
+  title: "Events 2026",
+  description: "Explore AI Driven Sri Lanka's 2026 events: AI Challenge Sri Lanka, the Inside AI industry series and the AI Community Talk Series, national AI programmes for Sri Lanka's students and graduates.",
+  path: "/events",
+  keywords: ["AI events Sri Lanka 2026", "AI Challenge Sri Lanka 2026", "Inside AI 2026", "AI Community Talk Series"],
+});
 
 export default function Page() {
   return (
