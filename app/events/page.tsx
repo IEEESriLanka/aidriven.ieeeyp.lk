@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata = pageMetadata({
   title: "Events 2026",
-  description: "Explore AI Driven Sri Lanka's 2026 events: AI Challenge Sri Lanka, the Inside AI industry series and the AI Community Talk Series, national AI programmes for Sri Lanka's students and graduates.",
+  description: "Explore AI Driven Sri Lanka's 2026 events, including AI Challenge Sri Lanka and the Inside AI industry series, for Sri Lanka's students and graduates.",
   path: "/events",
   keywords: ["AI events Sri Lanka 2026", "AI Challenge Sri Lanka 2026", "Inside AI 2026", "AI Community Talk Series"],
 });
@@ -26,7 +26,7 @@ export default function Page() {
 
       <div className="flex flex-col gap-y-10">
         {upcomingEventsData.filter((event) => !event.hidden).map((event, index) => (
-          <Item key={index} {...event} />
+          <Item key={index} {...event} headingLevel="h2" />
         ))}
       </div>
 

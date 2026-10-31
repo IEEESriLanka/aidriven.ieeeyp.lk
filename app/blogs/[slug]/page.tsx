@@ -1,6 +1,8 @@
 import { blogsData } from "@/lib/data";
 import type { BlogContentBlock } from "@/lib/type";
-import { pageMetadata, staticImageSrc } from "@/lib/seo";
+import JsonLd from "@/components/common/JsonLd";
+import { SITE_NAME, SITE_URL } from "@/lib/constant";
+import { breadcrumbJsonLd, pageMetadata, staticImageSrc } from "@/lib/seo";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -85,6 +87,26 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <main className="container mx-auto min-h-screen px-4 pt-28 pb-12 sm:px-6 lg:px-8">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: blog.title,
+          description: blog.caption,
+          image: `${SITE_URL}${staticImageSrc(blog.image)}`,
+          url: `${SITE_URL}${blog.link}`,
+          keywords: blog.tags?.join(", "),
+          author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+          publisher: { "@id": `${SITE_URL}/#organization` },
+        }}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blogs", path: "/blogs" },
+          { name: blog.title, path: blog.link },
+        ])}
+      />
       <article className="space-y-8">
         <div className="mx-auto max-w-3xl space-y-4">
           {blog.tags && blog.tags.length > 0 && (
@@ -115,6 +137,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             src={blog.image}
             alt={blog.title}
             fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover"
             priority
           />

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogsData } from "@/lib/data";
+import { blogsData, pastEventsData } from "@/lib/data";
 import { SITE_URL } from "@/lib/constant";
 
 const pages: { path: string; priority: number }[] = [
@@ -18,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return [
     ...pages.map(({ path, priority }) => ({ url: `${SITE_URL}${path}`, lastModified, priority })),
+    ...pastEventsData.flatMap(({ photosLink }) =>
+      photosLink ? [{ url: `${SITE_URL}${photosLink}`, lastModified, priority: 0.6 }] : [],
+    ),
     ...blogsData.map((blog) => ({ url: `${SITE_URL}${blog.link}`, lastModified, priority: 0.5 })),
   ];
 }

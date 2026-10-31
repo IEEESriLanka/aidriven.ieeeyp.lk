@@ -26,7 +26,7 @@ export default function PastEventsPage() {
 
       <div className="flex flex-col gap-y-10">
         {pastEventsData.map((event, index) => (
-          <Item key={index} {...event} />
+          <Item key={index} {...event} headingLevel="h2" />
         ))}
       </div>
 

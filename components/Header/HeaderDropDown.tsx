@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const eventLinks = [
-  { href: "/events", label: "All Events" },
+  { href: "/events", label: "All Events (This Year)" },
   { href: "/events/ai-challenge", label: "AI Challenge" },
   { href: "/events/inside-ai", label: "Inside AI" },
   { href: "/events/past-events", label: "Past Events" },
@@ -50,7 +50,7 @@ export function HeaderDropDown({ active }: { active?: boolean }) {
           aria-current={isLinkActive("/events") ? "page" : undefined}
           onClick={() => setIsOpen(false)}
         >
-          All Events
+          All Events (This Year)
         </Link>
 
         {/* Sub-events */}
@@ -126,7 +126,7 @@ export function MobileHeaderDropDown({ onNavigate }: { onNavigate: () => void })
             aria-current={isLinkActive("/events") ? "page" : undefined}
             onClick={onNavigate}
           >
-            All Events
+            All Events (This Year)
           </Link>
 
           {/* Sub-events */}

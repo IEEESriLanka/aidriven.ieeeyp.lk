@@ -37,7 +37,7 @@ const EditionCard = ({ title, desc, data, imgs }: eventsEditionDataProps) => {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {imgs.map((img, i) => (
             <div key={i} className="relative h-40 overflow-hidden rounded-2xl border border-white/10">
-              <Image src={img} alt="" fill className="object-cover" />
+              <Image src={img} alt={`${title}, photo ${i + 1}`} fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover" />
             </div>
           ))}
         </div>

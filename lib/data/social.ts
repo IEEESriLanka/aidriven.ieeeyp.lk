@@ -6,7 +6,7 @@ import WhatsappLogo from "@/assets/icons/whatsapp.png";
 export const socialLinks = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ieee.aidsl/ ",
+    href: "https://www.instagram.com/ieee.aidsl/",
     icon: InstaLogo,
   },
   {
@@ -16,12 +16,12 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/company/ai-driven-sri-lanka/ ",
+    href: "https://www.linkedin.com/company/ai-driven-sri-lanka/",
     icon: LinkedinLogo,
   },
   {
     name: "WhatsApp",
-    href: "https://whatsapp.com/channel/0029Vabpf3sFXUuYtZFnAe0V ",
+    href: "https://whatsapp.com/channel/0029Vabpf3sFXUuYtZFnAe0V",
     icon: WhatsappLogo,
   },
 ];

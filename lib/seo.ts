@@ -15,6 +15,18 @@ export const SITE_KEYWORDS = [
   "Inside AI",
 ];
 
+const MAX_TITLE_LENGTH = 60;
+const MAX_DESCRIPTION_LENGTH = 160;
+
+// Search results cut off long descriptions, so end at a sentence or word instead
+function clampDescription(text: string): string {
+  if (text.length <= MAX_DESCRIPTION_LENGTH) return text;
+  const clipped = text.slice(0, MAX_DESCRIPTION_LENGTH - 1);
+  const sentenceEnd = clipped.lastIndexOf(". ");
+  if (sentenceEnd > 80) return clipped.slice(0, sentenceEnd + 1);
+  return `${clipped.slice(0, clipped.lastIndexOf(" "))}…`;
+}
+
 // URL of a statically imported image, for use in meta tags
 export function staticImageSrc(image: StaticImport | string): string {
   if (typeof image === "string") return image;
@@ -39,24 +51,29 @@ export function pageMetadata({
   type?: "website" | "article";
   images?: string[];
 }): Metadata {
+  // The site name is dropped from long titles so the page's own words are not cut off
+  const fullTitle = `${title} | ${SITE_NAME}`;
+  const pageTitle = fullTitle.length > MAX_TITLE_LENGTH ? title : fullTitle;
+  const pageDescription = clampDescription(description);
+
   return {
-    title,
-    description,
+    title: { absolute: pageTitle },
+    description: pageDescription,
     keywords: [...keywords, ...SITE_KEYWORDS],
     alternates: { canonical: path },
     openGraph: {
       type,
       siteName: SITE_NAME,
-      title: `${title} | ${SITE_NAME}`,
-      description,
+      title: pageTitle,
+      description: pageDescription,
       url: path,
       locale: "en_US",
       images,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${SITE_NAME}`,
-      description,
+      title: pageTitle,
+      description: pageDescription,
       images,
     },
   };
@@ -78,3 +95,26 @@ export const organizationJsonLd = {
   parentOrganization: { "@type": "Organization", name: PARENT_ORG },
   sameAs: socialLinks.map((link) => link.href.trim()),
 };
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
+
+// Shows the page's place in the site as a trail in search results
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}

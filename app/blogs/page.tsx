@@ -4,7 +4,7 @@ import Item from "@/components/LandingPage/Blog/item";
 
 export const metadata = pageMetadata({
   title: "Blogs & Articles",
-  description: "Insights, research and perspectives on artificial intelligence from the AI Driven Sri Lanka community, from agentic AI and on-device models to AI careers and local-language AI.",
+  description: "Insights and perspectives on artificial intelligence from the AI Driven Sri Lanka community, from agentic AI and on-device models to AI careers.",
   path: "/blogs",
   keywords: ["AI blog Sri Lanka", "AI articles", "agentic AI", "Sinhala Tamil AI"],
 });
@@ -23,7 +23,7 @@ export default function BlogsPage() {
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {blogsData.map((blog, index) => (
-          <Item key={index} {...blog} priority={index < 3} />
+          <Item key={index} {...blog} priority={index < 3} headingLevel="h2" />
         ))}
       </div>
     </main>

@@ -28,6 +28,7 @@ export default function BgSvg() {
         <Image
           src={svg}
           alt=""
+          priority
           className="h-[120vh] w-full scale-155 object-cover opacity-30"
         />
 

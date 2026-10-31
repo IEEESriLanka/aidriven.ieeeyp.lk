@@ -12,27 +12,28 @@ import Form from "@/components/AboutUs/Form";
 
 export const metadata = pageMetadata({
   title: "About Us",
-  description: "AI Driven Sri Lanka is an IEEE Young Professionals Sri Lanka initiative founded in 2020, bridging the gap between Sri Lanka's undergraduates, graduates and the AI industry. Get in touch to partner with us.",
+  description: "AI Driven Sri Lanka is an IEEE Young Professionals Sri Lanka initiative founded in 2020, bridging the gap between students, graduates and the AI industry.",
   path: "/about-us",
   keywords: ["about AI Driven Sri Lanka", "partner with AI Driven Sri Lanka", "contact AIDSL"],
 });
 
 const Page = () => {
   return (
-    <div className="font-poppins container mx-[auto] flex flex-col items-center justify-center gap-[102px] px-[10px] pt-[201px] pb-[102px] text-white md:px-[40px] lg:px-[80px]">
+    <main className="font-poppins container mx-[auto] flex flex-col items-center justify-center gap-[102px] px-[10px] pt-[201px] pb-[102px] text-white md:px-[40px] lg:px-[80px]">
       {/* about */}
       <div className="container flex flex-col justify-center gap-16 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.08)_0%,rgba(58,53,49,0.08)_48.56%,rgba(52,47,42,0.08)_100%)] px-6 py-8 md:flex-row">
         <div className="flex justify-center">
           <Image
             src={aboutImage}
-            alt=" "
+            alt="AI Driven Sri Lanka"
+            sizes="220px"
             className="h-[220px] w-auto object-contain"
           />
         </div>
         <div className="container flex flex-col gap-[20px]">
-          <p className="font-elemental-end text-center text-[32px] md:text-left">
+          <h1 className="font-elemental-end text-center text-[32px] md:text-left">
             ABOUT <span className="text-primary">AIDSL</span>
-          </p>
+          </h1>
           <p className="text-base text-white/85 leading-relaxed lg:text-lg">
             AI-Driven Sri Lanka is an initiative launched in 2020 by IEEE Young
             Professionals Sri Lanka to empower young individuals in Sri Lanka
@@ -80,9 +81,9 @@ const Page = () => {
 
       <div className="container flex flex-col gap-[32px]">
         <div>
-          <p className="font-elemental-end text-center text-[32px] md:text-left">
+          <h2 className="font-elemental-end text-center text-[32px] md:text-left">
             OUR <span className="text-primary">CORE VALUES</span>
-          </p>
+          </h2>
           <p className="px-[40px] py-[40px] text-base text-white/85 leading-relaxed lg:text-lg">
             Our core values shape our identity, guiding us to empower AI
             enthusiasts, foster innovation, pursue excellence, and thrive through
@@ -103,10 +104,10 @@ const Page = () => {
 
       <div id="contact-us" className="container scroll-mt-28 flex flex-col gap-6">
         <div className="font-elemental-end text-primary text-center text-[32px] uppercase md:text-left">
-          <p>
+          <h2>
             Get in touch <span className="text-white">and let&apos;s</span>{" "}
             collaborate
-          </p>
+          </h2>
         </div>
         <div>
           <Form />
@@ -131,7 +132,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

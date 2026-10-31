@@ -15,7 +15,7 @@ export const projectsData: ProjectItemProps[] = [
     data: undefined,
   },
   {
-    title: "AI Com Talk 2025",
+    title: "AI Com Talk 2024",
     description: [
       "The AI-Driven SL Community Talk Series was a flagship initiative by AI Driven SL, organized together with IEEE Student Branches from leading Sri Lankan universities to promote AI knowledge sharing and practical learning. ",
     ],

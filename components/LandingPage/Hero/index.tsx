@@ -14,11 +14,12 @@ export default function Hero() {
             An initiative of <span className="font-semibold text-white">IEEE Young Professionals Sri Lanka</span>
           </span>
         </div>
-        <div className="font-elemental-end flex flex-col gap-y-2 text-2xl text-white lg:gap-y-6 lg:text-5xl lg:[@media(max-height:820px)]:gap-y-3">
+        <h1 className="font-elemental-end flex flex-col gap-y-2 text-2xl text-white lg:gap-y-6 lg:text-5xl lg:[@media(max-height:820px)]:gap-y-3">
+          <span className="sr-only">AI Driven Sri Lanka: </span>
           <span>ONE TEAM. </span>
           <span className="text-primary">Igniting minds.</span>
           <span>LIMITLESS POSSIBILITIES.</span>
-        </div>
+        </h1>
         <p className="w-full text-base text-balance text-white/85 lg:max-w-[55ch] lg:text-lg">
           Since 2020, bridging the gap between Sri Lanka&apos;s undergraduates,
           graduates and the AI industry.

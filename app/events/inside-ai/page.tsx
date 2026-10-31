@@ -2,6 +2,8 @@ import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import insideAILogo from "@/assets/Inside-ai-logo.png";
 import { insideAIFaqData, insideAIProgramTimelineData } from "@/lib/data/events";
+import { photoPreviews } from "@/lib/data/upcoming-events";
+import EventGallery from "@/components/Events/EventGallery";
 import {
   AccordionItem,
   AccordionItemContent,
@@ -38,12 +40,17 @@ const SolutionItem = ({ text }: { text: string }) => (
 
 export const metadata = pageMetadata({
   title: "Inside AI 2026",
-  description: "Inside AI 2026 is a year-long industry engagement series by AI Driven Sri Lanka, with hands-on AI sessions and workshops hosted at leading tech companies including WSO2, Virtusa and Codimite.",
+  description: "Inside AI 2026 is a year-long series of hands-on AI sessions and workshops hosted at leading tech companies, including WSO2, Virtusa and Codimite.",
   path: "/events/inside-ai",
   keywords: ["Inside AI", "Inside AI 2026", "AI workshops Sri Lanka", "industry AI sessions", "WSO2", "Virtusa", "Codimite"],
 });
 
+// Newest first. Add a session here once its photos are in place
+const COMPLETED_SESSIONS = ["inside-ai-3", "inside-ai-2", "inside-ai-1"];
+
 const Page = () => {
+  const sessionPhotos = COMPLETED_SESSIONS.flatMap((slug) => photoPreviews(slug, 3));
+
   const impactCards: { Icon: LucideIcon; text: string }[] = [
     { Icon: FlaskConical, text: "Gain hands-on experience with real AI tools and workflows" },
     { Icon: Factory, text: "Understand how AI is applied in industry environments" },
@@ -67,9 +74,16 @@ const Page = () => {
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="flex items-start justify-between gap-6">
           <div className="flex flex-col gap-3">
-            <div className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
+            <span className="border-primary/40 bg-primary/10 text-primary flex w-fit items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold tracking-wide uppercase">
+              <span className="relative flex size-2">
+                <span className="bg-primary absolute inline-flex size-full animate-ping rounded-full opacity-75 motion-reduce:animate-none" />
+                <span className="bg-primary relative inline-flex size-2 rounded-full" />
+              </span>
+              Ongoing series
+            </span>
+            <h1 className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
               Inside AI 2026
-            </div>
+            </h1>
             <p className="text-sm font-medium uppercase tracking-widest text-white/40">
               Industry Exposure Series
             </p>
@@ -77,6 +91,7 @@ const Page = () => {
           <Image
             src={insideAILogo}
             alt="Inside AI"
+            sizes="224px"
             className="hidden shrink-0 drop-shadow-[0_0_24px_rgba(255,91,60,0.35)] md:block md:w-56"
           />
         </div>
@@ -99,6 +114,14 @@ const Page = () => {
           <StatCard value="500+" label="Total Participants" />
           <StatCard value="100%" label="Hands-on Workshops" />
         </div>
+      </div>
+
+      {/* Sessions So Far */}
+      <div className="flex w-full flex-col gap-6">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+          sessions <span className="text-primary">so far</span>
+        </h2>
+        <EventGallery sections={sessionPhotos} eventTitle="Inside AI" />
       </div>
 
       {/* Why Inside AI */}
@@ -132,7 +155,7 @@ const Page = () => {
           program <span className="text-primary">timeline</span>
         </h2>
         <p className="text-white/70 text-center md:text-left">
-          Inside AI will be conducted as a multi-session series throughout the year.
+          Inside AI is being conducted as a multi-session series throughout the year.
         </p>
         <div className="w-full rounded-[30px] bg-[#191919B8] p-7.5">
           {/* Mobile: vertical */}
@@ -171,9 +194,9 @@ const Page = () => {
 
       {/* Impact for Participants */}
       <div className="flex w-full flex-col gap-4 p-5">
-        <div className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           impact for <span className="text-primary">participants</span>
-        </div>
+        </h2>
         <p className="text-white/70 text-center md:text-left mb-2">
           Inside AI is designed to create real transformation, not just awareness.
         </p>
@@ -208,9 +231,9 @@ const Page = () => {
 
       {/* FAQ */}
       <div className="flex flex-col gap-10 w-full">
-        <p className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           fREquEntly <span className="text-primary">AsKED</span> QuEstioNs
-        </p>
+        </h2>
         <AccordionRoot allowMultiple={true} className="mx-auto grid gap-x-2 gap-y-0 lg:grid-cols-2 w-full" variant="splitted">
           {insideAIFaqData.map((item) => (
             <AccordionItem key={item.value} className="h-fit self-start rounded-none bg-[#1c1c1c]">

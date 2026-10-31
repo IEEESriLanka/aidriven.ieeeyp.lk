@@ -2,7 +2,10 @@ import { BlogItemProps } from "@/lib/type";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Item(props: BlogItemProps & { priority?: boolean }) {
+export default function Item({
+  headingLevel: Heading = "h3",
+  ...props
+}: BlogItemProps & { priority?: boolean; headingLevel?: "h2" | "h3" }) {
   return (
     <Link
       href={props.link}
@@ -39,7 +42,7 @@ export default function Item(props: BlogItemProps & { priority?: boolean }) {
               ))}
             </div>
           )}
-          <h3 className="text-lg font-medium break-words text-white sm:text-xl">{props.title}</h3>
+          <Heading className="text-lg font-medium break-words text-white sm:text-xl">{props.title}</Heading>
           <p className="text-sm break-words text-white/70 sm:text-base">{props.caption}</p>
         </div>
       </article>

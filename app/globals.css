@@ -211,6 +211,16 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
+  /* Past event cards that open their own page */
+  .event-card-clickable {
+    @apply hover:border-primary/60 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(255,79,0,0.55)];
+  }
+
+  /* Stretches the title link over the whole card */
+  .event-card-link {
+    @apply after:absolute after:inset-0 after:z-10 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-primary group-hover:[-webkit-text-fill-color:var(--color-primary)];
+  }
+
   .testimonial-card {
     border-radius: 32px 48px 4px 48px;
     border: 0.4px solid var(--d-9-d-9-d-9, #FF4F00);
