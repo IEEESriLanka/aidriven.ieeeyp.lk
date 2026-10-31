@@ -1,16 +1,32 @@
+import EventCardArrow from "@/components/Events/EventCardArrow";
 import { type UpcomingEventItemProps } from "@/lib/type";
+import { cn } from "@/lib/utils";
 import { CalendarDays, Clock4 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Item(props: UpcomingEventItemProps) {
+export default function Item({
+  headingLevel: Heading = "h3",
+  ...props
+}: UpcomingEventItemProps & { headingLevel?: "h2" | "h3" }) {
   return (
-    <div className="grid h-full w-full gap-x-16 gap-y-8 rounded-2xl bg-[#111] px-6 py-6 text-white lg:grid-cols-2">
+    <div
+      className={cn(
+        "group relative grid h-full w-full gap-x-16 gap-y-8 rounded-2xl border border-transparent bg-[#111] px-6 py-6 text-white lg:grid-cols-2",
+        props.photosLink && "event-card-clickable",
+      )}
+    >
       <div className="flex flex-col justify-between gap-4 py-4">
         <div className="flex flex-col gap-4">
-          <h3 className="event-item-header text-2xl font-semibold uppercase">
-            {props.title}
-          </h3>
+          <Heading className="event-item-header text-2xl font-semibold uppercase">
+            {props.photosLink ? (
+              <Link href={props.photosLink} className="event-card-link">
+                {props.title}
+              </Link>
+            ) : (
+              props.title
+            )}
+          </Heading>
           {props.description.map((desc, index) => (
             <p key={index} className="">
               {desc}
@@ -47,7 +63,7 @@ export default function Item(props: UpcomingEventItemProps) {
 
         {props.link && (
           <div className="flex w-full items-center justify-start">
-            <Link href={props.link} className="text-base text-primary">Learn More</Link>
+            <Link href={props.link} className="relative z-20 text-base text-primary">Learn More</Link>
           </div>
         )}
       </div>
@@ -60,9 +76,14 @@ export default function Item(props: UpcomingEventItemProps) {
             src={props.img.src}
             alt={props.img.alt}
             fill
-            className="object-cover object-center"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className={cn(
+              "object-cover object-center",
+              props.photosLink && "transition-transform duration-500 group-hover:scale-105",
+            )}
           />
         )}
+        {props.photosLink && <EventCardArrow href={props.photosLink} />}
       </div>
     </div>
   );

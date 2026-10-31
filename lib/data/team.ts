@@ -578,11 +578,11 @@ export const Team2026Details: {
   secondary: {
     members: [
       {
-        profileImg: tharinduNimsaraPhoto,
-        name: "Tharindu Nimsara",
+        profileImg: linukPhoto,
+        name: "Linuk Perera",
         position: "Vice-Chairperson",
         socials: [
-          { icon: linkedinIcon, url: "https://www.linkedin.com/in/tharindu-nimsara-waidyathilake-578a112a0" },
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/linukperera" },
         ],
       },
       {
@@ -594,11 +594,11 @@ export const Team2026Details: {
         ],
       },
       {
-        profileImg: linukPhoto,
-        name: "Linuk Perera",
+        profileImg: tharinduNimsaraPhoto,
+        name: "Tharindu Nimsara",
         position: "Vice-Chairperson",
         socials: [
-          { icon: linkedinIcon, url: "https://www.linkedin.com/in/linukperera" },
+          { icon: linkedinIcon, url: "https://www.linkedin.com/in/tharindu-nimsara-waidyathilake-578a112a0" },
         ],
       },
     ],

@@ -15,11 +15,11 @@ export default function AboutUs() {
       className="section-gap-y container mx-auto px-4 py-8"
       id="about-section"
     >
-      <h1 className="section-header">
+      <h2 className="section-header">
         <span>What </span>
         <span className="text-primary">people Say </span>
         <span>About us ?</span>
-      </h1>
+      </h2>
       <div className="mt-8 flex lg:ml-4 lg:gap-x-8">
         <Carousel className="w-full overflow-x-clip overflow-y-visible">
           <CarouselContent className="flex w-full overflow-visible pl-4 lg:gap-x-8 lg:px-4">

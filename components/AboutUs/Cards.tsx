@@ -95,7 +95,7 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
           <img
             src={member.profileImg}
             className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}${member.flipX ? " -scale-x-100" : ""}`}
-            alt=""
+            alt={member.name}
           />
         ) : (
           <Image
@@ -103,7 +103,7 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
             // Photos render ~224px tall (h-56); without this the browser fetches full-width versions
             sizes="240px"
             className={`z-30 mx-auto h-56 w-auto object-cover${member.grayscale ? " grayscale" : ""}${member.flipX ? " -scale-x-100" : ""}`}
-            alt=""
+            alt={member.name}
           />
         )}
         <Parellelo />
@@ -119,7 +119,7 @@ export const MemberCard = ({ member }: { member: MemberDetailProps }) => {
         <div className="flex gap-[16px]">
           {member.socials.map((social, i) =>
             social.url ? (
-              <a key={i} href={social.url}>
+              <a key={i} href={social.url} aria-label={`${member.name} on LinkedIn`}>
                 <div className="size-[36px] rounded-[6px]">
                   <Image src={social.icon} alt="" />
                 </div>

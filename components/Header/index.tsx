@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNavigation from "./Mobile";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
-import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { navItems } from "@/lib/data";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -13,8 +12,6 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isOpen, open] = useLockingBodyScroll();
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
-  const isClient = useIsClient();
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -42,20 +39,18 @@ export default function Header() {
     };
   }, []);
 
-  if (!isClient) return null;
-
   return (
     <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[999] w-[95%] max-w-7xl transition-all duration-500">
       <header
         className={cn(
-          "w-full flex h-[70px] items-center justify-between px-6 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] overflow-hidden border",
+          "w-full flex h-[70px] items-center justify-between px-6 py-3 text-white transition-all duration-500 lg:grid lg:grid-cols-[1fr_auto_1fr] overflow-hidden rounded-xl border",
           scrolled ? "bg-[#2D1B19]/50 backdrop-blur-md border-white/10" : "bg-[#2D1B19]/95 border-transparent shadow-xl"
         )}
         data-lenis-prevent
       >
         <div className="relative z-10">
           <Link href="/" className="flex items-center">
-            <Image src={Logo} alt="AIDSL Logo" width={150} height={50} />
+            <Image src={Logo} alt="AI Driven Sri Lanka" width={150} height={50} priority />
           </Link>
         </div>
         <div className="relative hidden items-center justify-center lg:flex z-10">
@@ -93,7 +88,8 @@ export default function Header() {
             Contact Us
           </Link>
         </div>
-        {!isDesktop && <MobileNavigation isOpen={isOpen} open={open} />}
+        {/* Its button and menu are hidden from the lg breakpoint up with CSS */}
+        <MobileNavigation isOpen={isOpen} open={open} />
       </header>
     </div>
   );

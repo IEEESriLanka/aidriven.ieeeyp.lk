@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex items-center justify-center lg:justify-start">
           <Image
             src={Logo}
-            alt="AIDSL Logo"
+            alt="IEEE Young Professionals Sri Lanka"
             width={200}
             className="h-auto"
           />

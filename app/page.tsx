@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const UpcomingEvent = dynamic(() => import("@/components/LandingPage/UpcomingEvents"));
 const Timeline = dynamic(() => import("@/components/LandingPage/Timeline"));
 const PastEvents = dynamic(() => import("@/components/LandingPage/PastEvents"));
+const FeedbackVideos = dynamic(() => import("@/components/LandingPage/FeedbackVideos"));
 const Partners = dynamic(() => import("@/components/LandingPage/Partners"));
 const Testimonials = dynamic(() => import("@/components/LandingPage/Testimonials"));
 const Blogs = dynamic(() => import("@/components/LandingPage/Blog"));
@@ -19,6 +20,7 @@ export default function Home() {
             <Reveal><UpcomingEvent /></Reveal>
             <Reveal><Timeline /></Reveal>
             <Reveal><PastEvents /></Reveal>
+            <Reveal><FeedbackVideos /></Reveal>
             <Reveal><Testimonials /></Reveal>
             <Reveal><Blogs /></Reveal>
             <Reveal><PartnerCTA /></Reveal>

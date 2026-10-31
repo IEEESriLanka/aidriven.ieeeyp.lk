@@ -30,6 +30,8 @@ export interface UpcomingEventItemProps {
     alt: string;
   };
   hidden?: boolean;
+  gallery?: { slug: string; folder: string };
+  photosLink?: string;
 }
 
 export interface TestimonialProps {
@@ -40,6 +42,25 @@ export interface TestimonialProps {
     title: string;
   };
   message: string;
+}
+
+export interface EventPhoto {
+  src: string;
+  thumb: string;
+  width: number;
+  height: number;
+}
+
+export interface EventPhotoSection {
+  title?: string;
+  photos: EventPhoto[];
+  // Set when only some of the photos are shown, linking to the full gallery
+  allPhotos?: { href: string; total: number };
+}
+
+export interface FeedbackVideoProps {
+  src: string;
+  poster?: string;
 }
 
 export interface HeroStatProps {

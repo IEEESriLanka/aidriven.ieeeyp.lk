@@ -19,7 +19,7 @@ import {
 
 export const metadata = pageMetadata({
   title: "AI Community Talk Series",
-  description: "The AI Community Talk Series by AI Driven Sri Lanka brings AI knowledge sharing to Sri Lankan universities, organized with IEEE Student Branches and industry experts.",
+  description: "The AI Community Talk Series by AI Driven Sri Lanka brings AI knowledge sharing to Sri Lankan universities, with IEEE Student Branches and industry experts.",
   path: "/events/community-talk",
   keywords: ["AI Community Talk Series", "AI talks Sri Lanka", "IEEE Student Branch AI", "university AI sessions"],
 });
@@ -28,12 +28,12 @@ const Page = () => {
   return (
     <main className="customer-border container mx-auto flex flex-col items-center justify-center gap-20 px-[10px] py-30 md:px-[40px]">
       <div className="flex flex-col gap-4 rounded-[40px] bg-[#191919B8] p-[30px]">
-        <div className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
+        <h1 className="font-elemental-end text-primary text-center text-[40px] uppercase md:text-left">
           community talk series
-        </div>
+        </h1>
         <div className="grid gap-8 md:grid-cols-2">
           <div className="">
-            <Image src={comTalkImg} alt="" />
+            <Image src={comTalkImg} alt="AI Community Talk Series session" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div className="mx-auto flex flex-col items-center gap-y-4 text-xl text-white">
             <p>
@@ -48,9 +48,9 @@ const Page = () => {
               using real-world use cases.
             </p>
             <div className="w-full text-left">
-              <h3 className="text-primary mb-2 font-bold">
+              <h2 className="text-primary mb-2 font-bold">
                 Collaborating Universities
-              </h3>
+              </h2>
               <ul className="list-inside list-disc space-y-1">
                 <li>University of Peradeniya (IEEE Student Branch)</li>
                 <li>Uva Wellassa University (IEEE Student Branch)</li>
@@ -73,9 +73,9 @@ const Page = () => {
       </div>
 
       <div className="flex w-full flex-col gap-4 p-5">
-        <div className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           what you will <span className="text-primary">get</span>
-        </div>
+        </h2>
         <div className="grid items-center justify-center gap-4 px-[20px] text-white md:grid-cols-2">
           {communityFeatsData.map((data, i) => (
             <EventFeatCard feature={data} key={i} />
@@ -84,9 +84,9 @@ const Page = () => {
       </div>
 
       <div className="flex flex-col gap-10">
-        <p className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           fREquEntly <span className="text-primary">AsKED</span> QuEstioNs
-        </p>
+        </h2>
         <AccordionRoot
           allowMultiple={true}
           className="mx-auto grid gap-x-2 gap-y-0 lg:grid-cols-2"
@@ -111,9 +111,9 @@ const Page = () => {
       </div>
 
       <div className="flex w-full flex-col justify-center gap-10">
-        <h3 className="section-header">
+        <h2 className="section-header">
           our <span className="text-primary">previous editions</span>
-        </h3>
+        </h2>
         {communityTalkEditionsData.map((editions, i) => (
           <EditionCard
             key={i}

@@ -5,10 +5,12 @@ import SLAIC25Image from "@/assets/events/SLAIC2025.webp";
 import AIComTalk25Image from "@/assets/events/AIComTalk2025.webp";
 import AIForum2024Image from "@/assets/events/AIFrorum2024.webp";
 import AIChallenge2026GroupPhoto from "@/assets/events/AI Challenge sri lanka 2026 group photo.jpg";
+import Explorer2Photo from "@/assets/events/Explorer 2.0 photo.jpeg";
 import InsideAI1Photo from "@/assets/events/Inside AI 1.0 photo.jpg";
 import InsideAI2Photo from "@/assets/events/Inside AI 2.0 photo.jpg";
 import InsideAI3Photo from "@/assets/events/Inside AI 3.0 photo.jpg";
-import type { UpcomingEventItemProps } from "../type";
+import type { EventPhotoSection, UpcomingEventItemProps } from "../type";
+import eventPhotosManifest from "./event-photos.generated.json";
 
 export const upcomingEventsData: UpcomingEventItemProps[] = [
   {
@@ -57,9 +59,10 @@ export const upcomingEventsData: UpcomingEventItemProps[] = [
 
 ];
 
-export const pastEventsData: UpcomingEventItemProps[] = [
+const pastEvents: UpcomingEventItemProps[] = [
   {
     title: "Inside AI 3.0 - AI That Actually Makes Money",
+    gallery: { slug: "inside-ai-3", folder: "insideAI3.0" },
     description: [
       "In collaboration with Codimite, Inside AI 3.0 tackled the business side of artificial intelligence, focusing on 'AI that actually makes money'. The session provided actionable insights on building profitable AI products, monetization strategies, and delivering tangible ROI through AI-driven business models."
     ],
@@ -79,6 +82,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
   },
   {
     title: "Inside AI 2.0 - AI Agents & Automated Systems",
+    gallery: { slug: "inside-ai-2", folder: "insideAI2.0" },
     description: [
       "Inside AI 2.0 partnered with Virtusa to delve deep into the world of AI agents and automated systems. Participants learned how intelligent agentic workflows and advanced automation are revolutionizing enterprise efficiency and modern software architecture."
     ],
@@ -98,6 +102,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
   },
   {
     title: "Inside AI 1.0 - AI Research and Innovation",
+    gallery: { slug: "inside-ai-1", folder: "insideAI1.0" },
     description: [
       "Hosted in collaboration with WSO2, Inside AI 1.0 explored the frontiers of AI research and innovation. The session highlighted breakthrough methodologies and how leading tech companies translate cutting-edge AI research into scalable industry solutions."
     ],
@@ -117,6 +122,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
   },
   {
     title: "AI Challenge 2026",
+    gallery: { slug: "ai-challenge-2026", folder: "aiChallenge2026" },
     description: [
       "AI Challenge 2026 was a national-level AI innovation program designed to develop practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this challenge followed a structured, multi-phase model with mentorship, adversarial testing, refinement cycles, and a physical final round. The event successfully focused on building industry-ready skills through real-world problem-solving and team-based innovation."
     ],
@@ -140,6 +146,7 @@ export const pastEventsData: UpcomingEventItemProps[] = [
   },
   {
     title: "Sri Lanka AI Challenge 2025",
+    gallery: { slug: "sri-lanka-ai-challenge-2025", folder: "aiChallenge2025" },
     description: [
       "Sri Lanka AI Challenge was a key initiative under IEEE Challenge Sphere SL, designed to provide a structured pathway for participants to gain hands-on experience and strengthen their skills in AI technologies through a series of workshops and a competitive hackathon.",
     ],
@@ -158,7 +165,8 @@ export const pastEventsData: UpcomingEventItemProps[] = [
     },
   },
   {
-    title: "AI Com Talk 2025",
+    title: "AI Com Talk 2024",
+    gallery: { slug: "ai-com-talk-2024", folder: "aiComTalk" },
     description: [
       "The AI-Driven SL Community Talk Series was a flagship initiative by AI Driven SL, organized together with IEEE Student Branches from leading Sri Lankan universities to promote AI knowledge sharing and practical learning.",
     ],
@@ -173,11 +181,12 @@ export const pastEventsData: UpcomingEventItemProps[] = [
     venue: undefined,
     img: {
       src: AIComTalk25Image,
-      alt: "AI Com Talk 2025",
+      alt: "AI Com Talk 2024",
     },
   },
   {
     title: "Sri Lanka AI Forum 2024",
+    gallery: { slug: "sri-lanka-ai-forum-2024", folder: "slAIForum2024" },
     description: [
       "As a cornerstone event of the YPSL Summit 2024, the Sri Lanka AI Forum convened a panel of industry pioneers for an expert discussion on leveraging Generative AI to enhance work and learning efficiency. Moderated by Heminda Jayaweera, the forum featured a distinguished lineup of innovators from leading tech companies including Nagarro, 99x, PickMe, Zone 24x7, IFS, Microsoft, and Sysco Labs SL.",
     ],
@@ -195,4 +204,48 @@ export const pastEventsData: UpcomingEventItemProps[] = [
       alt: "Sri Lanka AI Forum 2024",
     },
   },
+  {
+    title: "Explorer 2.0 - Generative AI",
+    gallery: { slug: "explorer-2", folder: "explore2.0_2024" },
+    description: [
+      "Held at Hatch in 2024, Explorer 2.0 was a hands-on guide to Generative AI, giving participants a practical introduction to the technology through a guided session.",
+    ],
+    highlights: [
+      "Hands-on Generative AI session",
+      "Held at Hatch",
+    ],
+    date: undefined,
+    time: undefined,
+    venue: undefined,
+    img: {
+      src: Explorer2Photo,
+      alt: "Explorer 2.0",
+    },
+  },
 ];
+
+// Photos by folder name, generated by `pnpm photos:optimize`
+export const eventPhotos: Record<string, EventPhotoSection[]> = eventPhotosManifest;
+
+// A few photos per section, each linking to the event's full gallery
+export function photoPreviews(slug: string, photosPerSection: number): EventPhotoSection[] {
+  const event = pastEvents.find((item) => item.gallery?.slug === slug);
+  const sections = event?.gallery && eventPhotos[event.gallery.folder];
+  if (!sections) return [];
+  return sections.map((section) => ({
+    ...section,
+    title: section.title ?? event.title,
+    // Previews crop to a wide shape, which would cut the head off a portrait photo
+    photos: section.photos.filter((photo) => photo.width > photo.height).slice(0, photosPerSection),
+    allPhotos: { href: `/events/past-events/${slug}`, total: section.photos.length },
+  }));
+}
+
+// An event only gets a "View photos" link once its folder has photos
+export const pastEventsData: UpcomingEventItemProps[] = pastEvents.map((event) => ({
+  ...event,
+  photosLink:
+    event.gallery && eventPhotos[event.gallery.folder]
+      ? `/events/past-events/${event.gallery.slug}`
+      : undefined,
+}));

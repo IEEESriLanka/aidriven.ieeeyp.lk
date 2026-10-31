@@ -1,6 +1,9 @@
 import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import aiChallengeLogo from "@/assets/AI-challenge-logo.png";
+import groupPhoto from "@/assets/events/AI Challenge sri lanka 2026 group photo.jpg";
+import { photoPreviews } from "@/lib/data/upcoming-events";
+import EventGallery from "@/components/Events/EventGallery";
 import {
   NewChallengeEventsEditionsData as challengeEventsEditionsData,
   eventsFaqData,
@@ -23,7 +26,7 @@ import {
   Wrench, ShieldCheck, Handshake, BarChart2, Award,
   Target, FolderOpen, Trophy, Megaphone,
   Sprout, Globe, Link2,
-  Users, Network, GraduationCap,
+  Users, Network, GraduationCap, CheckCircle2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -49,7 +52,7 @@ const phaseModeColor: Record<string, string> = {
 
 export const metadata = pageMetadata({
   title: "AI Challenge Sri Lanka 2026",
-  description: "AI Challenge Sri Lanka 2026 is a national-level AI innovation programme by AI Driven Sri Lanka, taking student teams from problem identification through mentorship, prototyping and testing to a physical final round.",
+  description: "AI Challenge Sri Lanka 2026 was a national AI innovation programme taking student teams from problem identification to prototypes and a physical final round.",
   path: "/events/ai-challenge",
   keywords: ["AI Challenge Sri Lanka", "AI Challenge 2026", "AI competition Sri Lanka", "AI hackathon Sri Lanka", "SLAIC"],
 });
@@ -88,17 +91,21 @@ const Page = () => {
       <div className="flex w-full flex-col gap-6 rounded-[40px] bg-[#191919B8] p-7.5">
         <div className="flex items-start justify-between gap-6">
           <div className="flex flex-col gap-3">
-            <div className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
+            <span className="flex w-fit items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-300 uppercase">
+              <CheckCircle2 className="size-4" />
+              Completed
+            </span>
+            <h1 className="font-elemental-end text-primary text-[36px] uppercase leading-none md:text-[44px]">
               AI Challenge 2026
-            </div>
+            </h1>
             <p className="text-sm font-medium uppercase tracking-widest text-white/40">
               Sri Lanka Artificial Intelligence Challenge
             </p>
             <div className="flex flex-col gap-3 text-lg text-white/85 leading-relaxed">
               <p>
-                AI Challenge 2026 is a national-level AI innovation program designed to develop
+                AI Challenge 2026 was a national-level AI innovation program designed to develop
                 practical, measurable, real-world AI solutions. Unlike ordinary hackathons, this
-                challenge follows a structured, multi-phase model with mentorship, adversarial
+                challenge followed a structured, multi-phase model with mentorship, adversarial
                 testing, refinement cycles, and a physical final round.
               </p>
               <p className="font-medium text-white">
@@ -110,7 +117,18 @@ const Page = () => {
           <Image
             src={aiChallengeLogo}
             alt="Sri Lanka AI Challenge"
+            sizes="176px"
             className="hidden shrink-0 drop-shadow-[0_0_24px_rgba(255,91,60,0.35)] md:block md:w-44"
+          />
+        </div>
+        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-3xl bg-[#1c1c1c] md:aspect-[21/9]">
+          <Image
+            src={groupPhoto}
+            alt="AI Challenge 2026 participants and organizers on stage"
+            fill
+            priority
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            className="object-cover object-center"
           />
         </div>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -129,6 +147,14 @@ const Page = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Event Highlights */}
+      <div className="flex w-full flex-col gap-6">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+          event <span className="text-primary">highlights</span>
+        </h2>
+        <EventGallery sections={photoPreviews("ai-challenge-2026", 3)} eventTitle="AI Challenge 2026" />
       </div>
 
       {/* The Challenge & Our Solution */}
@@ -343,9 +369,9 @@ const Page = () => {
 
       {/* FAQ */}
       <div className="flex w-full flex-col gap-10">
-        <p className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
+        <h2 className="font-elemental-end text-center text-[32px] text-white uppercase md:text-left">
           fREquEntly <span className="text-primary">AsKED</span> QuEstioNs
-        </p>
+        </h2>
         <AccordionRoot allowMultiple={true} className="mx-auto grid gap-x-2 gap-y-0 xl:grid-cols-2 w-full" variant="splitted">
           {eventsFaqData.map((item) => (
             <AccordionItem key={item.value} className="h-fit self-start rounded-none bg-[#1c1c1c]">
@@ -364,9 +390,9 @@ const Page = () => {
 
       {/* Previous Editions */}
       <div className="flex w-full flex-col justify-center gap-10">
-        <h3 className="section-header">
+        <h2 className="section-header">
           our <span className="text-primary">previous editions</span>
-        </h3>
+        </h2>
         {challengeEventsEditionsData.map((editions, i) => (
           <EditionCard key={i} title={editions.title} desc={editions.desc} data={editions.data} imgs={editions.imgs} />
         ))}

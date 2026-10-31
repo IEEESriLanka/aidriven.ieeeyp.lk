@@ -12,10 +12,10 @@ import Item from "./item";
 export default function Projects() {
   return (
     <section className="section-gap-y container mx-auto flex flex-col gap-y-8 px-4">
-      <h1 className="section-header">
+      <h2 className="section-header">
         <span>Our</span>
         <span className="text-primary"> Previous Projects</span>
-      </h1>
+      </h2>
       <div>
         <Carousel>
           <CarouselContent className="ml-0 lg:gap-x-8">
