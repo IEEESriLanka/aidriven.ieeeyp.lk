@@ -21,8 +21,11 @@ export default function Hero() {
           <span>LIMITLESS POSSIBILITIES.</span>
         </h1>
         <p className="w-full text-base text-balance text-white/85 lg:max-w-[55ch] lg:text-lg">
-          Since 2020, bridging the gap between Sri Lanka&apos;s undergraduates,
-          graduates and the AI industry.
+          Established in 2020 as an initiative of IEEE Young Professionals Sri
+          Lanka, AI-Driven Sri Lanka (AIDSL) empowers the next generation of AI
+          innovators through impactful events, industry collaborations, and
+          knowledge-sharing initiatives, bridging academia and industry to shape
+          Sri Lanka&apos;s AI-driven future.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link

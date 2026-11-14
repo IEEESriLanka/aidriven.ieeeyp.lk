@@ -46,38 +46,23 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Mission & Vision section - commented out, do not remove
-      <div className="container flex flex-col gap-[40px]">
-        <div>
-          <p className="font-elemental-end text-center text-[32px] md:text-left">
-            <span className="text-primary">OUR STORY</span> IS ABOUT BUILDING AI{" "}
-            <span className="text-primary">
-              {" "}
-              STRONG AI <br /> COMMUNITY
-            </span>
+      <section aria-label="Our vision and mission" className="container grid gap-8 md:grid-cols-2">
+        <div className="flex flex-col gap-5 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-6 py-8 md:p-10">
+          <h2 className="font-elemental-end text-primary text-[32px]">Vision</h2>
+          <p className="text-base text-white/85 leading-relaxed lg:text-lg">
+            To ignite a premier, AI-powered innovation ecosystem that positions
+            Sri Lanka as a global hub for technological excellence and sustainable
+            economic growth.
           </p>
         </div>
-
-        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
-          <div className="text-primary text-[32px]">Mission</div>
-          <div className="container px-[40px] py-[35px] text-base text-white/85 leading-relaxed lg:text-lg">
-            Our mission is to bridge the gap between undergraduates and
-            graduates in the AI industry by offering comprehensive AI education,
-            practical skills, and a supportive community through a holistic
-            approach that includes bootcamps, technical awareness sessions,
-            community engagements, and mentorship programs, thereby fostering a
-            thriving AI ecosystem in Sri Lanka.
-          </div>
+        <div className="flex flex-col gap-5 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-6 py-8 md:p-10">
+          <h2 className="font-elemental-end text-primary text-[32px]">Mission</h2>
+          <p className="text-base text-white/85 leading-relaxed lg:text-lg">
+            To bridge the gap between academic brilliance and industry execution
+            by empowering the next generation of tech leaders.
+          </p>
         </div>
-
-        <div className="flex flex-col items-center justify-center rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.40)_0%,rgba(58,53,49,0.40)_48.56%,rgba(52,47,42,0.40)_100%)] px-[40px] pt-4 md:flex-row md:gap-[65px]">
-          <div className="text-primary text-[32px]">Vision</div>
-          <div className="container px-[40px] py-[35px] text-base text-white/85 leading-relaxed lg:text-lg">
-            Empowering Sri Lankan Youth with AI Excellence.
-          </div>
-        </div>
-      </div>
-      */}
+      </section>
 
       <div className="container flex flex-col gap-[32px]">
         <div>
