@@ -21,8 +21,8 @@ const Page = () => {
   return (
     <main className="font-poppins container mx-[auto] flex flex-col items-center justify-center gap-[102px] px-[10px] pt-[201px] pb-[102px] text-white md:px-[40px] lg:px-[80px]">
       {/* about */}
-      <div className="container flex flex-col justify-center gap-16 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.08)_0%,rgba(58,53,49,0.08)_48.56%,rgba(52,47,42,0.08)_100%)] px-6 py-8 md:flex-row">
-        <div className="flex justify-center">
+      <div className="container flex flex-col justify-center gap-16 rounded-[4px_44px] bg-[linear-gradient(180deg,rgba(69,65,61,0.08)_0%,rgba(58,53,49,0.08)_48.56%,rgba(52,47,42,0.08)_100%)] px-6 py-8 md:flex-row md:items-center">
+        <div className="flex shrink-0 justify-center">
           <Image
             src={aboutImage}
             alt="AI Driven Sri Lanka"
